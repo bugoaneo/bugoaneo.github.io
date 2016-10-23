@@ -1,0 +1,40 @@
+//colors & vars
+$main: #2a323a;
+$logo: #f39c12;
+$text: #222;
+$f-span: #2ecc71;
+$container: 960px;
+$footer-h: 100px;
+
+//mixins
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+@mixin pref($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+} 
+
+@mixin justify {
+	content: '';
+	width: 100%;
+	height: 0;
+	display: inline-block;
+}
+
+//layout
+@import "../reset";
+@import "base";
+@import "layout/header";
+@import "layout/section";
+@import "layout/responsive";
+
+//grid
+@import "grid";
+
+
+

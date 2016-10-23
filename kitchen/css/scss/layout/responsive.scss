@@ -1,0 +1,127 @@
+@media screen and (max-width: 1200px) {
+  $font-size: 16px;
+  html{
+    font-size: $font-size;
+  }
+}
+
+@media screen and (max-width: 900px){
+  $font-size: 15px;
+  html{
+    font-size: $font-size;
+  }
+}
+
+@media screen and (max-width: 720px){
+  $font-size: 14px;
+  html{
+    font-size: $font-size;
+  }
+
+  .header__menu .logo {
+    display: none;
+  }
+
+  .header__menu {
+    .logo-responsiv {
+    display: inline-block;
+    float: left;}
+    }
+
+  .main__menu {
+    position: absolute;
+    top: 0;
+    left: 9999px;
+    opacity: 0;
+     @include pref(transition, top 0.3s ease-in-out);
+    // display: none;
+    z-index: 5;
+    .nav__link {
+        display: block;
+        font-size: 25px;
+        padding: 20px 0;
+        border-bottom: 2px dotted #fff;
+        background: $main;
+    }
+    &:after {
+        content: none;
+    }
+  }
+  .nav__trigger {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    float: right;
+    border-bottom: 3px solid $logo;
+    border-top: 3px solid $logo;
+    cursor: pointer;
+    @include pref(transition, transform 0.3s);
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $logo;
+        position: absolute;
+        top: 50%;
+    }
+  }
+  .nav__hide:checked ~ .main__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    }
+
+    .photo__dscr {
+        text-align: center;
+        .descr__img {
+            width: 100%;
+        }
+    }
+
+   .nav__hide:checked + .nav__trigger {
+     transform: rotate(90deg);
+    }
+   .testimonials {
+    padding: rem(80px) 0;
+  }
+    
+    .main__menu-footer {
+        height: 46px;
+        text-align: justify;
+        margin: 50px 0;
+        border: none;
+        border-top: 1px dotted #fff;
+        border-bottom: 1px dotted #fff;
+        .nav__link-footer {
+            display: inline-block;
+            line-height: 46px;
+        }
+        &:after{
+            @include justify;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+  $font-size: 13px;
+  html{
+    font-size: $font-size;
+  }
+  .logo.logo-responsiv {
+    .nav__link-logo {
+        font-size: 20px; 
+        }
+    }
+}
+
+@media screen and (max-width: 400px){
+  $font-size: 13px;
+  html{
+    font-size: $font-size;
+  }
+
+}  
