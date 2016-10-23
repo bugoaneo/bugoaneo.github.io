@@ -1,1 +1,1 @@
-# bugo_aneo.github.io
+# bugo-aneo.github.io
