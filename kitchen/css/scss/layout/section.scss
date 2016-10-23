@@ -1,0 +1,310 @@
+.preference {
+  background: $main;
+  margin: 0 0 rem(200px) 0;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    transform: skewY(-8deg);
+  }
+}
+
+.preferens-foto__container {
+  text-align: center;
+}
+
+//description
+
+.descriptions{
+  padding: 0 0 rem(150px) 0;
+  background: #fff;
+  z-index: 1;
+    &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(9deg);
+  }
+  .row {
+    margin: 0 0 rem(200px) 0;
+    +.row {
+      margin: 0;
+    }
+  }
+  .col {
+  vertical-align: middle;
+  }
+} 
+
+.dscr__header {
+  font: 24px/1 'ostrich_black';
+  color: $text;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+
+.dscr__text {
+  font: 300 16px/1 'proxima';
+  color: $text;
+  margin: 0 0 30px 0;
+}
+
+// registration
+
+.registration {
+  background: -webkit-radial-gradient(circle at center -10%, #222 50%, $main 50%);
+  background: -o-radial-gradient(circle at center -10%, #222 50%, $main 50%);
+  background: -moz-radial-gradient (circle at center -10%, #222 50%, $main 50%);
+  background: radial-gradient(circle at center -10%, #222 50%, $main 50%);
+  padding: rem(420px) 0 0;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(6deg);
+  }
+}
+
+.registration__text {
+  color: #fff;
+  font: 30px/1 'ostrich_black';
+  text-transform: uppercase;
+  text-align: center;
+  margin: 33px 0 0 0;
+}
+
+.btn__register {
+  width: 215px;
+  height: 55px;
+  background: transparent;
+  border-radius: 30px 30px;
+  border: 3px solid $f-span;
+  font: bolder 24px/1 'proxima';
+  color: $f-span;
+  margin: 28px 0 0 0;
+}
+
+//testimonials 
+
+.testimonials {
+  padding: rem(160px) 0 0;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: 100%;
+    transform: skewY(-6deg);
+  }
+}
+
+.stn__header {
+  color: #000;
+  font: 300 30px/1 'ostrich_black';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.testimonial {
+  width: 100%;
+  margin: 80px 0 0 0;
+}
+
+.testimonial__text {
+  position: relative;
+  color: $main;
+  font: 500 16px/1 'proxima';
+  padding: 0 0 23px 0;
+  background:
+    linear-gradient(to top, #a1a1a1 20px, transparent 0) right, 
+    linear-gradient(to right, #a1a1a1 165px, #a1a1a1 0) bottom;
+   background-repeat: no-repeat;
+   background-size:
+  2px 100%,
+  100% 2px;
+    &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 183px;
+    width: 30px;
+    height: 24px;
+    border-right:  2px solid #a1a1a1;
+    border-bottom: 2px solid #a1a1a1;
+    transform: skewY(39deg);
+    transform-origin: 100% 50%; 
+    background: #fff;
+  }
+}
+
+.testimonial__content {
+  text-align: right;
+  padding: 13px 0 0 0;
+}
+
+.testimonial__pic {
+  width: 46px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  }
+
+.testimonial__title {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+
+  .testimonial__header {
+  font: bold 16px/1 'proxima';
+  color: $main;
+  }
+
+  small {
+    display: block;
+    color: #a1a1a1;
+    font: 300 14px/1 'proxima';
+  }
+}
+
+// contacts
+#map {
+  position: absolute; 
+  top: 0; bottom: 0; left: 0; right: 0; 
+  z-index: -100; 
+  height: 100%;
+  
+}
+
+.contacts {
+    padding: rem(250px) 0 0 0;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $main;
+        opacity: .8;
+        z-index: -2;
+    }
+}
+
+.adress {
+    font: 16px/1 'proxima';
+    color: #fff;
+    span {
+        display: block;
+        text-transform: uppercase;
+    }
+    .adress__link {
+        color: $f-span;
+        padding: 0 0 10px 0;
+    }
+}
+.logo-small {
+   color: $logo;
+    font: bolder 24px/1 'ostrich_black';
+    margin: 0 0 25px 0;
+}
+
+.location {
+    margin: 0 0 25px 0;
+}
+
+.main__menu-footer {
+    text-align: center;
+    border-left: 1px dotted #fff;
+    border-right: 1px dotted #fff;
+}
+
+.nav__link-footer {
+    display: block;
+}
+
+.social__item {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    .social__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 7px 0 0;
+        background: url(../img/icon.png) no-repeat;
+    }
+    .social__link-fb{
+        background-position: -27px 0;
+    }
+
+    .social__link-tv {
+        background-position: -51px 0;
+    }
+}
+
+.input__group {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #a1a1a1;
+    height: 33px;
+    .subscribe__input {
+        width: 100%;
+        height: 33px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        text-transform: uppercase;
+        font: 16px/1 'proxima';
+    }
+    .subscribe__btn {
+        width: 60px;
+        height: 33px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../img/icon.png) 36px 5px no-repeat;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.subscribe__text {
+    padding: 30px 0 0 0;
+    color: #fff;
+    font: 30px/1 'ostrich';
+    text-transform: uppercase;
+}
+
+footer {
+    color: #fff;
+    font: bold 14px/1 'proxima';
+}

@@ -1,0 +1,42 @@
+header {
+    background: $main;
+    padding: 50px 0;
+}
+
+.main__menu {
+  text-align: justify;
+  &:after {
+   content: '';
+    width: 100%;
+    height: 0;
+    display: inline-block;
+  }
+  
+}
+
+.nav__link {
+  color: #fff;
+  font: bold 14px/2 'proxima';
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.logo {
+  display: inline-block;
+  .nav__link-logo{
+    color: $logo;
+    font: bolder rem(40px) 'novecento';
+  }
+}
+
+.logo-responsiv {
+  display: none;
+}
+
+.nav__hide {
+  display: none;
+}
+
+.nav__trigger{
+  display: none;
+}
