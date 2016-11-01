@@ -126,7 +126,7 @@ article {
 		position: absolute;
 		bottom: -10px;
 		right: 0;
-		background: url(../img/tw-logo.png) no-repeat;
+		background: url(/img/tw-logo.png) no-repeat;
 		width: 40px;
 		height: 40px;
 	}
@@ -233,7 +233,7 @@ footer {
 			position: absolute;
 			top: -15px;
 			left: 0;
-			background: url(../img/soc-ic.png) 0 0 no-repeat;
+			background: url(/img/soc-ic.png) 0 0 no-repeat;
 		}
 			&:hover {
 			color: $hover-text;
