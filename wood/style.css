@@ -451,7 +451,7 @@ textarea:focus:placeholder-shown {
 
 html, body {
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
 
 html {
