@@ -1,0 +1,48 @@
+//headers
+
+.mine__title {
+	font: rem(72px) 'nautilus';
+	line-height: 1;
+	text-align: center;
+	color: $title_color;
+}
+
+.sub__header {
+	font: rem(31px) 'nautilus';
+	text-align: center;
+	line-height: 1;
+	color: $main_color;
+  margin: 0 0 rem(40px) 0;
+}
+
+.decor__title {
+  text-align: center;
+  color: $title_color;
+  font: rem(48px)/1 'nautilus';
+  margin: 0 0 50px 0;
+  &:before, &:after {
+    content: '';
+    background: url(../img/decor.png) no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 66px;
+    height: 51px;
+    margin:0 10px;
+  }
+  &:before {
+    background-position: -78px -9px;
+  }
+  &:after {
+    background-position: -3px -9px;
+  }
+}
+
+.bonus__text {
+  font: 14px/1 'arsenal';
+  color: $title_color;
+}
+
+.work__text {
+  font: rem(25px)/1 'arsenal';
+  color: $main-color;
+}
