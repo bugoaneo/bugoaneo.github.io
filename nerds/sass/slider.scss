@@ -1,0 +1,116 @@
+//slider 
+
+.slider {
+	background: $bg-grey;
+}
+
+.controls__hide {
+	display: none;
+}
+
+.slider__wrapper {
+	position: relative;
+	
+}
+
+.slider__list {
+	position: relative;
+	height: 415px;
+
+}
+.singl__slide {
+  text-align: right;
+  position: absolute;
+  height: 415px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;	
+}
+
+#slide1:checked ~ .slider__list > .singl__slide-first,
+#slide2:checked ~ .slider__list > .singl__slide-second,
+#slide3:checked ~ .slider__list > .singl__slide-therd {
+	opacity: 1;
+	z-index: 2;
+}
+
+.slide__img, .slide__text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.slide__text {
+	width: 34%;
+	text-align: left;
+	.slide__title {
+		font: 500 55px/1 Roboto, sans-serif;
+		margin: 0 0 40px 0;
+	}
+	.slide__descr {
+		color: $text-color;
+		font: 16px/1.5 Roboto, sans-serif;
+		margin: 0 0 45px 0;
+	}
+}
+
+.slider__btn {
+	padding: 0.9em 3.5em;
+	color: #fff;
+	white-space: nowrap;
+	text-transform: uppercase;
+	background: $red;
+	border-radius: 5px;
+	cursor: pointer;
+	@include pref(transition, background .5s ease-in-out);
+	&:hover {
+		background: $red-hover;
+	}
+	&:active{
+		color: rgba(#fff, 0.5);
+		box-shadow: inset 1px 0 1px 2px rgba(215, 55, 59, 0.9);
+	}
+}
+
+.slide__img {
+	width: 65%;
+	height: 100%;
+}
+
+.slide__control-item:hover,
+#slide1:checked ~ .slide__control > .slide-1,
+#slide2:checked ~ .slide__control > .slide-2,
+#slide3:checked ~ .slide__control > .slide-3 {
+	border-color: $btn-grey;
+}
+
+.slide__control{
+	position: absolute;
+	bottom: 95px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.slide__control-item {
+	display: inline-block;
+	position: relative;
+	width: 14px;
+	height: 14px;
+	border: 2px solid transparent;
+	margin: 0 17px;
+	background: #fff;
+	@include pref(border-radius, 50%);
+	cursor: pointer;
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: -7px;
+		left: -7px;
+		border: 6px solid #fff;		
+		width: 12px;
+		height: 12px;
+		@include pref(border-radius, 50%);
+	}
+}

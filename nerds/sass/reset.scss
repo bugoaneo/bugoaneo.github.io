@@ -1,0 +1,71 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+	outline: none;
+	border: none;
+	display: inline-block;
+}
+textarea{
+    overflow: auto;
+    resize: none;
+}
+img{
+	border: none;
+	outline: none;
+}
+.clearfix{
+    clear: both;
+}
+
+input:focus {
+  outline: none;
+}
+textarea:focus{
+    outline: none;
+}
+
+
+input:focus:-ms-input-placeholder{
+    color: transparent;
+}
+input:focus::-moz-placeholder{
+    color: transparent;
+}
+input:focus:-moz-placeholder{
+    color: transparent;
+}
+input:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+input:focus:placeholder-shown{
+    color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder{
+    color: transparent;
+}
+textarea:focus::-moz-placeholder{
+    color: transparent;
+}
+textarea:focus:-moz-placeholder{
+    color: transparent;
+}
+textarea:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+textarea:focus:placeholder-shown{
+    color: transparent;
+}
+
+.cf:after {
+	clear: both;
+	content: "";
+	display: table;
+}
