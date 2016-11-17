@@ -1,0 +1,12 @@
+@function rem($px) {
+	@return $px / 16px + 0rem;
+}
+
+//vars
+
+$text-color: #3c3c3c;
+$bg-color: #b4bdcc;
+
+//layout
+@import "base";
+@import "layout";
