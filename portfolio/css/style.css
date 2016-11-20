@@ -30,7 +30,7 @@ body {
   position: relative;
   border: 2px solid;
   border-top: none;
-  padding: 5.5% 13.5% 3.7% 13.5%;
+  padding: 5.5% 13.5% 45px 13.5%;
 }
 
 .section__title {
@@ -85,7 +85,7 @@ footer {
 }
 
 .header {
-  background: #b4bdcc url(../img/bg-top.jpg) center center/cover no-repeat;
+  background: #b4bdcc url(../img/bg-top.jpg) center right/cover no-repeat;
   color: #fff;
   text-transform: uppercase;
   padding: 10vh 0 10vh 0;
@@ -286,6 +286,66 @@ footer {
 
 .footer__logo {
   width: 20%;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+  .works__list {
+    display: block;
+  }
+  .works__list-row {
+    display: block;
+  }
+  .works__item {
+    display: inline-block;
+    width: 100%;
+  }
+  .works__item:first-of-type, .works__item:last-of-type {
+    width: 100%;
+  }
+  .works__item:nth-of-type(2) {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .works__title {
+    font-size: 2rem;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+  .section__title {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 0 10px;
+  }
+  .section__title {
+    width: calc(100% - 20px);
+  }
+  .section__title:before {
+    left: -45px;
+  }
+  .section__title:after {
+    left: 45px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    background-position-x: 89%;
+  }
+  .services {
+    background-position-x: 69%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
