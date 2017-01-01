@@ -1,12 +1,14 @@
 @font-face {
     font-family: 'Franklin Gothic Demi Cond';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Franklin Gothic Demi Cond'), local('FranklinGothicDemiCond-Regular'),
-        url(http://allfont.net/cache/fonts/franklin-gothic-demi-cond_248fe3567f6cae4f063e6230f4a72f30.woff) format('woff'),
-        url(http://allfont.net/cache/fonts/franklin-gothic-demi-cond_248fe3567f6cae4f063e6230f4a72f30.ttf) format('truetype');
+    src: url('../font/franklin.woff') format('woff'),
+         url('../font/franklin.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;    
 }
 
+html {
+  font: 16px/1 'franklin gothic demi cond', Atial, sans-serif;
+}
 
 .calculator__slide-item:after {
   clear: both;
@@ -98,10 +100,6 @@
 
 .faq__text {
   font: italic 16px/1.5 Arial, sans-serif;
-}
-
-html {
-  font: 16px/1 'franklin gothic demi cond', Atial, sans-serif;
 }
 
 body {
