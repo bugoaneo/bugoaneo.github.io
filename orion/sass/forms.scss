@@ -1,0 +1,130 @@
+.form {
+  padding: 20px 20px 43px 20px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px rgba(#c6946d, 0.5), 
+  -10px 10px rgba(#c6946d, 0.5);
+  text-align: center;
+}
+.form__title {
+  margin-bottom: 34px;
+}
+
+.form__row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.form__col {
+  width: 49%;
+  margin-right: 20px;
+  font-size: 0;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.form__label {
+  display: block;
+  position: relative;
+  padding: 0 0 8px 18px;
+  cursor: pointer;
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: -3px;
+    width: 10px;
+    height: 10px;
+    background: #e27d65;
+    border-radius: 50%;
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 27px;
+  border: 1px solid #c5cbcf;
+  border-radius: 3px;
+  background: #e5e5e5;
+  font: 300 20px/1 Roboto, sans-serif;
+}
+
+.consultation-form {
+  .btn {
+    margin-top: 45px;
+  }
+}
+
+.form--callback {
+  width: 550px;
+  padding: 20px 30px;
+  margin: 0 auto;
+  box-shadow: 10px 10px rgba(#000, 0.1), 
+  -10px 10px rgba(#000, 0.1);
+  position: relative;
+  .form__title {
+    margin-bottom: 25px;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+//form-calculator
+.form--order {
+  position: relative;
+  width: 840px;
+  padding: 0;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px rgba(#000, 0.1), 
+  -10px 10px rgba(#000, 0.1);
+  .mfp-close {
+    line-height: 0;
+    position: absolute;
+    top: 12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    background: $accent-color;
+    &:before {
+      content: 'X';
+      display: inline-block;
+      font-size: 18px;
+    }
+  }
+  .form__header {
+    padding: 20px 20px 15px 45px;
+    background: $text-color;
+    color: #fff;
+    font-size: 29px;
+  }
+  .form__container {
+    text-align: center;
+    padding: 25px 20px 15px 45px;
+    p {
+      margin-bottom: 35px;
+      font: italic 300 20px/1.5 Arial, sans-serif;
+    }
+  }
+  .form__input-order {
+    padding: 6px 15px;
+    font: italic 300 20px/1.5 Arial, sans-serif;
+    border: 2px solid #c6d0d6;
+    border-radius: 3px;
+    + .form__input-order {
+      margin-left: 10px;
+    }
+  }
+}
+
