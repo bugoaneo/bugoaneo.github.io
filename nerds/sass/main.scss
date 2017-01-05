@@ -1,26 +1,50 @@
-@mixin pref($name, $argument) {
-	-webkit-#{$name}: #{$argument};
-	-ms-#{$name}: #{$argument};
-	-moz-#{$name}: #{$argument};
-	-o-#{$name}: #{$argument};
-	#{$name}: #{$argument};
-}
-
-
 //color
 $red: #fb565a;
 $red-hover: #e74246;
+$red-active: #d7373b;
+$green: #00ca74;
+$green-hover: #00bc6c;
+$green-active: #00aa62;
+$yellow: #efc84a;
+$yellow-hover: #eab534;
+$yellow-active: #e5a722;
 $btn-grey: #e1e1e1;
-$bg-grey: #eeeeee;
+$bg-grey: #eee;
+$grey-hover: #dfdfdf;
+$grey-active: #d5d5d5;
 $text-color: #283136;
 
-//var layout
+//mixin
+
+%cf {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@mixin 
+btn($bg-color, $text-color, $hover-bg, $hover-text, $bg-active, $box-shadow) {
+  color: $text-color;
+  background-color: $bg-color;
+  border: none;
+  outline: none;
+  &:hover {
+    color: $text-color;
+    background-color: darken($bg-color, 10%);
+  }
+  &:active {
+    color: rgba($text-color, 0.5);
+    box-shadow: $box-shadow;
+  }
+}
+
 
 
 //layout
-@import "reset";
-@import "base";
-@import "header";
-@import "slider";
-@import "section";
-@import "footer";
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/section";
+@import "layout/slider";
+@import "layout/forms";
+@import "layout/footer";
+@import "layout/buttons";

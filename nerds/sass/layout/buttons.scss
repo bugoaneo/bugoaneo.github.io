@@ -1,0 +1,32 @@
+.btn {
+  padding: 0.9em 3.5em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &--small {
+    padding: 0.9em 2.5em;
+  }
+}
+
+.btn--red {
+  @include 
+  btn($red, #fff, $red-hover, #fff, $red-active, inset 0px 1px 0px 1px rgba(0, 0, 0, .1));
+}
+
+.btn--green {
+  @include 
+  btn($green, #fff, $green-hover, #fff, $green-active, inset 0px 1px 0px 1px rgba(0, 0, 0, .1));
+}
+
+.btn--yellow {
+  @include 
+  btn($yellow, #fff, $yellow-hover, #fff, $yellow-active, inset 0px 1px 0px 1px rgba(0, 0, 0, .1));
+}
+
+.btn--grey {
+  @include 
+  btn($bg-grey, #000, $grey-hover, #000, $grey-active, inset 0px 1px 0px 1px rgba(0, 0, 0, .1));
+}

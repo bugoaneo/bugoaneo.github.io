@@ -2,265 +2,253 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
-  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nerd's</title>
-  <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet"> 
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!--[if lt IE 8]>
-<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
-http://browsehappy.com/">обновите</a>
-<![endif]-->
-  <div class="wrapper">
   <header class="header">
     <div class="container">
       <div class="logo">
-        <a href="#" class="logo__link">
-          <img src="img/logo.png" alt="Nerd's">
+        <a href="index.html" class="logo__link">
+          <img src="img/logo.png" alt="Nerd's" width="160" height="55">
         </a>
       </div>
-      <nav class="mine__nav">
-        <a href="index.html" class="link nav__link">Студия</a>
-        <a href="index.html#partners" class="link nav__link">Клиенты</a>
-        <a href="#" class="link nav__link nav__link-aktiv">Магазин</a>
-        <a href="#contacts" class="link nav__link">Контакты</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html#studio" class="nav__link">Студия</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#partners" class="nav__link">Клиенты</a>
+          </li>
+          <li class="nav__item">
+            <a href="catalog.html" class="nav__link nav__link--active">Магазин</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link" data-target="anchor">Контакты</a>
+          </li>
+          <li class="nav__item nav__item--cart">
+            <a href="#" class="nav__link nav__link--cart">Корзина</a>
+          </li>
+        </ul>
       </nav>
-      <div class="cart">
-        <a href="" class="link cart__link">Корзина</a>
-      </div>
-    </div>
+      <h1 class="header__title">Магазин готовых шаблонов</h1>
+    </div> 
   </header>
-  <section class="catalog__top-header">
-    <div class="container">
-        <h1 class="top__title">Магазин готовых шаблонов</h1>
-      </div>
-  </section>
-  <section class="catalog__body">
-    <div class="container">
-      <div class="catalog__filtres">
-        
-        <form action="/" method="POST" class="catalog__filter">
 
-        <fieldset class="cost__range">
-          <legend class="catalog__title">Стоимость</legend>
-            <div class="range__control">
-              <div class="range">
-                <div class="range__scale" style="width: 70%"></div>
+  <main class="container catalog-container">
+    <div class="catalog__filteres">
+      <form action="/" method="POST" class="catalog__form">
+        <fieldset class="catalog__form-group">
+            <legend class="catalog__title">Стоимость</legend>
+            <div class="range__top">
+              <div class="range__progress">
+                <div class="range__bar" style="width: 70%"></div>
               </div>
-              <div class="range__toggle toggle__min"></div>
-              <div class="range__toggle toggle__max"></div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
             </div>
-            <div class="cost__control">
-              <label class="cost__descr cost__min">От 
-                <input class="cost__input cost__input-min" type="text" name="max-price" value="0">
+            <div class="range__form">
+              <label class="range__descriptioniption range__descriptioniption--min">От 
+              <input class="range__input" type="text" name="max-price" value="0">
               </label>
-              <label class="cost__descr cost__max">До 
-                <input class="cost__input cost__input-max" type="text" name="min-price" value="15000">
+              <label class="range__descriptioniption range__descriptioniption--max">До 
+              <input class="range__input" type="text" name="min-price" value="15000">
               </label>
             </div>
         </fieldset>
 
-          <fieldset class="grid">
-            <legend class="catalog__title">Сетка</legend>
-            <p>
-              <input id="responsive" type="radio" name="grid" checked>
-              <label class="grid__item descr__label" for="responsive">Адаптивная</label>
-            </p>
-            <p>
-              <input id="static" type="radio" name="grid">
-              <label class="grid__item descr__label" for="static">Фиксированная</label>
-            </p>
-            <p>
-              <input id="fluid" type="radio" name="grid">
-              <label class="grid__item descr__label" for="fluid">Резиновая</label>
-            </p>
-          </fieldset>
+        <fieldset class="catalog__form-group">
+          <legend class="catalog__title">Сетка</legend>
+          <input id="responsive" class="catalog__input" type="radio" name="grid" checked disabled>
+          <label class="catalog__label catalog__label--grid" for="responsive">Адаптивная</label>
+          <input id="static" class="catalog__input" type="radio" name="grid">
+          <label class="catalog__label catalog__label--grid" for="static">Фиксированная</label>
+          <input id="fluid" class="catalog__input" type="radio" name="grid">
+          <label class="catalog__label catalog__label--grid" for="fluid">Резиновая</label>
+        </fieldset>
 
-          <fieldset class="features">
-            <legend class="catalog__title">Особенности</legend>
-            <p>
-              <input id="slider" type="checkbox" checked>
-              <label class="features__item descr__label" for="slider">Слайдер</label>
-            </p>
-            <p>
-              <input id="advantages" type="checkbox">
-              <label class="features__item descr__label" for="advantages">Преимущества</label>
-            </p>
-            <p>
-              <input id="news" type="checkbox" checked>
-              <label class="features__item descr__label" for="news">Новости</label>
-            </p> 
-            <p>
-              <input id="galery" type="checkbox">
-              <label class="features__item descr__label" for="galery">Галерея</label>
-            </p>
-            <p>
-              <input id="cart" type="checkbox">
-              <label class="features__item descr__label" for="cart">Корзина</label>
-            </p>
-          </fieldset>
-          <input class="btn__filter" type="submit" value="Показать">
-        </form>
+        <fieldset class="catalog__form-group">
+          <legend class="catalog__title">Особенности</legend>
+          <input id="slider" class="catalog__input" type="checkbox" checked>
+          <label class="catalog__label catalog__label--advantages" for="slider">Слайдер</label>
+          <input id="advantages" class="catalog__input" type="checkbox">
+          <label class="catalog__label catalog__label--advantages" for="advantages">Преимущества</label>
+          <input id="news" class="catalog__input" type="checkbox" checked disabled>
+          <label class="catalog__label catalog__label--advantages" for="news">Новости</label>
+          <input id="galery" class="catalog__input" type="checkbox">
+          <label class="catalog__label catalog__label--advantages" for="galery">Галерея</label>
+          <input id="cart" class="catalog__input" type="checkbox">
+          <label class="catalog__label catalog__label--advantages" for="cart">Корзина</label>
+        </fieldset>
+        <button class="btn btn--grey" type="submit">Показать</button>
+      </form>
+    </div>
+
+    <div class="catalog__showcase">
+      <div class="catalog__header">
+        <h2 class="catalog__title">Сортировать</h2>
+
+        <div class="sorting">
+          <ul class="sorting__list">
+            <li class="sorting__item">
+              <a href="#" class="sorting__link sorting__link--active">По цене</a>
+            </li>
+            <li class="sorting__item">
+              <a href="#" class="sorting__link">По типу</a>
+            </li>
+            <li class="sorting__item">
+              <a href="#" class="sorting__link">По названию</a>
+            </li>          
+            <li class="sorting__item sorting__item--marker">
+              <a href="#" class="sorting__link marker__link marker__link--active">&#9660;</a>
+              <a href="#" class="sorting__link marker__link">&#9650;</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="catalog__showcase">
-        <div class="catalog__header">
-          <h3 class="catalog__title title__showcase">Сортировать</h3>
-          <div class="catalog__range">
-            <div class="range__list">
-              <a href="#" class="range__link range__link-active">По цене</a>
-              <a href="#" class="range__link">По типу</a>
-              <a href="#" class="range__link">По назначению</a>
-            </div>
-            <div class="range__marker">
-              <a href="#" class="marker__link marker__link-active">&#9660;</a>
-              <a href="#" class="marker__link">&#9650;</a>
-            </div>
+      <div class="showcase__wrapper">
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case1.jpg" width="360" height="576" alt="Sedona">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">Sedona</h2>
+            <div class="showcase__info">Информационный сайт для туристов</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>
           </div>
         </div>
-        <ul class="showcase__list">
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-              <img src="img/content/case1.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">Sedona</h4>
-              <div class="case__info">Информационный сайт для туристов</div>
-              <button class="case__prise">9 900 руб.</button>
-            </div>
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case2.jpg" width="360" height="576" alt="Pink App">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">Pink App</h2>
+            <div class="showcase__info">Продуктовый лендинг приложения для iOS и Android</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>     
+          </div>
+        </div>
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case3.jpg" width="360" height="576" alt="Barbershop">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">Barbershop</h2>
+            <div class="showcase__info">Сайт салоны красоты. Для мужчин, да.</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>   
+          </div>
+        </div>
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case4.jpg" width="360" height="576" alt="Mishka">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">Mishka</h2>
+            <div class="showcase__info">Интернет-магазин вязаных игрушек</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>
+          </div>
+        </div>
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case5.jpg" width="360" height="576" alt="A Plus">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">A Plus</h2>
+            <div class="showcase__info">Лендинг курсов повышения квалификации</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>
+          </div>
+        </div>
+        <div class="showcase">
+          <div class="showcase__brouser"><span></span></div>
+          <div class="showcase__img">
+            <img src="img/content/case6.jpg" width="360" height="576" alt="Кваст">
+          </div>
+          <div class="showcase__description">
+            <h2 class="showcase__name">Кваст</h2>
+            <div class="showcase__info">Промосайт производителя крафтового кваса</div>
+            <a href="#" class="btn btn--red">9 900 руб.</a>
+          </div>
+        </div>
+      </div>
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="#" class="pagination__link pagination__link--active">1</a>
           </li>
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-              <img src="img/content/case2.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">Pink App</h4>
-              <div class="case__info">Продуктовый лендинг приложения для iOS и Android</div>
-              <button class="case__prise">9 900 руб.</button>     
-            </div>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">2</a>
           </li>
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-              <img src="img/content/case3.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">Barbershop</h4>
-              <div class="case__info">Сайт салоны красоты. Для мужчин, да.</div>
-              <button class="case__prise">9 900 руб.</button>   
-            </div>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link">3</a>
           </li>
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-            <img src="img/content/case4.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">Mishka</h4>
-              <div class="case__info">Интернет-магазин вязаных игрушек</div>
-              <button class="case__prise">9 900 руб.</button>
-            </div>
-          </li>
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-              <img src="img/content/case5.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">A Plus</h4>
-              <div class="case__info">Лендинг курсов повышения квалификации</div>
-              <button class="case__prise">9 900 руб.</button>
-            </div>
-          </li>
-          <li class="shoucase__item">
-            <div class="case__brouser"></div>
-            <div class="case__img">
-              <img src="img/content/case6.jpg" alt="">
-            </div>
-            <div class="case__descr">
-              <h4 class="case__name">Кваст</h4>
-              <div class="case__info">Промосайт производителя крафтового кваса</div>
-              <button class="case__prise">9 900 руб.</button>
-            </div>
+          <li class="pagination__item">
+            <a href="#" class="pagination__link pagination__link--next">Следующая</a>
           </li>
         </ul>
-        <div class="catalog__pagination">
-          <a href="#" class="pagination__link pagination__link-active">1</a>
-          <a href="#" class="pagination__link">2</a>
-          <a href="#" class="pagination__link">3</a>
-          <a href="#" class="pagination__link pagination__link-next">Следующая</a>
-        </div>
       </div>
     </div>
-  </section>
-   <section id="contacts" class="contacts">
-      <div id="map" style="width: 100%; height: 417px;">
-      </div>
-      <div class="container">
-        <div class="contact__list">
-          <h4 class="contact__title">Nёrds design studio</h4>
-          <p class="adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="tel" href="tel:78122757575">тел. +7 (812) 275-75-75</a>
-          <a class="pop-up__trigger btn__contact" href="#pop-up">Напишите нам</a>
-        </div> 
-        <a href="#" class="pop-up" id="pop-up"></a>   
-        <div class="pop-up__window">        
-          <h3 class="pop-up__title">Напишите нам</h3>
-          <form method="post" action="" class="contact__form">
-            <label for="name">Ваше имя
-            <input class="text__inpit" id="name" type="text" placeholder="Представьтесь пожалуйста" required autofocus></label>
-            <label for="email">Ваш e-mail
-            <input class="text__inpit" id="email" type="email" name="email" placeholder="Для отправки ответа" required></label>
-            <label for="message">Текст письма</label>
-            <textarea name="message" id="message" placeholder="Для отправки ответа в свободной форме"></textarea>
-            <input id="btn__submit" type="submit" value="Отправить" /> 
-          </form>
-          <a href="#close" class="close__pop-up">X</a>
-        </div>
-      </div>
-  </section>
-  </div>
+  </main>
+  
   <footer class="footer">
-    <div class="container">
-      <div class="social__list">
-        <a href="#" class="social__btn btn__vk"></a>
-        <a href="#" class="social__btn btn__fb"></a>
-        <a href="#" class="social__btn btn__ig"></a>
+    <div class="map-canvas" id="contacts">
+      <div class="map" id="map"></div>
+      <div class="contact">
+        <h2 class="contact__title">Nёrds design studio</h2>
+        <p class="contact__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <a class="contact__phon" href="tel:78122757575">тел. +7 (812) 275-75-75</a>
+        <a class="btn btn--red pop-up__trigger" href="javascript:PopUpShow()">Напишите нам</a>
       </div>
-      <div class="footer__slogan">
-        <p class="slogan__big">Давайте дружить, это выгодно!</p>
-        <p class="slogan__action">Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+    </div>
+    <div class="social">
+      <div class="container">
+        <div class="social__list">
+          <a href="#" class="social__item social__item--vk">Вконтакте</a>
+          <a href="#" class="social__item social__item--fb">Фейсбук</a>
+          <a href="#" class="social__item social__item--inst">Инстаграм</a>
+        </div>
+        <div class="social__slogan">
+          <h2 class="social__title">Давайте дружить, это выгодно!</h2>
+          <p class="social__action">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>  
     </div>
   </footer>
-    <script type="text/javascript">
-    DG.then(function () {
-        map = DG.map('map', {
-            center: [54.98, 82.89],
-            zoom: 13,
-              scrollWheelZoom: false,
-              fullscreenControl: false
-        });
-                myIcon = DG.icon({
-                    iconUrl: 'img/map-pin.png',
-                    iconSize: [230, 190]
-                });
-                DG.marker([54.98, 82.89], {
-                    icon: myIcon
-                }).addTo(map);
-
-                
-                DG.marker([54.98, 82.89], {
-                    icon: myDivIcon
-                }).addTo(map);
-            });
-</script>
+  <!-- popup -->
+  <div class="pop-up-wrapper">
+    <div class="pop-up">
+      <a href="javascript:PopUpHide()" class="form__close"></a>
+      <h3 class="pop-up__title">Напишите нам</h3>
+      <form method="post" action="" class="form pop-up__form">
+        <div class="form__row">
+          <div class="form__column">
+            <label class="form__label" for="name">Ваше имя</label>
+            <input class="form__input" id="name" type="text" placeholder="Представьтесь пожалуйста" required>
+          </div>
+          <div class="form__column">
+            <label class="form__label" for="email">Ваш e-mail</label>
+            <input class="form__input" id="email" type="email" name="email" placeholder="Для отправки ответа" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <label class="form__label" for="message">Текст письма</label>
+          <textarea class="form__input form__input--message"  name="message" id="message" placeholder="Для отправки ответа в свободной форме"></textarea>
+        </div>
+        <button class="btn btn--red" type="submit">Отправить</button> 
+      </form>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+ <script src="js/scripts.js"></script>
 </body>
 </html>
