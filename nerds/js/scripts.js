@@ -1,4 +1,30 @@
+$(document).ready(function() { 
+
+	//scroll
+
+$('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
+    var target = $(this).attr('href'),
+        bl_top = $(target).offset().top - 0;
+    $('body, html').animate({scrollTop: bl_top}, 700);
+    return false;
+  });
+ 
+});
+
+ //popup
+  $(document).ready(function(){
+        PopUpHide();
+    });
+    function PopUpShow(){
+        $(".pop-up-wrapper").show();
+    }
+    function PopUpHide(){
+        $(".pop-up-wrapper").hide();
+    }
+	
+	
 DG.then(function () {
+	var map;
         map = DG.map('map', {
             center: [54.98, 82.89],
             zoom: 13,
@@ -18,29 +44,3 @@ DG.then(function () {
                     icon: myDivIcon
                 }).addTo(map);
             });
-			
-$(document).ready(function() { 
-
-	//scroll
-
-$('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
-    var target = $(this).attr('href'),
-        bl_top = $(target).offset().top - 0;
-    $('body, html').animate({scrollTop: bl_top}, 700);
-    return false;
-  });
-  
- 
- 
-});
-
- //popup
-  $(document).ready(function(){
-        PopUpHide();
-    });
-    function PopUpShow(){
-        $(".pop-up-wrapper").show();
-    }
-    function PopUpHide(){
-        $(".pop-up-wrapper").hide();
-    }
