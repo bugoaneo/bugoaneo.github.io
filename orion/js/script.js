@@ -1,16 +1,14 @@
+DG.then(function () {
+    map = DG.map('map', {
+        center: [54.98, 82.89],
+        zoom: 13,
+            scrollWheelZoom: false,
+            fullscreenControl: false
+    });
+});
 
 $(document).ready(function() {
- 
-  DG.then(function () {
-    map = DG.map('map', {
-    center: [54.98, 82.89],
-    zoom: 13,
-      scrollWheelZoom: false,
-      fullscreenControl: false
-      });
-  });
-
-   
+    
   $("[data-input-mask='phone']").mask("+7-999-999-99-99");
 
 //popups
