@@ -34,11 +34,17 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 //flickty
 
 $('.blog__post-sliderwrap').flickity({
-  
+  wrapAround: true,
+    autoPlay: 2500,
+    setGallerySize: true,
+    adaptiveHeight: true,
   });
 
  $('.partners__list').flickity({
-
+wrapAround: true,
+    autoPlay: 2500,
+    setGallerySize: true,
+    adaptiveHeight: true,
   });
 
 
