@@ -31,29 +31,38 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 
 
 
-//flickty
+//click
 
-$('.blog__post-sliderwrap').flickity({
-  wrapAround: true,
-    autoPlay: 2500,
-    setGallerySize: true,
-    adaptiveHeight: true,
+$('.slider__wrapper').slick({
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  dots: true,
+});
+
+ $('.partners__list').slick({
+    slidesToShow: 3,
+    arrows: false,
+    autoplay: true,
+    dots: false,
   });
 
- $('.partners__list').flickity({
-wrapAround: true,
-    autoPlay: 2500,
-    setGallerySize: true,
-    adaptiveHeight: true,
+  $('.blog__post-sliderwrap').slick({
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
+    dots: true,
   });
 
+/* $('.blog__list-wrapper').slick({
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: '30px',
+    arrows: true,
+    autoplay: false,
+    dots: true,
+  });*/
 
-  $('.slider__wrapper').flickity({
-    wrapAround: true,
-    autoPlay: 2500,
-    setGallerySize: true,
-    adaptiveHeight: true,
-  });
 
   //popups 
 
