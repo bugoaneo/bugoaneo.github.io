@@ -41,11 +41,20 @@ $('.slider__wrapper').slick({
 });
 
  $('.partners__list').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     arrows: false,
     autoplay: true,
     dots: false,
   });
+
+ $('.blog__list-wrapper').slick({
+    infinite: false,
+    slidesToShow: 3,
+    arrows: true,
+    dots: false,
+    infinite: false,
+  });
+
 
   $('.blog__post-sliderwrap').slick({
     slidesToScroll: 1,
@@ -54,14 +63,6 @@ $('.slider__wrapper').slick({
     dots: true,
   });
 
-/* $('.blog__list-wrapper').slick({
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: '30px',
-    arrows: true,
-    autoplay: false,
-    dots: true,
-  });*/
 
 
   //popups 
