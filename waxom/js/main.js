@@ -38,6 +38,17 @@ $('.slider__wrapper').slick({
   autoplay: true,
   autoplaySpeed: 2500,
   dots: true,
+  responsive: [ 
+  {
+    breakpoint: 480,
+      settings: {
+        arrows: false,
+        dots: true,
+        autoplay: false,
+      }
+  }
+
+  ]
 });
 
  $('.partners__list').slick({
@@ -45,6 +56,25 @@ $('.slider__wrapper').slick({
     arrows: false,
     autoplay: true,
     dots: false,
+    responsive: [ {
+    breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 3,
+      }
+    }
+  ]
   });
 
  $('.blog__list-wrapper').slick({
@@ -53,6 +83,26 @@ $('.slider__wrapper').slick({
     arrows: true,
     dots: false,
     infinite: false,
+    responsive: [ {
+    breakpoint: 680,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+      }
+    },
+    {
+       breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
   });
 
 
@@ -61,6 +111,7 @@ $('.slider__wrapper').slick({
     arrows: false,
     autoplay: false,
     dots: true,
+    infinite: false,
   });
 
 
