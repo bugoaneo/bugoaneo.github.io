@@ -1,0 +1,46 @@
+html {
+  font-size: 16px;
+  font-family: Raleway, Montserrat, Roboto, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.42;
+  width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  flex: 1 0 auto;
+  min-height: 100%;
+  
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+%container {
+  max-width: 1230px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

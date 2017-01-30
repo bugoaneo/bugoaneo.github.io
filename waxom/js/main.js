@@ -165,4 +165,12 @@ var show = true;
     }
   });
 
+  //mixitup
+  var mixer = mixitup('.project__list', {
+    controls: {
+      toggleLogic: 'and',
+      toggleDefault: 'none'
+    }
+  });
+ 
 });

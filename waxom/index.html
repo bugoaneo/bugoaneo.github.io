@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="img/logo.svg">
   <link rel="shortcut icon" href="favicon.ico">
   
-  <link href="http://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C700%2C800&ver=4.4.6" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic-ext" rel="stylesheet">  
 
   <link rel="stylesheet" href="css/libs.css">
@@ -269,11 +269,11 @@
     </section>
 
     <section class="ideas">
-    <h3 class="stn__title">Waxom is Realization of your Ideas.</h3>
-    <p class="stn__description">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-    <div class="stn__pic">
-      <img src="img/browsers.png" alt="">
-    </div>
+      <h3 class="stn__title">Waxom is Realization of your Ideas.</h3>
+      <p class="stn__description">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+      <div class="stn__pic">
+        <img src="img/browsers.png" alt="">
+      </div>
     </section>
 
     <section class="ideas__footer">
@@ -291,23 +291,23 @@
       <p class="stn__description">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
       <ul class="project__nav-list">
         <li class="project__nav-item">
-          <button type="button" class="btn btn--small btn--small-active">All</button>
+          <button type="button" class="btn btn--small btn--small-active" data-filter="all">All</button>
         </li>
         <li class="project__nav-item">
-          <button type="button" class="btn btn--small">Web Design</button>
+          <button type="button" class="btn btn--small" data-filter=".wd">Web Design</button>
         </li>
         <li class="project__nav-item">
-          <button type="button" class="btn btn--small">Mobile App</button>
+          <button type="button" class="btn btn--small" data-filter=".ma">Mobile App</button>
         </li>
         <li class="project__nav-item">
-        <button type="button" class="btn btn--small">Illustration</button>
+        <button type="button" class="btn btn--small" data-filter=".il">Illustration</button>
         </li>
         <li class="project__nav-item">
-          <button type="button" class="btn btn--small">Photography</button>
+          <button type="button" class="btn btn--small" data-filter=".ft">Photography</button>
         </li>
       </ul>
       <div class="project__list">
-        <div class="project__item">
+        <div class="project__item mix wd">
           <div class="project__item-pic">
             <img src="img/content/portfolio/guy-880x470.jpg" alt="">
               <div class="project__item-icon">
@@ -320,7 +320,7 @@
             <p class="project__item-text">Photography, Nature</p>
           </div>
         </div>
-        <div class="project__item">
+        <div class="project__item mix ma">
           <div class="project__item-pic">
             <img src="img/content/portfolio/portfolio2.jpg" alt="">
               <div class="project__item-icon">
@@ -333,7 +333,7 @@
             <p class="project__item-text">Graphic Design, Mock-Up</p>
           </div>
         </div>
-        <div class="project__item">
+        <div class="project__item mix il">
           <div class="project__item-pic">
             <img src="img/content/portfolio/portfolio3.jpg" alt="">
               <div class="project__item-icon">
@@ -346,7 +346,7 @@
             <p class="project__item-text">Photography, Nature</p>
           </div>
         </div>
-        <div class="project__item">
+        <div class="project__item mix ft">
           <div class="project__item-pic">
             <img src="img/content/portfolio/portfolio4.jpg" alt="">
               <div class="project__item-icon">
@@ -359,7 +359,7 @@
             <p class="project__item-text">Graphic Design, Mock-Up</p>
           </div>
         </div>
-        <div class="project__item">
+        <div class="project__item mix wd">
           <div class="project__item-pic">
             <img src="img/content/portfolio/portfolio5.jpg" alt="">
               <div class="project__item-icon">
@@ -372,7 +372,7 @@
             <p class="project__item-text">Photography, Holiday</p>
           </div>
         </div>
-        <div class="project__item">
+        <div class="project__item mix il">
           <div class="project__item-pic">
             <img src="img/content/portfolio/portfolio6.jpg" alt="">
               <div class="project__item-icon">
@@ -385,9 +385,9 @@
             <p class="project__item-text">Photography, Holiday</p>
           </div>
         </div>
-        <div class="project__item project__item--btn">
-          <button class="btn" type="button">Load more</button>
-        </div>
+      </div>
+      <div class="project__item project__item--btn ">
+        <button class="btn" type="button">Load more</button>
       </div>
     </section>
 
@@ -679,6 +679,7 @@
   <script src="js/vendor/slick.min.js"></script>
   <script src="js/vendor/spincrement.js"></script>
   <script src="js/vendor/magnific.js"></script>
+  <script src="js/vendor/mixitup.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

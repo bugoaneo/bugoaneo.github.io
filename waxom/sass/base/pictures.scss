@@ -1,0 +1,56 @@
+.logo__svg {
+  fill: #ccc;
+ .cls-1 {
+  fill-rule: evenodd;
+  }
+
+  .cls-2, .cls-3 {
+  font-size: 34px;
+  }
+  .cls-3 {
+  text-anchor: end;
+  font-family: "Raleway";
+
+  }
+  &--white{
+    fill: #fff;
+
+    .cls-1 {
+      fill-rule: evenodd;
+    }
+    .cls-2, .cls-3 {
+      font-size: 34px;
+    }
+    .cls-3 {
+    text-anchor: end;
+    font-family: "Raleway";
+    }
+  }
+}
+
+.stn__pic {
+  max-width: 1170px;
+  font-size: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.project__item-pic {
+  min-height: 279px;
+  font-size: 0;
+  img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+}
+
+.devises__img {
+  max-width: 426px;
+  min-width: 290px;
+  font-size: 0;
+  img {
+    width: 100%;
+  }
+}
