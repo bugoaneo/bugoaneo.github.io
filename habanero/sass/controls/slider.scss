@@ -1,0 +1,114 @@
+.slider {
+  height: 610px;
+  position: relative;
+  &:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px 3px rgba(64, 64, 64, 0.75);
+  z-index: 1;
+  }
+}
+
+.slide {
+  height: 610px;
+  &--1 {
+   background: url(../img/slide-fase.jpg) center center/cover no-repeat; 
+  }
+
+  &--2 {
+   background: url(../img/slide-fase.jpg)  center center/cover no-repeat; 
+  }
+
+  &--3 {
+    background: url(../img/slide-fase.jpg)  center center/cover no-repeat;
+  }
+
+  &--4 {
+    background: url(../img/slide-fase.jpg)  center center/cover no-repeat;
+  }
+
+  &--5 {
+    background: url(../img/slide-fase.jpg)  center center/cover no-repeat;
+  }
+}
+
+.slide__content {
+  background: rgba(#000, .5);
+  max-width: 850px;
+  padding: 35px 38px 10px 75px;
+  text-align: right;
+  position: relative;
+  top: 53%;
+  h1 {
+    margin-bottom: 10px;
+    font-size: 29px;
+    color: #fff;
+    line-height: 1;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+  }
+  a {
+    text-align: right;
+    font-size: 15px;
+    color: #010101;
+    border-bottom: 2px solid #56595d;
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  .slide__lead {
+    margin-bottom: 5px;
+    text-align: left;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -28px;
+      left: -30px;
+      display: block;
+      width: 40px;
+      height: 100px;
+      background: url(../img/icon/logo-icon.png);
+    }
+  }
+}
+
+.slick-initialized .slick-slide {
+  height: 610px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots {
+  bottom: 13px;
+}
+
+.slick-dots li button::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: $sub-header;
+  opacity: 1;
+  box-shadow: 3px 1px 2px rgba(#000, 0.5);
+}
+
+.slick-dots li button::before {
+  color: transparent;
+}
+
+.slick-dots li.slick-active button::before{
+  background: $top-header;
+  color: transparent;
+  opacity: 1;
+}

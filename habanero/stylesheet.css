@@ -1,0 +1,41 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-bag {
+    width: 23px;
+    height: 19px;
+    background-position: -5px -5px;
+}
+
+.sprite-car {
+    width: 30px;
+    height: 19px;
+    background-position: -5px -34px;
+}
+
+.sprite-cart {
+    width: 21px;
+    height: 19px;
+    background-position: -38px -5px;
+}
+
+.sprite-sale {
+    width: 19px;
+    height: 19px;
+    background-position: -69px -5px;
+}
+
+.sprite-serch {
+    width: 18px;
+    height: 17px;
+    background-position: -45px -34px;
+}
+
+<i class="sprite sprite-bag"></i>
+<i class="sprite sprite-car"></i>
+<i class="sprite sprite-cart"></i>
+<i class="sprite sprite-sale"></i>
+<i class="sprite sprite-serch"></i>
