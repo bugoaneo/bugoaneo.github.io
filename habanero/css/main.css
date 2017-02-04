@@ -498,6 +498,7 @@ button {
   padding: 0 15px;
 }
 
+/* product__reviews */
 .product__reviews-list {
   max-height: 140px;
   overflow: auto;
@@ -598,6 +599,7 @@ button {
   position: relative;
   height: 160px;
   width: 50%;
+  margin: 0 auto;
 }
 
 .product__extra-wrap .product__extra-img img {
