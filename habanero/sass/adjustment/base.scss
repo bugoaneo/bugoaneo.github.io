@@ -22,13 +22,6 @@ footer {
   flex: 0 0 auto;
 }
 
-.container {
-  max-width: 1220px;
-  padding: 0 10px;
-  margin: 0 auto;
-  position: relative;  
-}
-
 %container {
   max-width: 1220px;
   padding: 0 10px;
@@ -40,7 +33,6 @@ footer {
 %flex {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 
 %cf {

@@ -33,7 +33,7 @@ http://browsehappy.com/">обновите</a>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#" class="nav__link">Повара</a>
-              <div class="nav__dropdawn">
+              <div class="nav__dropdown">
                 <ul class="nav__list">
                   <li class="nav__item">
                     <a href="#" class="nav__link">Муж/Жен</a>
@@ -58,7 +58,7 @@ http://browsehappy.com/">обновите</a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link">Официанты</a>
-                <div class="nav__dropdawn nav__dropdawn--wide">
+                <div class="nav__dropdown nav__dropdown--wide">
                   <ul class="nav__list">
                     <p class="nav__title">Для женщин:</p>
                     <li class="nav__item">
@@ -120,7 +120,7 @@ http://browsehappy.com/">обновите</a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link">Служба доставки</a>
-                <div class="nav__dropdawn">
+                <div class="nav__dropdown">
                   <ul class="nav__list">
                     <li class="nav__item">
                       <a href="#" class="nav__link">Верхняя одежда</a>
@@ -201,9 +201,85 @@ http://browsehappy.com/">обновите</a>
           </div>
         </nav>
       </div><!--END HEADER SUB MENU -->
+
     </header><!--END HEADER -->
-    <main class="main">
-      
+
+    <main class="product">
+      <div class="product__container">
+        <section class="col">
+          <div class="product__header">
+            <h1 class="product__main-title">Фартук мужской «название модели»</h1>
+            <span class="product__id">SAR-4785e</span>
+          </div>
+          <div class="product__spec">
+            <div class="product__caption product__caption--active">Описание товара</div>
+            <div class="product__description product__description--active">
+              <div class="product__description-wrap">Фартук мужской из коллекции Black Star Wear. Модель прямого кроя с округлой горловиной. На груди большой чёрный принт «Original Collection Black Star Team». На спине текстурный принт с изображением головы льва и надписью «Black». Модель из натурального хлопка. Доступна в бордовом цвете.
+              Фартук мужской из коллекции Black Star Wear. Модель прямого кроя с округлой горловиной. На груди большой чёрный принт «Original Collection Black Star Team». На спине текстурный принт с изображением головы льва и надписью «Black». Модель из натурального хлопка. Доступна в бордовом цвете.
+              Фартук мужской из коллекции Black Star Wear. Модель прямого кроя с округлой горловиной. На груди большой чёрный принт «Original Collection Black Star Team». На спине текстурный принт с изображением головы льва и надписью «Black». Модель из натурального хлопка. Доступна в бордовом цвете.
+              </div>
+            </div>
+          </div>
+          <div class="product__reviews">
+            <div class="product__caption">Отзывы</div>
+            <ul class="product__reviews-list">
+              <li class="product__reviews-item">
+                <div class="reviews__autor">UserName</div>
+                <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt eligendi id, reiciendis quas, tenetur non nemo aliquid sint amet accusamus quia in magnam quos.</div>
+              </li>
+              <li class="product__reviews-item">
+                <div class="reviews__autor">UserName</div>
+                <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt eligendi id, reiciendis quas, tenetur non nemo aliquid sint amet accusamus quia in magnam quos.</div>
+              </li>
+              <li class="product__reviews-item">
+                <div class="reviews__autor">UserName</div>
+                <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt eligendi id, reiciendis quas, tenetur non nemo aliquid sint amet accusamus quia in magnam quos.</div>
+              </li>
+            </ul>
+          </div>
+        </section> <!-- END PRODUCT -->
+
+        <section class="col col--foto">
+          <div class="product__foto-wrap">
+            <img src="img/goods-big.png" alt="" class="product__foto-pic">
+          </div>
+        </section> <!-- END PRODUCT-FOTO -->
+
+        <section class="col col--price">
+          <div class="product__size">
+            <div class="product__title">Размер</div>
+            <div class="product__range">
+              <div class="range__title">Определить размер</div>
+              <div class="range__wrap">
+                <img src="img/range.png" alt="">
+              </div>
+          </div>
+          </div>
+          <div class="product__price">
+            <div class="product__cost">1200 руб.</div>
+            <button class="btn btn--red" type="button">В корзину</button>
+            <button class="btn btn--white" type="button">Выгодная покупка -5%</button>
+          </div>
+          <div class="product__extra">
+            <div class="product__title">Мы рекомендуем</div>
+            <div class="product__extra-wrap">              
+              <a href="#" class="product__extra-link">
+                <div class="product__extra-img">
+                  <img src="img/goods-small1.png" alt="" class="product__extra-foto">                           
+                </div>
+              </a>
+              <a href="#" class="product__extra-link">
+                <div class="product__extra-img">
+                  <img src="img/goods-big.png" alt="" class="product__extra-foto" width="76" height="161">                           
+                </div>
+              </a>
+            </div>
+          </div>
+        </section><!-- END PRODUCT-SPEC -->
+
+      </div>
+
+
     </main>
 
   </div> <!--END WRAPPER -->
@@ -229,6 +305,7 @@ http://browsehappy.com/">обновите</a>
         </ul>
     </div>
   </footer><!--END FOOTER -->
+
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
