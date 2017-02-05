@@ -18,6 +18,25 @@ $('.slider__wrapper').slick({
   ]
 });
 
+$('.banner__wrapper').slick({
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  dots: false,
+  arrows: false,
+  responsive: [ 
+  {
+    breakpoint: 480,
+      settings: {
+        autoplay: false,
+      }
+  }
+
+  ]
+});
+
+
+
 $('.user-form__button').click(function(){
   $('.user-form__input').toggleClass('user-form__input--active');
 });

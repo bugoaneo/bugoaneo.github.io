@@ -44,7 +44,7 @@
   font-size: 15px;
   padding: 12px 8px;
   color: #fff;transition: 0.3s;
-    &:after {
+    &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -52,7 +52,7 @@
     width: 20px;
     height: 39px;
     }
-    &:hover:after {
+    &:hover:before {
       background: url(../img/icon/logo-icon-small.png) 0px 0px;
     }
 }

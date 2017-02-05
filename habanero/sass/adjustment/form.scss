@@ -106,3 +106,20 @@
   transform: translateX(-50%);
   transition: opacity 0.3s ease;
 }
+
+/* catalog item form */
+
+.catalog__item-form {
+  @extend %flex;
+
+}
+.catalog__item-input {
+  width: 46px;
+  height: 28px;
+  background: $top-header;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}

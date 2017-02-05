@@ -1,6 +1,34 @@
 .slider {
   height: 610px;
   position: relative;
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots {
+  bottom: 13px;
+}
+
+.slick-dots li button::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: $sub-header;
+  opacity: 1;
+  box-shadow: 3px 1px 2px rgba(#000, 0.5);
+}
+
+.slick-dots li button::before {
+  color: transparent;
+}
+
+.slick-dots li.slick-active button::before{
+  background: $top-header;
+  color: transparent;
+  opacity: 1;
+}
 }
 
 .slide {
@@ -57,7 +85,6 @@
     margin-bottom: 5px;
     text-align: left;
     position: relative;
-
     &:before {
       content: '';
       position: absolute;
@@ -71,34 +98,60 @@
   }
 }
 
-.slick-initialized .slick-slide {
-  height: 610px;
-}
 
-.slick-dotted.slick-slider {
-  margin-bottom: 0;
-}
+/* catalog slider */
 
-.slick-dots {
-  bottom: 13px;
-}
+.banner {
+  margin-bottom: 30px;
+  height: 188px;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(#000, .5);
+  .image {
+    height: 188px;
+    &--1 {
+     background: url(../img/banner.jpg) center center/cover no-repeat; 
+    }
 
-.slick-dots li button::before {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background: $sub-header;
-  opacity: 1;
-  box-shadow: 3px 1px 2px rgba(#000, 0.5);
-}
+    &--2 {
+     background: url(../img/banner.jpg)  center center/cover no-repeat; 
+    }
 
-.slick-dots li button::before {
-  color: transparent;
-}
+    &--3 {
+      background: url(../img/banner.jpg)  center center/cover no-repeat;
+    }
 
-.slick-dots li.slick-active button::before{
-  background: $top-header;
-  color: transparent;
-  opacity: 1;
+    &--4 {
+      background: url(../img/banner.jpg)  center center/cover no-repeat;
+    }
+
+    &--5 {
+      background: url(../img/banner.jpg)  center center/cover no-repeat;
+    }
+  }
+  .image__content {
+    @extend .slide__content;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    text-align: left;
+    h1 {
+      color: $sub-header;
+    }
+    p {
+      color: $top-header;
+    }
+    .image__lead {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -28px;
+        left: -30px;
+        display: block;
+        width: 40px;
+        height: 100px;
+        background: url(../img/icon/logo-big-red.png);
+      }
+    }
+  }
 }

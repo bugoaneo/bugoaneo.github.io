@@ -69,7 +69,6 @@
     }
     
   }
-
   &--white {
     padding: 1.1em 0.7em;
     color: $button;
@@ -79,6 +78,30 @@
     }
     &:after {
       background: $button;
+    }
+  }
+
+  &--orange {
+    z-index: 1;
+    width: 46px;
+    height: 28px;
+    padding: 0.01em 0.6em;
+    background: $top-header;
+    border: none;
+    font-weight: bold;
+    &:hover, &:active {
+      color: $top-header;
+    }
+  }
+  &--catalog-form {
+    width: 38px;
+    height: 28px;
+    padding: 0;
+    border: 2px solid $top-header;
+    background: #fff url(../img/icon/cart-orange.png) center 2px no-repeat;
+    transition: all 0.3s;
+    &:hover {
+      background: $top-header url(../img/icon/cart.png) center 2px no-repeat;
     }
   }
 }
