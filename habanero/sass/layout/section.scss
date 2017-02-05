@@ -390,3 +390,32 @@
     }
   }
 }
+/* ================================================ */
+
+.catalog__header {
+  flex: 1 0 100%;
+  .sorting {
+    @extend %flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #636363;
+  }
+  .filtr {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .catalog__title {
+    border-bottom: none;
+  }
+  .catalog__header-title {
+    flex-basis: 200px;
+  }
+  .catalog__sorting {
+    flex: 1;
+    border-bottom: none;
+  }
+  .catalog__filtr {
+    flex: 0 0 calc(100% - 200px);  
+  }
+}
