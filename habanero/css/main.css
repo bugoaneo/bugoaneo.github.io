@@ -493,6 +493,63 @@
           flex: 1 0 250px;
 }
 
+.catalog__header {
+  -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+.catalog__header .sorting {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  border-bottom: 2px solid #636363;
+}
+
+.catalog__header .filtr {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.catalog__header .catalog__title {
+  border-bottom: none;
+}
+
+.catalog__header .catalog__header-title {
+  -webkit-flex-basis: 200px;
+      -ms-flex-preferred-size: 200px;
+          flex-basis: 200px;
+}
+
+.catalog__header .catalog__sorting {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-bottom: 15px;
+  border-bottom: none;
+}
+
+.catalog__header .catalog__filtr {
+  -webkit-flex: 0 0 calc(100% - 200px);
+      -ms-flex: 0 0 calc(100% - 200px);
+          flex: 0 0 calc(100% - 200px);
+  padding: 6px 0;
+  border-bottom: 2px solid #636363;
+}
+
 .catalog__title {
   font-size: 24px;
   text-transform: uppercase;
@@ -501,7 +558,6 @@
 }
 
 .catalog__nav {
-  margin-top: 27px;
   line-height: 1;
 }
 
@@ -527,14 +583,6 @@
 }
 
 /* Catalog sorting */
-.catalog__sorting {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #636363;
-}
-
 .sort-list__title, .filtr-list {
   font-size: 15px;
   color: #7b7979;
@@ -590,12 +638,6 @@
           transform: rotate(-90deg);
 }
 
-/* Catalog filtr */
-.catalog__filtr {
-  padding: 6px 0;
-  border-bottom: 2px solid #636363;
-}
-
 /* Catalog list */
 .catalog__container {
   -webkit-flex: 1 0 calc(100% - 250px);
@@ -614,8 +656,9 @@
   -webkit-flex: 0 0 25%;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
-  padding: 0 20px;
+  padding: 0 10px;
   position: relative;
+  max-width: 220px;
   margin-bottom: 70px;
 }
 
@@ -641,6 +684,11 @@
 .catalog__item .catalog__item-info {
   margin-bottom: 13px;
   font-size: 18px;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
 .catalog__item .catalog__item-price {
@@ -675,58 +723,6 @@
 .footer--sticky .nav__list .nav__link:before {
   top: -3px;
   left: -3px;
-}
-
-/* ================================================ */
-.catalog__header {
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-}
-
-.catalog__header .sorting {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  border-bottom: 2px solid #636363;
-}
-
-.catalog__header .filtr {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
-
-.catalog__header .catalog__title {
-  border-bottom: none;
-}
-
-.catalog__header .catalog__header-title {
-  -webkit-flex-basis: 200px;
-      -ms-flex-preferred-size: 200px;
-          flex-basis: 200px;
-}
-
-.catalog__header .catalog__sorting {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border-bottom: none;
-}
-
-.catalog__header .catalog__filtr {
-  -webkit-flex: 0 0 calc(100% - 200px);
-      -ms-flex: 0 0 calc(100% - 200px);
-          flex: 0 0 calc(100% - 200px);
 }
 
 .slider {
@@ -1060,7 +1056,7 @@ footer {
   position: relative;
 }
 
-.nav, .product__container, .product__size, .catalog, .catalog__sorting, .catalog__list, .catalog__header .sorting, .catalog__item-form {
+.nav, .product__container, .product__size, .catalog, .catalog__header .sorting, .catalog__header .catalog__sorting, .catalog__list, .catalog__item-form {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
