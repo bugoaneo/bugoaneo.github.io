@@ -72,7 +72,6 @@ $('.user-form__button').click(function(){
   $('.user-form__input').toggleClass('user-form__input--active');
 });
 
-
 //accordion
 
   $('.product__spec .product__description').not('.product__description--active').hide();
