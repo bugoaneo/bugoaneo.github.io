@@ -1301,6 +1301,14 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .catalog__list {
+    -webkit-justify-content: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
 .slider {
   height: 610px;
   position: relative;

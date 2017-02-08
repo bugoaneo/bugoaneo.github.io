@@ -534,3 +534,10 @@
   }
 
  }
+
+  @media screen and (max-width: 420px) {
+    .catalog__list {
+      justify-content: center !important;
+    }
+
+  }
