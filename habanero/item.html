@@ -383,7 +383,7 @@ http://browsehappy.com/">обновите</a>
 
     <main class="product">
       <div class="product__container">
-        <section class="col">
+        <section class="col col--info">
           <div class="product__header">
             <h1 class="product__main-title">Фартук мужской «название модели»</h1>
             <span class="product__id">SAR-4785e</span>
@@ -420,23 +420,57 @@ http://browsehappy.com/">обновите</a>
           <div class="product__foto-wrap">
             <img src="img/goods-big.png" alt="" class="product__foto-pic">
           </div>
+          <div class="product__mobil">
+            <div class="product__header product__header--mobil">
+              <h1 class="product__main-title">Фартук мужской «название модели»</h1>
+              <span class="product__id">SAR-4785e</span>
+            </div>
+            <div class="product__cost product__cost--mobil">1200 руб.</div>
+            <div class="product__rating">
+              <img src="img/stars.png" alt="">
+            </div>
+          </div>
         </section> <!-- END PRODUCT-FOTO -->
 
         <section class="col col--price">
-          <div class="product__size">
-            <div class="product__title">Размер</div>
+          <form action="POST" action="" name="product-order" class="product__form" id="product__form">
             <div class="product__range">
-              <div class="range__title">Определить размер</div>
-              <div class="range__wrap">
-                <img src="img/range.png" alt="">
-              </div>
-          </div>
-          </div>
-          <div class="product__price">
-            <div class="product__cost">1200 руб.</div>
-            <button class="btn btn--red" type="button">В корзину</button>
-            <button class="btn btn--white" type="button">Выгодная покупка -5%</button>
-          </div>
+              <div class="product__range-wrapper">
+                <div class="product__title">Цвет</div>
+                <div class="product__select-wrapper"> 
+                  <select name="size" class="product__select">
+                    <option value="undef" class="product__range-option">Выберите цвет</option>
+                    <option class="product__range-option" value="44">44</option>
+                    <option class="product__range-option" value="46">46</option>
+                    <option class="product__range-option" value="48">48</option>
+                    <option class="product__range-option" value="50">50</option>
+                  </select>
+                </div>
+              </div> 
+              <div class="product__range-wrapper">
+                <div class="product__title">Размер</div>
+                <div class="product__select-wrapper"> 
+                  <select name="size" class="product__select">
+                    <option value="undef" class="product__range-option">Выберите размер</option>
+                    <option class="product__range-option" value="44">44</option>
+                    <option class="product__range-option" value="46">46</option>
+                    <option class="product__range-option" value="48">48</option>
+                    <option class="product__range-option" value="50">50</option>
+                  </select>
+                </div>
+              </div> 
+            </div>
+            <div class="product__price">
+              <div class="product__cost">1200 руб.</div>
+              <fieldset class="product__amount">
+                <label class="product__amount-label" for="price-amount">Кол</label>
+                <input type="text" class="product__amount-input" id="price-amount" placeholder="1">
+              </fieldset>              
+              <button class="btn btn--red" type="submit">В корзину</button>
+              <a href="#" class="btn btn--white" type="button">Выгодная покупка -5%</a>
+            </div>
+          </form>
+          
           <div class="product__extra">
             <div class="product__title">Мы рекомендуем</div>
             <div class="product__extra-wrap">              

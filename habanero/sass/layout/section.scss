@@ -1,7 +1,6 @@
-#mobil__main {
+#mobil__main, .product__mobil, .product__amount {
   display: none;
 }
-
 
 /* Singl product page */
 
@@ -21,6 +20,9 @@
 .product__header {
   text-align: right;
   margin-bottom: 25px;
+  &--mobil {
+    display: none;
+  }
 }
 
 .product__main-title {
@@ -36,7 +38,7 @@
 }
 
 .product__spec {
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .product__caption {
@@ -201,7 +203,6 @@
 .product__cost {
   margin-bottom: 20px;
   font-size: 35px;
-  line-height: 1;
   color: $button;
 }
 

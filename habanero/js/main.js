@@ -26,7 +26,23 @@ $('.banner__wrapper').slick({
   arrows: false,
   responsive: [ 
   {
-    breakpoint: 480,
+    breakpoint: 599,
+      settings: {
+        autoplay: false,
+      }
+  }
+
+  ]
+});
+
+$('.banner__wrapper').slick({
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: true,
+  arrows: false,
+  responsive: [ 
+  {
+    breakpoint: 599,
       settings: {
         autoplay: false,
       }
