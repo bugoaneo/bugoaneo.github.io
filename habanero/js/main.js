@@ -20,23 +20,6 @@ $('.slider__wrapper').slick({
 
 $('.banner__wrapper').slick({
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  dots: false,
-  arrows: false,
-  responsive: [ 
-  {
-    breakpoint: 599,
-      settings: {
-        autoplay: false,
-      }
-  }
-
-  ]
-});
-
-$('.banner__wrapper').slick({
-  slidesToScroll: 1,
   autoplay: false,
   dots: true,
   arrows: false,
