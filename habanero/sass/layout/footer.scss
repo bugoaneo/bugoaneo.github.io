@@ -1,0 +1,33 @@
+/* Footer */
+.footer__social {
+    display: none;
+  }
+  
+.footer {
+  position: relative;
+  z-index: 3;
+  background: $top-header;
+  box-shadow: 0 5px 6px 10px rgba(45, 42, 42, 0.5);
+  .nav__list {
+    margin: auto;
+  }
+  &--sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.79;
+    .nav__list {
+      .nav__link {
+        padding: 3px 8px;
+        &:before {
+          top: -3px;
+          left: -3px;
+        }
+      }
+    }
+  }
+
+
+}
