@@ -1,6 +1,9 @@
 .slider {
   height: 610px;
   position: relative;
+  @include breakpoint(601px) {
+    display: none;
+ }
 
   .slick-dotted.slick-slider {
     margin-bottom: 0;
@@ -93,7 +96,7 @@
       display: block;
       width: 40px;
       height: 100px;
-      background: url(../img/icon/logo-icon.png);
+      background: url(../img/icon/sprites.png) -110px -45px no-repeat;
     }
   }
 }
@@ -106,6 +109,9 @@
   height: 188px;
   position: relative;
   box-shadow: 0 3px 6px rgba(#000, .5);
+  @include breakpoint(601px) {
+  display: none;
+ }
   .image {
     height: 188px;
     &--1 {
@@ -150,7 +156,7 @@
         display: block;
         width: 40px;
         height: 100px;
-        background: url(../img/icon/logo-big-red.png);
+        background: url(../img/icon/sprites.png) 0 0 no-repeat;
       }
     }
   }

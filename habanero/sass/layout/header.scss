@@ -12,6 +12,9 @@
   box-shadow: 0 3px 6px rgba(#000, .5);
   z-index: 2;
   position: relative;
+  @include breakpoint(601px) {
+  display: none;
+ }
 }
 
 .nav {
@@ -56,7 +59,7 @@
     height: 39px;
     }
     &:hover:before {
-      background: url(../img/icon/logo-icon-small.png) 0px 0px;
+      background: url(../img/icon/sprites.png) -45px -188px no-repeat;
     }
 }
 
@@ -65,6 +68,9 @@
   position: relative;
   z-index: 1;
   box-shadow: 0 5px 3px rgba(0,0,0, .5);
+  @include breakpoint(601px) {
+  display: none;
+ }
 }
 
 .sub-nav {
@@ -94,17 +100,17 @@
     }
     &--cargo {
       &:after {
-        background: url(../img/icon/spritesheet.png) -5px -34px;
+        background: url(../img/icon/sprites.png) -45px -159px no-repeat;
       }
     }
     &--client {
       &:after {
-        background: url(../img/icon/spritesheet.png) -5px -5px;
+        background: url(../img/icon/sprites.png) -79px 0 no-repeat;
       }
     }
     &--sale {
       &:after {
-        background: url(../img/icon/spritesheet.png) -60px -5px;
+        background: url(../img/icon/sprites.png) -130px -154px no-repeat;
       }
     }
   }
@@ -146,17 +152,17 @@
         right: 0;
         width: 22px;
         height: 19px;
-        background: url(../img/icon/spritesheet.png) -38px -5px;
+        background: url(../img/icon/sprites.png) -51px -89px no-repeat;
         transition: 0.3s;
       }
       &:hover:after {
-        background: url(../img/icon/spritesheet.png) -68px -34px;
+        background: url(../img/icon/sprites.png) -51px 0 no-repeat;
       }
     }
   }
 }
 
-//dropdown 
+/*DROPDOWN*/ 
 
 .nav__dropdown {
   background: rgba(#111, 0.8);

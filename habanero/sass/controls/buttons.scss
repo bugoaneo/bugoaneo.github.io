@@ -73,6 +73,7 @@
     padding: 1.1em 0.7em;
     color: $button;
     font-size: 0.75em;
+    @include breakpoint(601px) { display: none; }
     &:hover, &:active {
       color: #fff;
     }
@@ -99,10 +100,10 @@
     padding: 0;
     vertical-align: middle;
     border: 2px solid $top-header;
-    background: #fff url(../img/icon/cart-orange.png) center 2px no-repeat;
+    background: #fff url(../img/icon/sprites.png) -44px -59px no-repeat;
     transition: all 0.3s;
-    &:hover {
-      background: $top-header url(../img/icon/cart.png) center 2px no-repeat;
+    &:hover, &:active, &:focus {
+      background: $top-header url(../img/icon/sprites.png) -45px -87px no-repeat;
     }
   }
 }
@@ -129,5 +130,5 @@
 
 .mobil__serch-button {
   @extend .user-form__button;
-  background: transparent url(../img/icon/serch-mob.png) no-repeat;
+  background: transparent url(../img/icon/sprites.png) -51px -29px no-repeat;
 }

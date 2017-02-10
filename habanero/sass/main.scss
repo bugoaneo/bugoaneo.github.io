@@ -1,3 +1,10 @@
+@mixin breakpoint($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+
 @import "adjustment/variable";
 
 

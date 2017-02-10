@@ -1,13 +1,17 @@
-#mobil__main, .product__mobil, .product__amount, .catalog__title-mobil {
+#mobil__main, .product__mobil, 
+.product__amount, .catalog__title-mobil {
   display: none;
 }
 
-/* Singl product page */
+/* SINGL PRODUCT PAGE */
 
 .product__container {
   @extend %container;
   @extend %flex;
   flex-wrap: wrap;
+  @include breakpoint(601px) {
+    flex-direction: column;
+  }
 }
 
 .col {
@@ -16,13 +20,43 @@
   &--foto {
     margin-top: 0;
   }
+  &--price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+   @include breakpoint(601px) {
+      margin-top: 0;
+    &--info {
+      order: 2;
+    }
+    &--foto {
+      display: block;
+      margin-top: 30px;
+      order: -1; 
+      border-bottom: 1px solid $sub-header;
+    }
+    &--price {
+      margin-top: 25px;
+    }
+  } 
 }
+
 .product__header {
   text-align: right;
   margin-bottom: 25px;
   &--mobil {
     display: none;
   }
+   @include breakpoint(601px) { 
+    display: none;
+    text-align: left;
+    &--mobil {
+      display: block;
+      flex: 1 1 100%;
+    }
+   } 
 }
 
 .product__main-title {
@@ -39,6 +73,10 @@
 
 .product__spec {
   padding-bottom: 25px;
+  @include breakpoint(601px) {
+    padding-bottom: 0;
+    border-bottom: 1px solid $sub-header;
+  }
 }
 
 .product__caption {
@@ -58,11 +96,30 @@
     display: inline-block;
     width: 18px;
     height: 32px;
-    background: url(../img/icon/arrow.png) no-repeat;
+    background: url(../img/icon/sprites.png) -82px -29px no-repeat;
     transition: transform 0.5s ease-out;
   }
   &:hover:after {
     transform: rotate(90deg);
+  }
+  @include breakpoint(601px) {
+    width: 100%;
+    font-size: 22px;
+    color: #000;
+    &:after {
+      background: none;
+      display: inline-block;
+      top: 5px;
+      right: 24px;
+      width: 12px;
+      height: 12px;
+      border-left: 4px solid currentColor;
+      border-top: 4px solid currentColor;
+      transform: rotate(135deg);
+    }
+    &:hover:after {
+      transform: rotate(225deg);
+    }
   }
 }
 
@@ -72,9 +129,13 @@
   max-height: 150px;
   overflow: auto;
   padding: 0 15px;
+  @include breakpoint(601px) {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
-/* product__reviews */
+/* PRODUCT__REVIEWS */
 
 .product__reviews-list {
   max-height: 140px;
@@ -127,21 +188,20 @@
     width: 18px;
     height: 32px;
     transform: rotate(90deg);
-    background: url(../img/icon/arrow.png) no-repeat;
+    background: url(../img/icon/sprites.png) -82px -29px no-repeat;
   }
 }
 
-.col--price {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-}
-
 .product__price {
+  @include breakpoint(601px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   button {
     display: block;
     margin: 12px auto;
+    @include breakpoint(601px) { margin: 0; }
   }
 }
 
@@ -197,6 +257,7 @@
   .product__extra-link {
     overflow: hidden;
     height: 160px; 
+
   }
 }
 
@@ -204,9 +265,18 @@
   margin-bottom: 20px;
   font-size: 35px;
   color: $button;
+  @include breakpoint(601px) {
+    display: none;
+    &--mobil {
+      display: flex;
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
 }
 
-/* Catalog */
+/* CATALOG */
 
 .catalog {
   @extend %container;
@@ -216,10 +286,16 @@
 
 .catalog__menu {
   flex: 1 0 250px;
+  @include breakpoint(601px) {
+  display: none;
+ }
 }
 
 .catalog__header {
   flex: 1 0 100%;
+  @include breakpoint(601px) {
+    display: none;
+ }
   .sorting {
     @extend %flex;
     flex-wrap: wrap;
@@ -269,18 +345,18 @@
     &:before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -3px;
+      top: -6px;
+      left: 1px;
       width: 20px;
       height: 39px;
       }
     &:hover:before {
-      background: url(../img/icon/logo-small-red.png) 7px 0px no-repeat;
+      background: url(../img/icon/sprites.png) -82px -71px no-repeat;
     }
   }
 }
 
-/* Catalog sorting */
+/* CATALOG SORTING */
 
 .sort-list__title {
   font-size: 15px;
@@ -312,7 +388,7 @@
 }
 
 
-/* Pagination */
+/* PAGINATION */
 .pagination__item {
   display: inline-block;
   color: $catalog-text;
@@ -331,6 +407,8 @@
   }
 }
 
+/*FILTR*/
+
 .filtr-list {
   @extend .sort-list__title;
 }
@@ -343,7 +421,7 @@
   @extend .sort-list__link;
 }
 
-/* Catalog list */
+/* CATALOG LIST */
 
 .catalog__container {
   flex: 1 0 calc(100% - 250px);
@@ -353,6 +431,9 @@
   @extend %flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  @include breakpoint(440px) {
+  justify-content: center !important;
+ }
 }
 
 .catalog__item {
