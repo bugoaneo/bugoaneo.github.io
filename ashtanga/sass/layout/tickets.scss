@@ -5,6 +5,8 @@
 .tickets__list {
   width: 100%;
   margin-bottom: 30px;
+  border-collapse: collapse;
+  border-bottom: 2px dashed $main-color;
 }
 
 
@@ -18,17 +20,9 @@
 }
 .tickets__item {
   position: relative;
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    border-bottom: 2px dashed $main-color;
-    @include breakpoint($sm) {
-      border: none;
-    }
+  border-bottom: 2px dashed $main-color;
+  @include breakpoint($sm) {
+    border-bottom: none;
   }
 }
 
@@ -73,9 +67,46 @@
   }
 }
 
-.tickets__accent {
-  span {
-    color: $main-color;
-    font-weight: bold;
+/*payment*/
+
+.payment__list {
+  @extend %flex;
+}
+
+.payment__item {
+  flex: 1 1 30%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.payment__btn {
+  min-height: 116px;
+  font-size: 2em;
+  
+}
+.payment__link {
+  @extend .btn;
+  height: 116px;
+  display:table-cell;
+  vertical-align:middle;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.payment__descr {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  opacity: 0;
+  z-index: -1;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  &--active {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 100;
   }
+
 }

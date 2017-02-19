@@ -28,6 +28,7 @@
   color: $main-color;
   font-weight: bold;
   text-decoration: underline;
+  white-space: nowrap;
   &:hover {
     text-decoration: none;
   }

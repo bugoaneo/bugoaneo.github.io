@@ -1,10 +1,9 @@
 $(document).ready(function(){
 	
-//toggle
+//toggle-menu
 $('.menu-toggle').click(function(){
-	$('.main-nav__list').toggleClass('main-nav__list--active');
+  $('.main-nav__list').toggleClass('main-nav__list--active');
 });
-
 
 (function() {
 
