@@ -1,0 +1,58 @@
+section {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: $text-color;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.stn__inner {
+  @extend %container;
+  &--flex {
+    @extend %flex;
+    @include breakpoint($sm) {
+      display: block;
+    }
+  }
+}
+
+.description {
+  margin-top: 120px;
+  &:after {
+    @extend %cf;
+  }
+}
+
+.stn__header {
+    margin-bottom: 30px;
+    color: $main-color;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+  &--main {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+}
+
+.stn__img {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+@include breakpoint($sm) {
+  .stn__img {
+    float: none;
+    text-align: center;
+  }
+}
+
+.section__accent {
+  font-weight: bold;
+}

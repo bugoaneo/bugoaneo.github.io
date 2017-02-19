@@ -1,0 +1,215 @@
+.header {
+  position: fixed;
+  top: 0;
+  @extend %flex;
+  z-index: 999;
+  width: 100%;
+}
+ @include breakpoint($sm) {
+  .header {
+    box-shadow: 0px 10px 6px -7px rgba(0,0,0,0.5);
+  }
+}
+
+.main-nav, .social-list {
+  background: $main-color;
+  box-shadow: 0px 10px 6px -7px rgba(0,0,0,0.5);
+}
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  text-indent: -9999px;
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #fff;
+    &:after, &:before {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    content: "";
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+    }
+    &:before {
+      top: -18px;
+      transition-property: top, transform;
+    }
+    &:after {
+      bottom: -18px;
+      transition-property: bottom, transform;
+    }
+  }
+  &--active {
+    .menu-icon {
+      background: transparent;
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+        transition-delay: 0s, 0.3s;
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition-delay: 0s, 0.3s;
+      }
+    }
+  }
+}
+
+.main-nav {
+  position: relative;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.main-nav__list {
+  @extend %flex;
+}
+
+.main-nav__item {
+  flex: 1 1 0;
+}
+
+@include breakpoint($sm) {
+  .main-nav {
+    margin-right: 0;
+    box-shadow: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+
+  }
+
+  .main-nav__list {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    opacity: 0;
+    z-index: -1;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    &--active {
+      top: 100%;
+      left: 0;
+      opacity: 1;
+      z-index: 100;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 300px;
+      padding: 10px 0;
+      background: $main-color;
+      border-top: 1px solid darken($main-color, 20%);
+      .main-nav__item {
+        border-bottom: 1px solid darken($main-color, 20%);
+      }
+    } 
+  }
+  
+  /*menu mecanic
+
+  .menu-toggle:hover + .main-nav__list,
+  .main-nav__list:hover {
+      top: 100%;
+      left: 0;
+      opacity: 1;
+      z-index: 100;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-width: 300px;
+      padding: 10px 0;
+      background: $main-color;
+      border-top: 1px solid darken($main-color, 20%);
+      &:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      }
+      .main-nav__item {
+        border-bottom: 1px solid darken($main-color, 20%);
+      }
+  }*/
+}
+
+.main-nav__link {
+  display: block;
+  position: relative;
+  padding: 10px 0 10px 10px;
+  font-family: $font-nav;
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s linear 0s;
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    transition: width .5s ease-in-out, left .5s ease-in-out;
+  }
+  &:hover:after {
+    width: 50%;
+  }
+  &:hover:before {
+    width: 50%;
+    left: 0;
+  }
+}
+
+.social-list {
+  padding: 10px;
+}
+
+.social-list__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url(../../uploads/social.png) no-repeat 0 -1px;
+  &--fb {
+    background-position: -50px -1px;
+  }
+  &--mail {
+    background-position: -100px -1px;
+  }
+}
+  
+.social-list {
+  @extend %flex;
+  align-items: center;
+  flex-basis: 180px;
+}
+@include breakpoint($sm) { 
+  .social-list {
+    box-shadow: none;
+  }
+}
+
+

@@ -1,0 +1,49 @@
+.map-canvas {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#map {
+  width: 100%;
+  height: 417px;
+}
+
+.contacts__banner {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  z-index: 1;
+  width: 300px;
+  padding: 20px;
+  background: #FFEDE1;
+  @include breakpoint($sm) {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
+.contacts__adress {
+  font-size: 1.2em;
+  font-family: Bebasneue;
+}
+
+.contacts__phon {
+  @extend .main-nav__link;
+  display: block;
+  font-size: 2em;
+  font-family: Bebasneue;
+  color: $text-color;
+  margin-bottom: 20px;
+  @include breakpoint($sm) {
+    &:before, &:after {
+      content: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts__title {
+  font-weight: bold;
+}

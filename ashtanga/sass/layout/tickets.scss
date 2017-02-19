@@ -1,0 +1,81 @@
+.empty {
+  @extend %vhidden;
+}
+
+.tickets__list {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.tickets__header-mobil {
+  display: none;
+  @include breakpoint($sm) {
+    @extend .tickets__header-list;
+    display: block;
+    padding: 20px;
+  }
+}
+.tickets__item {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed $main-color;
+    @include breakpoint($sm) {
+      border: none;
+    }
+  }
+}
+
+.tickets__header {
+  @include breakpoint($sm) {
+    display: none;
+  }
+}
+
+.tickets__header-list {
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #fff;
+  background: $main-color;
+}
+
+.tickets__date {
+  @include breakpoint($sm) {
+    display: none;
+  }
+}
+.tickets__price {
+  position: relative;
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+  @include breakpoint($sm) {
+    width: auto;
+    display: block;
+    font-size: 1.5em;
+    text-align: right;
+    border-bottom: 2px dashed $main-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    &:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 20px;
+    }
+  }
+}
+
+.tickets__accent {
+  span {
+    color: $main-color;
+    font-weight: bold;
+  }
+}

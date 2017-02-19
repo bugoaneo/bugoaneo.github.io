@@ -1,0 +1,42 @@
+.partners__list {
+  @extend %flex;
+}
+
+.partners__item {
+  @extend .rules__item;
+  flex: 1 1 33%;
+  max-width: 300px;
+  &:first-child {
+    padding: 20px 0 20px 50px;
+  }
+  @include breakpoint($sm) {
+    flex: 0 auto;
+    width: 200px;
+    margin: 0 auto;
+  } 
+}
+
+.partners__city {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.partners__link {
+  position: relative;
+  font-size: 1em;
+  display: block;
+  color: $main-color;
+  font-weight: bold;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  &--tel {
+    color: $accent-color;
+    font-weight: normal;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
