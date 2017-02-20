@@ -31,6 +31,9 @@ p {
   &:after {
     @extend %cf;
   }
+    @include breakpoint(950px) {
+      margin-top: 140px;
+  }
 }
 
 .stn__header {

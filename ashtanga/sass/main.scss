@@ -1,10 +1,11 @@
 //misc
-
 @import "misc/reset";
 @import "misc/fonts";
 @import "misc/variables";
 @import "misc/mixins";
 @import "misc/base.scss";
+
+@import "vendor/magnific-popup.scss";
 
 //layout
 @import "layout/grid";

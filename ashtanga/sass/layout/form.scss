@@ -1,4 +1,4 @@
-.pop-up-wrapper {
+.pop-up {
   display: none;
 }
 
@@ -13,4 +13,69 @@
   font-family: Bebasneue;
   color: #fff;
   box-shadow: 0px 10px 6px -7px rgba(0,0,0,0.5);
+  &--mail {
+    font-size: 2em;
+  }
+}
+
+.pop-up {
+  margin: 0 15px;
+}
+
+
+.mfp-close-btn-in .mfp-close {
+  color: $main-color;
+}
+
+.pop-up__form {
+  position: relative;
+  max-width: 600px;
+  min-width: 260px;
+  padding: 30px;
+  background: $fill-color;
+  margin: 0 auto;
+
+}
+
+.pop-up__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-family: $font-nav;
+  color: $main-color;
+}
+
+.form__column {
+  width: 49%;
+  display: inline-block;
+  margin-bottom: 20px;
+  @include breakpoint($xs) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.form__label {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  // outline: none;
+  &:hover, &:active, &:focus {
+    border: 2px solid $main-color;
+  }
+  &--message {
+    height: 150px;
+    font-size: 16px;
+    font-family: $font-family;
+    margin-bottom: 30px;
+  }
 }

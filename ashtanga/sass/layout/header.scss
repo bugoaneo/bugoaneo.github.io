@@ -85,6 +85,13 @@
 
 .main-nav__item {
   flex: 1 1 0;
+  &--mobile {
+    display: none;
+    background: $sidebar-color;
+    @include breakpoint(600px) {
+      display: block;
+    }
+  }
 }
 
 @include breakpoint($sm) {
@@ -95,7 +102,6 @@
 
   .menu-toggle {
     display: flex;
-
   }
 
   .main-nav__list {
@@ -104,7 +110,7 @@
     left: -9999px;
     opacity: 0;
     z-index: -1;
-    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: left 0.3s ease-in-out;
     &--active {
       top: 100%;
       left: 0;
@@ -122,34 +128,6 @@
       }
     } 
   }
-  
-  /*menu mecanic
-
-  .menu-toggle:hover + .main-nav__list,
-  .main-nav__list:hover {
-      top: 100%;
-      left: 0;
-      opacity: 1;
-      z-index: 100;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      min-width: 300px;
-      padding: 10px 0;
-      background: $main-color;
-      border-top: 1px solid darken($main-color, 20%);
-      &:before {
-      content: '';
-      position: absolute;
-      top: -20px;
-      left: 0;
-      width: 100%;
-      height: 30px;
-      }
-      .main-nav__item {
-        border-bottom: 1px solid darken($main-color, 20%);
-      }
-  }*/
 }
 
 .main-nav__link {
@@ -180,6 +158,9 @@
     width: 50%;
     left: 0;
   }
+  // &--mobile {
+  //   color: $sidebar-color;
+  // }
 }
 
 .social-list {

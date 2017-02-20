@@ -34,6 +34,36 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
     return false;
   });
 
+//tickets
+
+  $('.payment__descr').hide();
+  $('.payment__btn').click(function(){
+      $(this).next().slideToggle();
+  });
+
+//pop-up
+
+  $('.social-list__link--mail, .footer__email, .contacts__email').magnificPopup({
+  type: 'inline',
+  focus: '#name',
+  removalDelay: 300,
+  callbacks: {
+    beforeOpen: function() {
+      if($(window).width() < 700) {
+        this.st.focus = false;
+      } else {
+        this.st.focus = '#name';
+      }
+    }
+  }
+
+  });
+
+  $('.banner__toggle-head').click(function(){
+  $('.banner').toggleClass('banner--active');
+});
+
+
 });
 
   DG.then(function () {
@@ -55,9 +85,9 @@ $('.stn__inner').removeClass('stn__inner').addClass('stn__inner-tab');
   $('.stn__inner-tab').removeClass('stn__inner-tab').addClass('stn__inner');
 }
 
-  $('.stn__inner-tab .schedule__item-wrapper').not('.schedule__item-wrapper--active').hide();
+  $('.schedule__item-wrapper').not('.schedule__item-wrapper--active').hide();
   
-      $('.stn__inner-tab .schedule__header').click(function() {
+      $('.schedule__header').click(function() {
         
         var findArticle = $(this).next();
         var findWrapper = $(this).closest('.stn__inner-tab');
