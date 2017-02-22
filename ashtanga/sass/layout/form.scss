@@ -79,3 +79,34 @@
     margin-bottom: 30px;
   }
 }
+
+.zoom-in .pop-up {
+  opacity: 0;
+  transform: scale(0.8); 
+}
+
+/* animate in */
+.zoom-in.mfp-ready .pop-up {
+  opacity: 1;
+  transform: scale(1); 
+}
+
+/* animate out */
+.zoom-in.mfp-removing .pop-up {
+  transform: scale(0.8); 
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}

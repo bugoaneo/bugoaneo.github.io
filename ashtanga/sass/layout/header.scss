@@ -105,27 +105,22 @@
   }
 
   .main-nav__list {
-    position: absolute;
-    top: 0;
-    left: -9999px;
-    opacity: 0;
-    z-index: -1;
-    transition: left 0.3s ease-in-out;
-    &--active {
-      top: 100%;
-      left: 0;
-      opacity: 1;
-      z-index: 100;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      min-width: 300px;
-      padding: 10px 0;
-      background: $main-color;
-      border-top: 1px solid darken($main-color, 20%);
-      .main-nav__item {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 300px;
+    padding: 10px 0;
+    background: $main-color;
+    border-top: 1px solid darken($main-color, 20%);
+    transform: translateX(-100%);   
+    .main-nav__item {
         border-bottom: 1px solid darken($main-color, 20%);
       }
+    &--active {
+      transform: translateX(0);
+      transition: 500ms transform ease-in-out;
+      
     } 
   }
 }
