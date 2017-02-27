@@ -1,20 +1,21 @@
-@mixin breakpoint($point) {
-  @media (max-width: $point) {
-    @content;
-  }
-}
+//misc
+@import "misc/reset";
+@import "misc/fonts";
+@import "misc/variable";
+@import "misc/mixins";
+@import "misc/base";
 
-
-@import "adjustment/variable";
-
-
+//layout
 @import "layout/header";
 @import "layout/section";
+@import "layout/product";
+@import "layout/catalog";
 @import "layout/footer";
 @import "layout/media";
 
+
+//controls+forms+btn
+
 @import "controls/slider";
 @import "controls/buttons";
-
-@import "adjustment/base";
-@import "adjustment/form";
+@import "controls/form";

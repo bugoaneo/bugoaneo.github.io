@@ -1,121 +1,15 @@
-//
-
-.cart-form__btn {
-  background: transparent;
-  color: #fff;
-  font-size: 12px;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.login-form__btn {
-  background: transparent;
-  font-size: 9px;
-  color: #fff;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.user-form__button {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  vertical-align: middle;
-  background: transparent url(../img/icon/spritesheet.png) -42px -31px;
-  cursor: pointer;
-}
-
-.btn {
+.nav-toggle {
   position: relative;
-  padding: 1em;
-  border: 1px solid currentColor;
-  font-family: Verdana, sans-serif;
-  line-height: 1;
-  color: #fff;
-  background: transparent;
-  overflow: hidden;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    width: 100%;
-    height: 0;
-    background: #fff;
-    opacity: 0;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transition: all 0.3s;
-    }
-    &:active:after {
-      height: 400%;
-      opacity: 1;
-    }
-    &:hover:after {
-      height: 300%;
-      opacity: 1;
-    }
-  &--red {
-    padding: 0.6em 1.7em;
-    background: $button;
-    font-size: 1.2em;
-    transition: all 0.3s;
-    z-index: 1;
-    &:hover, &:active {
-      color: $button;
-    }
-    
-  }
-  &--white {
-    padding: 1.1em 0.7em;
-    color: $button;
-    font-size: 0.75em;
-    @include breakpoint(601px) { display: none; }
-    &:hover, &:active {
-      color: #fff;
-    }
-    &:after {
-      background: $button;
-    }
-  }
-
-  &--orange {
-    z-index: 1;
-    width: 46px;
-    height: 28px;
-    padding: 0.01em 0.6em;
-    background: $top-header;
-    border: none;
-    font-weight: bold;
-    &:hover, &:active {
-      color: $top-header;
-    }
-  }
-  &--catalog-form {
-    width: 38px;
-    height: 28px;
-    padding: 0;
-    vertical-align: middle;
-    border: 2px solid $top-header;
-    background: #fff url(../img/icon/sprites.png) -44px -59px no-repeat;
-    transition: all 0.3s;
-    &:hover, &:active, &:focus {
-      background: $top-header url(../img/icon/sprites.png) -45px -87px no-repeat;
-    }
-  }
-}
-
-.menu-toggle {
-  position: relative;
+  align-self: center;
   width: 47px;
   height: 37px;
   border-top: 8px solid #3e3d3d;
   border-bottom: 8px solid #3e3d3d;
   background: none;
-  z-index: 10;
+  z-index: 1;
+  text-indent: 9999px;
+  color: transparent;
+  border-radius: 3px;
   &:after{
     content: '';
     display: block;
@@ -125,10 +19,102 @@
     width: 100%;
     height: 8px;
     background: #3e3d3d;
+    border-radius: 3px;
+  }
+} 
+.nav-toggle-close {
+  position: relative;
+  width: 47px;
+  height: 47px;
+  z-index: 1;
+  text-indent: 9999px;
+  color: transparent;
+  background: none;
+  align-self: flex-end;
+  &:after, &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    top: 50%;
+    left: 34%;
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
   }
 }
 
-.mobil__serch-button {
-  @extend .user-form__button;
-  background: transparent url(../img/icon/sprites.png) -51px -29px no-repeat;
+/*User*/
+
+.user__cart-btn {
+  position: relative;
+  width: 156px;
+  padding: 10px 40px 10px 30px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  font-size: 11px;
+  font-family: $font-family;
+  text-align: right;
+  color: $hover-color;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 30px;
+    height: 26px;
+    background: url(../img/icon/sprites.png) no-repeat -35px -160px;
+  }
+  &:hover {
+    border-color: currentColor;
+  }
+  @include breakpoint($xs) {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    text-indent: 9999px;
+    background: url(../img/icon/basket-mob.png) no-repeat center center;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+/*btn-baying*/
+
+.btn-baying {
+  position: relative;
+  padding: 8px 40px 5px 11px;
+  background: #555;
+  font-size: 16px;
+  font-family: $font-family;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid currentColor;
+  transition: all 0.3s ease-in-out;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    width: 17px; 
+    height: 15px;
+    background: url(../img/icon/sprites.png) no-repeat -34px -100px;
+  }
+  &:hover {
+    background: #fff;
+    color: #555;
+  }
+  &:hover:after {
+    background-position: -100px -30px;
+  }
 }

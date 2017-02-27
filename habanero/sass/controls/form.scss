@@ -1,0 +1,152 @@
+/*search*/
+
+.search {
+  align-self: center;
+  @include breakpoint($xs) {
+    display: none;
+  }
+  &--mobile {
+    @include breakpoint($xs) {
+    display: block;
+    }
+  }
+}
+
+.search__form {
+  position: relative;
+  width: 270px;
+  &--mobil {
+    @include breakpoint($xs) {
+      width: 100%;
+    }
+  }
+}
+
+.search__form-input {
+  position: relative;
+  min-width: 270px;
+  height: 24px;
+  padding: 0 55px 0 10px;
+  border: 2px solid #c4c4c4;
+  font-family: $font-family;
+  background: #ebebeb;
+  &--mobil {
+    @include breakpoint($xs) {
+      width: 100%;
+      height: 30px;
+      background: #fff;      
+    }
+  }
+}
+
+.search__form-button {
+  position: absolute;
+  right: 0;
+  margin-top: 2px;
+  width: 50px;
+  height: 20px;
+  text-indent: -99999px;
+  background: #ebebeb;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/icon/sprites.png) no-repeat -99px -118px;
+  }
+  @include breakpoint($xs) {
+    height: 26px;
+    background: #fff;
+  }
+}
+
+/*login-form */
+.pop-up {
+  display: none;
+}
+
+.login-form {
+  position: relative;
+  max-width: 450px;
+  min-width: 200px;
+  padding: 30px;
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form__row {
+  margin-bottom: 8px;
+  text-align: left;
+}
+.login-form__label {
+  display: block; 
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.login-form__input {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  &:hover, &:focus {
+    border: 1px solid currentColor;
+  }
+}
+
+.login-form__link {
+  margin: 30px 30px 30px;
+  color: inherit;
+  text-align: center;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-login {
+  background: transparent;
+  height: 30px;
+  width: 120px;
+  font-family: $font-family;
+  font-size: 16px;
+  margin: 0 auto;
+  color: inherit;
+  &:hover, &:active, &:focus {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+
+.zoom-in .pop-up {
+  opacity: 0;
+  transform: scale(0.8); 
+}
+
+/* animate in */
+.zoom-in.mfp-ready .pop-up {
+  opacity: 1;
+  transform: scale(1); 
+}
+
+/* animate out */
+.zoom-in.mfp-removing .pop-up {
+  transform: scale(0.8); 
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
