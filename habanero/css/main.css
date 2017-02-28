@@ -347,7 +347,7 @@ p {
     flex-direction: column;
     z-index: 10;
     background: #3e3d3d;
-    width: 100%;
+    max-width: 380px;
     padding: 50px 25px 25px 25px; }
     .nav--active .nav__list {
       flex-direction: column; }

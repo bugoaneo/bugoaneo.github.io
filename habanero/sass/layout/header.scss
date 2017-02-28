@@ -146,7 +146,7 @@
     flex-direction: column;
     z-index: 10;
     background: $fill-color;
-    width: 100%;
+    max-width: 380px;
     padding: 50px 25px 25px 25px;
     // overflow: hidden;
     .nav__list {
