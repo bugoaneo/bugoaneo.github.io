@@ -126,7 +126,7 @@
 .nav {
   max-width: 690px;
   @include breakpoint($xs) {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     transform: translateX(-100%);
@@ -173,6 +173,9 @@
   transition: all 0.3s ease-in-out;
   &:hover {
     background: $main-text;
+    @include breakpoint($xs) {
+    background: $fill-color;
+    }
   }
 }
 
@@ -193,12 +196,23 @@
   left: 0;
   background: $lite-fill;
   transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  @include breakpoint(900px) {
+    transition: opacity 0.5s ease-in-out;
+  }
+  @include breakpoint($xs) {
+    position: static;
+    background: $fill-color;
+  }
 }
 
 .nav__dropdown-list {
   width: 158px;
   padding: 20px 18px;
   text-align: left;
+  @include breakpoint($xs) {
+    width: 100%;
+    padding: 0 18px;
+  }
   &:not(:last-child) {
     border-right: 1px solid $fill-color;
   }
@@ -220,6 +234,9 @@
   &:hover {
     text-decoration: underline;
   }
+  @include breakpoint($xs) {
+    color: $lite-fill;
+  }
 }
 
 .nav__item:hover .nav__dropdown,
@@ -229,11 +246,21 @@
   transform: translateX(-50%);
   opacity: 1;
   z-index: 10;
+  @include breakpoint(900px) {
+    left: 0;
+    transform: translateX(0%);
+  }
+  @include breakpoint($xs) {
+    transform: none;
+  }
 }
 
 .nav__item:hover .nav__dropdown--wide,
 .nav__link:hover .nav__dropdown--wide {
   display: flex;
+  @include breakpoint($xs) {
+    display: block;
+  }
 } 
 
 /*header__mobile*/
