@@ -126,7 +126,7 @@
 .nav {
   max-width: 690px;
   @include breakpoint($xs) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transform: translateX(-100%);
@@ -174,7 +174,7 @@
   &:hover {
     background: $main-text;
     @include breakpoint($xs) {
-    background: $fill-color;
+      background: $fill-color;
     }
   }
 }
