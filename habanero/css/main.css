@@ -348,7 +348,7 @@ p {
     z-index: 10;
     background: #3e3d3d;
     width: 380px;
-    padding: 0 25px 25px 25px; }
+    padding: 50px 25px 25px 25px; }
     .nav--active .nav__list {
       flex-direction: column; }
     .nav--active .nav__item {
@@ -1047,14 +1047,15 @@ p {
     border-radius: 3px; }
 
 .nav-toggle-close {
-  position: relative;
+  position: absolute;
+  top: 10px;
+  right: 25px;
   width: 47px;
   height: 47px;
   z-index: 1;
   text-indent: 9999px;
   color: transparent;
-  background: none;
-  align-self: flex-end; }
+  background: none; }
   .nav-toggle-close:after, .nav-toggle-close:before {
     content: '';
     display: block;
@@ -1193,7 +1194,8 @@ p {
   padding: 0 55px 0 10px;
   border: 2px solid #c4c4c4;
   font-family: "museo";
-  background: #ebebeb; }
+  background: #ebebeb;
+  -webkit-appearance: none; }
   @media (max-width: 500px) {
     .search__form-input--mobil {
       width: 100%;

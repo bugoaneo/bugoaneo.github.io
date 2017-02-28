@@ -30,6 +30,7 @@
   border: 2px solid #c4c4c4;
   font-family: $font-family;
   background: #ebebeb;
+  -webkit-appearance: none;
   &--mobil {
     @include breakpoint($xs) {
       width: 100%;
