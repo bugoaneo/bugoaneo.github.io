@@ -335,11 +335,14 @@ p {
     .nav {
       position: absolute;
       top: 0;
-      left: 0;
-      transform: translateX(-100%); } }
+      left: -9999px;
+      opacity: 0;
+      z-index: -10; } }
   .nav--active {
-    transform: translateX(0);
-    transition: 500ms transform ease-in-out;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 0.5s left ease-in-out;
     display: flex;
     flex-direction: column;
     z-index: 10;
