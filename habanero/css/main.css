@@ -193,7 +193,8 @@ body {
 .wrapper {
   overflow: hidden;
   flex: 1 0 auto;
-  min-width: 300px; }
+  min-width: 300px;
+  position: relative; }
 
 footer {
   flex: 0 0 auto; }
@@ -332,7 +333,7 @@ p {
   max-width: 690px; }
   @media (max-width: 500px) {
     .nav {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       transform: translateX(-100%); } }
