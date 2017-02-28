@@ -119,7 +119,7 @@
 .nav-toggle, .nav-toggle-close {
   display: none;
     @include breakpoint($xs) {
-    display: flex;
+    display: block;
   }
 }
 
@@ -148,6 +148,7 @@
     background: $fill-color;
     width: 380px;
     padding: 0 25px 25px 25px;
+    // overflow: hidden;
     .nav__list {
       flex-direction: column;
     }
