@@ -1,0 +1,16 @@
+
+.person__gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 400px;
+}
+
+.person__gallery-item {
+  height: 400px;
+  width: auto;
+  img {
+    width: auto;
+    height: 400px;
+  }
+}
+

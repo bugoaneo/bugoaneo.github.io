@@ -118,3 +118,52 @@
     background-position: -100px -30px;
   }
 }
+
+/* product__btn */
+
+.product__form-btn {
+  padding: 5px 14px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  @include breakpoint($xs) {
+    flex: 1 auto;
+    margin-bottom: 10px;
+  }
+  &--red {
+    text-transform: uppercase;
+    background: $logo-color;
+    &:hover {
+      background: #fff;
+      color: $logo-color;
+      border-color: $logo-color;
+    }
+  }
+
+  &--grey {
+    position: relative;
+    padding-right: 35px;
+    background: $fill-color;
+    &:after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 6px;
+      display: block;
+      width: 29px;
+      height: 29px;
+      background: url(../img/icon/sprites.png) no-repeat -34px -100px;
+    }
+  }
+  &:hover {
+    background: #fff;
+    color: $fill-color;
+    border-color: $fill-color;
+    &:after {
+      background-position: -100px -30px;
+    }
+  }
+}

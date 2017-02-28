@@ -202,39 +202,54 @@ http://browsehappy.com/">обновите</a>
 
         <div class="product__gallery">
 
-          <div class="product__gallery-list product__gallery--small">
-            <div class="product__gallery-item product__gallery-item--small">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+          <div class="gallery-nav">
+            <div class="gallery-nav__item">
+              <img src="img/product.jpg" alt="" class="gallery-nav__pic">
             </div>
-            <div class="product__gallery-item product__gallery-item--small">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+            <div class="gallery-nav__item">
+              <img src="img/goods-big.png" alt="" class="gallery-nav__pic">
             </div>
-            <div class="product__gallery-item product__gallery-item--small">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+            <div class="gallery-nav__item">
+              <img src="img/slider.jpg" alt="" class="gallery-nav__pic">
             </div>
+            <div class="gallery-nav__item">
+              <img src="img/product.jpg" alt="" class="gallery-nav__pic">
+            </div>
+            <div class="gallery-nav__item">
+              <img src="img/goods-big.png" alt="" class="gallery-nav__pic">
+            </div>            
           </div>
 
-          <div class="product__gallery-list">
-            <div class="product__gallery-item">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+          <div class="gallery__list">
+            <div class="gallery__item">
+              <img src="img/product.jpg" alt="" class="gallery__pic">
             </div>
-            <div class="product__gallery-item">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+            <div class="gallery__item">
+              <img src="img/goods-big.png" alt="" class="gallery__pic">
             </div>
-            <div class="product__gallery-item">
-              <img src="img/product.jpg" alt="" class="product__gallery-pic">
+            <div class="gallery__item">
+              <img src="img/slider.jpg" alt="" class="gallery__pic">
+            </div>
+            <div class="gallery__item">
+              <img src="img/product.jpg" alt="" class="gallery__pic">
+            </div>
+            <div class="gallery__item">
+              <img src="img/goods-big.png" alt="" class="gallery__pic">
             </div>
           </div>
         </div><!-- END PRODUCT__GALLERY -->
 
-        <div class="product__description">
+        <div class="product__info">
           <h1 class="product__title">Название продукта</h1>
           <div class="product__description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis saepe odit alias officia, error sunt et eum quaerat? Nihil soluta error corporis commodi sunt repellendus quisquam ad nulla praesentium aspernatur?</p>
-            <p>Laborum, libero totam error cum explicabo fugit veniam nisi fugiat. Tempora deserunt quam explicabo doloremque voluptatem accusamus illo quis blanditiis, autem unde totam molestiae neque facere hic similique quibusdam harum.</p>
-            <p>Suscipit doloribus mollitia libero reiciendis aliquid earum quaerat nihil repudiandae, eveniet, impedit assumenda dolor id dolorem amet labore voluptatum rerum. Neque iusto eaque quasi blanditiis quo dicta beatae, repellendus ex?</p>
+            <div class="product__description-wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis saepe odit alias officia, error sunt et eum quaerat? Nihil soluta error corporis commodi sunt repellendus quisquam ad nulla praesentium aspernatur?</p>
+              <p>Laborum, libero totam error cum explicabo fugit veniam nisi fugiat. Tempora deserunt quam explicabo doloremque voluptatem accusamus illo quis blanditiis, autem unde totam molestiae neque facere hic similique quibusdam harum.</p>
+              <p>Suscipit doloribus mollitia libero reiciendis aliquid earum quaerat nihil repudiandae, eveniet, impedit assumenda dolor id dolorem amet labore voluptatum rerum. Neque iusto eaque quasi blanditiis quo dicta beatae, repellendus ex?</p>
+            </div>
             <div class="product__price">2000 руб.</div>
           </div>
+          
 
           <form method="POST" action="/" name="product-order" class="product__form" id="product__form">
             <div class="product__range">
@@ -271,14 +286,15 @@ http://browsehappy.com/">обновите</a>
             </div>
           </form>
         </div><!-- END PRODUCT__DESCRIPTION -->
+
       </div>
-      <div class="product__feature">
-        <ul class="product__feature-title">
+      <div class="product__feature demoTab">
+        <ul class="product__feature-title resp-tabs-list">
           <li>Характеристики</li>
           <li>Отзывы</li>
           <li>Доставка и оплата</li>
         </ul>
-        <div class="product__feature-description">
+        <div class="product__feature-description resp-tabs-container">
           <div class="product__feature-text">
             <h3 class="product__feature-title">Характеристики</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, corrupti! In distinctio earum nihil, facere aperiam delectus labore saepe explicabo libero, porro eius id quibusdam. Aspernatur libero, soluta molestiae consequatur.</p>
@@ -294,7 +310,7 @@ http://browsehappy.com/">обновите</a>
             <p>Rem deleniti soluta a quasi maxime eveniet quis deserunt quas quaerat nemo ad earum ex, molestias quae corrupti, repellat minima debitis alias voluptate, incidunt dolore ut fugiat. Qui, provident, explicabo.</p>
           </div>
         </div>
-      </div>
+      </div><!-- END PRODUCT__FEATURE -->
     </main>
 
   </div> <!--END WRAPPER -->
@@ -405,6 +421,8 @@ http://browsehappy.com/">обновите</a>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/magnific.js"></script>
+  <script src="js/zoom.js"></script>
+  <script src="js/easyResponsiveTabs.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
