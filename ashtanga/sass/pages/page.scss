@@ -73,18 +73,26 @@
   @extend .partners__link;
 }
 
+.bredcrambs__list {
+  text-align: left;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
 .bredcrambs__item {
+  color: $main-color;
   position: relative;
   display: inline-block;
   margin-right: 20px;
+
   &:not(:first-child):after {
     content: '/';
     position: absolute;
-    top: 4px;
+    top: 3px;
     left: -15px;
     display: block;
     font-size: 18px; 
-    color: $main-color;
+    color: currentColor;
   }
 }
 
@@ -116,10 +124,34 @@
 /*photoalbum*/
 
 .photogallery {
-  @extend %container;
+  margin-top: 120px;
+  @include breakpoint(950px) {
+    margin-top: 140px;
+  }
 }
 
-.bredcrambs__list {
-  text-align: left;
-  padding-left: 30px;
+.photogallery__list {
+  @extend %flex;
+  @include breakpoint($sm) {
+    justify-content: center;
 }
+
+}
+
+.photogallery__item {
+  color: $main-color;
+  flex: 1 1 290px;
+  max-width: 290px;
+  margin-bottom: 30px;
+
+}
+
+.photogallery__link {
+  color: $main-color;
+  text-align: center;
+}
+
+.photogallery__avatar {
+  @extend .teachers__pic;
+}
+
