@@ -634,26 +634,24 @@
     </div>   
   </article>
   <div class="pop-up">
-      
-      <form method="post" action="" class="form pop-up__form" id="mail" name="main-contact">
-        <p class="pop-up__title">Напишите нам</p>
-        <div class="form__row">
-          <div class="form__column">
-            <label class="form__label" for="name">Ваше имя</label>
-            <input class="form__input" id="name" type="text" placeholder="Представьтесь пожалуйста" required pattern="[A-Za-zА-Яа-яЁё]">
-          </div>
-          <div class="form__column">
-            <label class="form__label" for="email">Ваш e-mail</label>
-            <input class="form__input" id="email" type="email" name="email" placeholder="Для отправки ответа" required pattern="\S+@[a-z]+.[a-z]+">
-          </div>
+    <form method="post" action="" class="form pop-up__form" id="mail" name="main-contact">
+      <p class="pop-up__title">Напишите нам</p>
+      <div class="form__row">
+        <div class="form__column">
+          <label class="form__label" for="name">Ваше имя</label>
+          <input class="form__input" id="name" type="text" placeholder="Представьтесь пожалуйста" required pattern="[A-Za-zА-Яа-яЁё]">
         </div>
-        <div class="form__row">
-          <label class="form__label" for="message">Текст письма</label>
-          <textarea class="form__input form__input--message"  name="message" id="message" placeholder="Для отправки ответа в свободной форме"></textarea>
+        <div class="form__column">
+          <label class="form__label" for="email">Ваш e-mail</label>
+          <input class="form__input" id="email" type="email" name="email" placeholder="Для отправки ответа" required pattern="\S+@[a-z]+.[a-z]+">
         </div>
-        <button class="btn btn--mail" type="submit">Отправить</button>
-      </form>
-
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="message">Текст письма</label>
+        <textarea class="form__input form__input--message"  name="message" id="message" placeholder="Для отправки ответа в свободной форме"></textarea>
+      </div>
+      <button class="btn btn--mail" type="submit">Отправить</button>
+    </form>
   </div>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

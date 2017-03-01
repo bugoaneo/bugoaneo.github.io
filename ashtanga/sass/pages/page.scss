@@ -72,3 +72,54 @@
 .person__shedule-link {
   @extend .partners__link;
 }
+
+.bredcrambs__item {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  &:not(:first-child):after {
+    content: '/';
+    position: absolute;
+    top: 4px;
+    left: -15px;
+    display: block;
+    font-size: 18px; 
+    color: $main-color;
+  }
+}
+
+.bredcrambs__link {
+  position: relative;
+  padding: 5px;
+  display: block;
+  color: $main-color;
+   &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: currentColor;
+    transition: width .5s ease-in-out, left .5s ease-in-out;
+  }
+  &:hover:after {
+    width: 50%;
+  }
+  &:hover:before {
+    width: 50%;
+    left: 0;
+  }
+}
+
+/*photoalbum*/
+
+.photogallery {
+  @extend %container;
+}
+
+.bredcrambs__list {
+  text-align: left;
+  padding-left: 30px;
+}

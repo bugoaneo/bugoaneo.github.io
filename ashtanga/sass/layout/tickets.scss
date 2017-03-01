@@ -13,7 +13,11 @@
 .tickets__header-mobil {
   display: none;
   @include breakpoint($sm) {
-    @extend .tickets__header-list;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #fff;
+    background: $main-color;
     display: block;
     padding: 20px;
   }
@@ -87,7 +91,7 @@
 .payment__link {
   @extend .btn;
   height: 116px;
-  display:table-cell;
+  display: table-cell;
   vertical-align:middle;
   font-size: 1.5em;
   text-align: center;
