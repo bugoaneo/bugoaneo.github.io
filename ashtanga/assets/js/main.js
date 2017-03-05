@@ -74,6 +74,18 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 
   });
 
+  /*photoalbum*/
+
+$('.photoalbom__link').magnificPopup({
+  type: 'image',
+  gallery: {
+      enabled: true,
+      navigateByImgClick: true
+    },
+});
+
+
+
   $('.banner__toggle-head').click(function(){
   $('.banner').toggleClass('banner--active');
 });
@@ -83,12 +95,12 @@ $('a[data-target^="anchor"]').bind('click.smoothscroll', function(){
 $('.person__gallery-list').slick({
   dots: false,
   infinite: true,
+  autoplay: true,
   speed: 300,
   slidesToShow: 1,
   centerMode: true,
   variableWidth: true
 });
-
 
 });
 
