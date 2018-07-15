@@ -604,9 +604,9 @@ p {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 8%;
   flex: 1 1 8%;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   z-index: 2; }
   @media (max-width: 800px) {
     .main-nav__item .main-nav__link {
@@ -633,7 +633,11 @@ p {
     .main-nav__item:hover {
       -webkit-box-flex: 2;
       -ms-flex: 2 1 8%;
-      flex: 2 1 8%; } }
+      flex: 2 1 8%; }
+      .main-nav__item:hover .main-nav__text {
+        top: 100%;
+        opacity: 1;
+        background-color: inherit; } }
   @media (max-width: 800px) {
     .main-nav__item {
       -webkit-box-flex: 1;
@@ -2809,5 +2813,3 @@ input {
     background: url(../img/icons/i-denie.png) 53% 47% no-repeat #fff;
     border-radius: 100%;
     z-index: 5; }
-
-/*# sourceMappingURL=main.css.map */
