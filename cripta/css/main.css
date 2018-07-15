@@ -2770,13 +2770,13 @@ input {
       left: 10px; } }
 
 .icon-denial:before {
-  background: url(../img/icons/i-not.png) center center/cover no-repeat; }
+  background: url(../img/i-not.png) center center/cover no-repeat; }
 
 .icon-passing-now:before {
-  background: url(../img/icons/i-passing-now.png) center center/cover no-repeat; }
+  background: url(../img/i-passing-now.png) center center/cover no-repeat; }
 
 .icon-passed:before {
-  background: url(../img/icons/i-passed.png) center center/cover no-repeat; }
+  background: url(../img/i-passed.png) center center/cover no-repeat; }
 
 .article__item.passed .article__thumbs:before, .pagination-nav__item.passed .pagination-nav__pic:before {
   background-color: rgba(0, 104, 184, 0.7); }
@@ -2789,14 +2789,14 @@ input {
   bottom: 8%;
   width: 50px;
   height: 50px;
-  background: url(../img/icons/i-pass.png) 49% 49% no-repeat #fff;
+  background: url(../img/i-pass.png) 49% 49% no-repeat #fff;
   border-radius: 100%;
   z-index: 5; }
 
 .pagination-nav__item.passed .pagination-nav__pic:after {
   width: 37px;
   height: 37px;
-  background: url(../img/icons/i-pass.png) center center/50% no-repeat #fff; }
+  background: url(../img/i-pass.png) center center/50% no-repeat #fff; }
 
 .article__item.denied .article__thumbs {
   cursor: default;
