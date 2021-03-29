@@ -1,1 +1,1 @@
-# bugo-aneo.github.io
+# Polina Emelyanova portfolio
