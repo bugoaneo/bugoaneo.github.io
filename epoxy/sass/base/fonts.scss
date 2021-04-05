@@ -1,0 +1,27 @@
+/* roboto-regular - latin_cyrillic */
+@font-face {
+ src: local(""), url("../fonts/roboto-regular.woff2") format("woff2"),
+  url("../fonts/roboto-regular.woff") format("woff");
+ font-family: "Roboto";
+ font-style: normal;
+ font-weight: 400;
+ font-display: swap;
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+ src: local(""), url("../fonts/roboto-700.woff2") format("woff2"), url("../fonts/roboto-700.woff") format("woff");
+ font-family: "Roboto";
+ font-style: normal;
+ font-weight: 700;
+ font-display: swap;
+}
+
+@font-face {
+ font-family: "nautilus";
+ src: local(""), url("../fonts/nautilus-webfont.woff2") format("woff2"),
+  url("../fonts/nautilus-webfont.woff") format("woff");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
