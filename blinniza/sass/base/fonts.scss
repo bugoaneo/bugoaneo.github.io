@@ -1,0 +1,44 @@
+@font-face {
+ font-family: "TTRounds";
+ src: url("../fonts/TTRounds-LightItalic.eot");
+ src: url("../fonts/TTRounds-LightItalic.eot@#iefix") format("embedded-opentype"),
+  url("../fonts/TTRounds-LightItalic.woff") format("woff"), url("../fonts/TTRounds-LightItalic.ttf") format("truetype");
+ font-weight: 300;
+ font-style: italic;
+}
+@font-face {
+ font-family: "TTRounds";
+ src: url("../fonts/TTRounds-Light.eot");
+ src: url("../fonts/TTRounds-Light.eot@#iefix") format("embedded-opentype"),
+  url("../fonts/TTRounds-Light.woff") format("woff"), url("../fonts/TTRounds-Light.ttf") format("truetype");
+ font-weight: 300;
+ font-style: normal;
+}
+@font-face {
+ font-family: "TTRounds";
+ src: url("../fonts/TTRounds-Bold.eot");
+ src: url("../fonts/TTRounds-Bold.eot@#iefix") format("embedded-opentype"),
+  url("../fonts/TTRounds-Bold.woff") format("woff"), url("../fonts/TTRounds-Bold.ttf") format("truetype");
+ font-weight: bold;
+ font-style: normal;
+ font-display: swap;
+}
+@font-face {
+ font-family: "TTRounds";
+ src: url("../fonts/TTRounds-Regular.eot");
+ src: url("../fonts/TTRounds-Regular.eot@#iefix") format("embedded-opentype"),
+  url("../fonts/TTRounds-Regular.woff") format("woff"), url("../fonts/TTRounds-Regular.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+
+@font-face {
+ font-family: "Rounds";
+ src: url("../fonts/roundsblack.eot");
+ src: url("../fonts/roundsblack.eot@#iefix") format("embedded-opentype"),
+  url("../fonts/roundsblack.woff") format("woff"), url("../fonts/roundsblack.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}

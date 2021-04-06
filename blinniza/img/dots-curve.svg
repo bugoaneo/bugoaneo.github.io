@@ -1,0 +1,24 @@
+<svg id="Группа_4" data-name="Группа 4" xmlns="http://www.w3.org/2000/svg" width="685.94" height="572.937" viewBox="0 0 685.94 572.937">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 10px;
+        stroke-dasharray: 0.001 20;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Фигура_8" data-name="Фигура 8" class="cls-1" d="M1398,1395c470.86,0.01,399.02-523,399-523l-5-41" transform="translate(-1130 -837.063)"/>
+  <path id="Фигура_9" data-name="Фигура 9" class="cls-1" d="M1248,1401l-91-4" transform="translate(-1130 -837.063)"/>
+  <path id="Фигура_10" data-name="Фигура 10" class="cls-2" d="M1152,1374l-22,16,22,16v-32Z" transform="translate(-1130 -837.063)"/>
+</svg>

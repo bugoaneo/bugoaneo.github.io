@@ -1,0 +1,40 @@
+.footer {
+ padding: 4.5% 0 3.5em 0;
+ @include fFS(11px, 16px, 320px, 1920px, 18px);
+ line-height: 1.5;
+ font-weight: 300;
+ z-index: 1;
+ .container {
+  @include container(1100px);
+ }
+ @include bp(780px) {
+  padding: 10% 0 3.5em 0;
+  margin-top: 0;
+ }
+}
+.footer__row {
+ @include row(jsb);
+ + .footer__row {
+  margin-top: 5%;
+  color: #ac8fff;
+ }
+}
+
+.footer__col {
+ flex: 0 1 32%;
+ @include bp(650px) {
+  flex: 0 1 100%;
+  margin-bottom: 1em;
+ }
+}
+.footer__title {
+ font-weight: 700;
+ text-transform: uppercase;
+ margin-bottom: 1.2em;
+}
+.footer__text {
+ font-size: 16px;
+}
+.footer__text + .footer__text {
+ margin-top: 1.2em;
+}

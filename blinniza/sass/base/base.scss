@@ -1,0 +1,52 @@
+html {
+ font-family: $ff;
+ color: $text;
+ @include fFS(20px, $fz, 320px, 1900px, 18px);
+ line-height: 1;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+ text-shadow: $outline;
+ /**/
+ // background: #e09c93;
+ // background-image: repeating-linear-gradient(205deg, #e09c93 0%, #e09c93 30%, #d7ecec 30%, #d7ecec 60%);
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+.container {
+ position: relative;
+ max-width: $container;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+.section {
+ padding-top: 3em;
+}
+
+.section__title {
+ font-size: 1.5em;
+ font-family: $ff-a;
+ margin-bottom: 1em;
+ span {
+  display: block;
+  font-size: 1.5em;
+ }
+}

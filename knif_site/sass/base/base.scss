@@ -1,0 +1,59 @@
+html {
+ font-family: $ff;
+ color: $text;
+ @include fFS(16px, $fz, 320px, 1500px, 16px);
+ line-height: 1;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+.section {
+ padding: 2vh 0;
+}
+.section__title {
+ font-size: 1.75em;
+ margin-bottom: 0.8em;
+ background: $accent;
+ font-weight: 500;
+ background-size: cover;
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+ text-fill-color: transparent;
+ text-align: center;
+}
+
+.mobil {
+ display: none !important;
+ @include bp(768px) {
+  display: block !important;
+ }
+}
+
+.desk {
+ @include bp(768px) {
+  display: none !important;
+ }
+}
+
+.small {
+ font-size: 0.8em;
+}
