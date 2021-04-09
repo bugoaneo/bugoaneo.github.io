@@ -1,0 +1,111 @@
+html {
+ font-family: $ff;
+ @include fFS(15px, 20px, 320px, 1920px, 18px);
+ color: $text;
+ // font-weight: 400;
+ line-height: 1.1;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+ scrollbar-width: thin;
+ scrollbar-color: $prime #ddd;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ margin-bottom: -20px;
+ border-radius: 0 0 20px 20px;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+p {
+ line-height: 1.25;
+ span {
+  color: $prime;
+ }
+}
+
+.container {
+ max-width: $container;
+ margin: 0 auto;
+ padding: 0 10px;
+}
+
+.container-wide {
+ max-width: 1920px;
+ margin: 0 auto;
+ padding: 0 35px;
+ @include bp(1250px) {
+  padding: 0 10px;
+ }
+}
+
+.main {
+ margin-top: 100px;
+ transition: 0.3s ease-in-out;
+}
+
+.main__title {
+ @include fFS(27px, 68px, 320px, 1920px, 18px);
+ margin-bottom: 0.7em;
+ font-weight: 700;
+ text-align: center;
+ @include bp(780px) {
+  margin-bottom: 0;
+ }
+}
+
+.prodict__title {
+ @include fFS(21px, 58px, 320px, 1920px, 18px);
+ margin-top: 1em;
+ letter-spacing: 0.02em;
+ @include bp(780px) {
+  margin-top: 0;
+  text-align: center;
+ }
+}
+
+.section__title {
+ @include fFS(23px, 60px, 320px, 1920px, 18px);
+ margin-bottom: 0.5em;
+ text-align: center;
+ @include bp(850px) {
+ }
+}
+
+.col-pic {
+ position: relative;
+ flex: 0 1 40.5%;
+ @include bp(780px) {
+  flex: 1 1 100%;
+ }
+}
+
+.col-descr {
+ flex: 0 1 52.5%;
+ @include bp(780px) {
+  flex: 1 1 100%;
+ }
+}
+
+.col {
+ flex: 0 1 auto;
+}
+
+.col-3 {
+ @include col(3);
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="/img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+  <meta name="theme-color" content="#ffffff">
+
+  <title></title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" crossorigin rel="stylesheet preload">
+  <link rel="stylesheet" href="css/swiper-bundle.css">
+  <link rel="stylesheet preload" href="css/main.css">
+  <script>
+    function myDate(dig) {
+      var d = new Date(new Date().getTime() - dig * 24 * 60 * 60 * 1000);
+      var day = d.getDate();
+      var month = d.getMonth() + 1;
+      if (day < 10) {
+        day = "0" + day;
+      };
+      if (month < 10) {
+        month = "0" + month;
+      };
+      document.write(day + "." + month);
+    }
+  </script>
+  <!--! critical CSS DONT REMOVE !-->
+  <style>
+    .product {
+      background: url(img/product_bg.jpg) bottom center/cover no-repeat;
+    }
+
+    .header__plank {
+      background: url(img/header.svg) top center/auto 100% repeat-x;
+    }
+
+    .contact {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(30%, #fff0)), url(img/contact_bg.jpg);
+      background-image: -o-linear-gradient(top, #fff 0%, #fff0 30%), url(img/contact_bg.jpg);
+      background-image: linear-gradient(180deg, #fff 0%, #fff0 30%), url(img/contact_bg.jpg);
+      background-position: top center, bottom center;
+      background-size: cover;
+    }
+
+    .footer {
+      background: url(img/footer.jpg) top center/cover no-repeat;
+    }
+
+    @media(max-width: 800px) {
+      .product {
+        background: url(img/product_mobil.jpg) top center/cover no-repeat;
+      }
+
+      .footer {
+        background: url(img/footer_mob.jpg) top center/cover no-repeat;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="0" height="0" style="width: 0;height: 0; visibility: hidden;">
+    <symbol viewBox="0 0 31 37" id="bells">
+      <path d="M21.092 30.401a4.58 4.58 0 00-5.612-3.234 4.58 4.58 0 00-3.243 5.607 4.58 4.58 0 005.612 3.234 4.58 4.58 0 003.243-5.607z" fill="url(#bells_linear)" />
+      <path d="M10.269 5.65A2.714 2.714 0 117.857.786a2.714 2.714 0 112.412 4.864z" fill="url(#balls1_linear)" />
+      <path d="M27.432 27.91L5.5 33.785a3.676 3.676 0 01-4.504-2.595 3.711 3.711 0 01.59-3.15l.552-.757a7.152 7.152 0 001.136-6.071l-1-3.728C.8 11.984 4.072 6.328 9.582 4.852c5.51-1.477 11.171 1.786 12.645 7.286l1.017 3.798a7.152 7.152 0 003.913 4.642l.84.387a3.711 3.711 0 012.03 2.41l.01.035a3.676 3.676 0 01-2.604 4.5z" fill="url(#bells2_linear)" />
+      <defs>
+        <linearGradient id="bells_linear" x1="24" y1="10.5" x2="2" y2="46" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFE600" />
+          <stop offset="1" stop-color="#F90" />
+        </linearGradient>
+        <linearGradient id="balls1_linear" x1="24" y1="10.5" x2="2" y2="46" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFE600" />
+          <stop offset="1" stop-color="#F90" />
+        </linearGradient>
+        <linearGradient id="bells2_linear" x1="24" y1="10.5" x2="2" y2="46" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFE600" />
+          <stop offset="1" stop-color="#F90" />
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol viewBox="0 0 452 258" id="flame-r">
+      <mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="452" height="258">
+        <path fill="url(#paint0_linear)" d="M0 0h452v258H0z" />
+      </mask>
+      <g mask="url(#a)">
+        <path d="M272.679 484.987C187.538 426.138 170.671 361.72 170.671 361.72c59.137 73.695 144.32 48.145 58.938 18.496-85.383-29.648-112.629-87.687-98.946-147.939 15.508-68.159-48.1-79.062-48.1-79.062 36.73-10.529 65.34 17.82 81.129 48.973 21.105 41.743 56.455 20.588 27.695-2.262-16.675-13.296-36.469-43.409-46.718-91.721-12.683-59.454-85.1-39.194-85.1-39.194 76.723-43.94 160.339-36.787 190.702 72.995 20.521 73.927 56.312 104.094 81.098 97.721 26.634-6.854 20.492-29.99-.012-49.92-75.749-73.589 4.437-96.855 4.437-96.855-54.86 62.268 68.813 81.574 68.952 81.604 27.638 4.856 54.441 16.376 77.974 35.059 74.803 59.562 87.308 168.459 27.716 243.401-58.034 73.09-163.091 86.702-237.757 31.971z" fill="url(#paint1_linear)" />
+        <path opacity=".51" d="M250.27 142.006c8.291 30.141 19.155 52.971 30.883 68.999-53.262-37.665-75.506-70.627-99.73-122.347C155.404 33.063 59.848 69.07 59.848 69.07c76.444-43.999 160.06-36.847 190.422 72.936z" fill="url(#paint2_linear)" />
+        <path opacity=".51" d="M160.004 276.352c45.396 37.011 4.671 66.337 69.744 103.893-85.383-29.649-112.629-87.687-98.946-147.939l1.006-4.734c1.753 14.343 8.594 32.825 28.196 48.78z" fill="url(#paint3_linear)" />
+        <path d="M275.572 134.579s26.135-51.056-2.895-74.692c-29.03-23.635-28.166-48.92-24.186-59.425 0 0-22.39 36.862-5.33 66.83 17.089 29.83 35.812 49.236 32.411 67.287z" fill="url(#paint4_linear)" />
+        <path d="M128.247 140.952s-8.849-37.1-33.733-36.424c-24.885.677-35.335-12.46-37.902-19.554 0 0 4.6 28.338 26.117 35.968 21.488 7.77 39.337 9.382 45.518 20.01z" fill="url(#paint5_linear)" />
+        <path d="M14.248 179.515c-.47-3.925.408-7.288 2.635-10.089 2.225-2.831 5.388-4.492 9.492-4.985 4.162-.499 7.644.365 10.445 2.592 2.828 2.195 4.486 5.329 4.974 9.403l.386 3.211c.467 3.895-.413 7.243-2.64 10.044-2.199 2.798-5.35 4.443-9.453 4.935-4.014.482-7.476-.34-10.385-2.464-2.883-2.157-4.574-5.318-5.074-9.48l-.38-3.167zm7.995 2.524c.246 2.052 1.01 3.649 2.294 4.792 1.31 1.11 2.9 1.553 4.774 1.328 1.844-.222 3.256-1.024 4.236-2.409.976-1.414 1.334-3.206 1.074-5.377l-.391-3.256c-.246-2.052-1.026-3.647-2.339-4.787-1.283-1.143-2.862-1.602-4.735-1.377-1.873.225-3.296 1.059-4.27 2.503-.946 1.411-1.293 3.172-1.04 5.283l.397 3.3zm27.61 30.258c-.478-3.984.428-7.366 2.719-10.144 2.29-2.778 5.443-4.408 9.457-4.89 4.044-.485 7.493.352 10.346 2.514 2.883 2.157 4.576 5.332 5.08 9.525l.38 3.166c.463 3.866-.402 7.212-2.596 10.039-2.169 2.794-5.334 4.441-9.497 4.941-4.163.499-7.67-.332-10.524-2.493-2.827-2.194-4.485-5.328-4.974-9.402l-.39-3.256zm8 2.569c.242 2.022 1.022 3.618 2.339 4.787 1.343 1.136 2.936 1.593 4.78 1.372 1.902-.228 3.316-1.016 4.24-2.364.95-1.381 1.292-3.186 1.024-5.416l-.401-3.346c-.25-2.081-1.03-3.677-2.34-4.786-1.309-1.11-2.87-1.556-4.684-1.338-1.844.221-3.27 1.026-4.28 2.414-.98 1.384-1.338 3.176-1.074 5.377l.396 3.3zm-21.837 10.312l-5.96-2.542 25.62-54.562 5.96 2.542-25.62 54.562z" fill="url(#paint6_linear)" />
+        <path d="M368.531 36.436c.738-3.883 2.593-6.823 5.563-8.819 2.977-2.025 6.495-2.652 10.555-1.88 4.119.783 7.176 2.66 9.172 5.63 2.031 2.947 2.663 6.436 1.897 10.467l-.604 3.177c-.733 3.854-2.584 6.78-5.555 8.775-2.941 2.002-6.442 2.617-10.502 1.845-3.972-.755-7.023-2.585-9.153-5.49-2.096-2.929-2.752-6.452-1.969-10.571l.596-3.134zm6.856 4.825c-.386 2.03-.14 3.784.738 5.261.912 1.454 2.295 2.357 4.149 2.71 1.824.346 3.412.008 4.765-1.015 1.359-1.053 2.242-2.653 2.65-4.8l.613-3.222c.386-2.03.125-3.787-.782-5.27-.877-1.477-2.243-2.392-4.096-2.745-1.854-.352-3.462.013-4.826 1.095-1.33 1.058-2.193 2.631-2.59 4.72l-.621 3.266zm17.165 37.192c.749-3.942 2.636-6.891 5.66-8.847 3.024-1.955 6.521-2.555 10.493-1.8 4.002.76 7.035 2.603 9.101 5.526 2.095 2.928 2.749 6.467 1.96 10.615l-.595 3.133c-.728 3.825-2.565 6.753-5.511 8.784-2.912 2.007-6.427 2.619-10.546 1.836-4.119-.783-7.212-2.636-9.278-5.56-2.031-2.946-2.663-6.435-1.897-10.465l.613-3.222zm6.848 4.868c-.381 2.001-.12 3.758.781 5.27.936 1.49 2.317 2.407 4.141 2.754 1.883.358 3.468.034 4.757-.97 1.323-1.03 2.195-2.647 2.614-4.853l.63-3.31c.391-2.06.131-3.817-.782-5.27-.912-1.454-2.266-2.352-4.061-2.693-1.824-.347-3.427-.011-4.809 1.006-1.353 1.023-2.237 2.624-2.651 4.8l-.62 3.266zm-23.934 3.224l-4.912-4.226 40.925-44.257 4.912 4.227-40.925 44.256z" fill="url(#paint7_linear)" />
+      </g>
+      <defs>
+        <linearGradient id="paint0_linear" x1="452" y1="129" x2="0" y2="129" gradientUnits="userSpaceOnUse">
+          <stop offset=".063" stop-color="#fff" />
+          <stop offset=".533" stop-color="#EEE8FF" />
+          <stop offset="1" stop-color="#fff" />
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="510.302" y1="453.229" x2="96.017" y2="124.262" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFEE58" />
+          <stop offset=".151" stop-color="#FAD753" />
+          <stop offset=".468" stop-color="#FFB769" />
+          <stop offset=".92" stop-color="#FF4737" />
+          <stop offset="1" stop-color="#FF2626" />
+        </linearGradient>
+        <linearGradient id="paint2_linear" x1="160.772" y1="185.464" x2="189.307" y2="51.242" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFEE58" />
+          <stop offset=".151" stop-color="#FAD753" />
+          <stop offset=".468" stop-color="#FFB86B" />
+          <stop offset=".92" stop-color="#FF3F2F" />
+          <stop offset="1" stop-color="#FF3232" />
+        </linearGradient>
+        <linearGradient id="paint3_linear" x1="451.792" y1="526.904" x2="37.51" y2="197.939" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFEE58" />
+          <stop offset=".151" stop-color="#FAD753" />
+          <stop offset=".468" stop-color="#FFAC52" />
+          <stop offset=".92" stop-color="#FF4B3C" />
+          <stop offset="1" stop-color="#FF3131" />
+        </linearGradient>
+        <linearGradient id="paint4_linear" x1="294.378" y1="77.248" x2="228.871" y2="57.495" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFEE58" />
+          <stop offset=".151" stop-color="#FAD753" />
+          <stop offset=".468" stop-color="#FFAF58" />
+          <stop offset=".92" stop-color="#FF5243" />
+          <stop offset="1" stop-color="#FF3232" />
+        </linearGradient>
+        <linearGradient id="paint5_linear" x1="112.949" y1="103.863" x2="71.317" y2="122.22" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFEE58" />
+          <stop offset=".151" stop-color="#FAD753" />
+          <stop offset=".468" stop-color="#FFA848" />
+          <stop offset=".92" stop-color="#FD4738" />
+          <stop offset="1" stop-color="#FE3030" />
+        </linearGradient>
+        <linearGradient id="paint6_linear" x1="39.757" y1="144.051" x2="52.625" y2="251.282" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFE934" />
+          <stop offset="1" stop-color="#FF6B00" />
+        </linearGradient>
+        <linearGradient id="paint7_linear" x1="403.572" y1="10.35" x2="383.402" y2="116.45" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFE934" />
+          <stop offset="1" stop-color="#FF6B00" />
+        </linearGradient>
+      </defs>
+    </symbol>
+    <symbol viewBox="0 0 100 100" id="return">
+      <defs>
+        <linearGradient id="prefix__paint0_linear" x1="47.246" y1="112.859" x2="124.114" y2="17.489" gradientUnits="objectBoundingBox">
+          <stop stop-color="#EEE8FF" />
+          <stop offset="0" stop-color="#EEE8FF" />
+          <stop offset="1" stop-color="#FFF5FF" />
+        </linearGradient>
+        <linearGradient id="prefix__paint1_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint2_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint3_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint4_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint5_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint6_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint7_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint8_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="prefix__paint9_linear" x1="48.286" y1="101.311" x2="113.342" y2="34.382" gradientUnits="objectBoundingBox">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+      </defs>
+      <path d="M100 50c0 27.614-22.386 50-50 50S0 77.614 0 50 22.386 0 50 0s50 22.386 50 50z" fill="url(#prefix__paint0_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M65.749 15.001a1.19 1.19 0 01.435 1.627l-1.77 3.067a1.19 1.19 0 01-2.062-1.191l1.77-3.067a1.19 1.19 0 011.627-.436z" fill="url(#prefix__paint1_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.759 15.001a1.19 1.19 0 00-.436 1.627l1.77 3.067a1.19 1.19 0 102.063-1.191l-1.771-3.067a1.19 1.19 0 00-1.626-.436z" fill="url(#prefix__paint2_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M49.29 7.937c.658 0 1.19.533 1.19 1.19v7.437a1.19 1.19 0 11-2.38 0V9.127c0-.657.533-1.19 1.19-1.19z" fill="url(#prefix__paint3_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.222 21.388a1.19 1.19 0 011.683 0l5.259 5.259a1.19 1.19 0 01-1.684 1.684l-5.258-5.26a1.19 1.19 0 010-1.683z" fill="url(#prefix__paint4_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M81.951 21.388a1.19 1.19 0 00-1.683 0l-5.26 5.259a1.19 1.19 0 001.684 1.684l5.26-5.26a1.19 1.19 0 000-1.683z" fill="url(#prefix__paint5_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M79.796 61.44c2.614 2.314 4.682 5.67 4.682 10.395 0 6.365-2.421 10.276-5.257 12.604-2.782 2.283-5.859 2.96-7.138 3.1-.997.107-4.344.123-7.85.11-3.554-.012-7.402-.056-9.493-.083a.36.36 0 00-.364.36c0 2.442-2.95 3.664-4.677 1.938l-7.211-7.211a2.778 2.778 0 010-3.929l7.16-7.16c1.745-1.745 4.728-.509 4.728 1.959 0 .209.161.372.36.381 1.99.09 5.66.237 9.094.279 1.718.02 3.364.016 4.707-.035 1.401-.053 2.314-.152 2.674-.263.429-.133 1.039-.496 1.614-1.083.566-.577 1.027-1.296 1.24-2.067a3.39 3.39 0 00-.216-2.427c-.414-.876-1.277-1.883-2.915-2.9l1.256-2.023c1.907 1.184 3.148 2.503 3.811 3.904a5.77 5.77 0 01.359 4.083c-.342 1.234-1.046 2.294-1.836 3.098-.78.796-1.718 1.414-2.61 1.69-.712.22-1.946.317-3.288.367-1.4.053-3.09.058-4.826.037a299.915 299.915 0 01-9.172-.281 2.759 2.759 0 01-2.633-2.76.389.389 0 00-.663-.275l-7.16 7.16a.397.397 0 000 .561l7.21 7.211a.359.359 0 00.613-.253 2.74 2.74 0 012.776-2.742c2.088.027 5.927.071 9.471.084 3.594.013 6.757-.008 7.585-.098.972-.105 3.562-.667 5.883-2.573 2.268-1.86 4.387-5.088 4.387-10.763 0-3.933-1.686-6.671-3.88-8.612-2.225-1.97-4.976-3.114-7.006-3.74l.702-2.275c2.189.675 5.3 1.946 7.883 4.232z" fill="url(#prefix__paint6_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.517 65.814c0-.657.533-1.19 1.191-1.19h6.729a1.19 1.19 0 110 2.38h-6.729a1.19 1.19 0 01-1.19-1.19zm0 5.667c0-.658.533-1.19 1.191-1.19h9.562a1.19 1.19 0 010 2.38h-9.562a1.19 1.19 0 01-1.19-1.19z" fill="url(#prefix__paint7_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M25.789 38.008a2.778 2.778 0 012.778-2.778h41.447a2.778 2.778 0 012.777 2.778v37.014h-2.38V38.008a.397.397 0 00-.398-.397H28.567a.397.397 0 00-.397.397v41.447c0 .22.177.397.397.397h13.995v2.38H28.567a2.778 2.778 0 01-2.778-2.777V38.008z" fill="url(#prefix__paint8_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M45.65 38.802v5.996l2.383-1.059a3.968 3.968 0 013.223 0l2.382 1.059v-5.996H45.65zm-.793-2.381c-.877 0-1.587.71-1.587 1.587v8.011a1.587 1.587 0 002.232 1.45L49 45.916a1.59 1.59 0 011.289 0l3.498 1.555a1.587 1.587 0 002.232-1.45v-8.012c0-.876-.71-1.587-1.588-1.587h-9.574z" fill="url(#prefix__paint9_linear)" />
+    </symbol>
+    <symbol viewBox="0 0 100 100" id="star" fill="none">
+      <defs>
+        <linearGradient id="star0_linear" x1="47.246" y1="112.859" x2="124.114" y2="17.489" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EEE8FF" />
+          <stop offset="0" stop-color="#EEE8FF" />
+          <stop offset="1" stop-color="#FFF5FF" />
+        </linearGradient>
+        <linearGradient id="star1_linear" x1="49.291" y1="84.156" x2="91.895" y2="31.984" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+      </defs>
+      <path d="M100 50c0 27.614-22.386 50-50 50S0 77.614 0 50 22.386 0 50 0s50 22.386 50 50z" fill="url(#star0_linear)" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M50.794 21.773l7.195 20.687h20.084l-16.36 12.724 7.288 21.865-18.207-13.656-18.208 13.656 7.288-21.865-16.36-12.724h20.084l7.196-20.687zm0 7.248L45.29 44.84H30.454l12.212 9.498-5.41 16.231 13.538-10.153L64.332 70.57l-5.41-16.23 12.212-9.499H56.296l-5.503-15.82z" fill="url(#star1_linear)" />
+    </symbol>
+    <symbol viewBox="0 0 100 100" id="rocket">
+      <defs>
+        <linearGradient id="rocket0_linear" x1="47.246" y1="112.859" x2="124.114" y2="17.489" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EEE8FF" />
+          <stop offset="0" stop-color="#EEE8FF" />
+          <stop offset="1" stop-color="#FFF5FF" />
+        </linearGradient>
+        <linearGradient id="rocket1_linear" x1="48.355" y1="86.713" x2="92.02" y2="31.089" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="rocket2_linear" x1="61.276" y1="49.97" x2="72.705" y2="35.79" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+      </defs>
+      <path d="M100 50c0 27.614-22.386 50-50 50S0 77.614 0 50 22.386 0 50 0s50 22.386 50 50z" fill="url(#rocket0_linear)" />
+      <path d="M77.64 23.889a5.706 5.706 0 00-4.444-1.652A39.683 39.683 0 0047.99 33.858l-.885.9H35.57a1.173 1.173 0 00-.837.352L22.502 47.631a1.174 1.174 0 00.837 1.996h11.253l3.013 3.013a17.921 17.921 0 00-12.114 5.337c-9.586 9.703-2.035 20.777-1.956 20.886a1.173 1.173 0 002.136-.673c0-3.764 3.53-7.332 7.254-7.332a6.754 6.754 0 016.715 6.776 1.173 1.173 0 001.839.947A18.85 18.85 0 0048.772 63.8l3.13 3.13V78.19a1.175 1.175 0 002.004.83l12.52-12.521c.217-.216.34-.508.345-.814V54.424l.9-.885a39.683 39.683 0 0011.62-25.206 5.705 5.705 0 00-1.65-4.444zM36.064 37.105h8.694L34.584 47.279h-8.46l9.94-10.173zm5.62 38.212a9.086 9.086 0 00-8.766-6.8c-3.85 0-7.434 2.707-8.905 6.26-1.37-3.42-2.473-9.469 3.13-15.127a15.565 15.565 0 0112.905-4.546l6.26 6.26a17.075 17.075 0 01-4.625 13.953zM64.422 65.2L54.25 75.373v-8.428l10.173-10.173V65.2zm1.565-13.304l-1.22 1.221-.04.04-11.652 11.636-16.34-16.34 11.668-11.668.04-.04 1.22-1.204A37.335 37.335 0 0173.36 24.585a3.303 3.303 0 013.584 3.584 37.335 37.335 0 01-10.956 23.696v.031z" fill="url(#rocket1_linear)" />
+      <path d="M61.681 33.19a7.435 7.435 0 105.26 2.175 7.385 7.385 0 00-5.26-2.176zm3.6 11.033a5.087 5.087 0 11-7.2-7.188 5.087 5.087 0 017.2 7.188z" fill="url(#rocket2_linear)" />
+    </symbol>
+    <defs>
+      <symbol viewBox="0 0 100 100" fill="none" id="list">
+        <linearGradient id="list0_linear" x1="47.2461" y1="112.859" x2="124.114" y2="17.489" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EEE8FF" />
+          <stop offset="1" stop-color="#FFF5FF" />
+        </linearGradient>
+        <linearGradient id="list1_linear" x1="48.5365" y1="88.2097" x2="95.2484" y2="44.6125" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="list2_linear" x1="35.2301" y1="38.1284" x2="46.0637" y2="24.6873" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+        <linearGradient id="list3_linear" x1="49.3133" y1="64.9071" x2="62.0656" y2="49.0854" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#A046FF" />
+          <stop offset="1" stop-color="#FF00FB" />
+        </linearGradient>
+
+        <path d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z" fill="url(#list0_linear)" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.9816 21.0319H72.1582V80.5557H27.381V34.6325L40.9816 21.0319ZM41.9678 23.4128L29.7619 35.6187V78.1747H69.7773V23.4128H41.9678Z" fill="url(#list1_linear)" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6651 22.2224V36.3161H28.5714V33.9352H40.2842V22.2224H42.6651Z" fill="url(#list2_linear)" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M50.9606 55.6694V62.7738H48.5797V55.6694H41.4752V53.2884H48.5797V46.184H50.9606V53.2884H58.0651V55.6694H50.9606Z" fill="url(#list3_linear)" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="wrapper">
+    <button class="menu-trigger" type="button"><span></span></button>
+    <div class="popup__wrapper">
+      <div class="popup__icon">
+        <svg width="31" height="37" viewBox="0 0 31 37" class="bell">
+          <use xlink:href="#bells"></use>
+        </svg>
+        <span class="score">10</span>
+      </div>
+      <div class="popup promotion">
+        <div class="popup__close"></div>
+        <div class="popup__text">
+          <div class="popup__promotion">Последний день акции! Скидка до
+            <script>myDate(0)</script>!
+          </div>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popup__close"></div>
+        <div class="popup__text">
+          <p>Сегодня заказали <span class="order-score">10</span> шт</p>
+          <p>Осталось на складе: <span class="balance">33 шт</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- <header class="header">
+      <div class="container-wide">
+      </div>
+    </header> -->
+    <aside class="menu">
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li><a href="#about" data-target="anchor">О товаре</a></li>
+          <li><a href="#features" data-target="anchor">Выгода с нами</a></li>
+          <li><a href="#specification" data-target="anchor">Характеристики товара</a></li>
+          <li><a href="#reviews" data-target="anchor">Отзывы</a></li>
+          <li><a href="#order" data-target="anchor">Как заказать</a></li>
+          <li><a href="#faq" data-target="anchor">FAQ</a></li>
+          <li><a href="#contact" data-target="anchor">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="menu-threshold"></div>
+    </aside>
+    <main class="main">
+      <section class="product">
+        <div class="container">
+          <h1 class="main__title">Побалуйте себя косметикой Premium&nbsp;класса!</h1>
+          <div class="prodict__title">El'Skin / Бьюти бокс Подарочный Набор</div>
+          <!-- blur -->
+          <div class="product__pic"><img src="img/product.png" alt="" class="product-leadfoto"></div>
+          <div class="product__descr">
+            <div class="price">
+              <div class="price__sale">Скидка -50%</div>
+              <div class="price__row">
+                <div class="price__old">5510,00 руб.</div>
+                <div class="price__new">2755,00 руб.</div>
+              </div>
+            </div>
+            <lu class="product__features">
+              <li>Некоторое достоинство товара, которое закрывает боль</li>
+              <li>Качественный пластик, подходит для пищевых продуктов </li>
+              <li>Объем 12 литров - уместится всё!</li>
+            </lu>
+            <a href="" class="btn">Купить на Wildberries</a>
+            <div class="freeshipping"><span></span> Бесплатная доставка!</div>
+          </div>
+        </div>
+      </section>
+      <section class="section about" id="about">
+        <div class="container">
+          <div class="section__title">О товаре</div>
+          <div class="row">
+            <div class="about__pic col-pic"><img src="img/about.jpg" alt=""></div>
+            <div class="about__descr col-descr">
+              <div class="descr-wrapper">
+                <div class="descr-inner">
+                  <p><span>Эпоксидная смола</span> - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду. </p>
+                  <p><span>Набор для творчества из эпоксидной смолы</span> - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                  <p>Эпоксидная смола - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду.</p>
+                  <p>Набор для творчества из эпоксидной смолы - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                </div>
+                <button class="descr-btn" type="button">Подробнее</button>
+              </div>
+              <div class="about__plank">
+                <div class="about__plank-сontent">
+                  <div class="about__plank-text">
+                    <div class="about__plank-title">Супер хит!</div>
+                    <p>Куплено уже более <span>2000 шт</span></p>
+                  </div>
+                  <a href="" class="btn">Купить на Wildberries</a>
+                </div>
+                <div class="about__plank-pic">
+                  <img src="img/product_small.png" alt="" class="product-smallfoto ">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slider main container -->
+          <div class="about__slider">
+            <div class="swiper-container about__slider-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper about__slider-list">
+                <!-- Slides -->
+                <div class="swiper-slide about__slider-item"><img src="img/slider/about.jpg" alt=""></div>
+                <div class="swiper-slide about__slider-item"><img src="img/slider/s1.jpg" alt=""></div>
+                <div class="swiper-slide about__slider-item"><img src="img/slider/s2.jpg" alt=""></div>
+                <div class="swiper-slide about__slider-item"><img src="img/slider/s3.jpg" alt=""></div>
+                <div class="swiper-slide about__slider-item"><img src="img/slider/s4.jpg" alt=""></div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination about__slider-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+            </div>
+            <div class="swiper-button">
+              <div class="swiper-button-prev about__slider-prev"></div>
+              <div class="swiper-button-next about__slider-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="section__title">Покупать с нами выгодно!</div>
+          <div class="features__list">
+            <div class="features__item">
+              <div class="features__icon">
+                <svg viewBox="0 0 100 100">
+                  <use xlink:href="#list"></use>
+                </svg>
+              </div>
+              <div class="features__body">
+                <div class="features__title">Гарантия качества
+                  и соответствия</div>
+                <div class="features__text">Мы предлагаем 100% гарантию соответствия. На всю продукцию имеются соответствующие сертификаты</div>
+              </div>
+            </div>
+            <div class="features__item">
+              <div class="features__icon">
+                <svg viewBox="0 0 100 100">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+              <div class="features__body">
+                <div class="features__title">Mоментальная покупка через WILDBERRIES</div>
+                <div class="features__text">Мы являемся официальными партнерами WildBerries. Поэтому вас ждет безопасная оплата и 100% гарантия соответствия.</div>
+              </div>
+            </div>
+            <div class="features__item">
+              <div class="features__icon">
+                <svg viewBox="0 0 100 100">
+                  <use xlink:href="#return"></use>
+                </svg>
+              </div>
+              <div class="features__body">
+                <div class="features__title">Бесплатный возврат</div>
+                <div class="features__text">Не платите за неподошедшие вам товары. Просто отдайте их менеджеру, отправка за наш счет.</div>
+              </div>
+            </div>
+            <div class="features__item">
+              <div class="features__icon">
+                <svg viewBox="0 0 100 100">
+                  <use xlink:href="#rocket"></use>
+                </svg>
+              </div>
+              <div class="features__body">
+                <div class="features__title">Бесплатная доставка</div>
+                <div class="features__text">Получение товара в пунктах выдачи WildBerries. Отправляем по всей России! Заказ придет к вам в кратчайшие сроки!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="plank">
+        <div class="container-wide">
+          <div class="plank__content">
+            <div class="plank__text">
+              <div class="plank__title">Закажите набор <span class="product-name">Эль Скин</span> сейчас!</div>
+              <p>и получите скидку <span class="sale-amount">-50%</span></p>
+            </div>
+            <a href="" class="btn">Купить на WILDBERRIES</a>
+          </div>
+          <div class="plank__pic-left"><svg viewBox="0 0 414 352">
+              <use xlink:href="img/icon/sprite.svg#bags"></use>
+            </svg></div>
+          <div class="plank__pic-right product-pic"><img src="img/product_small.png" alt="" class="product-smallfoto"></div>
+        </div>
+      </div>
+      <section class="section specification" id="specification">
+        <div class="container">
+          <div class="section__title">Характеристики товара</div>
+          <div class="row">
+            <div class="specification__pic col-pic"><img src="img/about.jpg" alt=""></div>
+            <div class="specification__descr col-descr">
+              <div class="descr-wrapper">
+                <div class="descr-inner">
+                  <p><span>Эпоксидная смола</span> - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду. </p>
+                  <p><span>Набор для творчества из эпоксидной смолы</span> - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                  <p>Эпоксидная смола - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду.</p>
+                  <p>Набор для творчества из эпоксидной смолы - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                </div>
+                <button class="descr-btn" type="button">Подробнее</button>
+              </div>
+              <div class="descr-wrapper">
+                <div class="descr-inner">
+                  <p><span>Эпоксидная смола</span> - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду. </p>
+                  <p><span>Набор для творчества из эпоксидной смолы</span> - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                  <p>Эпоксидная смола - это уникальный материал, позволяющий создавать невероятно красивые изделия. Этот набор для рисования эпоксидной смолой Круг "Закат" включает в себя всё самое необходимое для живописи эпоксидной смолой, включая пошаговую текстовую и видео-инструкцию, материалы, инструменты, декор, защитную одежду.</p>
+                  <p>Набор для творчества из эпоксидной смолы - это нестандартный подарок для себя, близких или коллег. Эпоксидная смола для заливки используется в дизайне интерьеров, для создания мебели, декора, бижутерии.</p>
+                </div>
+                <button class="descr-btn" type="button">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section reviews" id="reviews">
+        <div class="container">
+          <div class="section__title">Отзывы клиентов с Wildberries</div>
+          <div class="reviews__slider">
+            <!-- Slider main container -->
+            <div class="swiper-container reviews__slider-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper reviews__slider-list">
+                <!-- Slides -->
+                <div class="swiper-slide reviews__slider-item">
+                  <div class="reviews__autor">
+                    <div class="reviews__ava"><img src="img/slider/r1.jpg" alt=""></div>
+                    <div class="reviews__info">
+                      <div class="reviews__name">Lorem ipsum dolor sit.</div>
+                      <div class="reviews__city">Lorem ipsum.</div>
+                    </div>
+                    <div class="raiting">
+                      <ul class="raiting__list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, odio.</div>
+                  <div class="reviews__pic"><img src="img/slider/s2.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide reviews__slider-item">
+                  <div class="reviews__autor">
+                    <div class="reviews__ava"><img src="img/slider/r2.jpg" alt=""></div>
+                    <div class="reviews__info">
+                      <div class="reviews__name">Lorem ipsum</div>
+                      <div class="reviews__city">Lorem ipsum dolor sit.</div>
+                    </div>
+                    <div class="raiting">
+                      <ul class="raiting__list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aperiam autem molestiae, itaque laudantium sint id delectus expedita nobis! At deleniti vitae ipsam expedita ullam sed saepe nulla amet reiciendis laudantium ducimus mollitia corrupti voluptatum tempore cum provident commodi, ad ipsa numquam. Reiciendis enim beatae dolore rem dolor expedita et!</div>
+                  <div class="reviews__pic"><img src="img/slider/s4.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide reviews__slider-item">
+                  <div class="reviews__autor">
+                    <div class="reviews__ava"><img src="img/slider/r3.jpg" alt=""></div>
+                    <div class="reviews__info">
+                      <div class="reviews__name">Lorem ipsum dolor sit.</div>
+                      <div class="reviews__city">Lorem ipsum dolor sit.</div>
+                    </div>
+                    <div class="raiting">
+                      <ul class="raiting__list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eligendi id esse veniam dicta! Harum obcaecati, sint corrupti ad expedita nostrum dicta deleniti, iusto libero eos esse repellat maiores error magnam qui soluta consectetur exercitationem pariatur sequi debitis odio voluptatibus. Non consequuntur obcaecati in, rerum illo pariatur hic dolorum error maxime, a nesciunt soluta nisi eligendi voluptatem totam dignissimos nemo veniam libero. Voluptatem quisquam perferendis, corrupti porro magnam nemo totam sequi ratione eaque expedita doloremque tenetur recusandae ullam eius! Officiis assumenda nisi suscipit numquam animi. Eius autem aspernatur dolorem enim magni dolor cupiditate id, facilis, sint ipsam voluptates molestiae nulla.</div>
+                  <div class="reviews__pic"><img src="img/slider/s3.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination reviews__slider-pagination"></div>
+
+            <div class="swiper-button">
+              <div class="swiper-button-prev reviews__slider-prev"></div>
+              <div class="swiper-button-next reviews__slider-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="plank plank--flame">
+        <div class="container-wide">
+          <div class="plank__content">
+            <div class="plank__text">
+              <div class="plank__title">Последний день акции <span class="product-name">на набор Эль скин</span></div>
+              <div class="price__row">
+                <div class="price__sale">Скидка -50%</div>
+                <div class="price__old">5510,00 руб</div>
+                <div class="price__new">2755,00 руб</div>
+              </div>
+            </div>
+            <a href="" class="btn">Купить на WILDBERRIES</a>
+          </div>
+        </div>
+        <picture class="plank__pic-left">
+          <source media="(max-width: 650px)" srcset="img/flame-lm.svg" type="image/svg+xml">
+          <source media="(min-width: 650px)" srcset="img/flame-l.svg" type="image/svg+xml">
+          <img src="img/flame-lm.svg" alt="">
+        </picture>
+        <div class="plank__pic-right">
+          <img src="img/flame-r.svg" alt="">
+        </div>
+      </div>
+      <div class="section-wrapper">
+        <section class="section order" id="order">
+          <div class="container">
+            <div class="order__list">
+              <div class="section__title">Как сделать заказ</div>
+              <div class="order__item">
+                <span class="order__item-namber">
+                  <!-- <img src="img/icon/i_1.svg" alt=""> -->
+                  <svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i1"></use>
+                  </svg>
+                </span>
+                <div class="order__item-text">Нажмите на кнопку «Купить на WildBerries»</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i2"></use>
+                  </svg></span>
+                <div class="order__item-text">Перейдите на сайт или в приложение WildBerries</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i3"></use>
+                  </svg></span>
+                <div class="order__item-text">Войдите в свой аккаунт</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i4"></use>
+                  </svg></span>
+                <div class="order__item-text">Оформите заказ за 2 минуты</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i5"></use>
+                  </svg></span>
+                <div class="order__item-text">Совершите безопасную оплату</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i6"></use>
+                  </svg></span>
+                <div class="order__item-text">Заберите заказ в пункте выдачи или курьером</div>
+              </div>
+              <div class="order__item">
+                <span class="order__item-namber"><svg viewBox="0 0 100 100">
+                    <use xlink:href="img/icon/sprite.svg#i7"></use>
+                  </svg></span>
+                <div class="order__item-text">Верните заказ БЕСПЛАТНО, если товар вам не подошел</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section faq" id="faq">
+          <div class="container">
+            <div class="faq__tabs">
+              <div class="faq__header">
+                <div class="faq__person">
+                  <img src="img/icon/box.svg" class="faq__preson-icon box">
+                  <img src="img/icon/heart.svg" class="faq__preson-icon heart">
+                  <img src="img/icon/prt.svg" class="faq__preson-icon prt">
+                  <svg width="310" height="374" viewBox="0 0 310 374">
+                    <use xlink:href="img/icon/sprite.svg#bayer"></use>
+                  </svg>
+                </div>
+                <div class="section__title">Остались вопросы?</div>
+              </div>
+              <div class="faq__list">
+                <div class="faq__item">
+                  <div class="faq__panel">Некоторый очень длинный вопрос, предполагающий крайне глубокомысленный ответ<i class="faq__icon"></i></div>
+                  <div class="faq__collapse">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto molestiae exercitationem corporis sunt reiciendis et ex culpa saepe repellat incidunt obcaecati eaque, maxime at corrupti, nobis impedit quibusdam, non suscipit.</p>
+                    <p>
+                      Animi, harum nemo et libero maiores obcaecati accusamus dolores rem, deserunt cupiditate, a distinctio sint beatae in temporibus voluptatibus autem. Mollitia eum a ipsam commodi voluptatem! Eos quas quam laborum!</p>
+                    <p>Voluptate, soluta doloremque corporis illum pariatur fuga ut adipisci temporibus doloribus, iusto iure accusantium praesentium ex assumenda possimus! Mollitia at, quidem soluta veniam tenetur molestiae excepturi aut modi reprehenderit saepe!</p>
+                    <p>Quisquam vitae, beatae illum autem facere ratione iste quia, pariatur eius, amet odio? Autem minima dolor nostrum possimus perspiciatis, similique sint odio dignissimos aliquam rerum maiores enim minus provident beatae!</p>
+                    <p>Corporis hic quia exercitationem quasi architecto excepturi dolore accusamus maxime, totam beatae facilis, necessitatibus voluptatem eveniet rem illum dolorum ipsam distinctio alias praesentium optio ipsa? Delectus maxime nulla eaque molestiae!</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__panel">А что если мне не подойдет товар?<i class="faq__icon"></i></div>
+                  <div class="faq__collapse">
+                    <p>Barcelona is a city in Spain. It is the capital and largest city of Catalonia, as well as the second most populous municipality of Spain. With a population of 1.6 million within city limits, its urban area extends to numerous neighbouring municipalities within the Province of Barcelona and is home to around 4.8 million people.</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__panel">Оно кусается?<i class="faq__icon"></i></div>
+                  <div class="faq__collapse">
+                    <p>Смотря как злить</p>
+                    <p><img src="img/Munchkin_kitten_6.jpg" alt=""></p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__panel">Я бы хотела такое же, но с перламутровыми пуговицами и в виде котенка, такое возмжно?<i class="faq__icon"></i></div>
+                  <div class="faq__collapse">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, molestias maiores! Cupiditate nobis sunt quia perferendis tempore, laborum praesentium reiciendis accusamus fugiat tenetur fuga iusto aspernatur est magni ab alias accusantium dolore quod voluptatibus. Quas laboriosam ipsam modi dolorem, ex laborum quia harum totam, voluptas quos tempora adipisci praesentium possimus dolorum asperiores dicta? Id voluptate quisquam cupiditate, quidem sit doloribus possimus ipsum molestiae eveniet praesentium facilis et veniam commodi ab accusamus nostrum. Reprehenderit dolor laboriosam saepe a assumenda veniam minima incidunt harum neque, fugit architecto commodi corporis nihil sit, dicta praesentium nisi quos officiis expedita. Repellendus asperiores obcaecati excepturi quasi!</p>
+                  </div>
+                </div>
+                <div class="faq__item">
+                  <div class="faq__panel">Хочу такие же трусы как у Навального - сделаете?<i class="faq__icon"></i></div>
+                  <div class="faq__collapse">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, officia.</p>
+                    <p>Libero officia accusantium quam voluptate ducimus facilis molestiae, pariatur optio.</p>
+                    <p>Dicta officia sapiente asperiores velit! Unde obcaecati aliquid labore odit?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="section__title">Не откажите себе в удовольствии
+            с косметикой Premium класса!</div>
+          <div class="contact__title">El'Skin / Бьюти бокс Подарочный Набор</div>
+          <div class="contact__container">
+            <div class="contact__pic"><img src="img/product.png" alt="" class="product-leadfoto">
+            </div>
+            <div class="contact__info">
+              <div class="sale">
+                <div class="sale__text">Ваша скидка</div>
+                <div class="sale__dig">-50%</div>
+              </div>
+              <div class="price">
+                <div class="price__row">
+                  <div class="price__old">5510,00 руб.</div>
+                  <div class="price__new">2755,00 руб.</div>
+                </div>
+                <a href="" class="btn">Купить на Wildberries</a>
+                <!-- <div class="freeshipping"><span></span> Бесплатная доставка!</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row jsb">
+        <div class="col-3">
+          <div class="footer__title">Гарантия соответствия</div>
+          <div class="footer__text">
+            Мы гордимся нашими продуктами, поскольку упорно и усердно ищем уникальные и необычные трендовые вещи. По этой причине мы предлагаем 100% гарантию соответствия. Если с вашим заказом что-то не так, вы можете быстро связаться с нашей службой поддержки клиентов, чтобы получить возмещение.
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="footer__title">О магазине</div>
+          <div class="footer__text">
+            ООО «Вайлдберриз»<br>
+            ИНН: 7721546864<br>
+            КПП: 997750001<br>
+            ОГРН: 1067746062449
+          </div>
+          <div class="footer__text">
+            <b>Адрес:</b> Московская область, Ленинский район, деревня Мильково, владение&nbsp;1
+          </div>
+          <div class="footer__text">
+            <b>График работы:</b> ПН-ВС 10:00 - 18:00
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="footer__title">Правовая информация</div>
+          <div class="footer__text">
+            <ul class="footer__list">
+              <li><a href="">Правила обмена и возврата</a></li>
+              <li><a href="">Правила оформления заказа</a></li>
+              <li><a href="">Политика конфиденциальности</a></li>
+              <li><a href="">Контакты</a></li>
+              <li><a href="">Перевозка и доставка</a></li>
+              <li><a href="">Защититесь от мошенников</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row jsb">
+        <div class="col">
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/icon/sprite.svg#visa"></use>
+          </svg>
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/icon/sprite.svg#mcard"></use>
+          </svg>
+        </div>
+        <div class="col">© 2020, «Вайлдберриз»</div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.sticky-kit.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script></script>
+</body>
+
+</html>

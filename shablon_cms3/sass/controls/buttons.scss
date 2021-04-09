@@ -1,0 +1,94 @@
+.btn {
+ min-width: 300px;
+ padding: 1.1em 1.5em;
+ border-radius: 4px;
+ @include fFS(18px, 23px, 320px, 1920px, 18px);
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.02em;
+ color: #fff;
+ background: $btn;
+ text-align: center;
+ &--slim {
+  min-width: auto;
+  width: 100%;
+  padding: 0.5em 1.5em;
+  @include fFS(13px, 20px, 320px, 1920px, 18px);
+ }
+ &:hover {
+  background: #d738ff;
+ }
+}
+
+.menu-trigger {
+ display: none;
+ padding: 10px 15px;
+ @include bp(780px) {
+  display: block;
+  span {
+   position: relative;
+   display: block;
+   width: 20px;
+   height: 20px;
+   padding: 9px 0;
+   background-clip: content-box;
+   background-color: #fff;
+   transition: 0.3s ease-in-out;
+   &:before,
+   &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(0);
+    transition: 0.3s ease-in-out;
+   }
+   &:before {
+    top: 0;
+   }
+   &:after {
+    bottom: 0;
+   }
+  }
+  &.open {
+   span {
+    background-color: transparent;
+    &:before {
+     top: 9px;
+     transform: rotate(-45deg);
+    }
+    &:after {
+     bottom: 9px;
+     transform: rotate(45deg);
+    }
+   }
+  }
+ }
+}
+
+.popup__close {
+ position: absolute;
+ top: 17px;
+ right: 17px;
+ width: 16px;
+ height: 16px;
+ cursor: pointer;
+ &:before,
+ &:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: $btn;
+ }
+ &:before {
+  transform: rotate(45deg);
+ }
+ &:after {
+  transform: rotate(-45deg);
+ }
+}

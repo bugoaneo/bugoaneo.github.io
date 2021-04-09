@@ -1,0 +1,55 @@
+.footer {
+ padding: 2em 0;
+ background-color: #000;
+ color: #fff;
+ .logo {
+  margin: auto;
+ }
+}
+
+.footer__title {
+ margin-bottom: 2em;
+}
+
+.footer__link {
+ li {
+  margin-bottom: 1.8em;
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+}
+
+.web {
+ text-align: center;
+ @include bp(650px) {
+  order: -1;
+ }
+}
+
+.web__list {
+ @include row(jc, as);
+ margin-bottom: 2em;
+ li {
+  flex: 0 1 80px;
+  a {
+   display: block;
+   height: 100%;
+   line-height: 1.5em;
+   * {
+    width: 1.5em;
+   }
+  }
+ }
+}
+
+.contact {
+ text-align: center;
+ @include bp(650px) {
+  order: -1;
+ }
+}
+
+.copy {
+ text-align: center;
+}

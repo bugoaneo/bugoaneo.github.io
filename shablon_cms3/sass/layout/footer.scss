@@ -1,0 +1,31 @@
+.footer {
+ margin-top: -35px;
+ background: linear-gradient(180deg, #9c00c9, #540096);
+ border-radius: 20px 20px 0px 0px;
+ padding: 4.5% 0 3.5em 0;
+ @include fFS(11px, 16px, 320px, 1920px, 18px);
+ color: #fff;
+ line-height: 1.5;
+ font-weight: 300;
+ z-index: 1;
+ .container {
+  max-width: 1700px;
+ }
+ .row + .row {
+  margin-top: 5%;
+  align-items: flex-end;
+ }
+ @include bp(650px) {
+  padding: 10% 0 3.5em 0;
+ }
+}
+
+.footer__title {
+ font-weight: 700;
+ text-transform: uppercase;
+ margin-bottom: 1.2em;
+}
+
+.footer__text + .footer__text {
+ margin-top: 1.2em;
+}

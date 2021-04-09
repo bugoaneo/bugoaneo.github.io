@@ -1,0 +1,30 @@
+@font-face {
+ font-family: "Gilroy";
+ src: url("../fonts/Gilroy-Regular.eot");
+ src: local("../fonts/Gilroy Regular"), local("Gilroy-Regular"),
+  url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"),
+  url("../fonts/Gilroy-Regular.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+@font-face {
+ font-family: "Gilroy";
+ src: url("../fonts/Gilroy-Bold.eot");
+ src: local("../fonts/Gilroy Bold"), local("Gilroy-Bold"),
+  url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+  url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+ font-weight: bold;
+ font-style: normal;
+ font-display: swap;
+}
+
+@font-face {
+ font-family: "nautilus";
+ src: local(""), url("../fonts/nautilus-webfont.woff2") format("woff2"),
+  url("../fonts/nautilus-webfont.woff") format("woff");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}

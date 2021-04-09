@@ -1,0 +1,247 @@
+.price {
+ margin-bottom: 1em;
+ @include bp(650px) {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+ }
+ &--row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .price__old {
+   color: #777777;
+   padding: 0;
+   margin-left: 1.1em;
+   @include bp(750px) {
+    &:before {
+     height: 2px;
+     transform: rotate(0deg);
+     background-color: currentColor;
+    }
+   }
+  }
+  .price__new {
+   @include bp(750px) {
+    color: #d61880;
+   }
+  }
+  @include bp(750px) {
+   margin: 1em 0 1em 2em;
+  }
+ }
+}
+.price__new {
+ font-weight: bold;
+ @include fFS(40px, 50px, 320px, 1900px, 20px);
+ @include bp(650px) {
+  margin-left: 1em;
+ }
+}
+
+.price__old {
+ position: relative;
+ display: inline-block;
+ padding: 0 0.8em;
+ @include fFS(28px, 38px, 320px, 1900px, 20px);
+ &:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-10deg);
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000;
+ }
+ @include bp(650px) {
+  padding: 0;
+ }
+}
+
+/*flip clock*/
+
+.flip-clock {
+ text-align: center;
+ perspective: 400px;
+}
+
+.flip-clock *,
+.flip-clock *:before,
+.flip-clock *:after {
+ box-sizing: border-box;
+}
+
+.flip-clock__piece {
+ display: inline-block;
+ margin: 0 5px;
+}
+
+.flip-clock__slot {
+ font-size: 0.8em;
+ font-weight: bold;
+}
+
+.card {
+ display: block;
+ position: relative;
+ padding-bottom: 0.8em;
+ font-size: 1.8em;
+ line-height: 1.1;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+ display: block;
+ height: 0.8em;
+ color: #fff;
+ background: #ff5c00;
+ padding: 0.25em 0.25em;
+ border-radius: 0.15em 0.15em 0 0;
+ backface-visiblity: hidden;
+ transform-style: preserve-3d;
+ width: 1.8em;
+ transform: translateZ(0);
+}
+
+.card__bottom {
+ color: #fff;
+ position: absolute;
+ top: 50%;
+ left: 0;
+ // border-top: solid 1px #000;
+ background: #ffa285;
+ border-radius: 0 0 0.15em 0.15em;
+ pointer-events: none;
+ overflow: hidden;
+}
+
+.card__bottom::after {
+ display: block;
+ margin-top: -0.8em;
+}
+
+.card__back::before,
+.card__bottom::after {
+ content: attr(data-value);
+}
+
+.card__back {
+ position: absolute;
+ top: 0;
+ height: 100%;
+ left: 0%;
+ pointer-events: none;
+}
+
+.card__back::before {
+ position: relative;
+ z-index: -1;
+ overflow: hidden;
+}
+
+.flip .card__back::before {
+ -webkit-animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+ animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ transform-origin: center bottom;
+}
+
+.flip .card__back .card__bottom {
+ transform-origin: center top;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+ -webkit-animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+ animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+}
+
+@-webkit-keyframes flipTop {
+ 0% {
+  transform: rotateX(0deg);
+  z-index: 2;
+ }
+
+ 0%,
+ 99% {
+  opacity: 0.99;
+ }
+
+ 100% {
+  transform: rotateX(-90deg);
+  opacity: 0;
+ }
+}
+
+@keyframes flipTop {
+ 0% {
+  transform: rotateX(0deg);
+  z-index: 2;
+ }
+
+ 0%,
+ 99% {
+  opacity: 0.99;
+ }
+
+ 100% {
+  transform: rotateX(-90deg);
+  opacity: 0;
+ }
+}
+
+@-webkit-keyframes flipBottom {
+ 0%,
+ 50% {
+  z-index: -1;
+  transform: rotateX(90deg);
+  opacity: 0;
+ }
+
+ 51% {
+  opacity: 0.99;
+ }
+
+ 100% {
+  opacity: 0.99;
+  transform: rotateX(0deg);
+  z-index: 5;
+ }
+}
+
+@keyframes flipBottom {
+ 0%,
+ 50% {
+  z-index: -1;
+  transform: rotateX(90deg);
+  opacity: 0;
+ }
+
+ 51% {
+  opacity: 0.99;
+ }
+
+ 100% {
+  opacity: 0.99;
+  transform: rotateX(0deg);
+  z-index: 5;
+ }
+}
+
+.raiting__list {
+ text-align: right;
+ margin-bottom: 1em;
+ li {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 1px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 19' id='star'%3E%3Cpath d='M10 0l3.42 5.292 6.09 1.618-3.975 4.889.343 6.291L10 15.82l-5.878 2.27.343-6.291-3.976-4.89 6.09-1.617L10 0z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='10' y1='0' x2='10' y2='20' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFE934'/%3E%3Cstop offset='.714' stop-color='%23FFD600'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: cover;
+ }
+}

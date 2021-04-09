@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Facebook Pixel Code -->
+  <script type="application/javascript">
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '');
+  </script>
+  <!-- End Facebook Pixel Code -->
+  <title>Подушка "Гармония De Lux" от Selena Dreams — лрепкий и здоровый сон!</title>
+  <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/swiper-bundle.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .hero {
+      background: url("img/hero__bg.jpg") center center/cover;
+    }
+
+    .hero__label {
+      background: url("img/medal.svg") center center/contain no-repeat;
+    }
+
+    .pillow {
+      background: url("img/pillow__bg.jpg") right bottom/cover, #77d2ff;
+    }
+
+    .video {
+      background: url("img/video.jpg") center top/cover;
+    }
+
+    .slider {
+      background: url("img/slider__bg.jpg") center top/cover;
+    }
+
+    .garanty {
+      background: url("img/garanty_l.svg") left top/auto 70% no-repeat, url("img/garanty_r.svg") right bottom/auto 70% no-repeat, #77d2ff;
+    }
+
+    .order {
+      background: url("img/order_l.jpg") left bottom/40% auto no-repeat, url("img/order_r.jpg") right bottom/40% auto no-repeat, #77d2ff;
+    }
+
+    .reviews {
+      background: url(img/review__bg.jpg) center center/cover;
+    }
+
+    @media(max-width: 750px) {
+      .hero {
+        background: none;
+      }
+
+      .hero__header {
+        background: url("img/header.jpg") right bottom/auto 100% no-repeat, #77d2ff;
+      }
+
+      .hero__header--bottom {
+        background: #fff;
+        color: #77d2ff;
+      }
+
+      .hero__container {
+        background: url("img/hero__promo-bg.png") center bottom/cover;
+        backdrop-filter: initial;
+      }
+
+      .pillow {
+        background: url("img/pillow__bg-mob.jpg") 100% 105%/contain no-repeat, #77d2ff;
+      }
+
+      .video {
+        background: url("img/video__mob.jpg") center top/cover;
+      }
+
+      .slider {
+        background: none;
+      }
+
+      .garanty {
+        background: url("img/garanty_l.svg") left top/70% auto no-repeat, #77d2ff;
+      }
+
+      .reviews {
+        background: url(img/review__bg-mob.jpg) center center/cover;
+      }
+
+      .order {
+        background: url("img/order__mob.png") right bottom/contain no-repeat, #77d2ff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--[if lt IE 9]>
+<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
+http://browsehappy.com/">обновите</a>
+<![endif]-->
+
+  <div class="wrapper">
+    <section class="section hero">
+      <div class="hero__wrapper">
+        <div class="hero__row">
+          <div class="hero__header">
+            <div class="hero__title">Крепкий<br>и&nbsp;здоровый сон</div>
+            <div class="hero__text">вам обеспечит подушка из гипоаллергенных материалов</div>
+          </div>
+          <div class="hero__pic"><img src="img/hero__bg-mob.jpg"></div>
+          <div class="hero__container">
+            <div class="hero__label">
+              Специальное предложение!
+            </div>
+            <div class="price">
+              <div class="price__old">2 947 &#8381;</div>
+              <div class="price__new">707 &#8381;</div>
+            </div>
+            <div class="timer">
+              <div class="timer__title">До конца акции осталось:</div>
+              <div class="flip-clock timer-clock1"></div>
+            </div>
+            <a href="" class="btn">Купить<br>на&nbsp;Wildberries</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pillow">
+      <div class="container">
+        <div class="pillow__row">
+          <div class="pillow__col pros">
+            <h2 class="pillow__title">Обычная подушка приносит массу беспокойства</h2>
+            <div class="pillow__list">
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#cons1"></use>
+                  </svg></div>
+                <div class="pillow__text">Вызывает аллергию</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#cons2"></use>
+                  </svg></div>
+                <div class="pillow__text">Негигиеничная</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#cons3"></use>
+                  </svg></div>
+                <div class="pillow__text">Быстро теряет форму</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#cons4"></use>
+                  </svg></div>
+                <div class="pillow__text">Сложно ухаживать</div>
+              </div>
+            </div>
+          </div>
+          <picture class="pillow__pic">
+            <source media="(max-width: 780px)" srcset="img/pillow__mob.png">
+            <img src="img/pillow.png">
+          </picture>
+          <div class="pillow__col cons">
+            <div class="pillow__title">Подушка "Гармония&nbsp;De&nbsp;Lux" от Selena Dreams дарит спокойный и крепкий сон</div>
+            <div class="pillow__list">
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#pros1"></use>
+                  </svg></div>
+                <div class="pillow__text">Гипоаллергенна</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#pros2"></use>
+                  </svg></div>
+                <div class="pillow__text">Не впитывает влагу
+                  и не накапливает пыль</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#pros3"></use>
+                  </svg></div>
+                <div class="pillow__text">Держит форму
+                  и не сбивается</div>
+              </div>
+              <div class="pillow__item">
+                <div class="pillow__icon"><svg viewBox="0 0 69 69">
+                    <use xlink:href="img/sprite.svg#pros4"></use>
+                  </svg></div>
+                <div class="pillow__text">Можно стирать
+                  в стиральной машине</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="container">
+        <div class="feature__header">Комфорт и удобство<span>во время сна</span></div>
+        <div class="feature__row">
+          <picture class="feature__pic">
+            <source media="(max-width: 800px)" srcset="img/feature__pillow-mob.png">
+            <img src="img/feature__pillow.png">
+          </picture>
+
+          <div class="feature__list">
+            <div class="feature__item">
+              <div class="feature__icon"><img src="img/feature__1.png"></div>
+              <div class="feature__descr">
+                <div class="feature__title">Практичный наполнитель</div>
+                <div class="feature__text">Микроволокно “лебяжий пух” упруго держит форму, не сбивается и не слёживается</div>
+              </div>
+            </div>
+            <div class="feature__item">
+              <div class="feature__icon"><img src="img/feature__2.png"></div>
+              <div class="feature__descr">
+                <div class="feature__title">Прочная ткань</div>
+                <div class="feature__text">Полиэфирный тик очень прочный, износостойкий и неприхотливый материал</div>
+              </div>
+            </div>
+            <div class="feature__item">
+              <div class="feature__icon"><img src="img/feature__3.png"></div>
+              <div class="feature__descr">
+                <div class="feature__title">Потайная молния</div>
+                <div class="feature__text">Регулируйте высоту и мягкость самостоятельно</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#order" data-target="anchor" class="btn">Купить<br>на&nbsp;Wildberries</a>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video__bg">
+        <video class="video__media" src="img/video.mp4" autoplay muted loop preload="auto"></video>
+      </div>
+      <div class="video__wrapper">
+        <div class="video__container">
+          <div class="video__pic"><img src="img/video__pic.jpg" alt=""></div>
+          <div class="video__descr">
+            <div class="video__title">
+              <div class="video__icon"><img src="img/feather.png"></div>
+              Подушка "Гармония&nbsp;De&nbsp;Lux" от Selena Dreams
+            </div>
+            <div class="video__text">Подходит для всей семьи!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="container">
+        <div class="slider__title">Selena Dreams / Гармония De Lux - размер 50х70</div>
+        <div class="slider__row">
+          <div class="slider__col">
+            <div class="slider__wrap">
+              <div class="swiper-container gallery-top slider__list">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/slider/slide__1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/slider/slide__2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/slider/slide__3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/slider/slide__4.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/slider/slide__5.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/slider/slide__6.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination slider__pagination"></div>
+              </div>
+              <div class="swiper-container gallery-thumbs slider__thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__1.jpg" alt=""></div>
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__2.jpg" alt=""></div>
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__3.jpg" alt=""></div>
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__4.jpg" alt=""></div>
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__5.jpg" alt=""></div>
+                  <div class="swiper-slide slider__thumb-pic"><img src="img/slider/slide__6.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__col slider__col--price">
+            <div class="price price--row">
+              <div class="price__new">707 &#8381;</div>
+              <div class="price__old">2 947 &#8381;</div>
+            </div>
+            <a href="#order" data-target="anchor" class="btn">Купить<br>на&nbsp;Wildberries</a>
+            <div class="slider__logo"><img src="img/slider__logo.png"></div>
+            <div class="slider__col-list">
+              <div class="slider__col-item">Бесплатная доставка</div>
+              <div class="slider__col-item">21 день на возврат</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="garanty">
+      <div class="container">
+        <div class="garanty__pic"><img src="img/feather.png"></div>
+        <div class="garanty__header">100% Гарантия Соответствия
+        </div>
+        <div class="garanty__row">
+          <div class="garanty__col">
+            <div class="garanty__icon"><svg viewBox="0 0 100 100">
+                <use xlink:href="img/sprite.svg#garanty1"></use>
+              </svg></div>
+            <div class="garanty__descr">
+              <div class="garanty__title">Моментальная покупка
+                через Wildberries</div>
+              <div class="garanty__text">Мы являемся официальными партнерами WildBerries. Поэтому вас ждет безопасная оплата и 100% гарантия соответствия.</div>
+            </div>
+          </div>
+          <div class="garanty__col">
+            <div class="garanty__icon"><svg viewBox="0 0 100 100">
+                <use xlink:href="img/sprite.svg#garanty2"></use>
+              </svg></div>
+            <div class="garanty__descr">
+              <div class="garanty__title">Бесплатная<br> доставка</div>
+              <div class="garanty__text">Получение товара в пунктах выдачи WildBerries. Отправляем по всей России! Заказ придет к вам в кратчайшие сроки!</div>
+            </div>
+          </div>
+          <div class="garanty__col">
+            <div class="garanty__icon"><svg viewBox="0 0 100 100">
+                <use xlink:href="img/sprite.svg#garanty3"></use>
+              </svg></div>
+            <div class="garanty__descr">
+              <div class="garanty__title">Бесплатный<br> возврат</div>
+              <div class="garanty__text">Не платите за неподошедшие вам товары</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__header">Слово счастливым клиентам:</div>
+        <div class="reviews__slider">
+          <!-- Slider main container -->
+          <div class="swiper-container reviews__slider-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper reviews__slider-list">
+              <!-- Slides -->
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r1.png"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Ксения Ли</div>
+                    <div class="reviews__city">г. Подольск</div>
+                  </div>
+                </div>
+                <div class="raiting">
+                  <ul class="raiting__list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="reviews__text">Хорошая подушка, не сбивается, очень удобно, что можно регулировать мягкость и высоту!</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r2.png"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Яна Цой</div>
+                    <div class="reviews__city">г. Москва</div>
+                  </div>
+                </div>
+                <div class="raiting">
+                  <ul class="raiting__list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="reviews__text">Купила подушки с наполнителем "Лебяжий пух" - ооочень нравятся! Очень мягкая-буквально
+                  проваливаешься в ней.. нет никаких намеков на комочки</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r3.png"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Софья Юрьева</div>
+                    <div class="reviews__city">г. Ссеверск</div>
+                  </div>
+                </div>
+                <div class="raiting">
+                  <ul class="raiting__list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="reviews__text">Классная подушка. Спать на ней очень приятно. Рекомендую.</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r4.png"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Алина Минакова</div>
+                    <div class="reviews__city">г. Омск</div>
+                  </div>
+                </div>
+                <div class="raiting">
+                  <ul class="raiting__list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="reviews__text">Подушка классная, купила маме-она довольна))Радует, что производство российское!</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r5.png"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Анна Васильева</div>
+                    <div class="reviews__city">г. Новосибирск</div>
+                  </div>
+                </div>
+                <div class="raiting">
+                  <ul class="raiting__list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="reviews__text">Однозначно рекомендую к покупке! Их кстати можно стирать, но мы не пробовали. Задумалась, может
+                  после стирки станет более пушистая...? Надо попробовать )))</div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__slider-btn swiper-button">
+            <div class="swiper-button-prev reviews__slider-prev"></div>
+            <div class="swiper-button-next reviews__slider-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="container">
+        <h2 class="order__header">Как заказать:</h2>
+        <div class="order__list">
+          <div class="order__item">
+            <span class="order__icon">
+              <svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i1"></use>
+              </svg>
+            </span>
+            <div class="order__text">Нажмите на кнопку «Купить на Wildberries»</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i2"></use>
+              </svg></span>
+            <div class="order__text">Перейдите на сайт</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i3"></use>
+              </svg></span>
+            <div class="order__text">Войдите в свой аккаунт</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i4"></use>
+              </svg></span>
+            <div class="order__text">Оформите заказ за 2 минуты</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i5"></use>
+              </svg></span>
+            <div class="order__text">Совершите безопасную оплату</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i6"></use>
+              </svg></span>
+            <div class="order__text">Заберите заказ в пункте выдачи или курьером</div>
+          </div>
+          <div class="order__item">
+            <span class="order__icon"><svg viewBox="0 0 63 63">
+                <use xlink:href="img/sprite.svg#i7"></use>
+              </svg></span>
+            <div class="order__text">Верните заказ БЕСПЛАТНО, если товар вам не подошел</div>
+          </div>
+        </div>
+        <a href="#order" data-target="anchor" class="btn">Купить<br>на&nbsp;Wildberries</a>
+      </div>
+    </section>
+    <section class="hero hero--bottom" id="order">
+      <div class="hero__wrapper">
+        <div class="hero__row">
+          <div class="hero__header hero__header--bottom">
+            <div class="hero__title">Крепкий<br>и&nbsp;здоровый сон</div>
+            <div class="hero__text">вам обеспечит подушка из гипоаллергенных материалов</div>
+          </div>
+          <div class="hero__pic"><img src="img/hero__bg-mob.jpg"></div>
+          <div class="hero__container">
+            <div class="hero__label">
+              Специальное предложение!
+            </div>
+            <div class="price">
+              <div class="price__old">2 947 &#8381;</div>
+              <div class="price__new">707 &#8381;</div>
+            </div>
+            <div class="timer">
+              <div class="timer__title">До конца акции осталось:</div>
+              <div class="flip-clock timer-clock2"></div>
+            </div>
+            <a href="https://www.wildberries.ru/catalog/16764177/detail.aspx" class="btn">Купить<br>на&nbsp;Wildberries</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__col">
+          <div class="footer__title">Гарантия соответствия</div>
+          <div class="footer__text">
+            Мы гордимся нашими продуктами, поскольку упорно и усердно ищем уникальные и необычные трендовые вещи. По
+            этой причине мы предлагаем 100% гарантию соответствия. Если с вашим заказом что-то не так, вы можете
+            быстро связаться с нашей службой поддержки клиентов, чтобы получить возмещение.
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">О магазине</div>
+          <div class="footer__text">
+            ООО «Вайлдберриз»<br>
+            ИНН: 7721546864<br>
+            КПП: 997750001<br>
+            ОГРН: 1067746062449
+          </div>
+          <div class="footer__text">
+            <b>Адрес:</b> Московская область, Ленинский район, деревня Мильково, владение&nbsp;1
+          </div>
+          <div class="footer__text">
+            <b>График работы:</b> ПН-ВС 10:00 - 18:00
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Правовая информация</div>
+          <div class="footer__text">
+            <ul class="footer__link">
+              <li><a href="info.html#vozvrat-tovara">Правила обмена и возврата</a></li>
+              <li><a href="info.html#kak-sdelat-zakaz">Правила оформления заказа</a></li>
+              <li><a href="info.html#politika">Политика конфиденциальности</a></li>
+              <li><a href="info.html#kontakty">Контакты</a></li>
+              <li><a href="info.html#besplatnaya-dostavka">Перевозка и доставка</a></li>
+              <li><a href="info.html#stop-moshennik">Защититесь от мошенников</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__col">
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/sprite.svg#visa"></use>
+          </svg>
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/sprite.svg#mcard"></use>
+          </svg>
+        </div>
+        <div class="footer__col">© 2020, «Вайлдберриз»</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

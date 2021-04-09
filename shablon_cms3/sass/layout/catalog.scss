@@ -1,0 +1,135 @@
+.catalog__list {
+ margin: 0 -1.5%;
+ font-size: 0;
+}
+
+.catalog__item {
+ position: relative;
+ display: inline-block;
+ vertical-align: top;
+ font-size: initial;
+ width: 31%;
+ padding: 16px 14px 22px 14px;
+ border: 1px solid #f2f2f6;
+ border-bottom: none;
+ border-radius: 4px 4px 0 0;
+ margin: 0 1% 127px 1%;
+ background-color: #fff;
+ transition: 0.5s ease-in-out;
+ z-index: 0;
+ &:nth-child(n + 3) {
+  margin: 0 1% 157px 1%;
+  // margin-bottom: 20px;
+ }
+ &:hover {
+  // box-shadow: 7px -5px 33px 0px rgba(61, 61, 61, 0.2), -7px 5px 33px 0px rgba(61, 61, 61, 0.2);
+  box-shadow: 7px 5px 33px rgba(0, 0, 0, 0.27);
+  z-index: 3;
+  .catalog__descr {
+   &:hover {
+    -webkit-line-clamp: 33;
+    max-height: 120px;
+    overflow: auto;
+   }
+  }
+  .catalog__text {
+   box-shadow: 7px 29px 29px rgba(0, 0, 0, 0.27);
+  }
+ }
+ @include bp(850px) {
+  width: 47.5%;
+  padding: 8px 7px 15px 7px;
+  margin-bottom: 20px;
+ }
+ @include bp(350px) {
+  width: 100%;
+  margin: 0 auto;
+ }
+}
+
+.catalog__pic {
+ position: relative;
+ padding-top: (392 / 327) * 100%;
+ overflow-y: hidden;
+ margin-bottom: 13px;
+ img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ }
+ @include bp(650px) {
+  margin-bottom: 10px;
+ }
+}
+
+.catalog__price {
+ position: relative;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ .sale {
+  margin-left: auto;
+  @include bp(850px) {
+   position: absolute;
+   top: -4em;
+   left: 10px;
+  }
+  @include bp(650px) {
+   top: -3em;
+  }
+ }
+}
+
+.catalog__price-new {
+ @include fFS(24px, 33px, 320px, 1920px, 16px);
+ font-weight: 700;
+ color: $menu;
+ @include bp(850px) {
+  margin-right: auto;
+ }
+}
+.catalog__price-old {
+ position: relative;
+ margin: 0 10px;
+ @include fFS(14px, 24px, 320px, 1920px, 16px);
+ font-weight: 700;
+ color: #8b8b8b;
+ &:before {
+  content: "";
+  position: absolute;
+  bottom: 0.4em;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+ }
+ @include bp(850px) {
+  margin: 0;
+ }
+}
+.catalog__descr {
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow-y: hidden;
+ max-height: 55px;
+ margin-bottom: 1em;
+ @include fFS(14px, 16px, 320px, 1920px, 18px);
+ transition: 0.5s ease-in-out;
+}
+
+.catalog__text {
+ position: absolute;
+ top: 100%;
+ left: -1px;
+ right: -1px;
+ padding: 0 14px 22px 14px;
+ border: 1px solid #f2f2f6;
+ border-top: none;
+ border-radius: 0 0 4px 4px;
+ background-color: #fff;
+ box-shadow: none;
+ transition: 0.3s ease-in-out;
+}

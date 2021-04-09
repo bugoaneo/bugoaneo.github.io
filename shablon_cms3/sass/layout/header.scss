@@ -1,0 +1,82 @@
+.header {
+ position: fixed;
+ top: 0;
+ right: 0;
+ width: 100%;
+ background-color: #b900e8;
+ z-index: 10;
+ transition: 0.3s ease-in-out;
+ .container-wide {
+  @include row(jsb, as);
+ }
+ &.hide {
+  top: -68px;
+ }
+ @include bp(780px) {
+  padding: 0.5em 0;
+  &.hide {
+   top: -58px;
+  }
+ }
+}
+
+.logo {
+ margin: auto 0;
+}
+
+.menu {
+ margin: 0 auto;
+ flex: 0 1 65%;
+ @include bp(1270px) {
+  flex: 0 1 85%;
+ }
+ @include bp(780px) {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+  &.open {
+   left: 0;
+  }
+ }
+}
+
+.menu__list {
+ @include row(jsb);
+ height: 100%;
+ li {
+  flex: 1 1 auto;
+  transition: 0.3s ease-in-out;
+  &:hover {
+   background: #d52fff;
+   a {
+    color: #fff;
+   }
+  }
+ }
+ a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1.4em 0.5em;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #fff;
+  // @include bp(1250px) {
+  //  font-size: 15px;
+  // }
+  @include bp(780px) {
+   font-size: 16px;
+   padding: 1em;
+   color: $btn;
+  }
+ }
+ @include bp(780px) {
+  display: block;
+ }
+}

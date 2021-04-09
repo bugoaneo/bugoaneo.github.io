@@ -1,0 +1,161 @@
+.menu-trigger {
+ display: none;
+ padding: 10px 15px;
+ @include bp(780px) {
+  display: block;
+  span {
+   position: relative;
+   display: block;
+   width: 20px;
+   height: 20px;
+   padding: 9px 0;
+   background-clip: content-box;
+   background-color: #fff;
+   transition: 0.3s ease-in-out;
+   &:before,
+   &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(0);
+    transition: 0.3s ease-in-out;
+   }
+   &:before {
+    top: 0;
+   }
+   &:after {
+    bottom: 0;
+   }
+  }
+  &.open {
+   span {
+    background-color: transparent;
+    &:before {
+     top: 9px;
+     transform: rotate(-45deg);
+    }
+    &:after {
+     bottom: 9px;
+     transform: rotate(45deg);
+    }
+   }
+  }
+ }
+}
+
+.btn {
+ padding: 1.1em 1.5em;
+ border-radius: 4px;
+ @include fFS(18px, 23px, 320px, 1920px, 18px);
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.02em;
+ color: #fff;
+ background: $btn;
+ text-align: center;
+ &--big {
+  width: 100%;
+ }
+ &:hover {
+  background: #d738ff;
+ }
+}
+
+.descr-btn {
+ position: relative;
+ display: none;
+ width: 100%;
+ padding: 0.5em;
+ color: $btn;
+ font-size: 16px;
+ text-align: center;
+ text-transform: uppercase;
+ &:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  vertical-align: text-top;
+  transform: rotate(-45deg);
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transition: 0.3s ease-in-out;
+ }
+ &:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(white));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), white);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1), white);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), white);
+  z-index: 1;
+  pointer-events: none;
+ }
+ @include bp(780px) {
+  display: block;
+ }
+}
+
+.faq__icon {
+ position: absolute;
+ @include center(y);
+ right: 2.1em;
+ width: 2.8em;
+ height: 2.8em;
+ border-radius: 100%;
+ background-color: #fff;
+ box-shadow: -1px 1px 7px rgba(125, 0, 184, 0.21);
+ transition: 0.3s ease-in-out;
+ &:before,
+ &:after {
+  content: "";
+  @include center;
+  background-color: #ac66e2;
+  transition: 0.3s ease-in-out;
+ }
+ &:before {
+  width: 1.2em;
+  height: 2px;
+ }
+ &:after {
+  width: 2px;
+  height: 1.2em;
+ }
+ @include bp(650px) {
+  font-size: 12px;
+  right: 1.1em;
+ }
+}
+
+.popup__close {
+ position: absolute;
+ top: 17px;
+ right: 17px;
+ width: 16px;
+ height: 16px;
+ &:before,
+ &:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: $btn;
+ }
+ &:before {
+  transform: rotate(45deg);
+ }
+ &:after {
+  transform: rotate(-45deg);
+ }
+}
