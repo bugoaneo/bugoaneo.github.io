@@ -1,0 +1,26 @@
+@font-face {
+ font-family: "vag_worldbold";
+ src: url("../fonts/vag_world.eot");
+ src: url("../fonts/vag_world.eot?#iefix") format("embedded-opentype"), url("../fonts/vag_world.woff2") format("woff2"),
+  url("../fonts/vag_world.woff") format("woff"), url("../fonts/vag_world.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+
+@font-face {
+ font-family: "Gilroy";
+ src: local("../fonts/Gilroy-Regular"), local("../fonts/Gilroy-Regular"),
+  url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+@font-face {
+ font-family: "Gilroy";
+ src: local("../fonts/Gilroy-Semibold"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+  url("../fonts/Gilroy-Semibold.woff") format("woff");
+ font-weight: bold;
+ font-style: normal;
+ font-display: swap;
+}

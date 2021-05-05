@@ -39,6 +39,8 @@ $(document).ready(function () {
  myTabs.init();
 
 });
+
+
 (function () {
  'use strict';
  // breakpoint where swiper will be destroyed

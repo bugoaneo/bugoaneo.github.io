@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+  <meta name="theme-color" content="#ffffff">
+
+  <title></title>
+  <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- <link rel="preload" href="fonts/vag_world.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <link rel="stylesheet" href="css/swiper-bundle.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .hero {
+      background: url(img/hero_curv.png) right top/auto 100% no-repeat, url(img/hero_bg.jpg) center bottom/cover;
+    }
+
+    .video {
+      background: url(img/features_bg2.png) left top/auto 100% no-repeat;
+    }
+
+    .reasons {
+      background: url(img/reasons_bg0.png) right 98%/31% auto no-repeat, url(img/star.png) 8% 70%/75px 70px no-repeat;
+    }
+
+    .features {
+      background: url(img/features_bg.png) right top/cover;
+    }
+
+    .features__descr {
+      background: url(img/cloud_features.png) center bottom/100% 100% no-repeat;
+    }
+
+    .catalog {
+      background: url(img/catalog_bg.jpg) center center/cover;
+    }
+
+    .reviews {
+      background: url(img/reviews.png) center center/cover;
+    }
+
+    .garanty {
+      background: url(img/garanty_leaf.png) 4% 0/300px 400px no-repeat;
+    }
+
+    .decoration-inner {
+      background: url(img/order_bg.png) left bottom/auto 70% no-repeat, url(img/garanty_leaf2.png) right 70%/auto no-repeat, url(img/garanty_r.png) right top/auto 70% no-repeat;
+    }
+
+    @media(max-width:1000px) {
+      .reasons {
+        background: url(img/reasons_bg0.png) right 90%/35% auto no-repeat, url(img/star.png) 8% 10%/75px 70px no-repeat;
+      }
+    }
+
+    @media(max-width:850px) {
+      .video {
+        background: none;
+      }
+    }
+
+    @media(max-width:750px) {
+      .hero {
+        background: url(img/hero_bg.jpg) center bottom/cover;
+      }
+
+      .hero__pic {
+        background: url(img/hero_l_mob.png) left bottom/auto 100% no-repeat, url(img/hero_r_mob.png) right bottom/auto 100% no-repeat;
+      }
+
+      .reasons,
+      .catalog {
+        background: none;
+      }
+
+      .garanty {
+        background: url(img/garanty_leaf-mob.png) center right/auto 40% no-repeat;
+      }
+
+      .decoration-inner {
+        background: url(img/order_bg.png) left 49%/auto 20% no-repeat, url(img/garanty_r-mob.png) right 70%/auto 30% no-repeat;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--[if lt IE 9]>
+<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
+http://browsehappy.com/">обновите</a>
+<![endif]-->
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__link">
+          <a href="https://www.instagram.com/p/CNwsckwDxz4/" target="_blank">
+            <svg viewBox="0 0 128 22" width="128" height="22">
+              <use xlink:href="img/sprite.svg#header_logo"></use>
+            </svg>
+          </a>
+          <div class="butterfly">
+            <figure class="figure">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="wing left" viewBox="0 0 27 43">
+                <path d="M26.703 20.96S20.051-.39.283.364c0 0 .48 18.857 5.289 20.698 4.809 1.84 21.131-.104 21.131-.104z" fill="#F4A7A7" />
+                <path d="M26.703 20.96S7.19 16.766 4.847 29.341c-1.29 6.632 6.624 17.62 13.183 11.626 6.575-6.17 8.673-20.009 8.673-20.009z" fill="#F4A7A7" />
+              </svg>
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="body" viewBox="0 0 8 32">
+                <path d="M5.64 20.19c.241 6.322-.128 11.526-.929 11.544-.8.019-1.679-5.118-1.92-11.44-.243-6.324.127-11.527.927-11.546.8-.018 1.68 5.119 1.922 11.441z" fill="#F4A7A7" />
+                <path d="M5.32 8.712c.082 1.072-.62 1.986-1.516 2.085-.896.098-1.699-.86-1.782-1.932-.083-1.072.619-1.987 1.515-2.086 1.072-.083 1.795.78 1.782 1.933z" fill="#F4A7A7" />
+                <path d="M4.467 7.305S4.052 1.943 7.025.43L4.467 7.305zM2.866 7.342S2.772 2.363.143.978l2.723 6.364z" fill="#F4A7A7" />
+              </svg>
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="wing right" viewBox="0 0 26 44">
+                <path d="M.975 22.895S5.815 1.042 25.519.015c0 0 1.185 18.918-3.354 21.095-4.731 2.337-21.19 1.785-21.19 1.785z" fill="#F4A7A7" />
+                <path d="M.975 22.895s19.063-5.876 22.514 6.407c1.831 6.461-5.045 18.107-12.108 12.608C4.223 36.491.975 22.895.975 22.895z" fill="#F4A7A7" />
+              </svg>
+            </figure>
+          </div>
+        </div>
+        <div class="logo"><img src="img/logo.png"></div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__row">
+          <div class="hero__col">
+            <h1 class="hero__title">Почему наши товары<br>
+              так любят дети и их родители:</h1>
+            <picture class="hero__pic">
+              <source media="(max-width: 600px)" srcset="img/hero_kid-mob.png">
+              <img src="img/hero_kid.png">
+            </picture>
+
+            <div class="hero__row">
+              <div class="hero__reasons">
+                <ul class="hero__reasons-list">
+                  <li>Авторские принты</li>
+                  <li>100% хлопок</li>
+                  <li>Гипоаллергенные краски</li>
+                  <li>Дышащая ткань</li>
+                  <li>Мягкие швы</li>
+                  <li>Качественная фурнитура</li>
+                </ul>
+              </div>
+              <div class="hero__figure"><img src="img/hero.png"></div>
+            </div><!-- /hero__row -->
+          </div><!-- /hero__col -->
+          <div class="hero__btn">
+            <a href="#order" data-target="anchor" class="btn">Купить на Wildberries</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
+      <div class="container">
+        <div class="video__screen" style="background: url('img/video_vrap.png') center bottom/contain no-repeat;">
+          <div class="video__wrapper">
+            <video class="video__inner" controls="controls" preload="auto" rel="preload" as="video" poster="img/poster.jpg">
+              <source src="img/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            </video>
+            <div class="video__cover">
+              <img src="img/poster.jpg" class="video__poster">
+              <div class="video__play">
+                <svg viewBox="0 0 43 43" class="">
+                  <use xlink:href="img/sprite.svg#play"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reasons">
+      <img src="img/reasons_kid.png" class="reasons__kid">
+      <div class="container">
+        <div class="reasons__row">
+          <div class="reasons__col reasons__col--pros">
+            <div class="reasons__title">
+              Принт
+              <svg viewBox="0 0 317 48" class="reasons__logo">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </div>
+            <ul class="reasons__list">
+              <li>Пропускает воздух</li>
+              <li>Мягкий на ощупь</li>
+              <li>Безопасный</li>
+              <li>Экологичный</li>
+            </ul>
+          </div>
+          <div class="reasons__col-pic"><img src="img/reasons.png"></div>
+          <div class="reasons__col reasons__col--cons">
+            <div class="reasons__title">Принт другого прозводителя</div>
+            <ul class="reasons__list">
+              <li>Не пропускает воздух</li>
+              <li>Ощущается на ткани</li>
+              <li>Вызывает аллергию</li>
+              <li>Низкое качество</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="features__row">
+        <picture class="features__pic">
+          <source media="(max-width: 750px)" srcset="img/features_mob.png">
+          <img src="img/features.png">
+        </picture>
+        <div class="features__box">
+          <div class="features__descr">
+            <div class="features__text">Швы не раздражают кожу, а&nbsp;значит здоровому и крепкому сну малыша ничто не помешает.</div>
+          </div>
+          <div class="features__hero"><img src="img/hero4.png"></div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__inner">
+          <h2 class="catalog__title">Выберите костюмчик для вашего малыша:</h2>
+          <div class="catalog__slider">
+            <div class="swiper-container catalog__top">
+              <div class="swiper-wrapper  catalog__top-wrap">
+                <div class="swiper-slide catalog__slide is-active"><img src="img/slider/sk1.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk2.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk3.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk4.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk5.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk6.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk7.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk8.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk9.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk10.jpg"></div>
+                <div class="swiper-slide catalog__slide"><img src="img/slider/sk11.jpg"></div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="zoom_in">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                  <use xlink:href="img/sprite.svg#zoom_in"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="swiper-container catalog__thumbs">
+              <div class="swiper-wrapper catalog__thumbs-wrap">
+                <div class="swiper-slide catalog__thumb-slide is-active"><img src="img/slider/st1.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st2.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st3.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st4.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st5.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st6.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st7.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st8.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st9.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st10.jpg"></div>
+                <div class="swiper-slide catalog__thumb-slide"><img src="img/slider/st11.jpg"></div>
+              </div>
+              <div class="price">
+                <div class="price__row">
+                  <div class="price__sale">-50%</div>
+                  <div class="price__old">1 135 &#8381;</div>
+                  <div class="price__new">595 &#8381;</div>
+                </div>
+                <a href="#order" data-target="anchor" class="btn">Купить на Wildberries</a>
+              </div>
+            </div>
+            <div class="catalog-btns">
+              <div class="swiper-button-next catalog-btn-next"></div>
+              <div class="swiper-button-prev catalog-btn-prev"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="reviews">
+      <picture class="reviews__hero">
+        <source media="(max-width: 700px)" srcset="img/hero2_mob.png">
+        <img src="img/hero2.png">
+      </picture>
+      <div class="container">
+        <h2 class="reviews__title">Реальные отзывы наших&nbsp;клиентов</h2>
+        <div class="reviews__slider">
+          <!-- Slider main container -->
+          <div class="swiper-container reviews__slider-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper reviews__slider-list">
+              <!-- Slides -->
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r3.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Торопова Любовь</div>
+                    <div class="reviews__city">г. Подольск</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Боди очень качественное на ощупь, швы мягкие. Покупала большого размера 80). Очень понравилось, что в нижней части три кнопочки – это дополнительная фиксация, ничего наружу не вылезает. Думаю комбинезон этой же фирмы заказать.</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r2.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Иванов Андрей</div>
+                    <div class="reviews__city">г. Новосибирск</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Заказал своей дочке на 8 марта. Пришло вовремя, к празднику успели. Качество на высоте, выглядит празднично. Мягкий. Жена с тещей заценили)))</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r1.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Ухова Ксения</div>
+                    <div class="reviews__city">г. Санкт-Петербург</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Боди симпатичный, швы аккуратные, мягкие и очень порадовало, что они наружу моей малышке не натирают. Принт интересный, яркий заказали такой же бодик на размер больше на вырост.</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r4.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Архангельская Тамара</div>
+                    <div class="reviews__city">г. Томск</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Бодики очень нежные удобные и очень симпатичные!! Уверенно советую, потому что я придирчива к детской одежде, всегда внимательно выбираю)) материал натуральный, швы мягкие незаметные.</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r5.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Ольга Церева</div>
+                    <div class="reviews__city">г. Нижневартовск</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Нереально красивый боди! Очень мягкий, нежный и швы наружу. Брали в 62 размере на выписку, чуть чуть совсем великоват, но это и к лучшему..))</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r6.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Упорова Анна</div>
+                    <div class="reviews__city">г. Санкт-Петербург</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Накупила штук 10 с разным принтом, очень довольна! Потому что вижу, как ребенку комфортно и спокойно в этой одежде не смотря на супер-активность)))</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/rav.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Вороновская Юля</div>
+                    <div class="reviews__city">г. Нижний Новгород</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Боди и слипы высокого качества и пошив и материал и принты! чувствуется, что созданы с любовью, очень мягкий хлопок, нам по размеру всё подошло.</div>
+              </div>
+              <div class="swiper-slide reviews__slider-item">
+                <div class="reviews__autor">
+                  <div class="reviews__ava"><img src="img/slider/r7.jpg"></div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Ильякова Екатерина</div>
+                    <div class="reviews__city">г. Санкт-Петербург</div>
+                  </div>
+                  <div class="raiting">
+                    <ul class="raiting__list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="reviews__text">Бодик заказываем уже второй и так же с рысью. Нам 5 месяцев, рост 66 см, размер 68 отлично нам подходит. Смотрится отлично! Качество просто супер! Рекомендую продавца!</div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-btns">
+            <div class="swiper-button-prev reviews-btn-prev"></div>
+            <div class="swiper-button-next reviews-btn-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="decoration-inner">
+      <section class="garanty">
+        <div class="container">
+          <div class="garanty__title">Гарантия качества и соответствия</div>
+          <div class="garanty__list">
+            <div class="garanty__item">
+              <div class="garanty__icon"><img src="img/i1.png" alt=""></div>
+              <div class="garanty__text">Моментальная покупка через Wildberries</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i2"></use>
+                </svg></div>
+              <div class="garanty__text">Мы являемся официальными партнерами Wildberries. Поэтому гарантируем безопасную оплату и 100% гарантию соответствия</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i3"></use>
+                </svg></div>
+              <div class="garanty__text">Бесплатный возврат</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i4"></use>
+                </svg></div>
+              <div class="garanty__text">Бесплатная доставка</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i5"></use>
+                </svg></div>
+              <div class="garanty__text">Получение товара в пунктах выдачи Wildberries около дома</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i6"></use>
+                </svg></div>
+              <div class="garanty__text">Есть возможность доставки курьером до дома</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><img src="img/i7.png" alt=""></div>
+              <div class="garanty__text">Отправка по всей России</div>
+            </div>
+            <div class="garanty__item">
+              <div class="garanty__icon"><svg viewBox="0 0 96 96">
+                  <use xlink:href="img/sprite.svg#i8"></use>
+                </svg></div>
+              <div class="garanty__text">Заказ придет к вам
+                в кратчайший срок</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="order" id="order">
+        <picture class="order__hero-kid">
+          <source media="(max-width: 750px)" srcset="img/order_mob.png">
+          <img src="img/order.png">
+        </picture>
+
+        <div class="container">
+          <div class="order__title">Безопасная покупка<br>
+            Бесплатная доставка!</div>
+          <div class="order__desc">
+            <div class="order__list">
+              <div class="order__item">
+                <div class="order__icon"><svg viewBox="0 0 95 96">
+                    <use xlink:href="img/sprite.svg#id1"></use>
+                  </svg></div>
+                <div class="order__text">Нажмите на кнопку заказа</div>
+              </div>
+              <div class="order__item">
+                <div class="order__icon"><svg viewBox="0 0 95 96">
+                    <use xlink:href="img/sprite.svg#id2"></use>
+                  </svg></div>
+                <div class="order__text">Добавьте товар в корзину</div>
+              </div>
+              <div class="order__item">
+                <div class="order__icon"><svg viewBox="0 0 95 96">
+                    <use xlink:href="img/sprite.svg#id3"></use>
+                  </svg></div>
+                <div class="order__text">Если не авторизованы на Wildberries - авторизуйтесь</div>
+              </div>
+              <div class="order__item">
+                <div class="order__icon"><svg viewBox="0 0 95 96">
+                    <use xlink:href="img/sprite.svg#id4"></use>
+                  </svg></div>
+                <div class="order__text">Завершите оформление заказа</div>
+              </div>
+            </div>
+            <div class="order__hero">
+              <img src="img/sale_mob.png">
+            </div>
+            <a href="/////" class="btn">Купить на Wildberries</a>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__col footer__col--text">
+          <div class="footer__text">
+            Бренд "Надевашка" создает коллекции с эксклюзивными
+            принтами, причудливыми и разноцветными, добавляя элемент
+            игры в повседневную жизнь вашего малыша. Сочетание
+            простого кроя и яркого рисунка будет радовать родителей и
+            малыша. А фурнитура и материалы премиального качества
+            точно удовлетворят потребности даже самого требовательного
+            покупателя.
+          </div>
+        </div>
+        <div class="footer__col footer__col--about">
+          <div class="footer__title">О магазине</div>
+          <div class="footer__text">
+            ООО «ВебТрейд»<br>
+            ИНН: 5407976229<br>
+            КПП: 540701001<br>
+            ОГРН: 1195476071614
+          </div>
+          <div class="footer__text">
+            <b>Адрес:</b>Новосибирск, ул. Советская, д. 5
+          </div>
+          <div class="footer__text">
+            <b>График работы:</b> ПН-ВС 10:00 - 18:00
+          </div>
+          <div class="footer__text footer__text--icon in">
+            <b>Наш инстаграм:</b> <a href="https://www.instagram.com/p/CNwsckwDxz4/">@nadevashka</a>
+          </div>
+          <div class="footer__text footer__text--icon ml">
+            <b>Наша почта:</b> <a href="info@nadevashka.com">info@nadevashka.com</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Правовая информация</div>
+          <div class="footer__text">
+            <ul class="footer__link">
+              <li><a href="info.html#vozvrat-tovara">Правила обмена и возврата</a></li>
+              <li><a href="info.html#kak-sdelat-zakaz">Правила оформления заказа</a></li>
+              <li><a href="info.html#politika">Политика конфиденциальности</a></li>
+              <li><a href="info.html#kontakty">Контакты</a></li>
+              <li><a href="info.html#besplatnaya-dostavka">Перевозка и доставка</a></li>
+              <li><a href="info.html#stop-moshennik">Защититесь от мошенников</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row accent">
+        <!-- <div class="footer__col">
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/sprite.svg#visa"></use>
+          </svg>
+          <svg width="41" height="26" viewBox="0 0 41 26">
+            <use xlink:href="img/sprite.svg#mcard"></use>
+          </svg>
+        </div> -->
+        <div class="footer__col">© 2021 «Web Trade»</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

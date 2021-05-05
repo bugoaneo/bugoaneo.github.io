@@ -1,0 +1,25 @@
+.header {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ padding-top: 1.2em;
+ z-index: 0;
+}
+.header__container {
+ @include row(jsb, as);
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 0 20px;
+}
+
+.logo {
+ width: 4.3em;
+ img {
+  display: block;
+  width: 100%;
+ }
+ &:only-child {
+  margin-left: auto;
+ }
+}
