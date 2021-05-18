@@ -1,0 +1,37 @@
+.form {
+ padding: 2.5em 4em;
+ background: #ffffff;
+ box-shadow: 0px 1em 2em rgba(238, 77, 71, 0.1);
+ border-radius: 10px;
+ @include bp(600px) {
+  padding: 2em;
+ }
+}
+
+.form__row {
+ margin-bottom: 1.75em;
+ &:last-child {
+  margin-bottom: 0;
+ }
+ label {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  font-weight: 300;
+ }
+ input {
+  padding: 1.5em;
+  font-size: 0.9em;
+  border-radius: 0.4em;
+  border: 1px solid rgba(238, 77, 71, 0.5);
+  outline: 1px solid transparent;
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+  &:focus,
+  &:active {
+   border: 1px solid $accent;
+   outline: 1px solid $accent;
+   box-shadow: 0px 1em 2em rgba(238, 77, 71, 0.2);
+  }
+ }
+}

@@ -1,0 +1,67 @@
+.btn {
+ position: relative;
+ padding: 1.1em;
+ color: #fff;
+ text-transform: uppercase;
+ font-size: 16px;
+ background-color: $accent;
+ border-radius: 5px;
+ text-align: center;
+ &--icon {
+  padding: 1.1em 4em 1.1em 1.8em;
+  &:after {
+   content: "";
+   @include center(y);
+   right: 1.1em;
+   width: 1.8em;
+   height: 0.9em;
+   background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 13'%3E%3Cpath d='M23.889 12.355L29.5 6.177l-1-1.1v-.073h-.066L23.888 0l-1.48 1.346 3.323 3.658H0v2h26.046l-3.637 4.005 1.48 1.346z' fill='%23fff'/%3E%3C/svg%3E");
+   background-size: cover;
+   background-position: right center;
+  }
+ }
+}
+
+.menu__trigger {
+ display: none;
+ @include bp(1050px) {
+  position: relative;
+  display: block;
+  align-self: center;
+  width: 2.5em;
+  height: 1.5em;
+  padding: 0.65em 5px;
+  margin-left: auto;
+  background: #fff;
+  background-clip: content-box;
+  transition: all 0.5s ease-in-out;
+  &:before,
+  &:after {
+   content: "";
+   position: absolute;
+   left: 5px;
+   right: 5px;
+   height: 0.2em;
+   background: #fff;
+   transform-origin: center center;
+   transition: all 0.5s ease-in-out;
+  }
+  &:before {
+   top: 0;
+  }
+  &:after {
+   top: calc(100% - 0.2em);
+  }
+ }
+ &.active {
+  background-color: transparent;
+  &:before {
+   top: 45%;
+   transform: rotate(45deg);
+  }
+  &:after {
+   top: 45%;
+   transform: rotate(-45deg);
+  }
+ }
+}

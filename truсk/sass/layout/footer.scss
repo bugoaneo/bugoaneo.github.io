@@ -1,0 +1,36 @@
+.footer {
+ padding: 2em 0 4em 0;
+}
+
+.footer__row {
+ max-width: 1050px;
+ @include row(jsb, ac);
+ font-weight: 300;
+}
+
+.footer__col {
+ flex: 1 1 auto;
+}
+
+.footer__list {
+ @include row(jfe, ac);
+ li {
+  margin-right: 2em;
+  &:last-child {
+   margin-right: 0;
+  }
+  a {
+   display: block;
+   width: 2em;
+   height: 2em;
+   border-radius: 100%;
+   background-color: $accent;
+   color: #fff;
+   text-align: center;
+   line-height: 2em;
+  }
+  svg {
+   height: 50%;
+  }
+ }
+}
