@@ -1,0 +1,203 @@
+@font-face {
+ font-family: "lobo";
+ src: url("../fonts/lobo.eot");
+ src: url("../fonts/lobo.eot?#iefix") format("embedded-opentype"), url("../fonts/lobo.woff") format("woff"),
+  url("../fonts/lobo.svg#lobo") format("svg");
+ font-weight: 400;
+ font-style: normal;
+}
+[data-icon]:before {
+ font-family: "lobo" !important;
+ content: attr(data-icon);
+ font-style: normal !important;
+ font-weight: 400 !important;
+ font-variant: normal !important;
+ text-transform: none !important;
+ speak: none;
+ line-height: 1;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+ font-family: "lobo" !important;
+ font-style: normal !important;
+ font-weight: 400 !important;
+ font-variant: normal !important;
+ text-transform: none !important;
+ speak: none;
+ line-height: 1;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+.icon-bag:before {
+ content: "a";
+}
+.icon-heart:before {
+ content: "b";
+}
+.icon-heart-empty:before {
+ content: "c";
+}
+.icon-menu:before {
+ content: "d";
+}
+.icon-bag-1:before {
+ content: "e";
+}
+.icon-flick-left:before {
+ content: "i";
+}
+.icon-horizontal-swipe:before {
+ content: "j";
+}
+.icon-up-open-big:before {
+ content: "k";
+}
+.icon-fontawesome-webfont-6:before {
+ content: "r";
+}
+.icon-fontawesome-webfont-7:before {
+ content: "s";
+}
+.icon-fontawesome-webfont-8:before {
+ content: "t";
+}
+.icon-fontawesome-webfont-13:before {
+ content: "y";
+}
+.icon-down-open-big:before {
+ content: "z";
+}
+.icon-down-open-mini:before {
+ content: "A";
+}
+.icon-left-open-mini:before {
+ content: "D";
+}
+.icon-left-open-big:before {
+ content: "E";
+}
+.icon-link:before {
+ content: "G";
+}
+.icon-popup:before {
+ content: "J";
+}
+.icon-resize-full:before {
+ content: "K";
+}
+.icon-resize-small:before {
+ content: "L";
+}
+.icon-right-open-big:before {
+ content: "N";
+}
+.icon-right-open-mini:before {
+ content: "M";
+}
+.icon-share:before {
+ content: "O";
+}
+.icon-shuffle:before {
+ content: "P";
+}
+.icon-behance:before {
+ content: "W";
+}
+.icon-facebook:before {
+ content: "X";
+}
+.icon-evernote:before {
+ content: "Y";
+}
+.icon-dribbble:before {
+ content: "Z";
+}
+.icon-forrst:before {
+ content: "0";
+}
+.icon-github:before {
+ content: "1";
+}
+.icon-grooveshark:before {
+ content: "2";
+}
+.icon-last:before {
+ content: "3";
+}
+.icon-linkedin:before {
+ content: "4";
+}
+.icon-paypal:before {
+ content: "5";
+}
+.icon-myspace:before {
+ content: "6";
+}
+.icon-skype:before {
+ content: "7";
+}
+.icon-soundcloud:before {
+ content: "8";
+}
+.icon-spotify:before {
+ content: "9";
+}
+.icon-tumblr-1:before {
+ content: "!";
+}
+.icon-twitter:before {
+ content: '"';
+}
+.icon-vimeo:before {
+ content: "#";
+}
+.icon-whatsapp:before {
+ content: "$";
+}
+.icon-youtube:before {
+ content: "%";
+}
+.icon-google:before {
+ content: "f";
+}
+.icon-gplus:before {
+ content: "g";
+}
+.icon-google-circles:before {
+ content: "h";
+}
+.icon-social-pinterest:before {
+ content: "l";
+}
+.icon-pinterest:before {
+ content: "m";
+}
+.icon-pause:before {
+ content: "n";
+}
+.icon-play:before {
+ content: "o";
+}
+.icon-volume:before {
+ content: "p";
+}
+.icon-volume-none:before {
+ content: "q";
+}
+.icon-fontawesome-webfont:before {
+ content: "u";
+}
+.icon-fontawesome-webfont-1:before {
+ content: "v";
+}
+.icon-reddit:before {
+ content: "w";
+}
+.icon-instagram:before {
+ content: "x";
+}
+.icon-flickr:before {
+ content: "B";
+}

@@ -1,0 +1,42 @@
+.menu-btn {
+ i {
+  font-size: 30px;
+ }
+ &.open {
+  opacity: 0;
+ }
+ @include bp(800px) {
+  color: #fff;
+ }
+}
+.menu-close {
+ position: relative;
+ margin: 5vh 3vw 0 auto;
+ width: 50px;
+ height: 50px;
+ color: #fff;
+ transition: 0.3s ease-in-out;
+ &:before,
+ &:after {
+  content: "";
+  @include center();
+  transform-origin: center center;
+  width: 60%;
+  height: 2px;
+  background: currentColor;
+  outline: 1px solid transparent;
+ }
+ &:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+ }
+ &:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+ }
+ &:hover {
+  color: #c1c1c1;
+  &:before,
+  &:after {
+   outline: 1px solid currentColor;
+  }
+ }
+}

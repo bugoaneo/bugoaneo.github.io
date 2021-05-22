@@ -1,10 +1,21 @@
 let menuTrigger = document.querySelector(".menu__trigger");
 let menu = document.querySelector(".menu");
+var link = document.querySelectorAll('a[href*="contact"]');
+var form = document.querySelector('#contact');
 
 menuTrigger.onclick = function () {
  this.classList.toggle('active');
  menu.classList.toggle('active')
 };
+
+
+for (var i = 0; i < link.length; i++) {
+ var scroll = link[i];
+ scroll.addEventListener('click', e => {
+  e.preventDefault();
+  form.scrollIntoView({ block: "start", behavior: "smooth" });
+ })
+}
 
 //header
 // Get the header

@@ -1,0 +1,48 @@
+html {
+ font-family: $ff;
+ color: $text;
+ font-size: $fz;
+ // @include fFS(16px, $fz, 320px, 600px, 20px);
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+img {
+ display: inline-block;
+}
+
+.container {
+ max-width: $container;
+ margin: 0 auto;
+ // padding: 0 20px;
+}
+
+.row {
+ @include row();
+}
+
+.desk {
+ @include bp(800px) {
+  display: none;
+ }
+}

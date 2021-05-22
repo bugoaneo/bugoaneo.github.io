@@ -1,0 +1,76 @@
+.footer {
+ padding: 4em 1em;
+}
+
+.footer__row {
+ margin-bottom: 2em;
+ text-align: center;
+ &:last-of-type {
+  margin-bottom: 0;
+ }
+}
+
+$color-map: (
+ 1: #00aced,
+ 2: #3b5998,
+ 3: #1769ff,
+ 4: #3f729b,
+ 5: #000,
+);
+
+.footer__link {
+ @include row(jc, ac);
+ li {
+  padding: 0.5em 1em;
+  position: relative;
+  @each $color, $i in $color-map {
+   &:nth-child(#{$color}) {
+    a {
+     @include hover(#{$i});
+    }
+   }
+  }
+  @include bp(600px) {
+   padding: 0.5em;
+  }
+  &:hover {
+   a:before {
+    opacity: 1;
+    transform: translateY(10px);
+   }
+  }
+ }
+ a {
+  position: relative;
+  display: inline-block;
+ }
+ &--copy {
+  li {
+   &:after {
+    content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 1px;
+    background-color: currentColor;
+    top: 50%;
+    right: -0.25em;
+   }
+   &:last-child {
+    &:after {
+     display: none;
+    }
+   }
+   &:hover {
+    a:before {
+     opacity: 1;
+     transform: translateY(10px);
+    }
+   }
+  }
+  a {
+   &:before {
+    background: #000 !important;
+   }
+  }
+ }
+}
