@@ -17,52 +17,6 @@ $(document).ready(function () {
         })
     });
 
-
-    // //Попапы
-    // setTimeout(function () {
-    //     let popup = document.querySelectorAll('.popup'),
-    //         score = document.querySelector('.score'),
-    //         order_score = document.querySelector('.order-score'),
-    //         balance = document.querySelector('.balance'),
-    //         guests = document.querySelector('.guests'),
-    //         close = document.querySelectorAll('.popup__close'),
-    //         l = 0,
-    //         count_score = localStorage.getItem("count_score") ? parseInt(localStorage.getItem("count_score")) : 10,
-    //         count_balance = localStorage.getItem("count_balance") ? parseInt(localStorage.getItem("count_balance")) : 34,
-    //         interval = setInterval(function () {
-    //             if (count_balance === 0) {
-    //                 clearInterval(interval);
-    //             }
-    //             if (l % 2 == 0) {
-    //                 score.innerText = count_score;
-    //                 order_score.innerText = count_score;
-    //                 balance.innerText = count_balance;
-    //                 localStorage.setItem("count_score", ++count_score);
-    //                 localStorage.setItem("count_balance", --count_balance);
-    //                 popup[0].classList.add('show');
-    //                 setTimeout(function () {
-    //                     popup[0].classList.remove('show');
-    //                 }, 5000);
-    //             } else {
-    //                 popup[1].classList.add('show');
-    //                 guests.innerText = Math.floor(Math.random() * 150) + 100 + " человек";
-    //                 setTimeout(function () {
-    //                     popup[1].classList.remove('show');
-    //                 }, 4000);
-    //             }
-    //             l++;
-    //         }, 9000);
-    //     close.forEach(function (elem) {
-    //         elem.addEventListener('click', function () {
-    //             popup.forEach(function (el) {
-    //                 el.classList.remove('show');
-    //             })
-    //         })
-    //     })
-    // }, 3000)
-    // //Попапы
-
-
     /*mobile menu */
 
     $('.menu-trigger, .menu-threshold').click(function () {

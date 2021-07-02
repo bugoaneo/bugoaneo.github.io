@@ -1,0 +1,9 @@
+/* forum-regular - latin_cyrillic */
+@font-face {
+ font-family: "Forum";
+ font-style: normal;
+ font-weight: normal;
+ src: local(""), url("../fonts/forum-v11-latin_cyrillic-regular.woff2") format("woff2"),
+  url("../fonts/forum-v11-latin_cyrillic-regular.woff") format("woff");
+ font-display: swap;
+}

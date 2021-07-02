@@ -1,0 +1,32 @@
+.footer {
+ background: $main;
+}
+.footer__wrapper {
+ width: 90%;
+ border-top: 1px solid $light;
+ margin: 0 auto;
+}
+
+.footer__menu {
+ @include row(jsa, ac);
+ max-width: 994px;
+ margin: 0 auto;
+ @include bp(600px) {
+  display: block;
+ }
+ a {
+  display: block;
+  padding: 1.25em 1em;
+  font-size: 1.15em;
+  text-align: center;
+  color: $light;
+ }
+}
+
+.footer__menu-item {
+ &:hover {
+  a {
+   color: #fff;
+  }
+ }
+}

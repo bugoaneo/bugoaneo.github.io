@@ -1,0 +1,26 @@
+.social-list {
+ @include row(jc, ac);
+ &--column {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+ }
+}
+
+.social-list__item {
+ flex: 0 0 50px;
+ width: 50px;
+ a {
+  display: block;
+  padding: 0.99em;
+ }
+ svg {
+  border-radius: 4px;
+ }
+}
+
+.icon {
+ width: 25px;
+ height: 25px;
+ border-radius: 4px;
+}
