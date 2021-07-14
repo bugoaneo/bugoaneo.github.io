@@ -1,0 +1,40 @@
+.form {
+ width: 100%;
+ .btn {
+  width: 100%;
+ }
+}
+input {
+ width: 100%;
+ padding: 1em;
+ border: 1px solid rgba(246, 246, 249, 0.2);
+}
+
+.form__row {
+ position: relative;
+ margin-bottom: 1.5em;
+ &:last-child {
+  margin-bottom: 0;
+ }
+}
+
+.form__input {
+ &:placeholder-shown + .form__label {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 1em;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: $hover;
+  opacity: 1;
+ }
+}
+
+.form__label,
+.form__input:focus + .form__label {
+ top: -50%;
+ opacity: 0;
+ transition: 0.5s;
+ pointer-events: none;
+}

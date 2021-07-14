@@ -6,7 +6,7 @@ html {
  scrollbar-width: thin;
  // @include fFS(16px, $fz, 320px, 1600px, 14px);
  &::-webkit-scrollbar {
-  width: 16px;
+  width: 8px;
  }
 
  &::-webkit-scrollbar-track {

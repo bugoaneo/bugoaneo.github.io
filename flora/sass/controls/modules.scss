@@ -24,3 +24,62 @@
  height: 25px;
  border-radius: 4px;
 }
+
+/*popup*/
+.overlay {
+ position: fixed;
+ left: 0;
+ right: 0;
+ width: 0;
+ height: 0;
+ display: flex;
+ background: rgba(6, 6, 6, 0.7);
+ opacity: 0;
+ z-index: 10;
+ overflow: hidden;
+ transition: opacity 0.5s ease-in-out;
+ &.show {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+ }
+}
+
+.popup {
+ position: relative;
+ margin: auto;
+ width: 95%;
+ max-width: 720px;
+ // width: min(95%, 720px);
+}
+
+.popup__body {
+ @include row(jc, as);
+ background: $main;
+}
+
+.popup__pic,
+.popup__info {
+ flex: 1 1 50%;
+}
+.popup__pic {
+ @include bp(600px) {
+  display: none;
+ }
+}
+.popup__info {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 1em 3em;
+ min-height: 400px;
+}
+
+.poup__title {
+ position: relative;
+ @include fFS(25px, 30px, 320px, 1600px, 14px);
+ text-transform: uppercase;
+ padding-bottom: 0.8em;
+ text-align: center;
+}

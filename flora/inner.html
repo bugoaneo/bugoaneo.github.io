@@ -5,17 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   <meta name="robots" content="all">
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="букеты на мероприятия" />
   <meta property="og:image" content="img/logo.png" />
-  <meta property="og:description" content="" />
-  <meta name="description" content="" />
+  <meta property="og:description" content="букеты на мероприятия" />
+  <meta name="description" content="букеты на мероприятия" />
   <meta name="keywords" content="" />
 
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
-  <link rel="preload" href="fonts/forum-v11-latin_cyrillic-regular.woff" as="font" type="font/woff2" crossorigin>
-  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preload" href="fonts/forum-v11-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
+  <meta name="theme-color" content="#3b181e">
 
-  <title></title>
+  <title>Букеты на мероприятия</title>
 
   <link rel="stylesheet" href="css/glide.core.css">
   <link rel="stylesheet" href="css/main.css">
@@ -34,7 +35,7 @@ http://browsehappy.com/">обновите</a>
     <header class="header">
       <div class="container-wide">
         <div class="header__row">
-          <div class="logo"><a href=""><img src="img/logo.svg" alt=""></a></div>
+          <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
           <button class="menu-trigger"><span class="menu-trigger__btn"></span><span class="menu-trigger__text">Меню</span></button>
         </div>
       </div>
@@ -71,7 +72,7 @@ http://browsehappy.com/">обновите</a>
                 <p>У нас есть огромное разноообразие букетов на любое событие.
                   Вы сможете приобрести как нежный букет, так и яркий, а также мужские, круглые, вертикалье, веерообразные, букеты-зонтики, букеты в вегетативной технике и много других экзотических видов.</p>
               </div>
-              <a href="" class="btn btn--smuth">Заказать</a>
+              <button class="btn btn--smuth js-popup">Заказать</button>
             </div>
             <div class="glide slider__tmb">
               <div class="glide__track " data-glide-el="track">
@@ -139,9 +140,42 @@ http://browsehappy.com/">обновите</a>
       </div>
     </div>
   </footer>
-
+  <!-- popup togle class show - class="overlay show" -->
+  <div class="overlay">
+    <div class="popup">
+      <div class="close-btn">Close popup</div>
+      <div class="popup__body">
+        <div class="popup__pic"><img src="img/pic5.jpg" alt=""></div>
+        <div class="popup__info">
+          <div class="poup__title">Оставьте свой номер и мы вам перезвоним!</div>
+          <form action="" method="POST" class="form">
+            <div class="form__row">
+              <input type="text" placeholder="Имя" id="name" name="name" required="" class="form__input">
+              <label for="name" class="form__label">Имя</label>
+            </div>
+            <div class="form__row">
+              <input type="tel" placeholder="Телефон" id="phone" name="phone" required="" class="form__input">
+              <label for="phone" class="form__label">Телефон</label>
+            </div>
+            <div class="form__row">
+              <button class="btn btn--light">Позвоните мне</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/glide.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script>
+    var myTabs = tabs({
+      el: '.slider__row',
+      tabContentContainers: '.slider__pic-item',
+      tabNavigationLinks: '.slider__tmb-item'
+    });
+    myTabs.init();
+    sliderTmb.mount();
+  </script>
 </body>
 
 </html>

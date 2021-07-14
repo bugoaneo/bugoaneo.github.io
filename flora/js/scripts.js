@@ -1,3 +1,27 @@
+document.querySelectorAll('a[data-title]').forEach(link => {
+
+ link.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  let href = this.getAttribute('href').substring(1);
+
+  const scrollTarget = document.getElementById(href);
+
+  const topOffset = document.querySelector('a[data-title]').offsetHeight;
+  // const topOffset = 0; // если не нужен отступ сверху
+  const elementPosition = scrollTarget.getBoundingClientRect().top;
+  const offsetPosition = elementPosition - topOffset;
+
+  window.scrollBy({
+   top: offsetPosition,
+   behavior: 'smooth'
+  });
+ });
+});
+
+
+
+
 let menuTrigger = document.querySelector('.menu-trigger');
 let header = document.querySelector('.header');
 let nav = document.querySelector('.nav')
@@ -21,7 +45,7 @@ function scrollFunction() {
 
 
 const slider = '.catalog__slider';
-const BREAKPOINTS = { tablets: 900 };
+const BREAKPOINTS = { tablets: 950 };
 
 
 
@@ -29,14 +53,18 @@ function initSlider() {
  let glideInit = false;
  const options = {
   type: 'slider',
-  perView: 2,
+  perView: 3,
   startAt: 0,
   touchRatio: 0,
   gap: 35,
   breakpoints: {
+   700: {
+    perView: 2,
+    gap: 15,
+   },
    600: {
     perView: 1
-   }
+   },
   }
  };
 
@@ -77,7 +105,6 @@ var sliderTmb = new Glide('.slider__tmb', {
  }
 });
 
-sliderTmb.mount();
 
 
 (function () {
@@ -165,10 +192,27 @@ sliderTmb.mount();
 
 })();
 
-var myTabs = tabs({
- el: '.slider__row',
- tabContentContainers: '.slider__pic-item',
- tabNavigationLinks: '.slider__tmb-item'
+
+/*popup */
+
+let popupBTN = document.querySelectorAll('.js-popup');
+let popupOverlay = document.querySelector('.overlay');
+let closePopup = document.querySelector('.close-btn');
+let popupBody = document.querySelector('.popup');
+popupBTN.forEach(function (ell) {
+ ell.addEventListener('click', function (e) {
+  e.preventDefault();
+  popupOverlay.classList.add('show');
+ });
 });
 
-myTabs.init();
+closePopup.addEventListener('click', function (e) {
+ e.preventDefault();
+ popupOverlay.classList.remove('show');
+});
+
+popupOverlay.addEventListener('click', function (e) {
+ if (e.target.closest('.popup') === null) {
+  popupOverlay.classList.remove('show');
+ }
+});
