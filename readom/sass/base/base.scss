@@ -1,0 +1,180 @@
+html {
+font-family: $ff;
+ color: $text;
+ font-size: $fz;
+ line-height: 1;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  max-width: $container;
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+img {
+display: inline-block;
+max-width: 100%;
+
+}
+
+/*helpers*/
+
+.center {
+ text-align: center;
+}
+
+.light {
+  color: $light;
+}
+
+.accent {
+  color: $accent;
+}
+
+.medium {
+  color: #8c8c8ce7;
+}
+
+/*typografy*/
+.section__title {
+  @include fF(30px, 45px, 400px, 1920px, 20px);
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  line-height: 1.3;
+  @include bp(600px) {
+    font-size: 23px;
+  }
+}
+
+.row {
+  @include flex;
+  &--rewerse {
+    flex-direction: row-reverse;
+    @include bp(600px) {
+      flex-direction: row;
+    }
+  }
+}
+
+.col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  flex: 0 1 48%;
+  @include bp(700px) {
+    flex: 1 1 100% !important;
+    min-height: auto;
+  }
+  &-right {
+    margin-left: auto;
+   @include bp(700px) {
+      margin: 0 auto;
+    }  
+  }
+  &-left {
+    margin-right: auto;
+    @include bp(700px) {
+      margin: 0 auto;
+    }
+  }
+  &--pic {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include bp(700px) {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      object-fit: contain;
+     @include bp(700px) { 
+       height: auto;
+     }
+    }
+    &.left {
+      margin-right: auto;
+      right: 108%;
+      @include bp(700px) {
+      right: auto;
+    }
+    }
+    &.right {
+      margin-left: auto;
+      left: 108%;
+      @include bp(700px) {
+      left: auto;
+    }
+    }
+  }
+ &-40 {
+   flex: 0 1 40%;
+ }
+ &-60 {
+   flex: 0 1 60%;
+ }
+}
+
+
+%icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 72px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.bullit {
+  li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 1em;
+    &:before {
+      content: '';
+      @include center('y');
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: url(../img/bullit.png) center center/contain no-repeat;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

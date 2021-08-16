@@ -1,0 +1,47 @@
+.order-form {
+  .btn {
+  width: 100%;
+  font-size: 20px;
+ }
+}
+
+.order-form__row {
+ position: relative;
+ margin-bottom: 20px;
+ input, select {
+  background: #fff;
+  padding: 20px 10px;
+  font-size: 16px;
+  &::placeholder {
+   color: transparent;
+  }
+  &:placeholder-shown + label {
+   top: 0;
+   height: 100%;
+   background-color: #f5f5f5;
+   font-size: 16px;
+  }
+  &:-ms-placeholder-shown + label {
+   top: 0;
+   height: 100%;
+   background-color: #f5f5f5;
+   font-size: 16px;
+  }
+  &:focus + label {
+   background-color: transparent;
+  }
+ }
+ label {
+  position: absolute;
+ top: -25px;
+ left: 0;
+ display: block;
+ width: 100%;
+ height: auto;
+ padding: 20px 0 0 10px;
+ font-weight: 300;
+ background-color: transparent;
+ font-size: 14px;
+ transition: 0.5s ease-in-out
+ }
+}

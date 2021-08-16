@@ -1,0 +1,14 @@
+.btn {
+ @include fF(23px, 14px, 400px, 1920px, 20px);
+ padding: .7em 2.5em;
+ border-radius: 2px;
+ color: #fff;
+ text-transform: uppercase;
+ background: #E32A61;
+ box-shadow: 0px 2px 11px rgba(227, 42, 97, 0.5);
+ transition: .3s ease-in-out;
+ text-align: center;
+ &:hover {
+  box-shadow: 0px 0px 2px rgba(227, 42, 97, 0.5);
+ }
+}
