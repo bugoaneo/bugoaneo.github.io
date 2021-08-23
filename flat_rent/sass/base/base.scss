@@ -1,0 +1,58 @@
+html {
+ font-family: $ff;
+ color: $text;
+ @include fFS(16px, $fz, 320px, 1900px, 20px);
+ height: -webkit-fill-available;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+ min-height: -webkit-fill-available;
+ // overflow: hidden;
+}
+
+.wrapper {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ min-width: 320px;
+ height: 100vh;
+ min-height: 1px;
+ min-height: -webkit-fill-available;
+ flex-grow: 1;
+ // overflow: hidden;
+}
+
+// .footer {
+//  flex-grow: 0;
+// }
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+img {
+ display: inline-block;
+}
+
+.container {
+ max-width: $container;
+ margin: 0 auto;
+ padding: 0 10px;
+ // height: 100%;
+}
+
+.bg {
+ background-color: #ddd;
+}
+
+.bg-white {
+ background-color: #fff;
+}
+
+p {
+ @include fFS(20px, 40px, 320px, 1900px, 20px);
+ margin-bottom: 0.5em;
+}

@@ -1,5 +1,6 @@
 let menu = document.querySelector('.menu'),
  menuBTN = document.querySelector('.menu-btn'),
+ wrapper = document.querySelector('.main__container'),
  menuLink = document.querySelectorAll('a[data-title]');
 
 menuLink.forEach(link => {
@@ -11,12 +12,11 @@ menuLink.forEach(link => {
 
   const scrollTarget = document.getElementById(href);
 
-  // const topOffset = document.querySelector('a[data-title]').offsetHeight;
   const topOffset = 0; // если не нужен отступ сверху
   const elementPosition = scrollTarget.getBoundingClientRect().top;
   const offsetPosition = elementPosition - topOffset;
 
-  window.scrollBy({
+  wrapper.scrollBy({
    top: offsetPosition,
    behavior: 'smooth'
   });
