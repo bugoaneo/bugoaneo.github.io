@@ -1,0 +1,96 @@
+.header {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ padding: 2px 0;
+ background-color: #fff;
+ z-index: 100;
+ .btn-call {
+  margin-right: auto;
+  @include bp(1000px) {
+   margin-right: 20px;
+   margin-left: auto;
+  }
+  @include bp(600px) {
+   margin-right: auto;
+   margin-left: auto;
+  }
+ }
+}
+
+.header__container {
+ @include row(jsa, ac);
+ padding: 0 10px 0 4%;
+ min-width: 320px;
+ @include bp(1300px) {
+  padding: 0 10px;
+ }
+ @include bp(1000px) {
+  justify-content: space-between;
+ }
+}
+
+.logo {
+ width: 115px;
+ // flex: 0 1 115px;
+ @include bp(1050px) {
+  width: 40px;
+ }
+}
+
+.menu {
+ flex: 0 1 54%;
+ margin: auto;
+ @include bp(1300px) {
+  flex: 0 1 auto;
+ }
+ @include bp(1000px) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  &.open {
+   transform: translateX(0);
+   opacity: 1;
+  }
+ }
+}
+
+.menu__list {
+ @include row(jsb);
+ @include bp(1000px) {
+  flex-direction: column;
+ }
+}
+
+.menu__item {
+ a {
+  position: relative;
+  display: block;
+  padding: 1em;
+  &:after {
+   content: "";
+   @include center(x);
+   bottom: 0;
+   width: 0;
+   height: 2px;
+   background: var(--accent);
+   transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+   @include bp(1000px) {
+    display: none;
+   }
+  }
+ }
+ &:hover {
+  a {
+   &:after {
+    width: 100%;
+   }
+  }
+ }
+}

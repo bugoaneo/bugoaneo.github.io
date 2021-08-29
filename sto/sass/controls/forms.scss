@@ -1,0 +1,30 @@
+.form-wrapper {
+ max-width: 490px;
+ padding: 3.5em 3.1em;
+ border-radius: 0.9em;
+ background-color: var(--formbg);
+ .section__text {
+  margin-bottom: 1.1em;
+ }
+ @include bp(750px) {
+  padding: 2.5em 2.1em;
+ }
+}
+
+.form__row {
+ + .form__row {
+  margin-top: 0.9em;
+ }
+ .btn:only-child {
+  margin: auto;
+ }
+}
+.form__label {
+ display: block;
+ margin-bottom: 0.3em;
+}
+.form__input {
+ padding: 1em;
+ background: #f5f5f5;
+ border: 1px solid #dcdcdc;
+}

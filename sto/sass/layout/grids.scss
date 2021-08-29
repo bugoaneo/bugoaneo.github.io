@@ -1,0 +1,87 @@
+/*grid*/
+
+.section__wrapper {
+ position: relative;
+ max-width: 980px;
+ margin: 2.8em auto 0 auto;
+ @include bp(1050px) {
+  min-width: 100%;
+ }
+}
+
+.section__row {
+ @include row(jsb, ac);
+ margin: auto;
+}
+
+.section__col {
+ flex: 0 1 50%;
+ @include bp(750px) {
+  flex: 1 1 100%;
+  + .section__col {
+   margin-top: 1.5em;
+  }
+ }
+ &.pic,
+ &.video {
+  position: relative;
+  flex: 0 1 60%;
+  padding-top: 38%;
+  overflow: hidden;
+  background-color: var(--itembg);
+  > *:first-child {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+  @include bp(750px) {
+   flex: 1 1 100%;
+   padding-top: 55%;
+   // margin-bottom: 1em;
+  }
+ }
+ &.text {
+  position: relative;
+  flex: 0 1 60%;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  background: var(--formbg);
+  align-content: start;
+  &:before {
+   content: "";
+   position: absolute;
+   left: -20px;
+   top: 50%;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 18px 18px 0 18px;
+   border-color: var(--formbg) transparent transparent transparent;
+   transform: translateY(-50%) rotate(90deg);
+  }
+  @include bp(750px) {
+   flex: 1 1 100%;
+   padding: 1em 1.5em;
+   margin-top: 1em;
+   &:before {
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+   }
+  }
+ }
+ &.descr {
+  flex: 0 1 38%;
+  padding: 10px 13px;
+  @include bp(750px) {
+   flex: 1 1 100%;
+   + .video,
+   .pic {
+    margin-top: 1em;
+   }
+  }
+ }
+}
