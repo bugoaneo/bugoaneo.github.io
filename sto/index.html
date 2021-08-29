@@ -57,7 +57,7 @@ http://browsehappy.com/">обновите</a>
             <li class="menu__item"><a href="#contacts" data-title="scroll">Контакты</a></li>
           </ul>
         </nav>
-        <button class="btn btn-call" type="button">Скачать демо-версию</button>
+        <button class="btn btn-call" type="button">Получить демо-версию</button>
         <button class="menu-trigger" type="button"></button>
       </div>
     </header>
@@ -595,10 +595,25 @@ http://browsehappy.com/">обновите</a>
         </div>
         <div class="section__wrapper">
           <!-- Slider main container -->
-          <div class="swiper-container reviews__container">
+          <div class="swiper-container reviews__container" id="video-slider">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper reviews__list">
               <!-- Slides -->
+              <div class="swiper-slide section__row">
+                <div class="section__col descr">
+                  <h3 class="section__caption">Антон Гладких</h3>
+                  <div class="section__text">
+                    <p>Владелец вети СТО “ООО Белый медведь”
+                      г.&nbsp;Бердск</p>
+                  </div>
+                </div>
+                <div class="section__col video">
+                  <div class="youtube" data-video="MZo39hzLywk"></div>
+                  <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
+                    <use xlink:href="#play"></use>
+                  </svg>
+                </div>
+              </div>
               <div class="swiper-slide section__row">
                 <div class="section__col descr">
                   <h3 class="section__caption">Антон Гладких</h3>
@@ -614,21 +629,6 @@ http://browsehappy.com/">обновите</a>
               </div>
               <div class="swiper-slide section__row">
                 <div class="section__col descr">
-                  <h3 class="section__caption">Антон Гладких</h3>
-                  <div class="section__text">
-                    <p>Владелец вети СТО “ООО Белый медведь”
-                      г.&nbsp;Бердск</p>
-                  </div>
-                </div>
-                <div class="section__col video">
-                  <div class="youtube" id="MZo39hzLywk" data-params="controls=0"></div>
-                  <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
-                    <use xlink:href="#play"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col descr">
                   <h3 class="section__caption">Иван Полевой</h3>
                   <div class="section__text">
                     <p>Владелец сети “Мощные моторы”
@@ -636,7 +636,7 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
                 <div class="section__col video">
-                  <div class="youtube" id="vilRUEgkHGI" data-params="controls=0"></div>
+                  <div class="youtube" data-video="vilRUEgkHGI"></div>
                   <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
                     <use xlink:href="#play"></use>
                   </svg>
@@ -741,7 +741,7 @@ http://browsehappy.com/">обновите</a>
 
  https://codepen.io/stanislas-prime/pen/akrpD
 
-https://codepen.io/logicalmadboy/pen/zYKrWaK?editors=1010 - остановить видео
+https://codepen.io/logicalmadboy/pen/zYKrWaK - остановить видео
  -->
 </body>
 

@@ -34,7 +34,7 @@ menuBTN.addEventListener('click', function (e) {
 });
 
 
-/* */
+/* sliders */
 
 (function () {
  'use strict';
@@ -176,25 +176,6 @@ possibilities = new Swiper('.marketing__container', {
  }
 });
 
-
-const reviews = new Swiper('.reviews__container', {
- slidesPerView: 1,
- spaceBetween: 20,
- loop: true,
- autoHeight: false,
- navigation: {
-  nextEl: '.reviews__button-next',
-  prevEl: '.reviews__button-prev',
- },
- breakpoints: {
-  750: {
-   autoHeight: true,
-  },
- },
-
-});
-
-
 const nestedSlider = new Swiper('.slider-nested', {
  slidesPerView: 1,
  spaceBetween: 20,
@@ -204,6 +185,8 @@ const nestedSlider = new Swiper('.slider-nested', {
   delay: 5000,
  },
 });
+
+
 
 /*tabs-accordion */
 
@@ -251,49 +234,113 @@ tabs.forEach(function (tab) {
 
 
 /*video */
-"use strict";
-function r(f) { /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f() }
-r(function () {
- if (!document.getElementsByClassName) {
-  // IE8 support
-  var getElementsByClassName = function (node, classname) {
-   var a = [];
-   var re = new RegExp('(^| )' + classname + '( |$)');
-   var els = node.getElementsByTagName("*");
-   for (var i = 0, j = els.length; i < j; i++)
-    if (re.test(els[i].className)) a.push(els[i]);
-   return a;
-  }
-  var videos = getElementsByClassName(document.body, "youtube");
+// "use strict";
+// function r(f) { /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f() }
+// r(function () {
+//  if (!document.getElementsByClassName) {
+//   // IE8 support
+//   var getElementsByClassName = function (node, classname) {
+//    var a = [];
+//    var re = new RegExp('(^| )' + classname + '( |$)');
+//    var els = node.getElementsByTagName("*");
+//    for (var i = 0, j = els.length; i < j; i++)
+//     if (re.test(els[i].className)) a.push(els[i]);
+//    return a;
+//   }
+//   var videos = getElementsByClassName(document.body, "youtube");
+//  }
+//  else {
+//   var videos = document.getElementsByClassName("youtube");
+//  }
+
+//  var nb_videos = videos.length;
+//  for (var i = 0; i < nb_videos; i++) {
+//   // Based on the YouTube ID, we can easily find the thumbnail image
+//   videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
+
+//   // Overlay the Play icon to make it look like a video player
+//   var play = document.createElement("div");
+//   play.setAttribute("class", "play");
+//   videos[i].appendChild(play);
+
+//   videos[i].onclick = function () {
+//    // Create an iFrame with autoplay set to true
+//    var iframe = document.createElement("iframe");
+//    var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+//    if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
+//    iframe.setAttribute("src", iframe_url);
+//    iframe.setAttribute("frameborder", '0');
+
+//    // The height and width of the iFrame should be the same as parent
+//    iframe.style.width = this.style.width;
+//    iframe.style.height = this.style.height;
+
+//    // Replace the YouTube thumbnail with YouTube Player
+//    this.parentNode.replaceChild(iframe, this);
+//   }
+//  }
+// });
+
+
+
+
+// 2. This code loads the IFrame Player API code asynchronously.
+// var tag = document.createElement('script');
+
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var scriptUrl = 'https:\/\/www.youtube.com\/s\/player\/528656c7\/www-widgetapi.vflset\/www-widgetapi.js'; try { var ttPolicy = window.trustedTypes.createPolicy("youtube-widget-api", { createScriptURL: function (x) { return x } }); scriptUrl = ttPolicy.createScriptURL(scriptUrl) } catch (e) { } if (!window["YT"]) var YT = { loading: 0, loaded: 0 }; if (!window["YTConfig"]) var YTConfig = { "host": "https://www.youtube.com" };
+if (!YT.loading) {
+ YT.loading = 1; (function () {
+  var l = []; YT.ready = function (f) { if (YT.loaded) f(); else l.push(f) }; window.onYTReady = function () { YT.loaded = 1; for (var i = 0; i < l.length; i++)try { l[i]() } catch (e$0) { } }; YT.setConfig = function (c) { for (var k in c) if (c.hasOwnProperty(k)) YTConfig[k] = c[k] }; var a = document.createElement("script"); a.type = "text/javascript"; a.id = "www-widgetapi-script"; a.src = scriptUrl; a.async = true; var c = document.currentScript; if (c) { var n = c.nonce || c.getAttribute("nonce"); if (n) a.setAttribute("nonce", n) } var b =
+   document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b)
+ })()
+};
+
+function onYouTubeIframeAPIReady() {
+ // Check all slides and initialize video players
+ var swiper = document.getElementById('video-slider');
+ var slides = swiper.getElementsByClassName('swiper-slide')
+
+ var players = [];
+
+ for (var i = 0; i < slides.length; i++) {
+  var videoEl = slides[i].getElementsByClassName('youtube')[0];
+  var id = videoEl.getAttribute('data-video');
+
+  var player = new YT.Player(videoEl, {
+   videoId: id,
+   playerVars: {
+    autoplay: false,
+    modestbranding: true,
+    rel: 0
+   }
+  });
+  players.push(player);
  }
- else {
-  var videos = document.getElementsByClassName("youtube");
- }
 
- var nb_videos = videos.length;
- for (var i = 0; i < nb_videos; i++) {
-  // Based on the YouTube ID, we can easily find the thumbnail image
-  videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].id + '/sddefault.jpg)';
+ const reviews = new Swiper('.reviews__container', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoHeight: false,
+  navigation: {
+   nextEl: '.reviews__button-next',
+   prevEl: '.reviews__button-prev',
+  },
+  breakpoints: {
+   750: {
+    autoHeight: true,
+   },
+  },
+  // on: {
+  //  slideChange: function () {
+  //   players[reviews.previousIndex].pauseVideo();
+  //   // players[mySwiper.activeIndex].playVideo();
+  //  }
+  // }
+ });
 
-  // Overlay the Play icon to make it look like a video player
-  var play = document.createElement("div");
-  play.setAttribute("class", "play");
-  videos[i].appendChild(play);
-
-  videos[i].onclick = function () {
-   // Create an iFrame with autoplay set to true
-   var iframe = document.createElement("iframe");
-   var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
-   if (this.getAttribute("data-params")) iframe_url += '&' + this.getAttribute("data-params");
-   iframe.setAttribute("src", iframe_url);
-   iframe.setAttribute("frameborder", '0');
-
-   // The height and width of the iFrame should be the same as parent
-   iframe.style.width = this.style.width;
-   iframe.style.height = this.style.height;
-
-   // Replace the YouTube thumbnail with YouTube Player
-   this.parentNode.replaceChild(iframe, this);
-  }
- }
-});
+}
