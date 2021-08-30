@@ -144,8 +144,14 @@
 
 .accordion__item {
  display: none;
- opacity: 0;
  transition: 0.5s ease-in-out;
+ &.current {
+  display: block;
+  opacity: 1;
+  .accordion__item-container {
+   animation: tabs 1s ease forwards;
+  }
+ }
  @include bp(750px) {
   display: block;
   opacity: 1;
@@ -153,7 +159,6 @@
    .accordion__item-container {
     height: auto;
     padding: 2em 1em;
-    opacity: 1;
    }
    .accordion__item-label {
     &:after {
@@ -162,8 +167,13 @@
    }
   }
  }
- &.current {
-  display: block;
+}
+
+@keyframes tabs {
+ from {
+  opacity: 0;
+ }
+ to {
   opacity: 1;
  }
 }
