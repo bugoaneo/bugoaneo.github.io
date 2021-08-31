@@ -44,11 +44,14 @@
 
 .btn {
  position: relative;
- padding: 1.6em 2em;
+ padding: 1.2em 2em;
+ border-radius: 0.5em;
  text-transform: uppercase;
  font-weight: 800;
  background-color: var(--accent);
+ color: #fff;
  line-height: 1;
+ box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
  transition: background-color 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
  &:after {
   content: "";
@@ -60,7 +63,7 @@
   transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
  }
  &.btn-call {
-  padding: 0.9em 1.5em;
+  padding: 0.8em 1.5em;
  }
  &:hover {
   background-color: transparent;

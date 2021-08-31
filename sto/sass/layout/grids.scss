@@ -43,6 +43,9 @@
    // margin-bottom: 1em;
   }
  }
+ &.pic {
+  flex: 0 1 50%;
+ }
  &.text {
   position: relative;
   flex: 0 1 60%;

@@ -1,13 +1,18 @@
 .form-wrapper {
  max-width: 490px;
- padding: 3.5em 3.1em;
+ padding: 3em 3.1em;
  border-radius: 0.9em;
- background-color: var(--formbg);
+ box-shadow: 0px 0.8em 1em rgba(86, 137, 213, 0.37);
+ background-color: #fff;
  .section__text {
   margin-bottom: 1.1em;
  }
  @include bp(750px) {
   padding: 2.5em 2.1em;
+ }
+ .section__caption {
+  color: var(--caption-color);
+  line-height: 1.1;
  }
 }
 
@@ -19,12 +24,20 @@
   margin: auto;
  }
 }
+
+.form__icon {
+ width: 4.5em;
+ height: 4.5em;
+ margin: 0 auto 1em auto;
+ border-radius: 100%;
+}
+
 .form__label {
  display: block;
  margin-bottom: 0.3em;
 }
+
 .form__input {
  padding: 1em;
- background: #f5f5f5;
- border: 1px solid #dcdcdc;
+ border: 1px solid #cfcfcf;
 }

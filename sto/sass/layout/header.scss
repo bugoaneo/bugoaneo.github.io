@@ -2,8 +2,10 @@
  position: fixed;
  top: 0;
  width: 100%;
- padding: 2px 0;
- background-color: #fff;
+ // padding: 2px 0;
+ background-color: rgba(255, 255, 255, 0.83);
+ -webkit-backdrop-filter: blur(10px);
+ backdrop-filter: blur(10px);
  z-index: 100;
  .btn-call {
   margin-right: auto;
@@ -73,6 +75,7 @@
   position: relative;
   display: block;
   padding: 1em;
+  color: #001e7a;
   &:after {
    content: "";
    @include center(x);

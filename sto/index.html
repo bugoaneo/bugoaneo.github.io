@@ -61,7 +61,7 @@ http://browsehappy.com/">обновите</a>
         <button class="menu-trigger" type="button"></button>
       </div>
     </header>
-    <section class="hero" id="hero" style="background: url(img/hero.jpg) top center/ cover;">
+    <section class="hero" id="hero" style="background: url(img/bg/hero.jpg) top center/ cover;">
       <div class="container">
         <h1 class="hero__title">Нетикс Трицепс</h1>
         <div class="hero__text">
@@ -76,15 +76,15 @@ http://browsehappy.com/">обновите</a>
         <div class="hero__card">
           <div class="hero__card-item">
             <h2 class="hero__card-title">Для тех, кто хочет открыть свой втосервис или СТО</h2>
-            <div class="hero__card-img"><img src="img/ph3.png" alt=""></div>
+            <!-- <div class="hero__card-img"><img src="img/ph3.png" alt=""></div> -->
           </div>
           <div class="hero__card-item">
             <h2 class="hero__card-title">Для тех, кто хочет перестать вести учёт в тетрадке или Excel</h2>
-            <div class="hero__card-img"><img src="img/ph2.png" alt=""></div>
+            <!-- <div class="hero__card-img"><img src="img/ph2.png" alt=""></div> -->
           </div>
           <div class="hero__card-item">
             <h2 class="hero__card-title">Для тех, кто использует пециализированный софт, но его стало мало</h2>
-            <div class="hero__card-img"><img src="img/ph1.png" alt=""></div>
+            <!-- <div class="hero__card-img"><img src="img/ph1.png" alt=""></div> -->
           </div>
         </div>
       </div>
@@ -321,13 +321,9 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!--  -->
-    <section class="section possibilities" id="possibilities">
+    <section class="section possibilities" id="possibilities" style="background: url(img/bg/possibilities.jpg) top center/cover;">
       <div class="container">
-        <h2 class="section__title">Основные возможности</h2>
-        <div class="section__lead">
-          <p>некий вспомогательный текст</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus in cum doloremque obcaecati, reiciendis ipsa. Nemo nostrum reprehenderit beatae error?</p>
-        </div>
+        <h2 class="section__title light">Основные возможности</h2>
         <div class="section__wrapper">
           <!-- Slider main container -->
           <div class="swiper-container possibilities__container">
@@ -414,11 +410,11 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!--  -->
-    <section class="section contact-form" id="contact-form">
+    <section class="section contact-form" id="contact-form" style="background: url(img/bg/form.png) top right/cover;">
       <div class="container">
-        <h2 class="section__title">Заголовок текста для открытой формы, привыв сделать заказ демо-версии</h2>
+        <h2 class="section__title accent">Поможем автоматизировать ваш бизнес</h2>
         <div class="section__lead">
-          <p>подзаголовок текста</p>
+          <p>В демоверсии вы сможете создать заказ-наряд, карточку агента (клиента, сотрудника, поставщика), создать и продать товар</p>
         </div>
         <div class="section__row">
           <div class="form-wrapper centred">
@@ -439,9 +435,9 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!--  -->
-    <section class="section marketing" id="marketing">
+    <section class="section marketing" id="marketing" style="background: url(img/bg/marketing.jpg) top center/cover;">
       <div class="container">
-        <h2 class="section__title">Маркетинг и реклама</h2>
+        <h2 class="section__title light">Маркетинг и реклама</h2>
         <div class="section__wrapper">
           <!-- Slider main container -->
           <div class="swiper-container marketing__container">
@@ -541,12 +537,9 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!--  -->
-    <section class="section price" id="price">
+    <section class="section price" id="price" style="background: url(img/bg/price.jpg) top center/cover">
       <div class="container">
-        <h2 class="section__title">заголовок текста для открытой формы, слева тарифы, справа ЗВОНОК К СПЕЦИАЛИСТУ</h2>
-        <div class="section__lead">
-          <p>подзаголовок текста (кстати, сюда ведет, когда нажимаешь “Цены” в хэдере в меню)</p>
-        </div>
+        <h2 class="section__title">Выберите оптимальное решение для вашего бизнеса</h2>
         <div class="section__row">
           <div class="section__col">
             <div class="price__wrapper centred">
@@ -569,7 +562,8 @@ http://browsehappy.com/">обновите</a>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
-              <div class="section__caption center">Заполните форму ниже и получите бесплатную версию Программы:</div>
+              <div class="form__icon"><img src="img/call.jpg" alt=""></div>
+              <div class="section__caption center">Наш специалист поможет вам подобрать версию программы и рассчитает точную стоимость для вашего сервиса:</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
                   <!-- <label for="name" class="form__label">Имя</label> -->
@@ -587,15 +581,14 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!--  -->
-    <section class="section develop" id="develop">
-      <div class="container">
+    <section class="section develop" id="develop" style="background-color: #6885FA;">
+      <div class="container light">
         <h2 class="section__title">Мы сами разрабатываем нашу программу</h2>
         <div class="section__lead">
           <p>Мы не на базе 1С. Что это значит?</p>
         </div>
         <div class="section__row">
-          <div class="section__col"></div>
-          <div class="section__col">
+          <div class="section__col centred">
             <ul class="list">
               <li>Трицепс ー узконаправленный программный продукт.
                 Мы глубоко изучаем и работаем только в одной сфере ー автобизнеса,
@@ -632,10 +625,12 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
                 <div class="section__col video">
-                  <div class="youtube" id="venOo-0kACk" data-params="controls=0"></div>
-                  <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
-                    <use xlink:href="#play"></use>
-                  </svg>
+                  <a href="https://www.youtube.com/watch?v=venOo-0kACk" class="youtube" data-lightbox>
+                    <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
+                      <use xlink:href="#play"></use>
+                    </svg>
+
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide section__row">
@@ -660,10 +655,12 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
                 <div class="section__col video">
-                  <div class="youtube" id="fsjAWuJkDfw" data-params="controls=0"></div>
-                  <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
-                    <use xlink:href="#play"></use>
-                  </svg>
+                  <a href="https://www.youtube.com/watch?v=fsjAWuJkDfw" class="youtube" data-lightbox>
+                    <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
+                      <use xlink:href="#play"></use>
+                    </svg>
+
+                  </a>
                 </div>
               </div>
               <div class="swiper-slide section__row">
@@ -689,10 +686,12 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
                 <div class="section__col video">
-                  <div class="youtube" id="vilRUEgkHGI" data-params="controls=0"></div>
-                  <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
-                    <use xlink:href="#play"></use>
-                  </svg>
+                  <a href="https://www.youtube.com/watch?v=vilRUEgkHGI" class="youtube" data-lightbox>
+                    <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
+                      <use xlink:href="#play"></use>
+                    </svg>
+
+                  </a>
                 </div>
               </div>
             </div>
@@ -743,6 +742,7 @@ http://browsehappy.com/">обновите</a>
 
   <!-- <link rel="preload" as="script" href="js/swiper-bundle.min.js" onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);"> -->
   <script src="js/swiper-bundle.min.js" rel="preload" as="script"></script>
+  <script src="js/lightbox.min.js" rel="preload" as="script"></script>
   <script src="js/scripts.js"></script>
 
 

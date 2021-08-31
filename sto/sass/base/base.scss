@@ -58,12 +58,19 @@ img {
  margin: auto;
 }
 
+.light {
+ color: #fff;
+}
+
 .section__title {
  margin-bottom: 10px;
  font-size: 1.65em;
  font-weight: 700;
  text-transform: uppercase;
  text-align: center;
+ + .section__row {
+  margin-top: 2em;
+ }
 }
 
 .section__lead {
@@ -76,6 +83,7 @@ img {
  font-size: 1.25em;
  margin-bottom: 0.7em;
  font-weight: 700;
+ color: var(--caption-color);
 }
 
 .section__text {
