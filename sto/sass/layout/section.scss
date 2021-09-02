@@ -33,7 +33,7 @@
  @include fFS(30px, 50px, 320px, 1900px, 16px);
  margin-bottom: 10px;
  text-transform: uppercase;
- font-weight: 600;
+ font-weight: 900;
  line-height: 1;
  text-align: center;
  color: #fff;
@@ -41,64 +41,123 @@
 .hero__text {
  @include fFS(14px, 24px, 320px, 1900px, 16px);
  margin-bottom: 1em;
+ font-weight: 900;
  text-align: center;
  line-height: 1.5;
  color: #fff;
 }
-
-.hero__icon {
- @include row(jc, ac);
+.hero__slider {
+ position: relative;
+}
+.hero__list {
+ @include row(jc);
  margin-bottom: 4em;
  @include bp(750px) {
-  margin-bottom: 0;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 0 auto;
  }
 }
-.hero__icon-item {
+.hero__item {
+ width: 200px;
+ @include bp(750px) {
+  width: auto;
+ }
+}
+.hero__icon {
  width: 5em;
  height: 5em;
- margin: 0 0.5em;
+ margin: 0 auto 0.5em auto;
  border-radius: 100%;
  background-color: var(--iconbg);
+}
+
+.hero__pagination {
+ .swiper-pagination-bullet-active {
+  background: #fff;
+ }
+}
+
+.hero__caption {
+ text-align: center;
+ color: #fff;
 }
 
 .hero__card {
  @include row(jc);
 }
 .hero__card-item {
- display: flex;
- flex-direction: column;
- justify-content: center;
- min-height: 290px;
+ position: relative;
+ height: 290px;
  flex: 0 1 25%;
- padding: 2.5em 0.5em;
  margin: 0 0.5em;
- border-radius: 0.5em;
- background: var(--accent);
+ border-radius: 1.5em;
  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
  color: #fff;
  text-align: center;
  cursor: pointer;
+ overflow: hidden;
+ &:hover {
+  .hero__card-back {
+   opacity: 1;
+  }
+ }
  @include bp(750px) {
   flex: 0 1 100%;
-  padding: 0.9em 0.5em;
   margin: 1em 0 0 0;
-  min-height: 0;
+  height: auto;
+  padding: 2.5em;
+  border-radius: 0.5em;
+  // padding: 0.9em 0.5em;
+ }
+}
+.hero__card-front,
+.hero__card-back {
+ position: absolute;
+ top: 0;
+ left: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+ padding: 0 1.5em;
+ p {
+  @include center(x);
+  bottom: 3.4em;
+  text-decoration: underline;
+  @include bp(750px) {
+   display: none;
+  }
+ }
+}
+.hero__card-front {
+ @include bp(750px) {
+  background: var(--accent) !important;
+ }
+}
+.hero__card-back {
+ color: var(--accent);
+ opacity: 0;
+ transition: opacity 0.5s ease-in-out;
+ @include bp(750px) {
+  background: #fff !important;
  }
 }
 
 .hero__card-title {
- font-size: 1.25em;
- font-weight: 600;
+ font-size: 1.5em;
+ font-weight: 900;
 }
 
-.hero__card-img {
- display: block;
- width: 90%;
- margin: 2em auto 0 auto;
- @include bp(750px) {
-  display: none;
- }
-}
+// .hero__card-img {
+//  display: block;
+//  width: 90%;
+//  margin: 2em auto 0 auto;
+//  @include bp(750px) {
+//   display: none;
+//  }
+// }
 
 /*accordion*/
 .accordion__slider {
@@ -259,14 +318,14 @@
 .card__item {
  position: relative;
  width: 30%;
- min-height: 260px;
+ min-height: 330px;
  font-size: 16px;
  padding: 2.5em 1.5em 3.2em 1.5em;
  border-radius: 8px;
  background-color: #fff;
  box-shadow: 0px 0.4em 1em rgba(86, 137, 213, 0.37);
  &:nth-child(-n + 3) {
-  margin-bottom: 3.2em;
+  margin-bottom: 2.5em;
  }
  @include bp(750px) {
   padding: 1em 1.8em;
@@ -296,12 +355,27 @@
  color: var(--iconbg);
 }
 
+/*possibilities*/
+
+.possibilities {
+ // .section__wrapper {
+ //  justify-content: center;
+ // }
+ .swiper-slide.section__row {
+  position: relative;
+  // justify-content: center;
+ }
+}
+
 /*marketing*/
 
 .marketing {
  .section__row {
-  border-radius: 0.5em;
-  background-color: #fff;
+  padding: 1em 2.5em;
+  min-height: 500px;
+  @include bp(750px) {
+   min-height: 0;
+  }
  }
 }
 
@@ -322,9 +396,9 @@
     border-radius: 0 0 0.9em 0.9em;
    }
   }
-  @include bp(750px) {
-   margin-top: 0;
-  }
+  // @include bp(750px) {
+  //  margin-top: 0;
+  // }
  }
 }
 .price__wrapper {
@@ -403,11 +477,40 @@
  }
 }
 
+/*develop*/
+.develop {
+ .list {
+  li {
+   margin-bottom: 2em;
+   &:last-child {
+    margin-bottom: 0;
+   }
+  }
+ }
+}
+
+/*reviews*/
+
+.reviews {
+ .section__wrapper {
+  max-width: 1090px;
+ }
+ .section__row {
+  border-radius: 0.5em;
+ }
+ .section__caption {
+  color: #42414b;
+ }
+}
+
 /*contacts*/
 .contacts {
  .section__row {
   max-width: 980px;
   align-items: stretch;
+ }
+ .form-wrapper {
+  padding: 1em 3.1em 3em 3.1em;
  }
 }
 .contacts__list {

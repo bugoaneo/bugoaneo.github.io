@@ -133,6 +133,24 @@
 
 /*slider*/
 
+.swiper-slide {
+ &.section__row {
+  padding: 3em 2.5em;
+  background-color: #fff;
+  border-radius: 0.5em;
+  &.no-bg {
+   background-color: transparent;
+  }
+  @include bp(750px) {
+   padding: 1.5em 1em;
+  }
+ }
+ .section__container {
+  max-width: 75%;
+  margin: auto;
+ }
+}
+
 .swiper-pagination {
  display: none;
  @include bp(750px) {
@@ -186,4 +204,12 @@
    margin-bottom: 0;
   }
  }
+}
+
+.avatar {
+ width: 5em;
+ height: 5em;
+ object-fit: cover;
+ border-radius: 0.4em;
+ margin-right: 0.5em;
 }

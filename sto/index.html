@@ -68,44 +68,78 @@ http://browsehappy.com/">обновите</a>
           <p>Профессиональная программа для автосервисов и магазинов автозапчастей</p>
           <p>Полная автоматизация работы</p>
         </div>
-        <div class="hero__icon">
-          <div class="hero__icon-item"></div>
-          <div class="hero__icon-item"></div>
-          <div class="hero__icon-item"></div>
+        <div class="hero__slider">
+          <div class="swiper-container hero__icons">
+            <div class="swiper-wrapper hero__list">
+              <!-- Slides -->
+              <div class="swiper-slide hero__item">
+                <div class="hero__icon"></div>
+                <div class="hero__caption">На рынке с 2005 года</div>
+              </div>
+              <div class="swiper-slide hero__item">
+                <div class="hero__icon"></div>
+                <div class="hero__caption">Более 800 успешных внедрений программы</div>
+              </div>
+              <div class="swiper-slide hero__item">
+                <div class="hero__icon"></div>
+                <div class="hero__caption">Техподдержка высокого уровня</div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination hero__pagination"></div>
         </div>
         <div class="hero__card">
-          <div class="hero__card-item">
-            <h2 class="hero__card-title">Для тех, кто хочет открыть свой втосервис или СТО</h2>
-            <!-- <div class="hero__card-img"><img src="img/ph3.png" alt=""></div> -->
-          </div>
-          <div class="hero__card-item">
-            <h2 class="hero__card-title">Для тех, кто хочет перестать вести учёт в тетрадке или Excel</h2>
-            <!-- <div class="hero__card-img"><img src="img/ph2.png" alt=""></div> -->
-          </div>
-          <div class="hero__card-item">
-            <h2 class="hero__card-title">Для тех, кто использует пециализированный софт, но его стало мало</h2>
-            <!-- <div class="hero__card-img"><img src="img/ph1.png" alt=""></div> -->
-          </div>
+          <a class="hero__card-item card_tab" href="#reasons" data-title="scroll" data-actab-group="0" data-actab-id="0">
+            <div class="hero__card-front" style="background: url(img/bg/hc1.png) bottom right/cover no-repeat, var(--accent);">
+              <h2 class="hero__card-title">Хотите открыть свой автосервис или СТО?</h2>
+              <p>Подробнее</p>
+            </div>
+            <div class="hero__card-back" style="background: url(img/bg/hc1_1.png) bottom right/cover no-repeat;">
+              <h2 class="hero__card-title">Я хочу открыть автосервис или СТО</h2>
+              <p>Подробнее</p>
+            </div>
+          </a>
+          <a class="hero__card-item card_tab" href="#reasons" data-title="scroll" data-actab-group="0" data-actab-id="1">
+            <div class="hero__card-front" style="background: url(img/bg/hc2.png) bottom right/cover no-repeat, var(--accent);">
+              <h2 class="hero__card-title">Хотите перестать вести учёт в тетрадке или Excel?</h2>
+              <p>Подробнее</p>
+            </div>
+            <div class="hero__card-back" style="background: url(img/bg/hc2_1.png) bottom right/cover no-repeat;;">
+              <h2 class="hero__card-title">Я хочу навести порядок в своём автосервисе</h2>
+              <p>Подробнее</p>
+            </div>
+          </a>
+          <a class="hero__card-item card_tab" href="#reasons" data-title="scroll" data-actab-group="0" data-actab-id="2">
+            <div class="hero__card-front" style="background: url(img/bg/hc3.png) bottom right/cover no-repeat, var(--accent);">
+              <h2 class="hero__card-title">Используете специализированный софт, но его стало мало?</h2>
+              <p>Подробнее</p>
+            </div>
+            <div class="hero__card-back" style="background: url(img/bg/hc3_1.png) bottom right/cover no-repeat;;">
+              <h2 class="hero__card-title">Я хочу видеть полную картину</h2>
+              <p>Подробнее</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-    <!--  -->
+    <!-- reasons -->
     <section class="section reasons" id="reasons">
       <div class="container">
         <div class="accordion">
           <!-- accordion desk menu -->
           <ul class="accordion__tabs">
-            <li class="accordion__tab current" data-actab-group="0" data-actab-id="0">Я хочу открыть автосервис или СТО</li>
-            <li class="accordion__tab" data-actab-group="0" data-actab-id="1">Я хочу навести порядок
+            <li class="accordion__tab card_tab current" data-actab-group="0" data-actab-id="0">Я хочу открыть автосервис или СТО</li>
+            <li class="accordion__tab card_tab" data-actab-group="0" data-actab-id="1">Я хочу навести порядок
               в&nbsp;своем&nbsp;автосервисе</li>
-            <li class="accordion__tab" data-actab-group="0" data-actab-id="2">Я хочу видеть полную картину</li>
+            <li class="accordion__tab card_tab" data-actab-group="0" data-actab-id="2">Я хочу видеть полную картину</li>
           </ul>
           <!-- Accordion content -->
           <div class="accordion__content">
             <!-- 1 -->
-            <article class="accordion__item current" data-actab-group="0" data-actab-id="0">
+            <article class="accordion__item current" id="tab1" data-actab-group="0" data-actab-id="0">
               <!-- Accordion mobile label -->
-              <div class="accordion__item-label">Я хочу открыть автосервис или СТО</div>
+              <div class="accordion__item-label" data-tab="reasons">Я хочу открыть автосервис или СТО</div>
               <div class="accordion__item-container">
                 <h3 class="accordion__item-caption">У вас множество вопросов, не знаете с чего начать?</h3>
                 <p class="accordion__item-text">Мы хотим поделиться с вами накопленным опытом и поможем в развитии вашего бизнеса с самых первых шагов</p>
@@ -174,9 +208,9 @@ http://browsehappy.com/">обновите</a>
               </div>
             </article>
             <!-- 2 -->
-            <article class="accordion__item" data-actab-group="0" data-actab-id="1">
+            <article class="accordion__item" id="tab2" data-actab-group="0" data-actab-id="1">
               <!-- Accordion mobile label -->
-              <div class="accordion__item-label">Я хочу навести порядок
+              <div class="accordion__item-label" data-tab="reasons">Я хочу навести порядок
                 в своем автосервисе</div>
               <div class="accordion__item-container">
                 <h3 class="accordion__item-caption">Не знаете остался ли клиент доволен обслуживанием? Как&nbsp;увеличить прибыль?<br> Сколько каких товаров осталось на складе? Сколько было прибыли и затрат за квартал?</h3>
@@ -245,9 +279,9 @@ http://browsehappy.com/">обновите</a>
               </div>
             </article>
             <!-- 3 -->
-            <article class="accordion__item" data-actab-group="0" data-actab-id="2">
+            <article class="accordion__item" id="tab3" data-actab-group="0" data-actab-id="2">
               <!-- accordion mobile label -->
-              <div class="accordion__item-label">Я хочу видеть полную картину</div>
+              <div class="accordion__item-label" data-tab="reasons">Я хочу видеть полную картину</div>
               <div class="accordion__item-container">
                 <h3 class="accordion__item-caption">Хотите детально видеть что происходит в вашем автосервисе?</h3>
                 <p class="accordion__item-text">Трицепс создавался для управления бизнес-процессами и глубокого контроля предприятия.
@@ -320,8 +354,8 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section possibilities" id="possibilities" style="background: url(img/bg/possibilities.jpg) top center/cover;">
+    <!-- possibilities -->
+    <section class="section possibilities" id="possibilities" style="background: url(img/bg/possibilities.jpg) top center/cover, var(--accent);">
       <div class="container">
         <h2 class="section__title light">Основные возможности</h2>
         <div class="section__wrapper">
@@ -330,31 +364,32 @@ http://browsehappy.com/">обновите</a>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper possibilities__list">
               <!-- Slides -->
-              <div class="swiper-slide section__row">
-                <div class="section__col pic">
-                  <img src="img/img1.jpg " alt="">
-                </div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">Кассы и терминалы</h3>
-                  <div class="section__text">
-                    <p>Все чеки печатаются в соответствии с 54-ФЗ.</p>
-                    <p>Беспланое подключение касс Штрих-М и Атол. Подключение касс других фирм и терминалов для оплаты банковскими картами за небольшую дополнительную плату.</p>
+              <div class="swiper-slide section__row no-bg">
+                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                  <div class="section__container">
+                    <h3 class="section__caption">Кассы и терминалы</h3>
+                    <div class="section__text">
+                      <p>Все чеки печатаются в соответствии с 54-ФЗ.</p>
+                      <p>Беспланое подключение касс Штрих-М и Атол. Подключение касс других фирм и терминалов для оплаты банковскими картами за небольшую дополнительную плату.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- slide2 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/img2.jpg " alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p2.jpg" alt=""></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Заказ-наряд за 35 секунд</h3>
                   <div class="section__text">
                     <p>Быстрое и удобное создание заказ-наряда, с отображением нормочасов и рекомендаций по периодическим услугам.</p>
-                    <p>Использование разных статусов, таких как “Запланировать” или “Начать работу”, даст каждому сотруднику понимание на каком этапе ремонта находится автомобиль.</p>
-                    <p>Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту</p>
+                    <p>Использование разных статусов, таких как “Запланировать” или “Начать работу”, даст каждому сотруднику понимание на каком этапе ремонта находится автомобиль.
+                      Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту.</p>
                   </div>
                 </div>
               </div>
+              <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/img3.jpg " alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p3.jpg" alt=""></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">График загрузки СТО</h3>
                   <div class="section__text">
@@ -362,17 +397,20 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">Нормочасы</h3>
-                  <div class="section__text">
-                    <p>Расчет стоимости ремонта автомобиля прямо в заказ-наряде, определение реальной нагрузки на автосервис, учет рабочего времени автомехаников, планирование доходности предприятия.</p>
+              <!-- slide4 -->
+              <div class="swiper-slide section__row no-bg">
+                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                  <div class="section__container">
+                    <h3 class="section__caption">Нормочасы</h3>
+                    <div class="section__text">
+                      <p>Расчет стоимости ремонта автомобиля прямо в заказ-наряде, определение реальной нагрузки на автосервис, учет рабочего времени автомехаников, планирование доходности предприятия.</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- slide5 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
+                <div class="section__col pic border"><img src="img/slider/p5.jpg" alt=""></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Подбор и проценка запчастей</h3>
                   <div class="section__text">
@@ -380,8 +418,9 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
               </div>
+              <!-- slide6 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
+                <div class="section__col pic border"><img src="img/slider/p6.jpg" alt=""></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Учет товаров и работа со складом</h3>
                   <div class="section__text">
@@ -390,12 +429,35 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
               </div>
+              <!-- slide7 -->
+              <div class="swiper-slide section__row no-bg">
+                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                  <div class="section__container">
+                    <h3 class="section__caption">Удобная филиальная структура, которая позволяет:</h3>
+                    <div class="section__text">
+                      <ul class="list">
+                        <li>Иметь общую базу клиентов во всех филиалах</li>
+                        <li>Создавать в каждом филиале свои склады и кассы</li>
+                        <li>Настраивать права доступа сотрудников для каждой точки</li>
+                        <li>Контролировать деятельность предприятия, как целиком, так и каждого отдельного филиала по любым параметрам</li>
+                        <li>Синхронизировать Базы данных филиалов между собой</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide8 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
+                <div class="section__col pic"><img src="img/slider/p8.png" alt=""></div>
                 <div class="section__col descr">
-                  <h3 class="section__caption">Учет всех документов</h3>
+                  <h3 class="section__caption">TriMobile ー мобильное приложение для мастеров ремзоны</h3>
                   <div class="section__text">
-                    <p>Ни один документ в Трицепсе невозможно удалить бесследно. Даже если документ был удален, то его легко можно будет найти. Это позволяет застраховаться от случайных ошибок или недобросовестного сотрудника</p>
+                    <ul class="list">
+                      <li>Приемщик моментально передает задание в ремзону исполнителям, ничего не теряется</li>
+                      <li>Приемщик и руководитель видит состояние работ в заказ-наряде в режиме Online</li>
+                      <li>Исполнитель видит сколько нормочасов он закрыл в нынешнем и прошлом месяце и сколько реального времени он на это потратил</li>
+                      <li>Вы экономите бумагу и тонер принтера на печатных формах</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -409,8 +471,8 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section contact-form" id="contact-form" style="background: url(img/bg/form.png) top right/cover;">
+    <!-- contact-form -->
+    <section class="section contact-form" id="contact-form" style="background: url(img/bg/form.png) top center/cover no-repeat;">
       <div class="container">
         <h2 class="section__title accent">Поможем автоматизировать ваш бизнес</h2>
         <div class="section__lead">
@@ -434,27 +496,83 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section marketing" id="marketing" style="background: url(img/bg/marketing.jpg) top center/cover;">
+    <!-- marketing -->
+    <section class="section marketing" id="marketing" style="background: url(img/bg/marketing.jpg) top center/cover no-repeat, var(--accent);">
       <div class="container">
         <h2 class="section__title light">Маркетинг и реклама</h2>
+        <div class="section__lead light">
+          <p>Запускайте правильные маркетинговые акции. Сократите расходы на неэффективную рекламу в 2 раза!</p>
+        </div>
         <div class="section__wrapper">
           <!-- Slider main container -->
           <div class="swiper-container marketing__container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper marketing__list">
               <!-- Slides -->
+
+              <div class="swiper-slide section__row">
+                <div class="section__col pic border"><img src="img/slider/m1.jpg " alt=""></div>
+                <div class="section__col descr">
+                  <h3 class="section__caption">СМС-рассылка</h3>
+                  <div class="section__text">
+                    <ul class="list">
+                      <li>Отправляйте сообщения прямо из заказ-наряда</li>
+                      <li>Напоминайте клиентам о записи или периодических услугах</li>
+                      <li>Сообщайте об акциях</li>
+                      <li>Создавайте массовые СМС-рассылки для групп клиентов</li>
+                      <li>Отслеживайте эффективность рассылок</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- slide2 -->
+              <div class="swiper-slide section__row">
+                <div class="section__col pic"><img src="img/slider/m2.jpg" alt=""></div>
+                <div class="section__col descr">
+                  <h3 class="section__caption">IP-телефония</h3>
+                  <div class="section__text">
+                    <p>Вы будете видеть всю информацию о клиенте еще до начала разговора в виде всплывающего окна, из которого можно быстро создать нового клиента и заказ-наряд.</p>
+                    <p>Автоматическая запись всех разговоров в программу и статистика по звонкам.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- slide3 -->
+              <div class="swiper-slide section__row">
+                <div class="section__col pic border"><img src="img/slider/m3.jpg" alt=""></div>
+                <div class="section__col descr">
+                  <h3 class="section__caption">Рекомендации по периодическим услугам</h3>
+                  <div class="section__text">
+                    <p>Напоминания для мастеров-приемщиков о рекомендованных клиенту работах указываются сразу в заказ-наряде что значительно увеличит ваш средний чек.</p>
+                    <p> Также вы будете видеть всех клиентов, которым, например, стоит заменить масло в этом месяце, и сможете напомнить им об этом.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- slide4 -->
+              <div class="swiper-slide section__row">
+                <div class="section__col pic border"><img src="img/slider/m4.jpg" alt=""></div>
+                <div class="section__col descr">
+                  <h3 class="section__caption">Сегментация клиентов по 17-и параметрам</h3>
+                  <div class="section__text">
+                    <p>Самый простой пример ー вы будете видеть какие марки к вам приезжают чаще, и для них вы сможете всегда держать в наличии расходники-фильтра, свечи и т.д.</p>
+                    <p>Статистика позволяет видеть лояльных клиентов и работать с такими в первую очередь. Тем самым формировать определенные предложения для конкретных групп клиентов и зарабатывать на каждой из них.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- slide5 -->
+              <div class="swiper-slide section__row no-bg">
+                <div class="section__col  single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                  <div class="section__container">
+                    <h3 class="section__caption">Гибкая бонусная система</h3>
+                    <div class="section__text">
+                      <p>Вы можете настроить ее так, как считаете нужным. Бонусы мотивируют клиентов тратить накопленные бонусы, а вместе с ними и реальные деньги.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- slide6 -->
               <div class="swiper-slide section__row">
                 <div class="section__col pic">
-                  <div class="swiper-container slider-nested">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="img/img3.jpg" alt=""></div>
-                      <div class="swiper-slide"><img src="img/img2.jpg" alt=""></div>
-                      <div class="swiper-slide"><img src="img/img1.jpg" alt=""></div>
-
-                    </div>
-                    <!-- <div class="swiper-pagination nested-pagination"></div> -->
-                  </div>
+                  <img src="img/slider/m6.png" alt="">
                 </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">“Мой Гараж” Удобное приложение как для автовладельцев, так и
@@ -478,54 +596,6 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/img2.jpg " alt=""></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">СМС-рассылка</h3>
-                  <div class="section__text">
-                    <p>Отправляйте сообщения прямо из заказ-наряда, напоминайте клиентам о записи или периодических услугах, сообщайте об акциях, создавайте массовые СМС-рассылки для групп клиентов и отслеживайте их эффективность. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/img3.jpg " alt=""></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">IP-телефония</h3>
-                  <div class="section__text">
-                    <p>Вы будете видеть всю информацию о клиенте еще до начала разговора в виде всплывающего окна, из которого можно быстро создать нового клиента и заказ-наряд.
-                      Автоматическая запись всех разговоров в программу и статистика по звонкам.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">Рекомендации по периодическим услугам</h3>
-                  <div class="section__text">
-                    <p>Напоминания для мастеров-приемщиков о рекомендованных клиенту работах указываются сразу в заказ-наряде что значительно увеличит ваш средний чек.
-                      Также вы будете видеть всех клиентов, которым, например, стоит заменить масло в этом месяце, и сможете напомнить им об этом.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">Сегментация клиентов по 17-и параметрам</h3>
-                  <div class="section__text">
-                    <p>Самый простой пример ー вы будете видеть какие марки к вам приезжают чаще, и для них вы сможете всегда держать в наличии расходники-фильтра, свечи и т.д.
-                      Статистика позволяет видеть лояльных клиентов и работать с такими в первую очередь. Тем самым формировать определенные предложения для конкретных групп клиентов и зарабатывать на каждой из них.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide section__row">
-                <div class="section__col pic"></div>
-                <div class="section__col descr">
-                  <h3 class="section__caption">Гибкая бонусная система</h3>
-                  <div class="section__text">
-                    <p>Вы можете настроить ее так, как считаете нужным. Бонусы мотивируют клиентов тратить накопленные бонусы, а вместе с ними и реальные деньги.</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <!-- If we need navigation buttons -->
@@ -536,8 +606,8 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section price" id="price" style="background: url(img/bg/price.jpg) top center/cover">
+    <!-- price -->
+    <section class="section price" id="price" style="background: url(img/bg/price.jpg) top center/cover fixed no-repeat">
       <div class="container">
         <h2 class="section__title">Выберите оптимальное решение для вашего бизнеса</h2>
         <div class="section__row">
@@ -562,7 +632,7 @@ http://browsehappy.com/">обновите</a>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
-              <div class="form__icon"><img src="img/call.jpg" alt=""></div>
+              <div class="form__icon"><img src="img/call.png" alt=""></div>
               <div class="section__caption center">Наш специалист поможет вам подобрать версию программы и рассчитает точную стоимость для вашего сервиса:</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
@@ -580,8 +650,8 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section develop" id="develop" style="background-color: #6885FA;">
+    <!-- develop -->
+    <section class="section develop" id="develop" style="background:url(img/bg/dewelop.jpg) top left/cover no-repeat, var(--iconbg);">
       <div class="container light">
         <h2 class="section__title">Мы сами разрабатываем нашу программу</h2>
         <div class="section__lead">
@@ -602,14 +672,11 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section reviews" id="reviews">
+    <!-- reviews -->
+    <section class="section reviews" id="reviews" style="background: url(img/bg/rev.jpg) top center/cover no-repeat, var(--accent);">
       <div class="container">
-        <h2 class="section__title">Отзывы наших постоянных клиентов</h2>
-        <div class="section__lead">
-          <p>некий вспомогательный текст</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus in cum doloremque obcaecati, reiciendis ipsa. Nemo nostrum reprehenderit beatae error?</p>
-        </div>
+        <h2 class="section__title light">Отзывы наших постоянных клиентов</h2>
+
         <div class="section__wrapper">
           <!-- Slider main container -->
           <div class="swiper-container reviews__container">
@@ -617,14 +684,14 @@ http://browsehappy.com/">обновите</a>
             <div class="swiper-wrapper reviews__list">
               <!-- Slides -->
               <div class="swiper-slide section__row">
-                <div class="section__col descr">
-                  <h3 class="section__caption">Руслан Чекмарев</h3>
+                <div class="section__col text">
+                  <h3 class="section__caption"><img src="img/avatara.jpg" class="avatar"> Руслан Чекмарев</h3>
                   <div class="section__text">
                     <p>Владелец сети СТО “Автомедведь”
                       г.&nbsp;Омск</p>
                   </div>
                 </div>
-                <div class="section__col video">
+                <div class="section__col content">
                   <a href="https://www.youtube.com/watch?v=venOo-0kACk" class="youtube" data-lightbox>
                     <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
                       <use xlink:href="#play"></use>
@@ -633,59 +700,63 @@ http://browsehappy.com/">обновите</a>
                   </a>
                 </div>
               </div>
+              <!-- slide2 -->
               <div class="swiper-slide section__row">
-                <div class="section__col descr">
-                  <h3 class="section__caption">Антон Гладких</h3>
+                <div class="section__col text">
+                  <h3 class="section__caption"><img src="img/call.png" class="avatar">
+                    Антон Гладких
+                  </h3>
                   <div class="section__text">
                     <p>Владелец сети СТО “Медведи на велосипеде”
                       г.&nbsp;Владивосток</p>
                   </div>
                 </div>
-                <div class="section__col text">
+                <div class="section__col content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis!</p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
                 </div>
               </div>
+              <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col descr">
+                <div class="section__col text">
                   <h3 class="section__caption">Виктор Черемшанов</h3>
                   <div class="section__text">
                     <p>Владелец сети СТО “Стоянка”
                       г.&nbsp;Челябинск</p>
                   </div>
                 </div>
-                <div class="section__col video">
+                <div class="section__col content">
                   <a href="https://www.youtube.com/watch?v=fsjAWuJkDfw" class="youtube" data-lightbox>
                     <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
                       <use xlink:href="#play"></use>
                     </svg>
-
                   </a>
                 </div>
               </div>
+              <!-- slide4 -->
               <div class="swiper-slide section__row">
-                <div class="section__col descr">
+                <div class="section__col text">
                   <h3 class="section__caption">Генадий Зверев</h3>
                   <div class="section__text">
                     <p>Владелец сети СТО “Формула ОдЫн”
                       г.&nbsp;Нефтюганск</p>
                   </div>
                 </div>
-                <div class="section__col text">
+                <div class="section__col content">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis!</p>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
                 </div>
               </div>
-
+              <!-- slide5 -->
               <div class="swiper-slide section__row">
-                <div class="section__col descr">
+                <div class="section__col text">
                   <h3 class="section__caption">Иван Полевой</h3>
                   <div class="section__text">
                     <p>Владелец сети “Мощные моторы”
                       г.&nbsp;Москва</p>
                   </div>
                 </div>
-                <div class="section__col video">
+                <div class="section__col content">
                   <a href="https://www.youtube.com/watch?v=vilRUEgkHGI" class="youtube" data-lightbox>
                     <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
                       <use xlink:href="#play"></use>
@@ -694,6 +765,7 @@ http://browsehappy.com/">обновите</a>
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
           <!-- If we need navigation buttons -->
@@ -704,8 +776,8 @@ http://browsehappy.com/">обновите</a>
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="section contacts" id="contacts">
+    <!-- contacts -->
+    <section class="section contacts" id="contacts" style="background: url(img/bg/contact.jpg) top center/cover no-repeat;">
       <div class="container">
         <h2 class="section__title">Контакты</h2>
         <div class="section__row">
@@ -719,6 +791,7 @@ http://browsehappy.com/">обновите</a>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
+              <div class="form__icon"><img src="img/call.png" alt=""></div>
               <div class="section__caption center">Заполните форму ниже и получите бесплатную версию Программы:</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
@@ -788,14 +861,7 @@ http://browsehappy.com/">обновите</a>
   <!-- /Yandex.Metrika counter -->
 
   <!-- https://codepen.io/emelyanova/pen/XWgbvNe -->
-  <!-- https://stackoverflow.com/questions/45217749/go-to-accordion-tab-when-click-button-vanilla-javascript
-
- https://thisis-blog.ru/optimizaciya-zagruzki-sajta-s-youtube/
-
- https://codepen.io/stanislas-prime/pen/akrpD
-
-https://codepen.io/logicalmadboy/pen/zYKrWaK?editors=1010 - остановить видео
- -->
+  <!-- https://stackoverflow.com/questions/45217749/go-to-accordion-tab-when-click-button-vanilla-javascript-->
 </body>
 
 </html>

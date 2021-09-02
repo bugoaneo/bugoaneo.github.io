@@ -45,16 +45,18 @@ menuBTN.addEventListener('click', function (e) {
  let mySwiper;
  let mySwiper2;
  let mySwiper3;
+ let mySwiper4;
  const breakpointChecker = function () {
   if (breakpoint.matches === true) {
-   if (mySwiper !== undefined && mySwiper2 !== undefined && mySwiper3 !== undefined) {
+   if (mySwiper !== undefined && mySwiper2 !== undefined && mySwiper3 !== undefined && mySwiper4 !== undefined) {
     mySwiper.destroy(true, true);
     mySwiper2.destroy(true, true);
     mySwiper3.destroy(true, true);
+    mySwiper4.destroy(true, true);
    }
    return;
   } else if (breakpoint.matches === false) {
-   return enableSwiper(), enableSwiper2(), enableSwiper3();
+   return enableSwiper(), enableSwiper2(), enableSwiper3(), enableSwiper4();
   }
 
 
@@ -145,6 +147,24 @@ menuBTN.addEventListener('click', function (e) {
    }
   });
  };
+ const enableSwiper4 = function () {
+  mySwiper4 = new Swiper('.hero__icons', {
+   slidesPerView: 1,
+   loop: true,
+   observer: true,
+   pagination: {
+    el: '.hero__pagination',
+    type: 'bullets',
+   },
+   autoplay: {
+    delay: 5000,
+   },
+   750: {
+    slidesPerView: 1,
+   },
+  });
+
+ };
 
  // keep an eye on viewport size changes
  breakpoint.addListener(breakpointChecker);
@@ -169,7 +189,7 @@ possibilities = new Swiper('.possibilities__container', {
  }
 });
 
-possibilities = new Swiper('.marketing__container', {
+marketing = new Swiper('.marketing__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
@@ -185,16 +205,22 @@ possibilities = new Swiper('.marketing__container', {
  }
 });
 
-const nestedSlider = new Swiper('.slider-nested', {
+
+const reviews = new Swiper('.reviews__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
- nested: true,
- autoplay: {
-  delay: 5000,
+ autoHeight: false,
+ navigation: {
+  nextEl: '.reviews__button-next',
+  prevEl: '.reviews__button-prev',
+ },
+ breakpoints: {
+  750: {
+   autoHeight: true,
+  },
  },
 });
-
 
 
 /*tabs-accordion */
@@ -239,21 +265,4 @@ labels.forEach(function (label) {
 
 tabs.forEach(function (tab) {
  tab.addEventListener("click", toggleShow);
-});
-
-
-const reviews = new Swiper('.reviews__container', {
- slidesPerView: 1,
- spaceBetween: 20,
- loop: true,
- autoHeight: false,
- navigation: {
-  nextEl: '.reviews__button-next',
-  prevEl: '.reviews__button-prev',
- },
- breakpoints: {
-  750: {
-   autoHeight: true,
-  },
- },
 });
