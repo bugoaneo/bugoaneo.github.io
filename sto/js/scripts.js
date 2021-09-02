@@ -2,17 +2,15 @@ let menu = document.querySelector('.menu'),
  menuBTN = document.querySelector('.menu-trigger'),
  menuLink = document.querySelectorAll('a[data-title]');
 
-document.querySelectorAll('a[data-title]').forEach(link => {
+document.querySelectorAll('[data-title="scroll"]').forEach(link => {
 
  link.addEventListener('click', function (e) {
   e.preventDefault();
-
   let href = this.getAttribute('href').substring(1);
-
   const scrollTarget = document.getElementById(href);
 
   // const topOffset = document.querySelector('a[data-title]').offsetHeight;
-  const topOffset = 0; // если не нужен отступ сверху
+  const topOffset = 45; // если не нужен отступ сверху
   const elementPosition = scrollTarget.getBoundingClientRect().top;
   const offsetPosition = elementPosition - topOffset;
 
@@ -35,7 +33,6 @@ menuBTN.addEventListener('click', function (e) {
 
 
 /* sliders */
-
 (function () {
  'use strict';
  // breakpoint where swiper will be destroyed
@@ -173,6 +170,7 @@ menuBTN.addEventListener('click', function (e) {
 })();
 
 
+
 possibilities = new Swiper('.possibilities__container', {
  slidesPerView: 1,
  spaceBetween: 20,
@@ -189,7 +187,7 @@ possibilities = new Swiper('.possibilities__container', {
  }
 });
 
-marketing = new Swiper('.marketing__container', {
+possibilities = new Swiper('.marketing__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
@@ -205,6 +203,15 @@ marketing = new Swiper('.marketing__container', {
  }
 });
 
+const nestedSlider = new Swiper('.slider-nested', {
+ slidesPerView: 1,
+ spaceBetween: 20,
+ loop: true,
+ nested: true,
+ autoplay: {
+  delay: 5000,
+ },
+});
 
 const reviews = new Swiper('.reviews__container', {
  slidesPerView: 1,
@@ -222,17 +229,14 @@ const reviews = new Swiper('.reviews__container', {
  },
 });
 
-
 /*tabs-accordion */
 
 const labels = document.querySelectorAll(".accordion__item-label");
-const tabs = document.querySelectorAll(".accordion__tab");
+const tabs = document.querySelectorAll(".card_tab");
 
 function toggleShow() {
  const target = this;
- const item = target.classList.contains("accordion__tab")
-  ? target
-  : target.parentElement;
+ const item = target.classList.contains("card_tab") ? target : target.parentElement;
  const group = item.dataset.actabGroup;
  const id = item.dataset.actabId;
 
@@ -266,3 +270,12 @@ labels.forEach(function (label) {
 tabs.forEach(function (tab) {
  tab.addEventListener("click", toggleShow);
 });
+
+
+/*parallax */
+
+// window.addEventListener('scroll', function (e) {
+//  const background = document.querySelector('#price');
+//  let scrolled = window.pageYOffset;
+//  background.style.backgroundPositionY = - (scrolled * 0.2) + 'px';
+// })
