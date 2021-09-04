@@ -53,7 +53,7 @@
 }
 .hero__list {
  @include row(jc);
- margin-bottom: 4em;
+ // margin-bottom: 4em;
  @include bp(750px) {
   flex-wrap: nowrap;
   justify-content: flex-start;

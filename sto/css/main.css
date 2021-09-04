@@ -1055,7 +1055,6 @@ img {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 4em;
 }
 @media (max-width: 750px) {
   .hero__list {
