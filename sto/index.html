@@ -26,12 +26,40 @@
 
   <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/main.css">
+  <!-- ускоряем графику -->
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="0" height="0" style="width: 0;height: 0; visibility: hidden;position:absolute;">
     <symbol id="play" viewBox="0 0 88 55">
-      <rect width="86.29" height="53.257" x=".855" y=".997" fill="f00" rx="4" />
+      <rect width="86.29" height="53.257" x=".855" y=".997" fill="#929292" rx="4" />
       <path fill="#fff" d="M57.292 27.625L37.355 39.136V16.113l19.938 11.512z" />
     </symbol>
+    <symbol id="skype" viewBox="0 0 42 42">
+      <circle cx="20.91" cy="20.91" r="20.91" fill="#FE9153" />
+      <path fill="#F8F8F8" d="M30.983 22.692c.112-.614.171-1.24.171-1.867 0-1.39-.271-2.74-.807-4.008a10.252 10.252 0 00-2.203-3.273 10.218 10.218 0 00-3.265-2.206 10.182 10.182 0 00-3.997-.81 10.3 10.3 0 00-1.944.186A6.108 6.108 0 0016.08 10a6.035 6.035 0 00-4.299 1.786A6.059 6.059 0 0010 16.096c0 1.035.267 2.055.764 2.954-.1.583-.155 1.18-.155 1.775 0 1.39.272 2.74.808 4.007a10.246 10.246 0 002.2 3.273 10.215 10.215 0 003.265 2.206c1.267.537 2.61.81 3.997.81.604 0 1.207-.055 1.8-.162.911.516 1.939.791 2.991.791a6.024 6.024 0 004.299-1.785 6.054 6.054 0 001.781-4.31 6.076 6.076 0 00-.767-2.963zm-2.395 5.888a4.07 4.07 0 01-2.915 1.21c-.71 0-1.409-.185-2.029-.537l-.611-.346-.694.122a8.227 8.227 0 01-4.696-.526A8.254 8.254 0 0115 26.718a8.297 8.297 0 01-2.433-5.89c0-.475.043-.96.125-1.44l.12-.684-.338-.608a4.125 4.125 0 01-.519-2c0-1.108.427-2.14 1.207-2.923a4.091 4.091 0 012.918-1.21c.677.002 1.343.169 1.941.488l.61.321.674-.13a8.43 8.43 0 011.577-.15c1.125 0 2.21.22 3.235.654a8.255 8.255 0 012.643 1.785 8.272 8.272 0 011.784 2.65 8.26 8.26 0 01.653 3.244 8.4 8.4 0 01-.139 1.512l-.128.696.343.616c.343.613.522 1.308.522 2.009 0 1.109-.427 2.14-1.207 2.922zm-5.77-8.952l-2.404-.534c-.914-.21-1.966-.486-1.966-1.35 0-.864.737-1.469 2.07-1.469 2.683 0 2.438 1.848 3.77 1.848.702 0 1.317-.414 1.317-1.123 0-1.657-2.649-2.903-4.895-2.903-2.439 0-5.035 1.039-5.035 3.803 0 1.33.473 2.747 3.089 3.404l3.246.813c.982.242 1.23.796 1.23 1.297 0 .832-.825 1.644-2.317 1.644-2.915 0-2.51-2.249-4.07-2.249-.702 0-1.21.485-1.21 1.175 0 1.346 1.63 3.146 5.28 3.146 3.472 0 5.193-1.677 5.193-3.926 0-1.447-.666-2.987-3.298-3.576z" />
+    </symbol>
+    <symbol id="mail" viewBox="0 0 42 42">
+      <circle cx="20.91" cy="21.417" r="20.91" fill="#FE9153" />
+      <path fill="#fff" stroke="#FE9153" stroke-width=".1" d="M20.91 30.324a8.818 8.818 0 005.294-1.74.836.836 0 01.997 1.343h0a10.482 10.482 0 01-6.291 2.069h0c-5.843 0-10.58-4.737-10.58-10.58 0-5.842 4.737-10.578 10.58-10.578s10.579 4.736 10.579 10.579v1.771h0a3.48 3.48 0 01-6.532 1.688l-.034-.063-.047.055a5.265 5.265 0 11-.457-7.365l.084.075v-.59a.836.836 0 011.671 0v6.2a1.822 1.822 0 003.643 0v-1.771a8.907 8.907 0 10-8.907 8.907zm0 0v-.05.05s0 0 0 0zm-3.593-8.908a3.593 3.593 0 107.186 0 3.593 3.593 0 00-7.186 0z" />
+    </symbol>
+    <symbol id="phone" viewBox="0 0 42 42">
+      <circle cx="20.91" cy="21.046" r="20.91" fill="#FE9153" />
+      <path fill="#fff" stroke="#fff" stroke-width=".15" d="M23.652 24.32h0a.348.348 0 01-.453-.087h0a31.18 31.18 0 01-2.224-3.224 31.16 31.16 0 01-1.68-3.538h0a.348.348 0 01.15-.436h.001l2.327-1.343a1.787 1.787 0 00.654-2.442l-2.568-4.448a1.787 1.787 0 00-2.442-.654L14.451 9.86c-1.472.85-2.015 2.519-1.678 4.852.336 2.333 1.551 5.35 3.623 8.94 2.072 3.589 4.078 6.15 5.93 7.608 1.853 1.458 3.57 1.822 5.042.972l2.966-1.712a1.787 1.787 0 00.654-2.441L28.42 23.63a1.787 1.787 0 00-2.442-.654l-2.326 1.343zm-4.709-8.156h0a1.363 1.363 0 00-.58 1.685 32.2 32.2 0 001.74 3.662l.001.002a32.151 32.151 0 002.3 3.338 1.363 1.363 0 001.75.34h0l.78-.45 3.349 5.801-1.418.819c-1.134.655-2.57.272-4.219-1.128-1.645-1.398-3.476-3.789-5.378-7.084-1.903-3.295-3.058-6.077-3.446-8.2-.388-2.127-.002-3.563 1.133-4.218l1.417-.818 3.35 5.801-.779.45zm8.605 7.97l2.569 4.448a.781.781 0 01-.286 1.067l-.677.39-3.35-5.801.677-.39a.781.781 0 011.067.285zm-8.56-14.83l2.568 4.45a.781.781 0 01-.286 1.066l-.677.39-3.35-5.8.677-.391a.781.781 0 011.067.286z" />
+    </symbol>
+    <symbol id="cloud" viewBox="0 0 42 42">
+      <circle cx="20.911" cy="20.911" r="20.911" fill="#fff" />
+      <path fill="#FF7C32" d="M19.287 15.246c-2.34 0-4.243 1.794-4.243 3.998 0 .153.015.326.046.544l.256 1.79a.648.648 0 01-.655.733l-2.049.011c-1.19.007-2.159.938-2.159 2.075 0 1.145.975 2.077 2.173 2.077h15c1.484 0 2.691-1.147 2.691-2.558 0-1.025-.644-1.948-1.643-2.352l-.808-.327c-.285-.115-.63-.484-.64-.87l-.02-.802a1.131 1.131 0 00-1.13-1.089c-.04 0-.117.007-.257.04l-1.29.296c-.329.075-.752-.074-.906-.347l-.625-1.102c-.742-1.305-2.176-2.117-3.741-2.117zm0-2.246c2.583 0 4.824 1.355 5.95 3.34.283-.07.575-.105.868-.108 1.97 0 3.567 1.464 3.613 3.283a5.195 5.195 0 012.275 1.785c.552.78.843 1.69.837 2.616 0 2.654-2.315 4.804-5.173 4.804H12.656C10.084 28.72 8 26.784 8 24.397c0-2.378 2.07-4.306 4.628-4.32a5.933 5.933 0 01-.065-.833C12.56 15.796 15.572 13 19.286 13z" />
+    </symbol>
+    <symbol id="desk" viewBox="0 0 43 43">
+      <circle cx="21.571" cy="21.418" r="20.911" fill="#fff" />
+      <path fill="#FF7C32" stroke="#FF7C32" stroke-width=".1" d="M31.616 11.306h-20.09A2.195 2.195 0 009.334 13.5v13.247c0 1.21.984 2.193 2.192 2.193h7.163v2.614H16.68a.764.764 0 000 1.528h9.78a.764.764 0 000-1.528h-2.007V28.94h7.162a2.195 2.195 0 002.193-2.193V13.5a2.195 2.195 0 00-2.193-2.193zm-8.69 20.247h-2.71V28.94h2.71v2.614zm9.355-4.806a.665.665 0 01-.665.664h-20.09a.665.665 0 01-.664-.665v-1.035h21.419v1.036zm0-2.564H10.862V13.499c0-.366.298-.664.664-.664h20.09c.367 0 .665.298.665.664v10.684z" />
+    </symbol>
   </svg>
+  <!-- ускоряем графику -->
+  <style>
+    .hero__icon,
+    .card__icon {
+      background-image: url(img/icons/sprites.png);
+    }
+  </style>
 </head>
 
 <body>
@@ -45,19 +73,20 @@ http://browsehappy.com/">обновите</a>
     <header class="header">
       <div class="header__container">
         <picture class="logo">
-          <source media="(max-width: 1050px)" srcset="img/logo_m.svg">
+          <source media="(max-width: 950px)" srcset="img/logo_m.svg">
           <img src="img/logo_d.svg" alt="Нетикс Трицепс">
         </picture>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item"><a href="#possibilities" data-title="scroll">Основные возможности</a></li>
             <li class="menu__item"><a href="#marketing" data-title="scroll">Маркетинг и реклама</a></li>
+            <li class="menu__item header-desk"><a href="" class="btn btn-call">Попробовать<br>бесплатно</a></li>
             <li class="menu__item"><a href="#price" data-title="scroll">Цены</a></li>
             <li class="menu__item"><a href="#reviews" data-title="scroll">Отзывы</a></li>
             <li class="menu__item"><a href="#contacts" data-title="scroll">Контакты</a></li>
           </ul>
         </nav>
-        <button class="btn btn-call" type="button">Получить демо-версию</button>
+        <a href="" class="btn btn-call header-mobil">Попробовать<br>бесплатно</a>
         <button class="menu-trigger" type="button"></button>
       </div>
     </header>
@@ -73,15 +102,15 @@ http://browsehappy.com/">обновите</a>
             <div class="swiper-wrapper hero__list">
               <!-- Slides -->
               <div class="swiper-slide hero__item">
-                <div class="hero__icon"></div>
+                <div class="hero__icon" style="background-position: -111px -10px;"></div>
                 <div class="hero__caption">На рынке с 2005 года</div>
               </div>
               <div class="swiper-slide hero__item">
-                <div class="hero__icon"></div>
+                <div class="hero__icon" style="background-position: -10px -10px;"></div>
                 <div class="hero__caption">Более 800 успешных внедрений программы</div>
               </div>
               <div class="swiper-slide hero__item">
-                <div class="hero__icon"></div>
+                <div class="hero__icon" style="background-position: -211px -10px;"></div>
                 <div class="hero__caption">Техподдержка высокого уровня</div>
               </div>
             </div>
@@ -105,7 +134,7 @@ http://browsehappy.com/">обновите</a>
               <h2 class="hero__card-title">Хотите перестать вести учёт в тетрадке или Excel?</h2>
               <p>Подробнее</p>
             </div>
-            <div class="hero__card-back" style="background: url(img/bg/hc2_1.png) bottom right/cover no-repeat;;">
+            <div class="hero__card-back" style="background: url(img/bg/hc2_1.png) bottom right/cover no-repeat;">
               <h2 class="hero__card-title">Я хочу навести порядок в своём автосервисе</h2>
               <p>Подробнее</p>
             </div>
@@ -115,7 +144,7 @@ http://browsehappy.com/">обновите</a>
               <h2 class="hero__card-title">Используете специализированный софт, но его стало мало?</h2>
               <p>Подробнее</p>
             </div>
-            <div class="hero__card-back" style="background: url(img/bg/hc3_1.png) bottom right/cover no-repeat;;">
+            <div class="hero__card-back" style="background: url(img/bg/hc3_1.png) bottom right/cover no-repeat;">
               <h2 class="hero__card-title">Я хочу видеть полную картину</h2>
               <p>Подробнее</p>
             </div>
@@ -150,49 +179,61 @@ http://browsehappy.com/">обновите</a>
                     <div class="swiper-wrapper card__list">
                       <!-- Slides -->
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -10px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Откуда брать клиентов и как их удерживать?</div>
-                          <div class="card__text">С Трицепсом вы легко сможете следить за эффективностью рекламы.
-                            В программу встроена бонусная система, СМС-рассылка и удобное приложение для записи клиентов в автосервис “Мой Гараж</div>
+                          <div class="card__text">
+                            <p>С Трицепсом вы легко сможете следить за эффективностью рекламы.</p>
+                            <p>В программу встроена бонусная система, СМС-рассылка и удобное приложение для записи клиентов в автосервис “Мой Гараж”</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -95px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Как вести учет клиентской базы данных?</div>
-                          <div class="card__text">Вы будете видеть всю статистику по клиентам ー сегментация, частота посещения, оборот, средний чек, задолженность
-                            Доступ ко всей истории обслуживания и общения с клиентом за 15 секунд</div>
+                          <div class="card__text">
+                            <p>Вы будете видеть всю статистику по клиентам ー сегментация, частота посещения, оборот, средний чек, задолженность.</p>
+                            <p>Доступ ко всей истории обслуживания и общения с клиентом за 15 секунд.</p>
+
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Откуда брать запчасти?</div>
-                          <div class="card__text">Вы сможете быстро и точно подобрать и проценить запчасти с помощью каталогов Лаксимо и QWEP.
-                            Это позволит контролировать продажи, избежать торговых издержек и недовольных клиентов</div>
+                          <div class="card__text">
+                            <p>Вы сможете быстро и точно подобрать и проценить запчасти с помощью каталогов Лаксимо и QWEP.</p>
+                            <p>Это позволит контролировать продажи, избежать торговых издержек и недовольных клиентов.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Как рассчитывать зарплату сотрудникам?</div>
-                          <div class="card__text">Расчет зарплаты всех сотрудников будут занимать 20 минут в месяц благодаря гибкой настройке по 44-ем параметрам.
-                            Мы с радостью поможем вам подобрать вид расчета и систему мотивации сотрудников</div>
+                          <div class="card__text">
+                            <p>Расчёт зарплаты всех сотрудников будет занимать 20 минут в месяц благодаря гибкой настройке по 44-ём параметрам.</p>
+                            <p>Мы с радостью поможем вам подобрать вид расчёта и систему мотивации сотрудников.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -95px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Как построить грамотные отношения с государством?</div>
-                          <div class="card__text">Чеки фз-54, выгрузка в 1С, кассовая дисциплина и тотальный учет</div>
+                          <div class="card__text">
+                            <p>Все чеки из программы печатаются в соответствии с ФЗ-54. В Трицепсе легко соблюдается кассовая дисциплина благодаря точному учёту.</p>
+                            <p>Печать документов для юридических лиц ТОРГ-12, УПД, Акт выполненных работ прямо из программы. Выгрузка необходимых данных в 1С для бухгалтерии.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -10px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Как вести учет товаров?</div>
-                          <div class="card__text">Вы всегда будете знать какие товары и в каком объеме есть на складе,видеть передвижение одной запчасти или всех сразу. Наглядная статистика и рекомендации к поставкам</div>
+                          <div class="card__text">Вы всегда будете знать какие товары и в каком объёме есть на складе,видеть передвижение одной запчасти или всех сразу. Наглядная статистика и рекомендации к поставкам.</div>
                         </div>
                       </div>
                     </div>
@@ -213,7 +254,7 @@ http://browsehappy.com/">обновите</a>
               <div class="accordion__item-label" data-tab="reasons">Я хочу навести порядок
                 в своем автосервисе</div>
               <div class="accordion__item-container">
-                <h3 class="accordion__item-caption">Не знаете остался ли клиент доволен обслуживанием? Как&nbsp;увеличить прибыль?<br> Сколько каких товаров осталось на складе? Сколько было прибыли и затрат за квартал?</h3>
+                <h3 class="accordion__item-caption">Не знаете остался ли клиент доволен обслуживанием? Как увеличить прибыль? Сколько каких товаров осталось на складе?</h3>
                 <p class="accordion__item-text">Мы работаем в автоматизации автобизнеса с 2005 года и хотим поделиться с вами нашими разработками и накопленным опытом</p>
                 <div class="accordion__slider">
                   <!-- Slider2 main container -->
@@ -222,48 +263,60 @@ http://browsehappy.com/">обновите</a>
                     <div class="swiper-wrapper card__list">
                       <!-- Slides -->
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Расчет зарплаты сотрудников</div>
-                          <div class="card__text">Затраты времени на расчет зарплаты снижаются с 4 часов до 20 минут.
-                            Гибкая настройка расчета и системы мотивации сотрудников по 44-ем параметрам</div>
+                          <div class="card__text">
+                            <p>Затраты времени на расчет зарплаты снижаются с 4 часов до 20 минут.</p>
+                            <p>Гибкая настройка расчёта и системы мотивации сотрудников по 44-ём параметрам.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -95px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Учет клиентской базы данных</div>
-                          <div class="card__text">Доступ ко всей истории обслуживания и общения с клиентом за 15 секунд
-                            Учет и анализ всех необходимых данных о ваших клиентах ー сегментация для рекламы и контроля выпадающих клиентов, частота посещения, оборот, средний чек, задолженность</div>
+                          <div class="card__text">
+                            <p>Доступ ко всей истории обслуживания и общения с клиентом за 15 секунд.</p>
+                            <p>Учёт и анализ всех необходимых данных о ваших клиентах ー сегментация для рекламы и контроля выпадающих клиентов, частота посещения, оборот, средний чек, задолженность.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -311px -10px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Составление заказ-наряда за 35 секунд</div>
-                          <div class="card__text">Быстрое и удобное составление заказ-наряда, в котором отображаются нормочасы и рекомендации по периодическим услугам
-                            Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту</div>
+                          <div class="card__text">
+                            <p>Быстрое и удобное составление заказ-наряда, в котором отображаются нормочасы и рекомендации по периодическим услугам.</p>
+                            <p>Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Подбор и проценка запчастей</div>
-                          <div class="card__text">Быстрый и точный подбор и проценка запчастей с помощью каталогов Лаксимо и QWEP позволят контролировать продажи, избежать торговых издержек и недовольных клиентов</div>
+                          <div class="card__text">
+                            <p>Быстрый и точный подбор и проценка запчастей с помощью каталогов Лаксимо и QWEP позволят контролировать продажи, избежать торговых издержек и недовольных клиентов.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -311px -95px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Наглядный контроль ключевых показателей для увеличения прибыли</div>
-                          <div class="card__text">Чеки фз-54, выгрузка в 1С, кассовая дисциплина и тотальный учет</div>
+                          <div class="card__text">
+                            <p>При помощи управленческих отчётов вы сможете контролировать главные показатели: выручка, наценка, затраты, средний чек, количество клиентов, частота посещения сервиса одним клиентом, конверсия.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -10px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Учет товаров и работа со складом</div>
-                          <div class="card__text">Какие товары и в каком объеме есть на складе, контроль передвижения одной запчасти или всех сразу, наглядная статистика и рекомендации к поставкам</div>
+                          <div class="card__text">
+                            <p>Какие товары и в каком объёме есть на складе, контроль передвижения одной запчасти или всех сразу, наглядная статистика и рекомендации к поставкам.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -284,8 +337,8 @@ http://browsehappy.com/">обновите</a>
               <div class="accordion__item-label" data-tab="reasons">Я хочу видеть полную картину</div>
               <div class="accordion__item-container">
                 <h3 class="accordion__item-caption">Хотите детально видеть что происходит в вашем автосервисе?</h3>
-                <p class="accordion__item-text">Трицепс создавался для управления бизнес-процессами и глубокого контроля предприятия.
-                  Мы будем рады поделиться с вами нашими разработками и опытом</p>
+                <p class="accordion__item-text">Трицепс создавался для управления бизнес-процессами и глубокого контроля предприятия.<br>
+                  Мы будем рады поделиться с вами нашими разработками и опытом.</p>
                 <div class="accordion__slider">
                   <!-- Slider3 main container -->
                   <div class="swiper-container card slider3">
@@ -293,49 +346,62 @@ http://browsehappy.com/">обновите</a>
                     <div class="swiper-wrapper card__list">
                       <!-- Slides -->
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -95px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Полное ведение клиента</div>
-                          <div class="card__text">В отчетах вы увидите данные о выполнении рекомендаций по периодическим услугам, частоту посещения, оборот, средний чек, дебетовую и кредитовую задолженности.
-                            Сегментация клиентов по 17-и параметрам для гибкой настройки рекламы и контроля “выпадающих” клиентов.
-                            Доступ сотрудников ко всей истории обслуживания и общения с клиентом за 15 секунд</div>
+                          <div class="card__text">
+                            <p>В отчётах вы увидите данные о выполнении рекомендаций по периодическим услугам, частоту посещения, средний чек, дебетовую и кредитовую задолженности.</p>
+                            <p>Сегментация клиентов по 17-и параметрам для настройки рекламы и контроля “выпадающих” клиентов.</p>
+                            <p>Доступ сотрудников к истории обслуживания и общения с клиентом за 15 секунд.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -111px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Расчет зарплаты сотрудников</div>
-                          <div class="card__text">Трицепс позволяет гибко настроить расчет заработной платы и системы мотивации сотрудников по 44-ем параметрам!
-                            Расчет зарплаты всех сотрудников будут занимать 20 минут в месяц</div>
+                          <div class="card__text">
+                            <p>Трицепс позволяет гибко настроить расчёт заработной платы и системы мотивации сотрудников по 44-ем параметрам!</p>
+                            <p>Расчет зарплаты всех сотрудников будут занимать 20 минут в месяц.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -10px -196px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Учет товаров и работа со складом</div>
-                          <div class="card__text">Вы будете видеть запас товара на складе, передвижение одной запчасти или всех сразу, количество товара в пути, сколько заказано, за сколько произведена оплата, сколько разрешено к отпуску и т. д.
-                            Наглядная статистика и рекомендации к поставкам помогут избежать запасов неликвидного товара и точно рассчитать закупку исходя из запланированного бюджета.</div>
+                          <div class="card__text">
+                            <p>Вы будете видеть запас товара на складе, передвижение одной запчасти или всех сразу, количество товара в пути, сколько заказано, сколько оплачено и т. д.</p>
+                            <p>Наглядная статистика и рекомендации к поставкам помогут избежать запасов неликвидного товара и точно рассчитать закупку исходя из запланированного бюджета.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -10px -281px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Наглядный контроль ключевых показателей</div>
-                          <div class="card__text">Выручка, наценка, средний чек, количество клиентов, частота посещения сервиса одним клиентом, конверсия и множество других показателей в управленческих отчетах для полного контроля предприятия</div>
+                          <div class="card__text">
+                            <p>Выручка, наценка, средний чек, количество клиентов, частота посещения сервиса одним клиентом, конверсия и множество других показателей в управленческих отчётах для полного контроля предприятия.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -95px -281px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Донастройка программы под индивидуальные нужды</div>
-                          <div class="card__text">Гибкая настройка программы под потребности и особенности именно вашего предприятия позволяет наглядно видеть и контролировать все, что происходит в автосервисе, повысить эффективность деятельности предприятия</div>
+                          <div class="card__text">
+                            <p>Гибкая настройка программы под потребности и особенности именно вашего предприятия позволяет наглядно видеть и контролировать все, что происходит в автосервисе, повысить эффективность деятельности предприятия.</p>
+                          </div>
                         </div>
                       </div>
                       <div class="swiper-slide card__item">
-                        <div class="card__icon"></div>
+                        <div class="card__icon" style="background-position: -180px -281px;"></div>
                         <div class="card__body">
                           <div class="card__caption">Учет всех документов</div>
-                          <div class="card__text">Ни один документ в Трицепсе невозможно удалить бесследно. Даже если документ был удален, то его легко можно будет найти. Это позволяет застраховаться от случайных ошибок или недобросовестного сотрудника</div>
+                          <div class="card__text">
+                            <p>Ни один документ в Трицепсе невозможно удалить бесследно. Даже если документ был удалён, то его легко можно будет найти.</p>
+                            <p>Это позволяет застраховаться от случайных ошибок или недобросовестного сотрудника.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -370,30 +436,30 @@ http://browsehappy.com/">обновите</a>
                     <h3 class="section__caption">Кассы и терминалы</h3>
                     <div class="section__text">
                       <p>Все чеки печатаются в соответствии с 54-ФЗ.</p>
-                      <p>Беспланое подключение касс Штрих-М и Атол. Подключение касс других фирм и терминалов для оплаты банковскими картами за небольшую дополнительную плату.</p>
+                      <p>Бесплатное подключение касс Штрих-М и Атол. Кассы других фирм и терминалы для оплаты банковскими картами подключаются за небольшую дополнительную плату.</p>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- slide2 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p2.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p2.jpg" alt="Заказ-наряд за 35 секунд"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Заказ-наряд за 35 секунд</h3>
                   <div class="section__text">
                     <p>Быстрое и удобное создание заказ-наряда, с отображением нормочасов и рекомендаций по периодическим услугам.</p>
-                    <p>Использование разных статусов, таких как “Запланировать” или “Начать работу”, даст каждому сотруднику понимание на каком этапе ремонта находится автомобиль.
-                      Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту.</p>
+                    <p>Использование разных статусов, таких как “Запланировать” или “Начать работу”, даст каждому сотруднику понимание на каком этапе ремонта находится автомобиль.<br>
+                      Также вы будете видеть статистику по всем заказ-нарядам за нужный период или по конкретному клиенту</p>
                   </div>
                 </div>
               </div>
               <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p3.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p3.jpg" alt="График загрузки СТО"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">График загрузки СТО</h3>
                   <div class="section__text">
-                    <p>Наглядный и удобный способ увидеть загруженность и спланировать работу автосервиса ー по постам, мастерам-приемщикам или автослесарям.</p>
+                    <p>Наглядный и удобный способ увидеть загруженность и спланировать работу автосервиса ー по постам, мастерам-приёмщикам или автослесарям.</p>
                   </div>
                 </div>
               </div>
@@ -403,14 +469,14 @@ http://browsehappy.com/">обновите</a>
                   <div class="section__container">
                     <h3 class="section__caption">Нормочасы</h3>
                     <div class="section__text">
-                      <p>Расчет стоимости ремонта автомобиля прямо в заказ-наряде, определение реальной нагрузки на автосервис, учет рабочего времени автомехаников, планирование доходности предприятия.</p>
+                      <p>Бесплатный расчёт стоимости ремонта автомобиля прямо в заказ-наряде, определение реальной нагрузки на автосервис, учёт рабочего времени автомехаников, планирование доходности предприятия.</p>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- slide5 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p5.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p5.jpg" alt="Подбор и проценка запчастей"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Подбор и проценка запчастей</h3>
                   <div class="section__text">
@@ -420,12 +486,12 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide6 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p6.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/p6.jpg" alt="Учет товаров и работа со складом"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Учет товаров и работа со складом</h3>
                   <div class="section__text">
-                    <p>Вы будете видеть и контролировать какой имеется запас товара на складе, передвижение одной запчасти или всех сразу.</p>
-                    <p>Рекомендации к поставкам помогут избежать запасов неликвидного товара и точно рассчитать закупку исходя из запланированного бюджета.</p>
+                    <p>Вы будете видеть и контролировать какой имеется запас товара на складе, передвижение одной запчасти или всех сразу.<br>
+                      Рекомендации к поставкам помогут избежать запасов неликвидного товара и точно рассчитать закупку исходя из запланированного бюджета.</p>
                   </div>
                 </div>
               </div>
@@ -448,7 +514,7 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide8 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/slider/p8.png" alt=""></div>
+                <div class="section__col pic"><img src="img/slider/p8.png" alt="TriMobile ー мобильное приложение для мастеров ремзоны"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">TriMobile ー мобильное приложение для мастеров ремзоны</h3>
                   <div class="section__text">
@@ -490,7 +556,9 @@ http://browsehappy.com/">обновите</a>
                 <!-- <label for="phone" class="form__label">Телефон</label> -->
                 <input type="tel" class="form__input" name="" id="phone" placeholder="Ваш телефон +7">
               </div>
-              <div class="form__row center"><button class="btn">Перезвоните мне</button></div>
+              <div class="form__row center">
+                <button class="btn">Попробовать бесплатно</button>
+              </div>
             </form>
           </div>
         </div>
@@ -511,7 +579,7 @@ http://browsehappy.com/">обновите</a>
               <!-- Slides -->
 
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m1.jpg " alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/m1.jpg " alt="Создавайте массовые СМС-рассылки для групп клиентов"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">СМС-рассылка</h3>
                   <div class="section__text">
@@ -527,7 +595,7 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide2 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/slider/m2.jpg" alt=""></div>
+                <div class="section__col pic"><img src="img/slider/m2.jpg" alt="IP-телефония"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">IP-телефония</h3>
                   <div class="section__text">
@@ -538,23 +606,26 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m3.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/m3.jpg" alt="Рекомендации по периодическим услугам"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Рекомендации по периодическим услугам</h3>
                   <div class="section__text">
-                    <p>Напоминания для мастеров-приемщиков о рекомендованных клиенту работах указываются сразу в заказ-наряде что значительно увеличит ваш средний чек.</p>
-                    <p> Также вы будете видеть всех клиентов, которым, например, стоит заменить масло в этом месяце, и сможете напомнить им об этом.</p>
+                    <p>Напоминания для мастеров-приёмщиков
+                      о рекомендованных клиенту работах указываются сразу в заказ-наряде что значительно увеличит ваш средний чек.</p>
+                    <p>Также вы будете видеть всех клиентов, которым, например, стоит заменить масло в этом месяце, и сможете напомнить им об этом.</p>
                   </div>
                 </div>
               </div>
               <!-- slide4 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m4.jpg" alt=""></div>
+                <div class="section__col pic border"><img src="img/slider/m4.jpg" alt="Сегментация клиентов по 17-и параметрам"></div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Сегментация клиентов по 17-и параметрам</h3>
                   <div class="section__text">
                     <p>Самый простой пример ー вы будете видеть какие марки к вам приезжают чаще, и для них вы сможете всегда держать в наличии расходники-фильтра, свечи и т.д.</p>
-                    <p>Статистика позволяет видеть лояльных клиентов и работать с такими в первую очередь. Тем самым формировать определенные предложения для конкретных групп клиентов и зарабатывать на каждой из них.</p>
+
+                    <p>Статистика позволяет видеть лояльных клиентов и работать с такими в первую очередь. Тем самым формировать определенные предложения для конкретных групп клиентов и зарабатывать на каждой
+                      из них.</p>
                   </div>
                 </div>
               </div>
@@ -572,7 +643,7 @@ http://browsehappy.com/">обновите</a>
               <!-- slide6 -->
               <div class="swiper-slide section__row">
                 <div class="section__col pic">
-                  <img src="img/slider/m6.png" alt="">
+                  <img src="img/slider/m6.png" alt="“Мой Гараж” Удобное приложение">
                 </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">“Мой Гараж” Удобное приложение как для автовладельцев, так и
@@ -584,7 +655,7 @@ http://browsehappy.com/">обновите</a>
                       <li>Просмотр истории обслуживания</li>
                       <li>Загрузка собственных изображений автомобиля</li>
                       <li>Обмен мгновенными сообщениями
-                        с работниками сервиса</li>
+                        с&nbsp;работниками сервиса</li>
                       <li>Возможность позвонить в ваш сервис прямо из приложения</li>
                     </ul>
                     <p><b>Сотрудникам:</b></p>
@@ -616,23 +687,30 @@ http://browsehappy.com/">обновите</a>
               <h3 class="price__lead">Стоимость полной версии Нетикс Трицепс</h3>
               <div class="price__item">
                 <div class="price__content">
-                  <div class="price__caption"><span class="icon"></span>Облачная версия ПО</div>
+                  <div class="price__caption">
+                    <span class="icon"><svg viewBox="0 0 42 42" width="42">
+                        <use xlink:href="#cloud"></use>
+                      </svg></span>Облачная версия ПО
+                  </div>
                   <div class="price__value">от <span>2400 ₽</span></div>
                   <div class="price__text">в месяц</div>
                 </div>
               </div>
               <div class="price__item">
                 <div class="price__content">
-                  <div class="price__caption"><span class="icon"></span>Лицензия для ПК</div>
+                  <div class="price__caption"><span class="icon">
+                      <svg viewBox="0 0 42 42" width="42">
+                        <use xlink:href="#desk"></use>
+                      </svg></span>Лицензия для ПК</div>
                   <div class="price__value">от <span>19700 ₽</span></div>
-                  <div class="price__text">без лимита</div>
+                  <div class="price__text">в вечное пользование</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
-              <div class="form__icon"><img src="img/call.png" alt=""></div>
+              <div class="form__icon"><img src="img/icons/call.png" width="68"></div>
               <div class="section__caption center">Наш специалист поможет вам подобрать версию программы и рассчитает точную стоимость для вашего сервиса:</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
@@ -660,10 +738,8 @@ http://browsehappy.com/">обновите</a>
         <div class="section__row">
           <div class="section__col centred">
             <ul class="list">
-              <li>Трицепс ー узконаправленный программный продукт.
-                Мы глубоко изучаем и работаем только в одной сфере ー автобизнеса,
-                но делаем это хорошо</li>
-              <li>Все решения на 1С состоят из платформы и конфигурации. Покупая конфигурацию, созданную для автосервиса вы в любом случае вынуждены платить за платформу. Ежегодно на поддержку самой платформы требуются весьма заметные суммы.
+              <li>Трицепс ー узконаправленный программный продукт.<br>Мы глубоко изучаем и работаем только в одной сфере ー автобизнеса, но делаем это хорошо</li>
+              <li>Все решения на 1С состоят из платформы и конфигурации. Покупая конфигурацию, созданную для автосервиса вы в любом случае вынуждены платить за платформу. Ежегодно на поддержку самой платформы требуются весьма заметные суммы.<br>
                 Весь код Трицепса освобожден от дополнительных платежей, мы независимы в нашей ценовой политике</li>
               <li>Мы сами разрабатываем Трицепс и можем гибко настроить программу под нужды практически любого бизнеса ー от небольшого «гаражного» автосервиса, до сети станций и магазинов</li>
               <li>Ваши настройки не удаляются, не бывает проблем с запуском лицензий после обновления программы</li>
@@ -673,7 +749,7 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!-- reviews -->
-    <section class="section reviews" id="reviews" style="background: url(img/bg/rev.jpg) top center/cover no-repeat, var(--accent);">
+    <section class="section reviews" id="reviews" style="background: url(img/bg/rev.jpg) top right/cover no-repeat, var(--accent);">
       <div class="container">
         <h2 class="section__title light">Отзывы наших постоянных клиентов</h2>
 
@@ -682,7 +758,31 @@ http://browsehappy.com/">обновите</a>
           <div class="swiper-container reviews__container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper reviews__list">
-              <!-- Slides -->
+              <!-- slide2 -->
+              <div class="swiper-slide section__row">
+                <div class="section__col text">
+                  <h3 class="section__caption"><img src="img/icons/call.png" class="avatar">
+                    Антон Гладких
+                  </h3>
+                  <div class="section__text">
+                    <p>Владелец сети СТО “Медведи на велосипеде”
+                      г.&nbsp;Владивосток</p>
+                  </div>
+                </div>
+                <div class="section__col review">
+                  <div class="review__container">
+                    <div class="review__inner">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p> -->
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- Slides1 -->
               <div class="swiper-slide section__row">
                 <div class="section__col text">
                   <h3 class="section__caption"><img src="img/avatara.jpg" class="avatar"> Руслан Чекмарев</h3>
@@ -700,22 +800,6 @@ http://browsehappy.com/">обновите</a>
                   </a>
                 </div>
               </div>
-              <!-- slide2 -->
-              <div class="swiper-slide section__row">
-                <div class="section__col text">
-                  <h3 class="section__caption"><img src="img/call.png" class="avatar">
-                    Антон Гладких
-                  </h3>
-                  <div class="section__text">
-                    <p>Владелец сети СТО “Медведи на велосипеде”
-                      г.&nbsp;Владивосток</p>
-                  </div>
-                </div>
-                <div class="section__col content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
-                </div>
-              </div>
               <!-- slide3 -->
               <div class="swiper-slide section__row">
                 <div class="section__col text">
@@ -726,10 +810,8 @@ http://browsehappy.com/">обновите</a>
                   </div>
                 </div>
                 <div class="section__col content">
-                  <a href="https://www.youtube.com/watch?v=fsjAWuJkDfw" class="youtube" data-lightbox>
-                    <svg class="play-btn" width="86" height="54" viewBox="0 0 88 55">
-                      <use xlink:href="#play"></use>
-                    </svg>
+                  <a href="img/phr.jpg" data-lightbox data-image-alt="Image 1">
+                    <img src="img/phr_m.jpg" alt="Отзыв">
                   </a>
                 </div>
               </div>
@@ -742,9 +824,15 @@ http://browsehappy.com/">обновите</a>
                       г.&nbsp;Нефтюганск</p>
                   </div>
                 </div>
-                <div class="section__col content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                <div class="section__col review">
+                  <div class="review__container">
+                    <div class="review__inner">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil optio fuga qui porro libero voluptatibus, sapiente vero doloremque, repellat nam quos, accusamus ut. Similique voluptatem impedit, quibusdam voluptate, possimus rem alias neque libero sint aspernatur non nisi eveniet praesentium ipsam.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- slide5 -->
@@ -765,7 +853,6 @@ http://browsehappy.com/">обновите</a>
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
           <!-- If we need navigation buttons -->
@@ -783,16 +870,25 @@ http://browsehappy.com/">обновите</a>
         <div class="section__row">
           <div class="section__col">
             <ul class="contacts__list">
-              <li class="contacts__item"><span class="icon"></span>Телефон: <a href="tel:+79139199099">+7 (913) 919-90-99</a></li>
-              <li class="contacts__item"><span class="icon"></span>Телефон: <a href="tel:+78383637551">+7 (383) 363-75-51</a></li>
-              <li class="contacts__item"><span class="icon"></span>Skype: <a href="skype:netix_ru?call">netix_ru</a></li>
-              <li class="contacts__item"><span class="icon"></span>Email: <a href="mailto:info@netix.ru">info@netix.ru</a></li>
+              <li class="contacts__item"><span class="icon"><svg viewBox="0 0 42 42" width="42">
+                    <use xlink:href="#phone"></use>
+                  </svg></span>Телефон: <a href="tel:78005502549">8 800 550 2549</a></li>
+              <li class="contacts__item"><span class="icon"><svg viewBox="0 0 42 42" width="42">
+                    <use xlink:href="#phone"></use>
+                  </svg></span>Телефон: <a href="tel:+78383637551">+7 (383) 363-75-51</a></li>
+              <li class="contacts__item"><span class="icon"><svg viewBox="0 0 42 42" width="42">
+                    <use xlink:href="#skype"></use>
+                  </svg></span>Skype: <a href="skype:netix_ru?call">netix_ru</a></li>
+              <li class="contacts__item"><span class="icon"><svg viewBox="0 0 42 42" width="42">
+                    <use xlink:href="#mail"></use>
+                  </svg></span>Email: <a href="mailto:info@netix.ru">info@netix.ru</a></li>
             </ul>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
-              <div class="form__icon"><img src="img/call.png" alt=""></div>
-              <div class="section__caption center">Заполните форму ниже и получите бесплатную версию Программы:</div>
+              <div class="form__icon"><img src="img/icons/call.png" alt="Заполните форму ниже и получите бесплатную версию Программы Нетикс"></div>
+              <div class="section__caption center">Остались вопросы?<br>
+                Наш менеджер готов проконсультировать вас</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
                   <!-- <label for="name" class="form__label">Имя</label> -->
@@ -810,12 +906,67 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
   </div>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__brand">
+        <picture class="logo">
+          <img src="img/logo_d.svg" alt="Нетикс Трицепс">
+        </picture>
+        <p>Программы для автосервисов<br>и магазинов запчастей</p>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__list">
+          <li>
+            <a href="#possibilities" data-title="scroll">Основные возможности</a>
+          </li>
+          <li>
+            <a href="#marketing" data-title="scroll">Маркетинг и реклама</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__list">
+          <li><a href="#price" data-title="scroll">Цены</a></li>
+          <li><a href="" class="btn btn-call">Попробовать<br>бесплатно</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__list">
+          <li><a href="#reviews" data-title="scroll">Отзывы</a></li>
+          <li><a href="#contacts" data-title="scroll">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__copy">© 2021 Нетикс Трицепс</div>
+    </div>
+  </footer>
 
+  <div class="overlay" id="success">
+    <div class="popup">
+      <div class="popup__body">
+        <div class="popup__icon"><img src="img/call_popup.png" alt="Спасибо, что выбрали нас!"></div>
+        <div class="popup__content center">
+          <p>Спасибо, что выбрали нас!<br>
+            Наши специалисты получили ваше обращение и&nbsp;в&nbsp;ближайшее время свяжутся в вами!</p>
+          <button class="btn" type="button">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="demo">
+    <div class="popup">
+      <div class="popup__body">
+        <div class="popup__icon"><img src="img/icons/demo.png" alt="Спасибо, что выбрали нас!"></div>
+        <div class="popup__content center">
+          <p>Вам предоставлен доступ к демоверсии на 30 дней!</p>
+          <button class="btn" type="button">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- <link rel="preload" as="script" href="js/swiper-bundle.min.js" onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);"> -->
   <script src="js/swiper-bundle.min.js" rel="preload" as="script"></script>
-  <script src="js/lightbox.min.js" rel="preload" as="script"></script>
   <script src="js/scripts.js"></script>
 
 
@@ -860,8 +1011,6 @@ http://browsehappy.com/">обновите</a>
          </noscript> -->
   <!-- /Yandex.Metrika counter -->
 
-  <!-- https://codepen.io/emelyanova/pen/XWgbvNe -->
-  <!-- https://stackoverflow.com/questions/45217749/go-to-accordion-tab-when-click-button-vanilla-javascript-->
 </body>
 
 </html>

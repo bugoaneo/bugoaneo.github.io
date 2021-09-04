@@ -62,6 +62,19 @@ img {
  color: #fff;
 }
 
+.desk {
+ @include bp(750px) {
+  display: none;
+ }
+}
+
+.mobil {
+ display: none;
+ @include bp(750px) {
+  display: flex;
+ }
+}
+
 .section__title {
  margin-bottom: 10px;
  font-size: 1.65em;

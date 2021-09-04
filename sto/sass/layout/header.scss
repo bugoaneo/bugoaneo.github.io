@@ -2,13 +2,11 @@
  position: fixed;
  top: 0;
  width: 100%;
- // padding: 2px 0;
  background-color: rgba(255, 255, 255, 0.83);
  -webkit-backdrop-filter: blur(10px);
  backdrop-filter: blur(10px);
  z-index: 100;
  .btn-call {
-  margin-right: auto;
   @include bp(1000px) {
    margin-right: 20px;
    margin-left: auto;
@@ -22,8 +20,9 @@
 }
 
 .header__container {
+ position: relative;
  @include row(jsa, ac);
- padding: 0 10px 0 4%;
+ padding: 0 10px;
  min-width: 320px;
  @include bp(1300px) {
   padding: 0 10px;
@@ -34,20 +33,24 @@
 }
 
 .logo {
+ @include center(y);
+ left: 4%;
+ display: block;
  width: 115px;
- // flex: 0 1 115px;
- @include bp(1050px) {
+ @include bp(950px) {
+  position: static;
+  transform: none;
   width: 40px;
  }
 }
 
 .menu {
- flex: 0 1 54%;
+ flex: 0 1 65%;
  margin: auto;
- @include bp(1300px) {
+ @include bp(1350px) {
   flex: 0 1 auto;
  }
- @include bp(1000px) {
+ @include bp(900px) {
   position: absolute;
   top: 100%;
   left: 0;
@@ -66,17 +69,19 @@
 
 .menu__list {
  @include row(jsb);
- @include bp(1000px) {
+ @include bp(900px) {
   flex-direction: column;
  }
 }
 
 .menu__item {
+ display: flex;
+ flex: 0 1 auto;
  a {
   position: relative;
   display: block;
   padding: 1em;
-  color: #001e7a;
+  color: var(--link);
   &:after {
    content: "";
    @include center(x);
@@ -96,5 +101,17 @@
     width: 100%;
    }
   }
+ }
+}
+
+.header-desk {
+ @include bp(950px) {
+  display: none;
+ }
+}
+.header-mobil {
+ display: none;
+ @include bp(900px) {
+  display: flex;
  }
 }

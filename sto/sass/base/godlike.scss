@@ -339,10 +339,10 @@ th {
 // Fix display elements in article
 article {
     // Add margins
-    p:not(:empty) {
-        margin-top: 0.7em;
-        margin-bottom: 0.7em;
-    }
+    // p:not(:empty) {
+    // margin-top: 0.7em;
+    // margin-bottom: 0.7em;
+    // }
 
     // Fix align graphical elements
     img,
