@@ -39,7 +39,8 @@
  color: #fff;
 }
 .hero__text {
- @include fFS(14px, 24px, 320px, 1900px, 16px);
+ font-size: 1.3em;
+ // @include fFS(14px, 24px, 320px, 1900px, 16px);
  margin-bottom: 1em;
  font-weight: 900;
  text-align: center;
@@ -48,6 +49,7 @@
 }
 .hero__slider {
  position: relative;
+ margin-bottom: 3.5em;
 }
 .hero__list {
  @include row(jc);
@@ -92,7 +94,7 @@
  flex: 0 1 25%;
  margin: 0 0.5em;
  border-radius: 1.5em;
- box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
+ // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
  color: #fff;
  text-align: center;
  cursor: pointer;
@@ -163,6 +165,11 @@
 // }
 
 /*accordion*/
+
+.accordion {
+ margin-bottom: 1.5em;
+}
+
 .accordion__slider {
  position: relative;
 }
@@ -307,7 +314,7 @@
  flex-wrap: wrap;
  justify-content: space-between;
  max-width: 980px;
- padding: 3.2em 0 2em 0;
+ padding: 3.5em 0 2em 0;
  margin: auto;
  @include bp(1050px) {
   max-width: 100%;
@@ -376,6 +383,17 @@
  }
 }
 
+/*contact-form*/
+
+.contact-form {
+ padding: 7em 0;
+ .section__lead {
+  max-width: 980px;
+  margin: 0 auto 1.5em auto;
+  font-weight: 700;
+ }
+}
+
 /*marketing*/
 
 .marketing {
@@ -390,6 +408,7 @@
 
 /*price*/
 .price {
+ padding: 7em 0;
  .section__row {
   max-width: 980px;
   border-radius: 0.9em;
@@ -398,7 +417,7 @@
  }
  .section__col {
   .form-wrapper {
-   padding: 1.5em 3.1em 3em 3.1em;
+   padding: 1.5em 1.125em 3em 1.125em;
    border-radius: 0 0.9em 0.9em 0;
    box-shadow: none;
    @include bp(750px) {
@@ -483,11 +502,15 @@
  span {
   font-size: 2em;
   line-height: 1;
+  &.currency {
+   font-weight: 600;
+  }
  }
 }
 
 /*develop*/
 .develop {
+ padding: 8em 0;
  .list {
   li {
    margin-bottom: 2em;
@@ -519,7 +542,7 @@
   align-items: stretch;
  }
  .form-wrapper {
-  padding: 1em 3.1em 3em 3.1em;
+  padding: 1em 1.125em 3em 1.125em;
  }
 }
 .contacts__list {

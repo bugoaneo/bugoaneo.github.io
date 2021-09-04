@@ -1,6 +1,6 @@
 .form-wrapper {
  max-width: 490px;
- padding: 3em 3.1em;
+ padding: 3em 1.2em;
  border-radius: 0.9em;
  box-shadow: 0px 0.8em 1em rgba(86, 137, 213, 0.37);
  background-color: #fff;
@@ -11,9 +11,14 @@
   padding: 2.5em 2.1em;
  }
  .section__caption {
+  max-width: 443px;
   color: var(--caption-color);
   line-height: 1.1;
  }
+}
+
+.form {
+ padding: 0 2.2em;
 }
 
 .form__row {
@@ -26,18 +31,51 @@
 }
 
 .form__icon {
- width: 4.5em;
- height: 4.5em;
- margin: 0 auto 1em auto;
+ width: 5em;
+ height: 5em;
+ margin: 0 auto 0.5em auto;
  border-radius: 100%;
 }
 
 .form__label {
+ position: relative;
  display: block;
  margin-bottom: 0.3em;
 }
 
+.form__input-wrap {
+ position: relative;
+ display: block;
+ &:after {
+  content: "";
+  @include center(x);
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+ }
+ &:hover {
+  &:after {
+   width: 100%;
+  }
+  .form__input {
+   border: 1px solid transparent;
+   border-bottom: 2px solid transparent;
+  }
+ }
+}
+
 .form__input {
  padding: 1em;
- border: 1px solid #cfcfcf;
+ border: 1px solid transparent;
+ border-bottom: 2px solid var(--accent);
+ transition: border 0.1s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+ &:placeholder-shown:not(:hover):not(:focus) {
+  border: 1px solid #cfcfcf;
+ }
+ &:focus {
+  border: 1px solid transparent;
+  border-bottom: 2px solid var(--accent);
+ }
 }

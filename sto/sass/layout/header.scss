@@ -7,6 +7,9 @@
  backdrop-filter: blur(10px);
  z-index: 100;
  .btn-call {
+  &:after {
+   display: none;
+  }
   @include bp(1000px) {
    margin-right: 20px;
    margin-left: auto;

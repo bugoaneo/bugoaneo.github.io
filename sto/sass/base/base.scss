@@ -84,6 +84,25 @@ img {
  + .section__row {
   margin-top: 2em;
  }
+ &.quotes {
+  position: relative;
+  &:before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: -5%;
+   transform: translateY(-40%);
+   width: 290px;
+   height: 200px;
+   background: url(../img/bg/qwot.png) center center/contain no-repeat;
+   @include bp(1400px) {
+    left: -3%;
+   }
+   @include bp(1150px) {
+    display: none;
+   }
+  }
+ }
 }
 
 .section__lead {

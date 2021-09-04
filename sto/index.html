@@ -418,6 +418,26 @@ http://browsehappy.com/">обновите</a>
             </article>
           </div>
         </div>
+        <div class="form-wrapper centred">
+          <div class="section__caption center">Заполните форму ниже и получите бесплатную версию программы:</div>
+          <form action="/" method="POST" name="" id="" class="form">
+            <div class="form__row">
+              <!-- <label for="name" class="form__label">Имя</label> -->
+              <label class="form__input-wrap">
+                <input type="text" class="form__input" name="" id="" placeholder="Введите ваше имя">
+              </label>
+            </div>
+            <div class="form__row">
+              <!-- <label for="phone" class="form__label">Телефон</label> -->
+              <label class="form__input-wrap">
+                <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
+              </label>
+            </div>
+            <div class="form__row center">
+              <button class="btn">Попробовать бесплатно</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <!-- possibilities -->
@@ -431,7 +451,7 @@ http://browsehappy.com/">обновите</a>
             <div class="swiper-wrapper possibilities__list">
               <!-- Slides -->
               <div class="swiper-slide section__row no-bg">
-                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                <div class="section__col single" style="background:#fff;">
                   <div class="section__container">
                     <h3 class="section__caption">Кассы и терминалы</h3>
                     <div class="section__text">
@@ -465,7 +485,7 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide4 -->
               <div class="swiper-slide section__row no-bg">
-                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                <div class="section__col single" style="background:#fff;">
                   <div class="section__container">
                     <h3 class="section__caption">Нормочасы</h3>
                     <div class="section__text">
@@ -497,7 +517,7 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide7 -->
               <div class="swiper-slide section__row no-bg">
-                <div class="section__col single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                <div class="section__col single" style="background:#fff;">
                   <div class="section__container">
                     <h3 class="section__caption">Удобная филиальная структура, которая позволяет:</h3>
                     <div class="section__text">
@@ -538,7 +558,7 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
     <!-- contact-form -->
-    <section class="section contact-form" id="contact-form" style="background: url(img/bg/form.png) top center/cover no-repeat;">
+    <section class="section contact-form" id="contact-form" style="background: url(img/bg/form_l.png) top left/contain no-repeat, url(img/bg/form_r.png) top right/contain no-repeat;">
       <div class="container">
         <h2 class="section__title accent">Поможем автоматизировать ваш бизнес</h2>
         <div class="section__lead">
@@ -546,15 +566,19 @@ http://browsehappy.com/">обновите</a>
         </div>
         <div class="section__row">
           <div class="form-wrapper centred">
-            <div class="section__caption center">Заполните форму ниже и получите бесплатную версию Программы:</div>
+            <div class="section__caption center">Заполните форму ниже и получите бесплатную версию программы:</div>
             <form action="/" method="POST" name="" id="" class="form">
               <div class="form__row">
-                <!-- <label for="name" class="form__label">Имя</label> -->
-                <input type="text" class="form__input" name="" id="name" placeholder="Введите ваше имя">
+                <!-- <label for="name1" class="form__label">Имя</label> -->
+                <label class="form__input-wrap">
+                  <input type="text" class="form__input" name="" id="" placeholder="Введите ваше имя">
+                </label>
               </div>
               <div class="form__row">
                 <!-- <label for="phone" class="form__label">Телефон</label> -->
-                <input type="tel" class="form__input" name="" id="phone" placeholder="Ваш телефон +7">
+                <label class="form__input-wrap">
+                  <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
+                </label>
               </div>
               <div class="form__row center">
                 <button class="btn">Попробовать бесплатно</button>
@@ -631,7 +655,7 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide5 -->
               <div class="swiper-slide section__row no-bg">
-                <div class="section__col  single" style="background: url(img/bg/col_bg.png) center center/cover no-repeat, #fff;">
+                <div class="section__col  single" style="background:#fff;">
                   <div class="section__container">
                     <h3 class="section__caption">Гибкая бонусная система</h3>
                     <div class="section__text">
@@ -692,7 +716,7 @@ http://browsehappy.com/">обновите</a>
                         <use xlink:href="#cloud"></use>
                       </svg></span>Облачная версия ПО
                   </div>
-                  <div class="price__value">от <span>2400 ₽</span></div>
+                  <div class="price__value">от <span>2400</span> <span class="currency">₽</span></div>
                   <div class="price__text">в месяц</div>
                 </div>
               </div>
@@ -702,7 +726,7 @@ http://browsehappy.com/">обновите</a>
                       <svg viewBox="0 0 42 42" width="42">
                         <use xlink:href="#desk"></use>
                       </svg></span>Лицензия для ПК</div>
-                  <div class="price__value">от <span>19700 ₽</span></div>
+                  <div class="price__value">от <span>19700</span> <span class="currency">₽</span></div>
                   <div class="price__text">в вечное пользование</div>
                 </div>
               </div>
@@ -710,16 +734,20 @@ http://browsehappy.com/">обновите</a>
           </div>
           <div class="section__col">
             <div class="form-wrapper centred">
-              <div class="form__icon"><img src="img/icons/call.png" width="68"></div>
+              <div class="form__icon"><img src="img/icons/call.png"></div>
               <div class="section__caption center">Наш специалист поможет вам подобрать версию программы и рассчитает точную стоимость для вашего сервиса:</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
                   <!-- <label for="name" class="form__label">Имя</label> -->
-                  <input type="text" class="form__input" name="" id="name" placeholder="Введите ваше имя">
+                  <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="" id="" placeholder="Введите ваше имя">
+                  </label>
                 </div>
                 <div class="form__row">
                   <!-- <label for="phone" class="form__label">Телефон</label> -->
-                  <input type="tel" class="form__input" name="" id="phone" placeholder="Ваш телефон +7">
+                  <label class="form__input-wrap">
+                    <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
+                  </label>
                 </div>
                 <div class="form__row center"><button class="btn">Перезвоните мне</button></div>
               </form>
@@ -731,7 +759,7 @@ http://browsehappy.com/">обновите</a>
     <!-- develop -->
     <section class="section develop" id="develop" style="background:url(img/bg/dewelop.jpg) top left/cover no-repeat, var(--iconbg);">
       <div class="container light">
-        <h2 class="section__title">Мы сами разрабатываем нашу программу</h2>
+        <h2 class="section__title quotes">Мы сами разрабатываем нашу программу</h2>
         <div class="section__lead">
           <p>Мы не на базе 1С. Что это значит?</p>
         </div>
@@ -761,7 +789,7 @@ http://browsehappy.com/">обновите</a>
               <!-- slide2 -->
               <div class="swiper-slide section__row">
                 <div class="section__col text">
-                  <h3 class="section__caption"><img src="img/icons/call.png" class="avatar">
+                  <h3 class="section__caption"><img src="img/avatara.jpg" class="avatar">
                     Антон Гладких
                   </h3>
                   <div class="section__text">
@@ -888,15 +916,19 @@ http://browsehappy.com/">обновите</a>
             <div class="form-wrapper centred">
               <div class="form__icon"><img src="img/icons/call.png" alt="Заполните форму ниже и получите бесплатную версию Программы Нетикс"></div>
               <div class="section__caption center">Остались вопросы?<br>
-                Наш менеджер готов проконсультировать вас</div>
+                Наш менеджер готов проконсультировать&nbsp;вас</div>
               <form action="/" method="POST" name="" id="" class="form">
                 <div class="form__row">
                   <!-- <label for="name" class="form__label">Имя</label> -->
-                  <input type="text" class="form__input" name="" id="name" placeholder="Введите ваше имя">
+                  <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="" id="" placeholder="Введите ваше имя">
+                  </label>
                 </div>
                 <div class="form__row">
                   <!-- <label for="phone" class="form__label">Телефон</label> -->
-                  <input type="tel" class="form__input" name="" id="phone" placeholder="Ваш телефон +7">
+                  <label class="form__input-wrap">
+                    <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
+                  </label>
                 </div>
                 <div class="form__row center"><button class="btn">Перезвоните мне</button></div>
               </form>

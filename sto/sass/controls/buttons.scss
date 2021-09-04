@@ -52,16 +52,16 @@
  color: #fff;
  line-height: 1;
  box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
- transition: all 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
- &:after {
-  content: "";
-  @include center(x);
-  top: 100%;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
- }
+ transition: all 0.5s ease-in-out;
+ // &:after {
+ //  content: "";
+ //  @include center(x);
+ //  top: 100%;
+ //  width: 0;
+ //  height: 2px;
+ //  background: var(--accent);
+ //  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+ // }
  &.btn-call {
   font-size: 15px;
   text-align: center;
@@ -71,11 +71,11 @@
   color: #fff;
  }
  &:hover {
-  background-color: transparent;
-  color: var(--link);
-  &:after {
-   width: 100%;
-  }
+  background-color: #ff9b62;
+  // color: var(--link);
+  // &:after {
+  //  width: 100%;
+  // }
  }
 }
 
