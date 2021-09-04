@@ -92,8 +92,9 @@ img {
    top: 50%;
    left: -5%;
    transform: translateY(-40%);
-   width: 290px;
-   height: 200px;
+   width: 240px;
+   height: 150px;
+   filter: drop-shadow(4px 30px 3px rgba(0, 0, 0, 0.18));
    background: url(../img/bg/qwot.png) center center/contain no-repeat;
    @include bp(1400px) {
     left: -3%;

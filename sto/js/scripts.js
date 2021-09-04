@@ -175,6 +175,9 @@ possibilities = new Swiper('.possibilities__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
+ autoplay: {
+  delay: 6000,
+ },
  autoHeight: true,
  navigation: {
   nextEl: '.possibilities__button-next',
@@ -192,6 +195,9 @@ possibilities = new Swiper('.marketing__container', {
  spaceBetween: 20,
  loop: true,
  autoHeight: true,
+ autoplay: {
+  delay: 6000,
+ },
  navigation: {
   nextEl: '.marketing__button-next',
   prevEl: '.marketing__button-prev',
