@@ -8,6 +8,8 @@
   --iconbg: #6885fa;
   --link: #001e7a;
   --reviews: #f9f9f9;
+  --btn: #ff7c32;
+  --btn-hov: #ffa674;
 }
 
 *,
@@ -1984,7 +1986,7 @@ img {
   border-radius: 0.5em;
   text-transform: uppercase;
   font-weight: 800;
-  background-color: var(--accent);
+  background-color: var(--btn);
   color: #fff;
   line-height: 1;
   -webkit-box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
@@ -2002,7 +2004,7 @@ img {
   color: #fff;
 }
 .btn:hover {
-  background-color: #ff9b62;
+  background-color: var(--btn-hov);
 }
 
 .play-btn {
