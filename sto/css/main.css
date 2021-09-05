@@ -2273,9 +2273,9 @@ img {
     left: -0.5em;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 600px) {
   .section__slider-btns .swiper-button-prev {
-    left: -1.5em;
+    left: -1em;
   }
 }
 .section__slider-btns .swiper-button-next {
@@ -2286,9 +2286,9 @@ img {
     right: -0.5em;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 600px) {
   .section__slider-btns .swiper-button-next {
-    right: -1.5em;
+    right: -1em;
   }
 }
 

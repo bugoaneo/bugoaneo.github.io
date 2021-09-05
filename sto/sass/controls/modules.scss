@@ -167,8 +167,8 @@
   @include bp(1200px) {
    left: -0.5em;
   }
-  @include bp(750px) {
-   left: -1.5em;
+  @include bp(600px) {
+   left: -1em;
   }
  }
  .swiper-button-next {
@@ -176,8 +176,8 @@
   @include bp(1200px) {
    right: -0.5em;
   }
-  @include bp(750px) {
-   right: -1.5em;
+  @include bp(600px) {
+   right: -1em;
   }
  }
 }
