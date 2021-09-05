@@ -77,8 +77,6 @@ menuBTN.addEventListener('click', function (e) {
     },
     600: {
      observer: true,
-     // observeParents: true,
-     // slidesPerView: 2,
     },
     500: {
      slidesPerView: 1,
@@ -104,8 +102,6 @@ menuBTN.addEventListener('click', function (e) {
      slidesPerView: 3,
     },
     600: {
-     // observer: true,
-     // observeParents: true,
      slidesPerView: 2,
     },
     500: {
@@ -120,7 +116,6 @@ menuBTN.addEventListener('click', function (e) {
   mySwiper3 = new Swiper('.slider3', {
    spaceBetween: 15,
    resizeObserver: true,
-   // observeParents: true,
    navigation: {
     nextEl: '.slider3__button-next',
     prevEl: '.slider3__button-prev',
@@ -171,12 +166,23 @@ menuBTN.addEventListener('click', function (e) {
 
 
 
-possibilities = new Swiper('.possibilities__container', {
+const possibilities = new Swiper('.possibilities__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
  autoplay: {
   delay: 6000,
+  disableOnInteraction: false,
+ },
+ on: {
+  init() {
+   this.el.addEventListener('mouseenter', () => {
+    this.autoplay.stop();
+   });
+   this.el.addEventListener('mouseleave', () => {
+    this.autoplay.start();
+   });
+  }
  },
  autoHeight: true,
  navigation: {
@@ -190,13 +196,24 @@ possibilities = new Swiper('.possibilities__container', {
  }
 });
 
-possibilities = new Swiper('.marketing__container', {
+const marketing = new Swiper('.marketing__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
  autoHeight: true,
  autoplay: {
   delay: 6000,
+  disableOnInteraction: false,
+ },
+ on: {
+  init() {
+   this.el.addEventListener('mouseenter', () => {
+    this.autoplay.stop();
+   });
+   this.el.addEventListener('mouseleave', () => {
+    this.autoplay.start();
+   });
+  }
  },
  navigation: {
   nextEl: '.marketing__button-next',
@@ -209,15 +226,15 @@ possibilities = new Swiper('.marketing__container', {
  }
 });
 
-const nestedSlider = new Swiper('.slider-nested', {
- slidesPerView: 1,
- spaceBetween: 20,
- loop: true,
- nested: true,
- autoplay: {
-  delay: 5000,
- },
-});
+// const nestedSlider = new Swiper('.slider-nested', {
+//  slidesPerView: 1,
+//  spaceBetween: 20,
+//  loop: true,
+//  nested: true,
+//  autoplay: {
+//   delay: 5000,
+//  },
+// });
 
 const reviews = new Swiper('.reviews__container', {
  slidesPerView: 1,
