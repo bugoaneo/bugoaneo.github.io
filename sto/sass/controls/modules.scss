@@ -226,7 +226,7 @@
  background: rgba(255, 255, 255, 0.7);
  backdrop-filter: blur(20px);
  transition: opacity 0.5s ease;
- .shown {
+ &.shown {
   display: flex;
   animation: opacity 1s ease forwards;
  }

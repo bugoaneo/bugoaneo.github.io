@@ -5,7 +5,7 @@
  height: 50px;
  padding: 24px 14px;
  background-clip: content-box;
- background-color: var(--text);
+ background-color: var(--btn);
  cursor: pointer;
  top: 0;
  transition: 0.5s ease-in-out;
@@ -18,7 +18,7 @@
   left: 14px;
   right: 14px;
   height: 2px;
-  background-color: var(--text);
+  background-color: var(--btn);
   transform-origin: center center;
   transition: 0.5s ease-in-out;
  }
@@ -53,15 +53,7 @@
  line-height: 1;
  box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
  transition: all 0.5s ease-in-out;
- // &:after {
- //  content: "";
- //  @include center(x);
- //  top: 100%;
- //  width: 0;
- //  height: 2px;
- //  background: var(--accent);
- //  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
- // }
+
  &.btn-call {
   font-size: 15px;
   text-align: center;
@@ -72,10 +64,28 @@
  }
  &:hover {
   background-color: var(--btn-hov);
-  // color: var(--link);
-  // &:after {
-  //  width: 100%;
-  // }
+ }
+}
+
+.btn-link {
+ position: relative;
+ padding: 0.6em 0.2em;
+ font-size: 1.2em;
+ font-weight: 800;
+ color: var(--link);
+ &:after {
+  content: "";
+  @include center(x);
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+ }
+ &:hover {
+  &:after {
+   width: 100%;
+  }
  }
 }
 

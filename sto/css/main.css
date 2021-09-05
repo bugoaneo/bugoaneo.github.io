@@ -1928,7 +1928,7 @@ img {
   height: 50px;
   padding: 24px 14px;
   background-clip: content-box;
-  background-color: var(--text);
+  background-color: var(--btn);
   cursor: pointer;
   top: 0;
   -webkit-transition: 0.5s ease-in-out;
@@ -1943,7 +1943,7 @@ img {
   left: 14px;
   right: 14px;
   height: 2px;
-  background-color: var(--text);
+  background-color: var(--btn);
   -webkit-transform-origin: center center;
       -ms-transform-origin: center center;
           transform-origin: center center;
@@ -2005,6 +2005,32 @@ img {
 }
 .btn:hover {
   background-color: var(--btn-hov);
+}
+
+.btn-link {
+  position: relative;
+  padding: 0.6em 0.2em;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--link);
+}
+.btn-link:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  -webkit-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  -o-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+}
+.btn-link:hover:after {
+  width: 100%;
 }
 
 .play-btn {
@@ -2311,7 +2337,7 @@ img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-.overlay .shown {
+.overlay.shown {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
