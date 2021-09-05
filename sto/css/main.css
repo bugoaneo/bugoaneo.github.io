@@ -548,6 +548,11 @@ img {
     font-size: 12px;
   }
 }
+@media (max-width: 1000px) {
+  .header .btn-link {
+    display: none;
+  }
+}
 
 .header__container {
   position: relative;
@@ -592,7 +597,7 @@ img {
   display: block;
   width: 115px;
 }
-@media (max-width: 950px) {
+@media (max-width: 1300px) {
   .logo {
     position: static;
     -webkit-transform: none;

@@ -20,6 +20,11 @@
    font-size: 12px;
   }
  }
+ .btn-link {
+  @include bp(1000px) {
+   display: none;
+  }
+ }
 }
 
 .header__container {
@@ -40,7 +45,7 @@
  left: 4%;
  display: block;
  width: 115px;
- @include bp(950px) {
+ @include bp(1300px) {
   position: static;
   transform: none;
   width: 40px;
