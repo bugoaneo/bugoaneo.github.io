@@ -221,7 +221,7 @@ const nestedSlider = new Swiper('.slider-nested', {
 
 const reviews = new Swiper('.reviews__container', {
  slidesPerView: 1,
- spaceBetween: 20,
+ spaceBetween: 10,
  loop: true,
  autoHeight: true,
  navigation: {
@@ -231,6 +231,7 @@ const reviews = new Swiper('.reviews__container', {
  breakpoints: {
   750: {
    autoHeight: false,
+   spaceBetween: 20,
   },
  },
 });
