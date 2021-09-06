@@ -28,6 +28,15 @@
  .btn:only-child {
   margin: auto;
  }
+ &.error {
+  color: red;
+  .form__input {
+   border: 1px solid currentColor !important;
+  }
+  .form__input-wrap:hover:after {
+   background-color: red;
+  }
+ }
 }
 
 .form__icon {

@@ -1863,6 +1863,15 @@ img {
 .form__row .btn:only-child {
   margin: auto;
 }
+.form__row.error {
+  color: red;
+}
+.form__row.error .form__input {
+  border: 1px solid currentColor !important;
+}
+.form__row.error .form__input-wrap:hover:after {
+  background-color: red;
+}
 
 .form__icon {
   width: 5em;
@@ -2010,6 +2019,9 @@ img {
 }
 .btn:hover {
   background-color: var(--btn-hov);
+}
+.btn:disabled {
+  opacity: 0.5;
 }
 
 .btn-link {

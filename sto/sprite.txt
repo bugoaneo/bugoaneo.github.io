@@ -1,0 +1,75 @@
+
+.hero_1 {
+    width: 80px; height: 81px;
+    background: url('css_sprites.png') -111px -10px;
+}
+
+.hero_2 {
+    width: 81px; height: 81px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+.hero_3 {
+    width: 80px; height: 81px;
+    background: url('css_sprites.png') -211px -10px;
+}
+
+.i1 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -10px -111px;
+}
+
+.i2 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -95px -111px;
+}
+
+.i3 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -180px -111px;
+}
+
+.i4 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -10px -196px;
+}
+
+.i5 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -95px -196px;
+}
+
+.i6 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -180px -196px;
+}
+
+.i7 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -311px -10px;
+}
+
+.i8 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -311px -95px;
+}
+
+.i9 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -311px -180px;
+}
+
+.i10 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -10px -281px;
+}
+
+.i11 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -95px -281px;
+}
+
+.i12 {
+    width: 65px; height: 65px;
+    background: url('css_sprites.png') -180px -281px;
+}

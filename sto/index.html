@@ -157,7 +157,7 @@ http://browsehappy.com/">обновите</a>
     <section class="section reasons" id="reasons">
       <div class="container">
         <div class="accordion">
-          <!-- Активный таб помечен классом current, его переброс - меняет видимый таб. -->
+          <!-- TODO The active tab is marked with the CURRENT class, its reload - changes the visible tab. -->
           <ul class="accordion__tabs">
             <li class="accordion__tab card_tab current" data-actab-group="0" data-actab-id="0">Я хочу открыть автосервис или СТО</li>
             <li class="accordion__tab card_tab" data-actab-group="0" data-actab-id="1">Я хочу навести порядок
@@ -447,7 +447,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide2 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p2.jpg" alt="Заказ-наряд за 35 секунд"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/p2.jpg" data-lightbox data-image-alt="Заказ-наряд за 35 секунд">
+                    <img src="img/slider/p2.jpg" alt="Заказ-наряд за 35 секунд">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Заказ-наряд за 35 секунд</h3>
                   <div class="section__text">
@@ -459,7 +463,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p3.jpg" alt="График загрузки СТО"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/p3.jpg" data-lightbox data-image-alt="График загрузки СТО">
+                    <img src="img/slider/p3.jpg" alt="График загрузки СТО">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">График загрузки СТО</h3>
                   <div class="section__text">
@@ -480,7 +488,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide5 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p5.jpg" alt="Подбор и проценка запчастей"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/p5.jpg" data-lightbox data-image-alt="Подбор и проценка запчастей">
+                    <img src="img/slider/p5.jpg" alt="Подбор и проценка запчастей">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Подбор и проценка запчастей</h3>
                   <div class="section__text">
@@ -490,7 +502,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide6 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/p6.jpg" alt="Учёт товаров и работа со складом"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/p6.jpg" data-lightbox data-image-alt="Учёт товаров и работа со складом">
+                    <img src="img/slider/p6.jpg" alt="Учёт товаров и работа со складом">
+                </div>
+                </a>
                 <div class="section__col descr">
                   <h3 class="section__caption">Учёт товаров и работа со складом</h3>
                   <div class="section__text">
@@ -518,7 +534,9 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide8 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic"><img src="img/slider/p8.png" alt="TriMobile ー мобильное приложение для мастеров ремзоны"></div>
+                <div class="section__col pic">
+                  <img src="img/slider/p8.png" alt="TriMobile ー мобильное приложение для мастеров ремзоны">
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">TriMobile ー мобильное приложение для мастеров ремзоны</h3>
                   <div class="section__text">
@@ -552,20 +570,20 @@ http://browsehappy.com/">обновите</a>
           <div class="form-wrapper centred">
             <div class="section__caption center">Заполните форму ниже и получите бесплатную версию программы:</div>
             <form action="/" method="POST" name="" id="" class="form">
-              <div class="form__row">
-                <!-- <label for="name1" class="form__label">Имя</label> -->
+              <!-- TODO Remowe ERROR class before publishing -->
+              <div class="form__row error">
                 <label class="form__input-wrap">
                   <input type="text" class="form__input" name="" id="" placeholder="Введите ваше имя">
                 </label>
               </div>
               <div class="form__row">
-                <!-- <label for="phone" class="form__label">Телефон</label> -->
                 <label class="form__input-wrap">
                   <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
                 </label>
               </div>
               <div class="form__row center">
-                <button class="btn">Попробовать бесплатно</button>
+                <!-- TODO Remowe DISABLED class before publishing -->
+                <button class="btn" disabled>Попробовать бесплатно</button>
               </div>
             </form>
           </div>
@@ -587,7 +605,11 @@ http://browsehappy.com/">обновите</a>
               <!-- Slides -->
 
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m1.jpg " alt="Создавайте массовые СМС-рассылки для групп клиентов"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/m1.jpg" data-lightbox data-image-alt="Создавайте массовые СМС-рассылки для групп клиентов">
+                    <img src="img/slider/m1.jpg" alt="Создавайте массовые СМС-рассылки для групп клиентов">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">СМС-рассылка</h3>
                   <div class="section__text">
@@ -614,7 +636,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide3 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m3.jpg" alt="Рекомендации по периодическим услугам"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/m3.jpg" data-lightbox data-image-alt="Рекомендации по периодическим услугам">
+                    <img src="img/slider/m3.jpg" alt="Рекомендации по периодическим услугам">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Рекомендации по периодическим услугам</h3>
                   <div class="section__text">
@@ -626,7 +652,11 @@ http://browsehappy.com/">обновите</a>
               </div>
               <!-- slide4 -->
               <div class="swiper-slide section__row">
-                <div class="section__col pic border"><img src="img/slider/m4.jpg" alt="Сегментация клиентов по 17-и параметрам"></div>
+                <div class="section__col pic border">
+                  <a href="img/slider/m4.jpg" data-lightbox data-image-alt="Сегментация клиентов по 17-и параметрам">
+                    <img src="img/slider/m4.jpg" alt="Сегментация клиентов по 17-и параметрам">
+                  </a>
+                </div>
                 <div class="section__col descr">
                   <h3 class="section__caption">Сегментация клиентов по 17-и параметрам</h3>
                   <div class="section__text">
@@ -727,7 +757,7 @@ http://browsehappy.com/">обновите</a>
                   </label>
                 </div>
                 <div class="form__row">
-                  <!-- <label for="phone" class="form__label">Телефон</label> -->
+
                   <label class="form__input-wrap">
                     <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
                   </label>
@@ -907,7 +937,7 @@ http://browsehappy.com/">обновите</a>
                   </label>
                 </div>
                 <div class="form__row">
-                  <!-- <label for="phone" class="form__label">Телефон</label> -->
+
                   <label class="form__input-wrap">
                     <input type="tel" class="form__input" name="" id="" placeholder="Ваш телефон +7">
                   </label>
@@ -954,9 +984,10 @@ http://browsehappy.com/">обновите</a>
       <div class="footer__copy">© 2021 Нетикс Трицепс</div>
     </div>
   </footer>
-  <!-- это попап поднимается добавлением класса shown если отправка письма прошла успешно. -->
+  <!-- TODO add class SHOWN if email send success -->
   <div class="overlay" id="success">
     <div class="popup">
+      <div class="lightbox-btn-close lightbox-btn"></div>
       <div class="popup__body">
         <div class="popup__icon"><img src="img/icons/call_popup.png" alt="Спасибо, что выбрали нас!"></div>
         <div class="popup__content center">
@@ -967,9 +998,10 @@ http://browsehappy.com/">обновите</a>
       </div>
     </div>
   </div>
-  <!-- это попап поднимается добавлением класса shown если предоставлен доступ. -->
+  <!-- TODO add class SHOWN if given access for display -->
   <div class="overlay" id="demo">
     <div class="popup">
+      <div class="lightbox-btn-close lightbox-btn"></div>
       <div class="popup__body">
         <div class="popup__icon"><img src="img/icons/demo.png" alt="Спасибо, что выбрали нас!"></div>
         <div class="popup__content center">
@@ -984,7 +1016,7 @@ http://browsehappy.com/">обновите</a>
   <script src="js/swiper-bundle.min.js" rel="preload" as="script"></script>
   <script src="js/scripts.js"></script>
 
-
+  <!-- TODO uncomment after publishing -->
   <!-- Yandex.Metrika informer -->
   <!-- <a href="https://metrika.yandex.ru/stat/?id=22271095&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/22271095/3_0_FFFFFFFF_FFFFFFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="22271095" data-lang="ru" /></a> -->
   <!-- /Yandex.Metrika informer -->
