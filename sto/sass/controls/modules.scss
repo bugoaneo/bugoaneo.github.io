@@ -150,14 +150,20 @@
   margin: auto;
  }
 }
-
-.swiper-pagination {
+.slider1__pagination,
+.slider2__pagination,
+.slider3__pagination {
  display: none;
  @include bp(750px) {
   @include row(jc, ac);
-  position: relative;
-  margin: 1em auto 0 auto;
   font-size: initial;
+  .swiper-pagination-bullet {
+   border: none;
+   opacity: 0.2;
+  }
+  .swiper-pagination-bullet-active {
+   opacity: 1;
+  }
  }
 }
 

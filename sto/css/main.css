@@ -2256,11 +2256,15 @@ img {
   margin: auto;
 }
 
-.swiper-pagination {
+.slider1__pagination,
+.slider2__pagination,
+.slider3__pagination {
   display: none;
 }
 @media (max-width: 750px) {
-  .swiper-pagination {
+  .slider1__pagination,
+.slider2__pagination,
+.slider3__pagination {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2276,9 +2280,18 @@ img {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: relative;
-    margin: 1em auto 0 auto;
     font-size: initial;
+  }
+  .slider1__pagination .swiper-pagination-bullet,
+.slider2__pagination .swiper-pagination-bullet,
+.slider3__pagination .swiper-pagination-bullet {
+    border: none;
+    opacity: 0.2;
+  }
+  .slider1__pagination .swiper-pagination-bullet-active,
+.slider2__pagination .swiper-pagination-bullet-active,
+.slider3__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
   }
 }
 

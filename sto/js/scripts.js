@@ -171,7 +171,7 @@ const possibilities = new Swiper('.possibilities__container', {
  spaceBetween: 20,
  loop: true,
  autoplay: {
-  delay: 6000,
+  delay: 8000,
   disableOnInteraction: false,
  },
  on: {
@@ -189,6 +189,10 @@ const possibilities = new Swiper('.possibilities__container', {
   nextEl: '.possibilities__button-next',
   prevEl: '.possibilities__button-prev',
  },
+ pagination: {
+  el: ".possibilities__pagination",
+  type: 'bullets',
+ },
  breakpoints: {
   750: {
    autoHeight: false,
@@ -202,7 +206,7 @@ const marketing = new Swiper('.marketing__container', {
  loop: true,
  autoHeight: true,
  autoplay: {
-  delay: 6000,
+  delay: 8000,
   disableOnInteraction: false,
  },
  on: {
@@ -218,6 +222,10 @@ const marketing = new Swiper('.marketing__container', {
  navigation: {
   nextEl: '.marketing__button-next',
   prevEl: '.marketing__button-prev',
+ },
+ pagination: {
+  el: ".marketing__pagination",
+  type: 'bullets',
  },
  breakpoints: {
   750: {
