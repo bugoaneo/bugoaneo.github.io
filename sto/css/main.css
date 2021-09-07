@@ -1011,7 +1011,7 @@ img {
   }
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 700px) {
   .hero {
     height: auto;
     min-height: calc(100vh - 50px);
@@ -1050,6 +1050,11 @@ img {
 .hero__slider {
   position: relative;
   margin-bottom: 3.5em;
+}
+@media (max-width: 650px) {
+  .hero__slider {
+    margin-bottom: 1.5em;
+  }
 }
 
 .hero__list {
@@ -2303,22 +2308,12 @@ img {
     left: -0.5em;
   }
 }
-@media (max-width: 600px) {
-  .section__slider-btns .swiper-button-prev {
-    left: -1em;
-  }
-}
 .section__slider-btns .swiper-button-next {
   right: -5em;
 }
 @media (max-width: 1200px) {
   .section__slider-btns .swiper-button-next {
     right: -0.5em;
-  }
-}
-@media (max-width: 600px) {
-  .section__slider-btns .swiper-button-next {
-    right: -1em;
   }
 }
 

@@ -22,7 +22,7 @@
  }
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 700px) {
  .hero {
   height: auto;
   min-height: calc(100vh - 50px);
@@ -50,6 +50,9 @@
 .hero__slider {
  position: relative;
  margin-bottom: 3.5em;
+ @include bp(650px) {
+  margin-bottom: 1.5em;
+ }
 }
 .hero__list {
  @include row(jc);
