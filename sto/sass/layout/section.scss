@@ -41,18 +41,17 @@
 .hero__text {
  font-size: 1.3em;
  // @include fFS(14px, 24px, 320px, 1900px, 16px);
- margin-bottom: 1em;
  font-weight: 900;
  text-align: center;
  line-height: 1.5;
  color: #fff;
+ margin-bottom: 2.8em;
+ @include bp(650px) {
+  margin-bottom: 1.2em;
+ }
 }
 .hero__slider {
  position: relative;
- margin-bottom: 3.5em;
- @include bp(650px) {
-  margin-bottom: 1.5em;
- }
 }
 .hero__list {
  @include row(jc);
@@ -90,6 +89,10 @@
 
 .hero__card {
  @include row(jc);
+ margin-bottom: 3.5em;
+ @include bp(650px) {
+  margin-bottom: 1.5em;
+ }
 }
 .hero__card-item {
  position: relative;
@@ -155,6 +158,13 @@
  font-weight: 900;
  @include bp(600px) {
   font-size: 1.2em;
+ }
+}
+
+.hero__pagination {
+ display: none;
+ @include bp(750px) {
+  display: block;
  }
 }
 

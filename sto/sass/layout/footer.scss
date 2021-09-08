@@ -18,20 +18,20 @@
  .logo {
   position: static;
   transform: none;
+  @include bp(1300px) {
+   width: 150px;
+  }
+  @include bp(750px) {
+   margin: 0 auto 10px auto;
+  }
  }
  @include bp(1200px) {
   flex: 1 1 150px;
   margin-bottom: 1em;
-  .logo {
-   width: 115px;
-  }
  }
  @include bp(750px) {
   flex: 1 1 100%;
   text-align: center;
-  .logo {
-   margin: 0 auto 10px auto;
-  }
  }
 }
 

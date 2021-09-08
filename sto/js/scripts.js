@@ -129,11 +129,9 @@ menuBTN.addEventListener('click', function (e) {
      slidesPerView: 3,
     },
     600: {
-
      slidesPerView: 2,
     },
     500: {
-
      slidesPerView: 1,
     },
    }
@@ -170,6 +168,8 @@ const possibilities = new Swiper('.possibilities__container', {
  slidesPerView: 1,
  spaceBetween: 20,
  loop: true,
+ // observer: true,
+ // resizeObserver: true,
  autoplay: {
   delay: 8000,
   disableOnInteraction: false,
@@ -205,6 +205,8 @@ const marketing = new Swiper('.marketing__container', {
  spaceBetween: 20,
  loop: true,
  autoHeight: true,
+ // resizeObserver: true,
+ // observer: true,
  autoplay: {
   delay: 8000,
   disableOnInteraction: false,
@@ -229,26 +231,19 @@ const marketing = new Swiper('.marketing__container', {
  },
  breakpoints: {
   750: {
+
    autoHeight: false,
   },
  }
 });
-
-// const nestedSlider = new Swiper('.slider-nested', {
-//  slidesPerView: 1,
-//  spaceBetween: 20,
-//  loop: true,
-//  nested: true,
-//  autoplay: {
-//   delay: 5000,
-//  },
-// });
 
 const reviews = new Swiper('.reviews__container', {
  slidesPerView: 1,
  spaceBetween: 10,
  loop: true,
  autoHeight: true,
+ // resizeObserver: true,
+ // observer: true,
  navigation: {
   nextEl: '.reviews__button-next',
   prevEl: '.reviews__button-prev',
