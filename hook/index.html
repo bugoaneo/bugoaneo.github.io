@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="all" />
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <title>Milk & Cheese</title>
+  <link rel="preload" href="fonts/noto-sans-v28-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="0" height="0" style="position: absolute; width: 0; height: 0; visibility: hidden">
+    <symbol id="heart" viewBox="0 0 20 19">
+      <path fill="#25282B" fill-rule="evenodd" d="M10.004 2.93C11.062 1.929 12.347 1 14.262 1a5.66 5.66 0 0 1 2.202.446c.698.295 1.33.726 1.862 1.268a5.833 5.833 0 0 1 1.24 1.89 5.905 5.905 0 0 1 0 4.449 5.834 5.834 0 0 1-1.24 1.89L10 19.428l-8.326-8.486A5.875 5.875 0 0 1 0 6.829c0-1.54.6-3.02 1.674-4.114A5.693 5.693 0 0 1 5.737 1c1.995 0 3.24.936 4.267 1.93Zm4.258.07c-1.441 0-2.308.781-3.549 2.045L10 5.773l-.714-.728C8.041 3.777 7.268 3 5.737 3c-.985 0-1.933.4-2.636 1.115A3.875 3.875 0 0 0 2 6.828c0 1.022.398 1.997 1.101 2.714L10 16.572l6.898-7.03c.348-.355.625-.777.815-1.243a3.907 3.907 0 0 0 0-2.942 3.833 3.833 0 0 0-.815-1.242 3.733 3.733 0 0 0-1.212-.826A3.659 3.659 0 0 0 14.262 3Z" clip-rule="evenodd" />
+    </symbol>
+    <symbol id="heart-fill" viewBox="0 0 16 14">
+      <path xmlns="http://www.w3.org/2000/svg" fill="#333" d="M14.766 1.238A4.21 4.21 0 0 0 11.79 0 4.198 4.198 0 0 0 8.81 1.238L8 2.052l-.812-.814a4.204 4.204 0 0 0-5.955 0 4.231 4.231 0 0 0 0 5.974l.812.814L8 14l5.955-5.974.811-.814A4.225 4.225 0 0 0 16 4.225a4.237 4.237 0 0 0-1.234-2.987Z" />
+    </symbol>
+    <symbol id="remove" viewBox="0 0 38 38">
+      <rect width="38" height="38" fill="#F4F3F3" rx="19" />
+      <path stroke="#333" stroke-linecap="round" fill="none" stroke-linejoin="round" stroke-width="1.6" d="M13.572 14.928H25.786M16.964 14.928v-1.357a1.357 1.357 0 0 1 1.358-1.357h2.714a1.357 1.357 0 0 1 1.357 1.357v1.357m2.036 0v9.5a1.357 1.357 0 0 1-1.357 1.357h-6.786a1.357 1.357 0 0 1-1.357-1.357v-9.5h9.5Z" />
+    </symbol>
+    <symbol id="add" viewBox="0 0 39 38">
+      <rect width="38" height="38" x=".354" fill="#FFB000" rx="19" />
+      <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m12.947 18.738 13 .081M19.671 12.583v13" />
+    </symbol>
+    <symbol id="no_gluten" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="12" fill="#EBEBEB" />
+      <path fill="#333" d="m20.396 2.827-6.055 6.055c-.118-.523-.367-1.086-.745-1.684a1.468 1.468 0 0 0-1.739-.603c-.089-.59-.353-1.235-.79-1.925a1.468 1.468 0 0 0-1.247-.687c-.509 0-.975.257-1.247.687-.2.316-.363.622-.49.918a3.036 3.036 0 0 0-.414-.524c-.496-.497-1.254-.863-2.253-1.088a1.469 1.469 0 0 0-1.368.396c-.36.36-.508.872-.396 1.368.225.999.59 1.757 1.087 2.253.156.156.333.293.524.414-.296.127-.601.29-.916.49-.43.271-.687.737-.687 1.246 0 .51.257.976.687 1.248.69.436 1.335.7 1.924.79a1.48 1.48 0 0 0 .604 1.738c.597.378 1.161.627 1.684.745l-5.732 5.732a.549.549 0 0 0 .777.776l5.285-5.285c.119.228.296.426.523.569.865.547 1.66.824 2.362.824 1.2 0 2.45-.84 3.077-1.329l4.11 4.11a.549.549 0 1 0 .777-.776l-4.11-4.11c.488-.625 1.33-1.876 1.33-3.078 0-.702-.278-1.497-.825-2.362a1.473 1.473 0 0 0-.57-.523l5.61-5.608a.547.547 0 0 0 0-.777.549.549 0 0 0-.777 0Zm-14.88 4.39c-.343-.342-.617-.937-.793-1.718a.377.377 0 0 1 .101-.35.373.373 0 0 1 .35-.102c.782.177 1.376.45 1.719.793.529.529.787 1.547.896 2.274-.727-.11-1.744-.368-2.273-.897Zm3.33-.185c0-.484.227-1.098.655-1.775a.373.373 0 0 1 .32-.176c.062 0 .218.017.319.176.428.677.654 1.29.654 1.775 0 .748-.537 1.65-.974 2.242-.436-.592-.973-1.494-.973-2.242Zm-3.912 3.43a.373.373 0 0 1-.176-.319c0-.062.017-.218.176-.319.677-.428 1.29-.654 1.775-.654.748 0 1.65.537 2.242.973-.592.437-1.494.974-2.242.974-.484 0-1.098-.226-1.775-.654Zm2.528 2.529a.373.373 0 0 1-.176-.32c0-.062.017-.218.176-.319.677-.428 1.29-.654 1.775-.654.54 0 1.162.28 1.688.6L9.62 13.605a1.92 1.92 0 0 1-.383.041c-.484 0-1.098-.226-1.775-.654Zm6.554 2.217c-.592.437-1.494.974-2.242.974-.484 0-1.098-.226-1.775-.654a.373.373 0 0 1-.176-.32c0-.062.017-.218.176-.319.677-.428 1.29-.654 1.775-.654.748 0 1.65.537 2.242.973Zm1.189-4.886c.428.677.654 1.29.654 1.775 0 .748-.537 1.65-.974 2.242-.436-.592-.973-1.494-.973-2.242 0-.484.226-1.098.654-1.775a.373.373 0 0 1 .32-.176c.062 0 .218.017.319.176Zm-1.883-.762c0 .124-.015.252-.041.383l-1.306 1.305c-.32-.526-.6-1.147-.6-1.688 0-.484.226-1.098.654-1.775a.373.373 0 0 1 .32-.176c.062 0 .218.017.319.176.428.677.654 1.29.654 1.775Z" />
+    </symbol>
+    <symbol id="drop" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="12" fill="#EBEBEB" />
+      <path stroke="#333" fill="none" d="m7.15 8.296.35.357L11.54 4.7l4.037 3.953a5.485 5.485 0 0 1 0 7.877c-2.228 2.182-5.846 2.182-8.075 0a5.485 5.485 0 0 1 0-7.877l-.35-.357Z" />
+    </symbol>
+    <symbol id="nuts" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="12" fill="#EBEBEB" />
+      <path fill="#333" d="M15.772 18.667c1.158 0 2.227-.433 3.011-1.217.856-.856 1.285-2.028 1.208-3.3-.075-1.234-.62-2.42-1.538-3.336a5.216 5.216 0 0 0-2.804-1.476 1.17 1.17 0 0 1-.987-.987 5.217 5.217 0 0 0-1.476-2.804c-.917-.917-2.101-1.464-3.336-1.538-1.272-.077-2.444.352-3.3 1.208-.856.856-1.285 2.028-1.208 3.3.075 1.234.621 2.419 1.538 3.336a5.217 5.217 0 0 0 2.804 1.476c.527.091.896.46.987.987a5.218 5.218 0 0 0 1.476 2.804c.917.917 2.102 1.463 3.336 1.538.097.006.194.009.29.009ZM9.562 4.859c.078 0 .157.003.236.008 1.025.062 2.012.519 2.78 1.287a4.362 4.362 0 0 1 1.238 2.343c.153.887.8 1.534 1.687 1.688.875.151 1.685.579 2.343 1.236.768.769 1.226 1.756 1.288 2.78.061 1.024-.279 1.962-.958 2.642-.622.622-1.476.964-2.404.964a3.95 3.95 0 0 1-.237-.007c-1.024-.062-2.012-.52-2.78-1.288a4.363 4.363 0 0 1-1.237-2.343 2.024 2.024 0 0 0-1.687-1.687 4.363 4.363 0 0 1-2.343-1.237c-.769-.768-1.226-1.756-1.288-2.78-.062-1.023.278-1.961.958-2.64.626-.628 1.473-.966 2.404-.966Z" />
+      <path fill="#333" d="M10.657 8.88a.451.451 0 0 0 .239-.073.409.409 0 0 0 .065-.053.433.433 0 0 0-.031-.636.386.386 0 0 0-.108-.065.468.468 0 0 0-.122-.03.461.461 0 0 0-.167.016.428.428 0 0 0-.305.411.433.433 0 0 0 .387.427.437.437 0 0 0 .042.003ZM12.208 8.618a.414.414 0 0 0 .239-.073.445.445 0 0 0 .119-.118.395.395 0 0 0 .053-.114.466.466 0 0 0 .017-.167.42.42 0 0 0-.07-.196.421.421 0 0 0-.233-.173.538.538 0 0 0-.082-.016.41.41 0 0 0-.207.03.465.465 0 0 0-.14.094.38.38 0 0 0-.075.101.48.48 0 0 0-.042.118.388.388 0 0 0 0 .168.511.511 0 0 0 .064.155.42.42 0 0 0 .155.14.431.431 0 0 0 .202.05ZM11.038 7.295a.382.382 0 0 0 .084-.008.433.433 0 0 0 .22-.726.384.384 0 0 0-.101-.075.375.375 0 0 0-.078-.032.515.515 0 0 0-.082-.016.428.428 0 0 0-.47.385.431.431 0 0 0 .427.472Z" />
+    </symbol>
+    <symbol id="success" viewBox="0 0 24 24">
+      <circle cx="14" cy="14" r="14" fill="#0EB44D" />
+      <path fill="#fff" fill-rule="evenodd" d="m21 9.739-7.95 8.636L7 12.584l.993-1.054 4.992 4.779 6.958-7.559L21 9.739Z" clip-rule="evenodd" />
+    </symbol>
+    <symbol id="checkout" viewBox="0 0 44 44">
+      <circle cx="22" cy="20" r="12" fill="#FFB000" />
+      <path fill="#fff" d="m22.382 13.636-6.11 7.636h5.5l-.612 5.091 6.11-7.636H21.77l.611-5.091Z" />
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 16 12">
+      <path stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 6H1M6 11 1 6l5-5" />
+    </symbol>
+    <symbol id="basket" viewBox="0 0 17 19">
+      <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 4.333h14.4M5 4.333V2.667c0-.442.168-.866.468-1.179C5.768 1.176 6.175 1 6.6 1h3.2c.424 0 .83.176 1.131.488.3.313.469.737.469 1.179v1.666m2.4 0V16c0 .442-.169.866-.469 1.178-.3.313-.707.489-1.131.489h-8c-.425 0-.832-.176-1.132-.489A1.702 1.702 0 0 1 2.6 16V4.333h11.2Z" />
+    </symbol>
+  </svg>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <a href="" class="btn btn--link">
+            <svg viewBox="0 0 16 12" width="16">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </a>
+          <h1 class="header__title">Milk & Cheese</h1>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <section class="section card">
+            <div class="row jc ac features">
+              <div class="features__list">
+                <div class="features__item">
+                  <svg viewBox="0 0 24 24" width="24">
+                    <use xlink:href="#no_gluten"></use>
+                  </svg>
+                </div>
+                <div class="features__item">
+                  <svg viewBox="0 0 24 24" width="24">
+                    <use xlink:href="#drop"></use>
+                  </svg>
+                </div>
+                <div class="features__item">
+                  <svg viewBox="0 0 24 24" width="24">
+                    <use xlink:href="#nuts"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="features__count">+3</div>
+              <button class="btn btn--right" type="button">
+                <svg class="like" viewBox="0 0 24 24" width="20">
+                  <use xlink:href="#heart-fill" class="like__fill"></use>
+                  <use xlink:href="#heart" class="like__open"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="gallery">
+              <div class="glide gallery__product">
+                <div class="glide__track" data-glide-el="track">
+                  <div class="glide__slides gallery__list">
+                    <div class="glide__slide gallery__pic"><img src="img/product.jpg" alt="" /></div>
+                    <div class="glide__slide gallery__pic"><img src="img/product2.jpg" alt="" /></div>
+                    <div class="glide__slide gallery__pic"><img src="img/product3.jpg" alt="" /></div>
+                  </div>
+                </div>
+                <div class="glide__bullets gallery__pagination" data-glide-el="controls[nav]">
+                  <button class="glide__bullet" data-glide-dir="=0"></button>
+                  <button class="glide__bullet" data-glide-dir="=1"></button>
+                  <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+              </div>
+            </div>
+            <h2 class="section__title">Just Milk Semi-Skimmed 6 x 1L (Case&nbsp;of&nbsp;2)</h2>
+            <div class="price">
+              <div class="price__list">
+                <div class="price__unit">
+                  <span class="unit-item">1 pc</span> / <span class="price-item">£1.59</span>
+                </div>
+                <div class="price__cost">£1.59</div>
+              </div>
+              <div class="quantity">
+                <div class="quantity__add hidden">Add</div>
+                <button type="button" class="quantity__down"><svg viewBox="0 0 38 38" width="38">
+                    <use xlink:href="#remove"></use>
+                  </svg></button>
+                <input class="quantity__amount" type="number" value="2" />
+                <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="38">
+                    <use xlink:href="#add"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <hr class="divider">
+            <nav class="nav">
+              <a href="#nutrition" class="nav__link">Nutrition</a>
+              <a href="#ingredients" class="nav__link">Ingredients</a>
+              <a href="#other" class="nav__link">Other</a>
+            </nav>
+          </section>
+          <section class="section">
+            <h2 class="section__caption">Buy with this product</h2>
+            <div class="slider">
+              <div class="glide slider__additional">
+                <div class="glide__track slider__track" data-glide-el="track">
+                  <div class="glide__slides">
+                    <div class="glide__slide">
+                      <div class="card card--small">
+                        <button class="btn btn--right" type="button">
+                          <svg class="like fill" viewBox="0 0 24 24" width="16">
+                            <use xlink:href="#heart-fill" class="like__fill"></use>
+                            <use xlink:href="#heart" class="like__open"></use>
+                          </svg>
+                        </button>
+                        <div class="card__pic"><img src="img/product2.jpg" alt=""></div>
+                        <h3 class="card__title">Best-in 10 British Big Eggs</h3>
+                        <div class="price">
+                          <div class="price__list">
+                            <div class="price__unit">
+                              <span class="unit-item">1 pc</span> / <span class="price-item">£1.5</span>
+                            </div>
+                            <div class="price__cost">£1.59</div>
+                          </div>
+                          <div class="quantity">
+                            <div class="quantity__add">Add</div>
+                            <button type="button" class="quantity__down hidden"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#remove"></use>
+                              </svg></button>
+                            <input class="quantity__amount hidden" type="number" value="109" />
+                            <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#add"></use>
+                              </svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <div class="card card--small">
+                        <button class="btn btn--right" type="button">
+                          <svg class="like" viewBox="0 0 24 24" width="20">
+                            <use xlink:href="#heart-fill" class="like__fill"></use>
+                            <use xlink:href="#heart" class="like__open"></use>
+                          </svg>
+                        </button>
+                        <div class="card__pic"><img src="img/product3.jpg" alt=""></div>
+                        <h3 class="card__title">Best-in 10 British Big Eggs Best-in 10 British Big Eggs</h3>
+                        <div class="price">
+                          <div class="price__list">
+                            <div class="price__unit">
+                              <span class="unit-item">1 pc</span> / <span class="price-item">£1.5</span>
+                            </div>
+                            <div class="price__cost">£1.59</div>
+                          </div>
+                          <div class="quantity">
+                            <div class="quantity__add hidden">Add</div>
+                            <button type="button" class="quantity__down"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#remove"></use>
+                              </svg></button>
+                            <input class="quantity__amount" type="number" value="19" />
+                            <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#add"></use>
+                              </svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <div class="card card--small">
+                        <button class="btn btn--right" type="button">
+                          <svg class="like" viewBox="0 0 24 24" width="20">
+                            <use xlink:href="#heart-fill" class="like__fill"></use>
+                            <use xlink:href="#heart" class="like__open"></use>
+                          </svg>
+                        </button>
+                        <div class="card__pic"><img src="img/product_t.jpg" alt=""></div>
+                        <h3 class="card__title">Best-in 10 </h3>
+                        <div class="price">
+                          <div class="price__list">
+                            <div class="price__unit">
+                              <span class="unit-item">12 pc</span> / <span class="price-item">£15</span>
+                            </div>
+                            <div class="price__cost">£15</div>
+                          </div>
+                          <div class="quantity">
+                            <div class="quantity__add hidden">Add</div>
+                            <button type="button" class="quantity__down"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#remove"></use>
+                              </svg></button>
+                            <input class="quantity__amount" type="number" value="109" />
+                            <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#add"></use>
+                              </svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <div class="card card--small">
+                        <button class="btn btn--right" type="button">
+                          <svg class="like" viewBox="0 0 24 24" width="20">
+                            <use xlink:href="#heart-fill" class="like__fill"></use>
+                            <use xlink:href="#heart" class="like__open"></use>
+                          </svg>
+                        </button>
+                        <div class="card__pic"><img src="img/product2.jpg" alt=""></div>
+                        <h3 class="card__title">Best-in 10 British Big Eggs Best-in 10 British Big Eggs</h3>
+                        <div class="price">
+                          <div class="price__list">
+                            <div class="price__unit">
+                              <span class="unit-item">1 pc</span> / <span class="price-item">£1.5</span>
+                            </div>
+                            <div class="price__cost">£1.59</div>
+                          </div>
+                          <div class="quantity">
+                            <div class="quantity__add hidden">Add</div>
+                            <button type="button" class="quantity__down"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#remove"></use>
+                              </svg></button>
+                            <input class="quantity__amount" type="number" value="19" />
+                            <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#add"></use>
+                              </svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="glide__slide">
+                      <div class="card card--small">
+                        <button class="btn btn--right" type="button">
+                          <svg class="like fill" viewBox="0 0 24 24" width="16">
+                            <use xlink:href="#heart-fill" class="like__fill"></use>
+                            <use xlink:href="#heart" class="like__open"></use>
+                          </svg>
+                        </button>
+                        <div class="card__pic"><img src="img/product.jpg" alt=""></div>
+                        <h3 class="card__title">Best-in 10 British Big Eggs</h3>
+                        <div class="price">
+                          <div class="price__list">
+                            <div class="price__unit">
+                              <span class="unit-item">1 pc</span> / <span class="price-item">£1.5</span>
+                            </div>
+                            <div class="price__cost">£1.59</div>
+                          </div>
+                          <div class="quantity">
+                            <div class="quantity__add">Add</div>
+                            <button type="button" class="quantity__down hidden"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#remove"></use>
+                              </svg></button>
+                            <input class="quantity__amount hidden" type="number" value="109" />
+                            <button type="button" class="quantity__up"><svg viewBox="0 0 38 38" width="24">
+                                <use xlink:href="#add"></use>
+                              </svg></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <section class="section card">
+            <div class="section__box">
+              <h2 class="section__caption" id="nutrition">Nutrition</h2>
+              <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Ultrices at egestas tempus duis egestas semper dolor <strong>morbi purus</strong>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Ultrices at egestas tempus duis egestas semper dolor <strong>morbi purus</strong>.</p>
+              <ul class="list">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Ultrices at egestas tempus</li>
+                <li>Duis egestas semper dolor morbi purus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores iure fugit ducimus aperiam molestiae suscipit!</li>
+              </ul>
+            </div>
+            <hr class="divider">
+            <div class="section__box">
+              <div class="nutrition__list open">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="nutrition__title">28</div>
+                    <div class="nutrition__subtitle">Kkal.</div>
+                    <div class="nutrition__info">
+                      <span>4% RI</span><span class="green">Low</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">1.3 g</div>
+                    <div class="nutrition__subtitle">Proteins</div>
+                    <div class="nutrition__info">
+                      <span>10% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">1.3 g</div>
+                    <div class="nutrition__subtitle">Fats</div>
+                    <div class="nutrition__info">
+                      <span>12% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">28</div>
+                    <div class="nutrition__subtitle">Сarbs</div>
+                    <div class="nutrition__info">
+                      <span>10% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">6.4 mg</div>
+                    <div class="nutrition__subtitle">Niacin</div>
+                    <div class="nutrition__info">
+                      <span>40% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">0.8 mg</div>
+                    <div class="nutrition__subtitle">Vitamin B6</div>
+                    <div class="nutrition__info">
+                      <span>57% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">0 g</div>
+                    <div class="nutrition__subtitle">Fats</div>
+                    <div class="nutrition__info">
+                      <span>57% RI</span>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="nutrition__title">28</div>
+                    <div class="nutrition__subtitle">Carbs</div>
+                    <div class="nutrition__info">
+                      <span>57% RI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--hide open" type="button">Hide</button>
+            </div>
+            <hr class="divider">
+            <div class="section__box">
+              <h2 class="section__caption" id="ingredients">Ingredients</h2>
+              <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Ultrices at egestas tempus duis egestas semper dolor <strong>morbi purus</strong>.</p>
+            </div>
+            <hr class="divider">
+            <div class="section__box">
+              <h2 class="section__caption" id="other">Other</h2>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Страна производства</td>
+                    <td>Россия</td>
+                  </tr>
+                  <tr>
+                    <td>Состав</td>
+                    <td>цельное молоко</td>
+                  </tr>
+                  <tr>
+                    <td>Состав</td>
+                    <td>12 дн.</td>
+                  </tr>
+                  <tr>
+                    <td>Изготовитель</td>
+                    <td>ОАО "Компания "Юнимилк"</td>
+                  </tr>
+                  <tr>
+                    <td>Жирность</td>
+                    <td>4.5 %</td>
+                  </tr>
+                  <tr>
+                    <td>Содержание лактозы</td>
+                    <td>обычное (более 1% лактозы)</td>
+                  </tr>
+                  <tr>
+                    <td>Витаминизированное&nbsp;/ обогащенное</td>
+                    <td>нет</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="js/glide.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+html {
+ font-family: var(--text-ff);
+ color: var(--text);
+ font-size: var(--fz);
+ height: 100%;
+ height: -webkit-fill-available;
+}
+
+body {
+ height: 100%;
+ min-height: -webkit-fill-available;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ max-width: var(--container);
+ height: 100%;
+ margin: 0 auto;
+ overflow: hidden;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+.content {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ background-color: var(--light-bg);
+}
+
+.container {
+ padding: 0 24px;
+ @include bp(360px) {
+  padding: 0 15px;
+ }
+}
+
+.main {
+ position: relative;
+ flex: 1 1 auto;
+ overflow: auto;
+ scrollbar-width: thin;
+ scrollbar-color: var(--primary) var(--lightest);
+ z-index: 1;
+ &::-webkit-scrollbar {
+  width: 0;
+ }
+ &::-webkit-scrollbar-track {
+  background-color: var(--lightest);
+  border-radius: 0.2em;
+ }
+ &::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0.2em;
+ }
+}
+
+.section {
+ margin-bottom: 14px;
+}
+
+.section__box {
+ margin: 17px 0;
+ &:first-of-type {
+  margin-top: 0;
+ }
+ &:last-of-type {
+  margin-bottom: 0;
+ }
+}
+
+.list {
+ margin: 17px 0;
+ font-size: 12px;
+ font-weight: 400;
+ font-family: var(--header-ff);
+ color: var(--light);
+ li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  &::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0.5em;
+   width: 4px;
+   height: 4px;
+   border-radius: 100%;
+   background-color: currentColor;
+  }
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+}
+
+.divider {
+ height: 1px;
+ margin: 0;
+ border: none;
+ background-color: var(--divider);
+}
+
+.table {
+ font-family: var(--header-ff);
+ td {
+  padding: 7px 0;
+  &:first-child {
+   color: var(--medium);
+  }
+  &:last-child {
+   text-align: right;
+  }
+ }
+ &--total {
+  font-family: var(--text-ff);
+  font-size: 16px;
+  td {
+   &:first-child {
+    color: var(--text);
+   }
+  }
+  tfoot {
+   border-top: 1px solid var(--divider);
+   font-size: 24px;
+   font-family: var(--accent-ff);
+  }
+ }
+}
+
+.col-3 {
+ @include col(3);
+}
+.col-4 {
+ @include col(4);
+}
+
+.col-6 {
+ @include col(6);
+}
+.hidden {
+ display: none;
+}
+
+.green {
+ color: var(--success);
+}
+.red {
+ color: var(--attention);
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+img {
+ display: inline-block;
+}
+
+p {
+ margin-bottom: 24px;
+ font-family: var(--header-ff);
+ font-weight: 300;
+ line-height: 1.5;
+ &:last-of-type {
+  margin-bottom: 0;
+ }
+}

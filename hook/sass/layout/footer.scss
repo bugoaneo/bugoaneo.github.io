@@ -1,0 +1,38 @@
+.footer {
+ padding: 8px 0 20px 0;
+ border-radius: 8px 8px 0px 0px;
+ background-color: var(--text);
+ color: #fff;
+ box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.15);
+ .row {
+  padding: 0 10px;
+ }
+}
+
+.footer__caption {
+ margin-bottom: 5px;
+ font-size: 10px;
+}
+
+.ooter__icon,
+.footer__box {
+ display: inline-block;
+ vertical-align: middle;
+}
+.footer__icon {
+ width: 24px;
+ height: 24px;
+ margin-right: 10px;
+ box-shadow: 0px 2px 10px rgba(19, 16, 9, 0.5);
+}
+
+.footer__time {
+ font-size: 14px;
+ font-weight: 600;
+}
+
+.footer__price {
+ font-size: 16px;
+ font-weight: 700;
+ line-height: 1;
+}

@@ -1,0 +1,50 @@
+.header {
+ position: relative;
+ padding: 10px 0;
+ border-radius: 0;
+ background-color: var(--primary);
+ z-index: 1;
+ transition: border-radius 0.5s ease-in;
+ .btn--link {
+  @include center(y);
+  left: 1em;
+ }
+ &:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateY(90%);
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 0 0 8px 8px;
+  background-color: var(--primary);
+  transition: transform 0.5s 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: -1;
+ }
+ &.scroll {
+  border-radius: 0 0 8px 8px;
+  transition: border-radius 0.5s ease-in;
+  &::before {
+   transform: translateY(0);
+  }
+ }
+}
+.header__title {
+ text-align: center;
+ font-size: 2em;
+ line-height: 1;
+ font-family: var(--accent-ff);
+}
+
+.nav {
+ margin-top: 8px;
+ @include row(jsb);
+}
+.nav__link {
+ display: block;
+ padding: 0.5em 0;
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--primary);
+}
