@@ -163,4 +163,9 @@
    padding: 1.5em 1em;
   }
  }
+ &.video {
+  padding-bottom: 54%;
+  border-radius: 0.5em;
+  overflow: hidden;
+ }
 }

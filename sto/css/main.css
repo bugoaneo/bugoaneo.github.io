@@ -588,11 +588,6 @@ img {
 }
 
 .logo {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   left: 4%;
   display: block;
   width: 115px;
@@ -698,9 +693,9 @@ img {
   width: 0;
   height: 2px;
   background: var(--accent);
-  -webkit-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  -o-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  -webkit-transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  -o-transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
 }
 @media (max-width: 1000px) {
   .menu__item a:after {
@@ -986,6 +981,11 @@ img {
             flex: 0 1 100%;
     padding: 1.5em 1em;
   }
+}
+.section__col.video {
+  padding-bottom: 54%;
+  border-radius: 0.5em;
+  overflow: hidden;
 }
 
 /*section*/
@@ -1789,10 +1789,10 @@ img {
 }
 
 .footer__brand {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2 1 400px;
-      -ms-flex: 2 1 400px;
-          flex: 2 1 400px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 300px;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
   color: #727271;
 }
 .footer__brand .logo {
