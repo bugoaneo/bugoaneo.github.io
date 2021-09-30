@@ -164,8 +164,15 @@
   }
  }
  &.video {
-  padding-bottom: 54%;
+  position: relative;
   border-radius: 0.5em;
+  padding-bottom: 30%;
+  overflow: hidden;
+ }
+ &.video-single {
+  position: relative;
+  border-radius: 0.5em;
+  padding-bottom: 54%;
   overflow: hidden;
  }
 }
