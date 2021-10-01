@@ -13,15 +13,16 @@
 
  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
- <meta name="theme-color" content="#ffffff">
+ <meta name="theme-color" content="#343434">
 
  <title></title>
- <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet"> -->
  <link rel="preload" href="fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin>
  <link rel="stylesheet" href="css/main.css">
+ <!-- ускоряем графику -->
+ <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="0" height="0" style="width: 0;height: 0; visibility: hidden;position:absolute;">
 
+
+ </svg>
 </head>
 
 <body>
@@ -32,14 +33,71 @@ http://browsehappy.com/">обновите</a>
 <![endif]-->
 
  <div class="wrapper">
-  <div class="container">
-   <br><br>
-   <h1>от +60% прибыли
-    по вашим инвестициям</h1>
-   <p style="font-weight: 700;">Also, in the past 24 hours, more than 534,000 people have visited freeCodeCamp.org. People from every country on Earth used freeCodeCamp today – including many families who are living off less than $10 per day. Our nonprofit will continue to make technology education freely available to anyone with an internet connection and a desire to learn. If you want to support our mission, here's how you can get involved: https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/</p>
-   <p> Паола Волкова глубоко и всесторонне познала жизнь и творчество величайших мировых художников, актеров, режиссеров разных эпох, словно была их современницей, словно была их музой. Эта книга о встречах и расставаниях, о любви и боли, о дружбе и ненависти. Эта книга воспоминаний великой женщины, ставшей Маэстро жизни, наполненной красотой и смыслом.
-   </p>
-  </div>
+  <header class="header">
+   <div class="header__container">
+    <button class="menu-trigger" type="button"></button>
+    <div class="logo"><a href="/"><svg viewBox="0 0 164 19">
+       <use xlink:href="img/sprite.svg#logo"></use>
+      </svg></a>
+    </div>
+    <nav class="nav">
+     <ul class="nav__list">
+      <li class="nav__item"><a href="">О компании</a></li>
+      <li class="nav__item"><a href="">
+        <span class="nav__icon">
+         <svg viewBox="0 0 20 23" width="20">
+          <use xlink:href="img/sprite.svg#icon-cube"></use>
+         </svg>
+        </span>Модели сотрудничества
+       </a>
+      </li>
+      <li class="nav__item">
+       <a href="">
+        <span class="nav__icon">
+         <svg viewBox="0 0 23 22" width="20">
+          <use xlink:href="img/sprite.svg#icon-maining"></use>
+         </svg>
+        </span>Майнинг фермы
+       </a>
+      </li>
+      <li class="nav__item"><a href="">Услуги</a></li>
+      <li class="nav__item nav__contact">
+       <ul class="nav__contact-list">
+        <li class="nav__contact-item"><a href="tel:+78005006647">Мы на связи<span class="nav__icon">
+           <svg viewBox="0 0 17 17" width="16">
+            <use xlink:href="img/sprite.svg#icon-tel"></use>
+           </svg>
+          </span>8 (800) 500 66 47</a></li>
+        <li class="nav__contact-item">
+         <a href="">
+          <span class="nav__icon">
+           <svg viewBox="0 0 14 12" width="16">
+            <use xlink:href="img/sprite.svg#icon-telegram"></use>
+           </svg>
+          </span>
+         </a>
+        </li>
+        <li class="nav__contact-item"><a href="mailto: sale@prominers.ru">
+          <span class="nav__icon">
+           <svg viewBox="0 0 17 12" width="16">
+            <use xlink:href="img/sprite.svg#icon-email"></use>
+           </svg>
+          </span>
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </nav>
+    <div class="login">
+     <a href="" class="login__link"><span class="login__icon">
+       <svg viewBox="0 0 12 12" width="12">
+        <use xlink:href="img/sprite.svg#icon-user"></use>
+       </svg>
+      </span>Личный кабинет</a>
+    </div>
+   </div>
+  </header>
  </div>
  <footer class="footer"></footer>
 

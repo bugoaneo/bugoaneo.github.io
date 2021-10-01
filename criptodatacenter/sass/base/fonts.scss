@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "buyan";
+    src: url("../fonts/buyanbold.woff2") format("woff2"), url("../fonts/buyanbold.woff") format("woff"),
+        url("../fonts/buyanbold.svg#boldbold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "buyan";
+    src: url("../fonts/buyanregular.woff") format("woff"), url("../fonts/buyanregular.woff2") format("woff2"),
+        url("../fonts/buyanregular.svg#regularregular") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "buyan";
+        src: url("../fonts/buyanbold.svg#boldbold") format("svg");
+    }
+}
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.eot");
+    src: local(""), url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff2") format("woff2"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff") format("woff"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.svg#PTSansNarrow") format("svg");
+}
+
+@font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.eot");
+    src: local(""), url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff2") format("woff2"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff") format("woff"),
+        url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.svg#PTSansNarrow") format("svg");
+}

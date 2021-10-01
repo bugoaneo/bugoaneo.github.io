@@ -1,0 +1,119 @@
+.header {
+ position: fixed;
+ left: 0;
+ top: 0;
+ width: 100%;
+ min-width: 320px;
+ padding-top: 20px;
+ @include bp(1100px) {
+  padding-top: 0;
+  background: #111;
+ }
+}
+.header__container {
+ @include row(jsb, ac);
+ max-width: 1770px;
+ padding: 0 10px 0 0;
+ margin: 0 auto;
+}
+
+.logo {
+ flex: 0 1 165px;
+ a {
+  display: block;
+  line-height: 0;
+ }
+ @include bp(1100px) {
+  margin-right: auto;
+  flex: 0 1 135px;
+ }
+}
+
+.nav {
+ flex: 0 1 1120px;
+ padding: 0 10px;
+ margin: 0 auto;
+ @include bp(1500px) {
+  flex: 1 1 auto;
+ }
+ @include bp(1100px) {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #111;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  &.open {
+   transform: translateX(0);
+   opacity: 1;
+  }
+ }
+}
+
+.nav__list {
+ @include row(jsb, ac);
+ @include bp(1100px) {
+  display: block;
+ }
+}
+
+.nav__contact-list {
+ @include row(jsb, ac);
+ @include bp(1100px) {
+  display: block;
+ }
+}
+
+.nav__item {
+ a {
+  @include row(jfs, ac);
+  padding: 1.1em 0.2em;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+  @include bp(1100px) {
+   font-size: 15px;
+  }
+ }
+ &:hover {
+  > a {
+   color: $link;
+  }
+ }
+}
+.nav__icon,
+.login__icon {
+ display: flex;
+ margin-right: 7px;
+}
+
+.nav__contact-item {
+ .nav__icon {
+  margin: 0 3px;
+ }
+ &:hover {
+  > a {
+   color: $link;
+  }
+ }
+}
+.login__link {
+ @include row(jfs, ac);
+ padding: 1.1em 0.2em;
+ font-size: 16px;
+ text-transform: uppercase;
+ line-height: 1;
+ @include bp(1100px) {
+  font-size: 14px;
+ }
+}
+
+.login {
+ &:hover {
+  > a {
+   color: $link;
+  }
+ }
+}
