@@ -588,11 +588,6 @@ img {
 }
 
 .logo {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   left: 4%;
   display: block;
   width: 115px;
@@ -698,9 +693,9 @@ img {
   width: 0;
   height: 2px;
   background: var(--accent);
-  -webkit-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  -o-transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  transition: width 0.5s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  -webkit-transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  -o-transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  transition: width 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.34);
 }
 @media (max-width: 1000px) {
   .menu__item a:after {
@@ -986,6 +981,18 @@ img {
             flex: 0 1 100%;
     padding: 1.5em 1em;
   }
+}
+.section__col.video {
+  position: relative;
+  border-radius: 0.5em;
+  padding-bottom: 30%;
+  overflow: hidden;
+}
+.section__col.video-single {
+  position: relative;
+  border-radius: 0.5em;
+  padding-bottom: 54%;
+  overflow: hidden;
 }
 
 /*section*/
@@ -1289,6 +1296,32 @@ img {
   }
 }
 
+.card_subtitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
+  background-color: #fff;
+  opacity: 1;
+}
+
 .accordion__tab {
   position: relative;
   -webkit-box-flex: 0;
@@ -1323,11 +1356,17 @@ img {
 .accordion__tab.current:after {
   background-color: currentColor;
 }
+.accordion__tab.current .card_subtitle {
+  opacity: 0;
+}
 .accordion__tab:hover {
   color: var(--accent);
 }
 .accordion__tab:hover:after {
   background-color: currentColor;
+}
+.accordion__tab:hover .card_subtitle {
+  opacity: 0;
 }
 
 .accordion__item {
@@ -1789,10 +1828,10 @@ img {
 }
 
 .footer__brand {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2 1 400px;
-      -ms-flex: 2 1 400px;
-          flex: 2 1 400px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 300px;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
   color: #727271;
 }
 .footer__brand .logo {
