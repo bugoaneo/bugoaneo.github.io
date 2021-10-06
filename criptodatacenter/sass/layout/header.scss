@@ -5,6 +5,7 @@
  width: 100%;
  min-width: 320px;
  padding-top: 20px;
+ z-index: 10;
  @include bp(1100px) {
   padding-top: 0;
   background: #111;
@@ -13,8 +14,11 @@
 .header__container {
  @include row(jsb, ac);
  max-width: 1770px;
- padding: 0 10px 0 0;
+ padding: 0 10px;
  margin: 0 auto;
+ @include bp(1100px) {
+  padding: 0 10px 0 0;
+ }
 }
 
 .logo {
@@ -29,7 +33,7 @@
  }
 }
 
-.nav {
+.nav__wrapper {
  flex: 0 1 1120px;
  padding: 0 10px;
  margin: 0 auto;
@@ -57,19 +61,15 @@
  @include bp(1100px) {
   display: block;
  }
-}
-
-.nav__contact-list {
- @include row(jsb, ac);
- @include bp(1100px) {
-  display: block;
+ &.tablet {
+  margin-right: 0.5em;
  }
 }
 
 .nav__item {
  a {
   @include row(jfs, ac);
-  padding: 1.1em 0.2em;
+  padding: 1.1em 0.3em;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1;
@@ -83,25 +83,39 @@
   }
  }
 }
+
+.nav__mobil-text {
+ display: none;
+ @include bp(1100px) {
+  display: block;
+ }
+}
+
+.nav__text {
+ + * {
+  margin-left: 0.4em;
+ }
+}
+
+.tablet {
+ display: none;
+ @include bp(1100px) {
+  display: flex;
+ }
+ @include bp(650px) {
+  display: none;
+ }
+}
+
 .nav__icon,
 .login__icon {
  display: flex;
- margin-right: 7px;
+ margin-right: 0.4em;
 }
 
-.nav__contact-item {
- .nav__icon {
-  margin: 0 3px;
- }
- &:hover {
-  > a {
-   color: $link;
-  }
- }
-}
 .login__link {
  @include row(jfs, ac);
- padding: 1.1em 0.2em;
+ padding: 1.1em 0.1em;
  font-size: 16px;
  text-transform: uppercase;
  line-height: 1;

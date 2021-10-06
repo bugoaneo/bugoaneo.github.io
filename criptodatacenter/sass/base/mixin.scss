@@ -88,38 +88,6 @@
   }
 }
 
-.row,
-%row {
-  display: flex;
-  flex-wrap: wrap;
-  // margin-right: -20px;
-  // margin-left: -20px;
-  &.ac {
-    align-items: center;
-  }
-  &.as {
-    align-items: stretch;
-  }
-  &.ab {
-    align-items: baseline;
-  }
-  &.ast {
-    align-items: flex-start;
-  }
-  &.jc {
-    justify-content: center;
-  }
-  &.jsb {
-    justify-content: space-between;
-  }
-  &.jsa {
-    justify-content: space-around;
-  }
-  &.reverse {
-    flex-direction: row-reverse;
-  }
-}
-
 @mixin col($dig: col) {
   flex: 0 1 auto;
   @include bp(650px) {

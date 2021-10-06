@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  background-color: #848484;
+}
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.container {
+  width: min(max(320px, 98%), 1680px);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: max(5vh, 3%) 0;
+}
+
+h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.modeles__list {
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+.modeles__item {
+  background: transparent;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+  transition: background 0.8s ease-in-out;
+}
+.modeles__item.open {
+  background: #ddd;
+}
+.modeles__item.open .modeles__panel {
+  padding: 0.5em 0 0.5em 3.5em;
+}
+.modeles__item.open .modeles__icon {
+  top: 0;
+  transform: scale(2.5);
+}
+.modeles__item.open .modeles__close {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.modeles__item.open .modeles__open {
+  opacity: 1;
+}
+.modeles__item.open .modeles__wrap {
+  max-height: 5000px;
+  transition: max-height 0.5s ease-in;
+}
+.modeles__item.open .line-btn {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.modeles__icon {
+  position: absolute;
+  transform: scale(1);
+  top: -5%;
+  left: -2em;
+  width: 3.5em;
+  transition: all 0.5s ease-in-out;
+  outline: 1px solid red;
+}
+
+.modeles__panel {
+  position: relative;
+  padding: 0.5em 0 0.5em 1.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+.modeles__content {
+  width: calc(100% - 3.5em);
+  transition: all 0.5s ease-in-out;
+}
+
+.modeles__open {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modeles__wrap {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.modeles__info {
+  padding: 0 1em 3em 3.5em;
+}
+
+.line-btn {
+  opacity: 1;
+}
+
+@-webkit-keyframes lineInserted {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 5555px;
+    /* your line height here */
+  }
+}
+
+@keyframes lineInserted {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 5555px;
+    /* your line height here */
+  }
+}
