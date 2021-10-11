@@ -40,10 +40,10 @@
       <path stroke="#fff" d="M238.28 70.838v137.344l-118.381 68.575V139.413L238.28 70.838ZM118.899 139.413v137.344L.519 208.182V70.838l118.38 68.575Z" />
       <path fill="#BFB8FF" d="m140.928 72.282.845.487-16.193 9.342-.845-.488 1.028-.593c.898-.518 1.462-1.027 1.69-1.528.183-.352.122-.738-.183-1.16-.198-.307-1.073-.909-2.626-1.805l-20.373-11.752c-1.583-.914-2.657-1.437-3.22-1.568-.563-.132-1.249-.132-2.055 0-.807.114-1.645.421-2.513.922l-1.028.593-.845-.488 16.193-9.341.845.487-1.027.593c-.899.518-1.462 1.028-1.691 1.529-.182.35-.129.742.16 1.172.198.308 1.074.91 2.627 1.805l20.372 11.753c1.584.913 2.657 1.436 3.221 1.568.578.123 1.271.127 2.078.013.807-.132 1.645-.448 2.512-.948l1.028-.593Z" />
       <path fill="#4C3F71" d="m140.928 72.282.845.487-16.193 9.342-.845-.488 1.028-.593c.898-.518 1.462-1.027 1.69-1.528.183-.352.122-.738-.183-1.16-.198-.307-1.073-.909-2.626-1.805l-20.373-11.752c-1.583-.914-2.657-1.437-3.22-1.568-.563-.132-1.249-.132-2.055 0-.807.114-1.645.421-2.513.922l-1.028.593-.845-.488 16.193-9.341.845.487-1.027.593c-.899.518-1.462 1.028-1.691 1.529-.182.35-.129.742.16 1.172.198.308 1.074.91 2.627 1.805l20.372 11.753c1.584.913 2.657 1.436 3.221 1.568.578.123 1.271.127 2.078.013.807-.132 1.645-.448 2.512-.948l1.028-.593Z" />
-      <mask id="a" width="60" height="104" x="0" y="139" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+      <mask id="model01a1" width="60" height="104" x="0" y="139" maskUnits="userSpaceOnUse" style="mask-type:alpha">
         <path fill="#C4C4C4" d="M59.582 242.15.018 207.802v-68.747l59.564 34.348v68.747Z" />
       </mask>
-      <g stroke="#fff" stroke-miterlimit="10" stroke-width=".5" mask="url(#a)">
+      <g stroke="#fff" stroke-miterlimit="10" stroke-width=".5" mask="url(#model01a1)">
         <path d="M59.495 39.21v268.768M55.331 211.153V107.362l-17.62-10.153V69.828L30.897 58.04V26.86" />
         <path d="M51.827 207.599v-92.23l-18.582-10.708v-26.84l-8.673-15.01V23.213" />
         <path d="M19.385 50.308v15.57l8.762 15.159v23.661l19.197 11.062v93.086M90.28 191.353l-120.826-69.704M19.385 150.454v-12.797l-13.71-7.904-5.86-10.151-28.593-16.487" />
@@ -1116,104 +1116,104 @@
           <h2 class="section__header">Предлагаем 4 модели сотрудничества</h2>
           <div class="models__list">
             <!-- model 1 -->
-            <section class="models__item">
-              <header class="models__header">
-                <div class="models__icon">
-                  <svg viewBox="0 0 419 457">
-                    <use xlink:href="img/sprite.svg#cube" class="models__open"></use>
-                    <use xlink:href="#model01" class="models__close"></use>
-                  </svg>
-                </div>
-                <div class="models__menu">
+            <section class="models__item  open">
+              <div class="models__icon">
+                <svg viewBox="0 0 419 457">
+                  <use xlink:href="img/sprite.svg#cube" class="models__close"></use>
+                </svg>
+                <object data="img/model-1.svg" class="models__open" type="image/svg+xml"></object>
+              </div>
+              <div class="models__content">
+                <header class="models__header">
                   <h3 class="models__title">Модель#1</h3>
                   <p class="models__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</p>
                   <button type="button" class="models__link js-close">Подробнее</button>
-                </div>
-              </header>
-              <div class="models__wraapper">
-                <div class="models__info">
-                  <header class="models__header mobil">
-                    <button type="button" class="models__btn js-close">
-                      <svg viewBox="0 0 23 16">
-                        <use xlink:href="img/sprite.svg#arrow-close"></use>
-                      </svg>
-                    </button>
-                    <div class="models__menu">
-                      <h3 class="models__title">01</h3>
-                      <p class="models__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</p>
+                </header>
+                <div class="models__wrapper">
+                  <div class="models__info">
+                    <header class="models__header mobil" style="display: none;">
+                      <button type="button" class="models__btn js-close">
+                        <svg viewBox="0 0 23 16">
+                          <use xlink:href="img/sprite.svg#arrow-close"></use>
+                        </svg>
+                      </button>
+                      <div class="models__caption">
+                        <h3 class="models__title">01</h3>
+                        <p class="models__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</p>
+                      </div>
+                    </header>
+                    <ul class="list">
+                      <li>Гарантированный возврат инвестиций</li>
+                      <li>Гарантированная инвестиционная прибыль</li>
+                      <li>Ежедневные выплаты инвестиционной прибыли</li>
+                    </ul>
+                    <ol class="list">
+                      <li>Позвоните нам по телефону 8 (800) 500 66 47 </li>
+                      <li>Заключите Договор. Договор заключается на сумму от 50 000 рублей, на срок от 6 месяцев</li>
+                      <li>Предоставьте ваш электронный кошелёк для выплат криптовалюты</li>
+                      <li>Мы подключим оборудование на сумму ваших инвестиций в течение 1 часа и предоставим вам ссылку на Личный Кабинет</li>
+                      <li>C этого момента оборудование добывает Ethereum (ETH)</li>
+                      <li>На ваш электронный кошелёк перечисляется добытый криптоактив. Вы распоряжаетесь добытым криптоактивом по своему усмотрению</li>
+                      <li>По окончании срока Договора, вы гарантированно получаете возврат ваших инвестиций</li>
+                    </ol>
+                    <div class="models__row">
+                      <a href="" class="link link--icon">Ознакомиться с договором</a>
+                      <button type="button" class="btn">Начать сотрудничество</button>
                     </div>
-                  </header>
-                  <ul class="list">
-                    <li>Гарантированный возврат инвестиций</li>
-                    <li>Гарантированная инвестиционная прибыль</li>
-                    <li>Ежедневные выплаты инвестиционной прибыли</li>
-                  </ul>
-                  <ol class="list">
-                    <li>Позвоните нам по телефону 8 (800) 500 66 47 </li>
-                    <li>Заключите Договор. Договор заключается на сумму от 50 000 рублей, на срок от 6 месяцев</li>
-                    <li>Предоставьте ваш электронный кошелёк для выплат криптовалюты</li>
-                    <li>Мы подключим оборудование на сумму ваших инвестиций в течение 1 часа и предоставим вам ссылку на Личный Кабинет</li>
-                    <li>C этого момента оборудование добывает Ethereum (ETH)</li>
-                    <li>На ваш электронный кошелёк перечисляется добытый криптоактив. Вы распоряжаетесь добытым криптоактивом по своему усмотрению</li>
-                    <li>По окончании срока Договора, вы гарантированно получаете возврат ваших инвестиций</li>
-                  </ol>
-                  <div class="models__row">
-                    <a href="" class="link link--icon">Ознакомиться с договором</a>
-                    <button type="button" class="btn">Начать сотрудничество</button>
-                  </div>
-                  <div class="models__row">
-                    <button type="button" class="link js-close">Свернуть</button>
+                    <div class="models__row">
+                      <button type="button" class="link js-close">Свернуть</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
             <!-- model 2 -->
             <section class="models__item">
-              <header class="models__header">
-                <div class="models__icon">
-                  <svg viewBox="0 0 419 457">
-                    <use xlink:href="img/sprite.svg#cube" class="models__open"></use>
-                    <use xlink:href="#model02" class="models__close"></use>
-                  </svg>
-                </div>
-                <div class="models__menu">
+              <div class="models__icon">
+                <svg viewBox="0 0 419 457">
+                  <use xlink:href="img/sprite.svg#cube" class="models__close"></use>
+                </svg>
+                <object data="img/model-2.svg" class="models__open" type="image/svg+xml"></object>
+              </div>
+              <div class="models__content">
+                <header class="models__header">
                   <h3 class="models__title">Модель#2</h3>
                   <p class="models__subtitle">Покупка майнинг-оборудования с последующей установкой в Дата Центре</p>
                   <button type="button" class="models__link js-close">Подробнее</button>
-                </div>
-              </header>
-              <div class="models__wraapper">
-                <div class="models__info">
-                  <header class="models__header mobil">
-                    <button type="button" class="models__btn js-close">
-                      <svg viewBox="0 0 23 16">
-                        <use xlink:href="img/sprite.svg#arrow-close"></use>
-                      </svg>
-                    </button>
-                    <div class="models__menu">
-                      <h3 class="models__title">02</h3>
-                      <p class="models__subtitle">Покупка майнинг-оборудования с последующей установкой в Дата Центре</p>
+                </header>
+                <div class="models__wrapper">
+                  <div class="models__info">
+                    <header class="models__header mobil">
+                      <button type="button" class="models__btn js-close">
+                        <svg viewBox="0 0 23 16">
+                          <use xlink:href="img/sprite.svg#arrow-close"></use>
+                        </svg>
+                      </button>
+                      <div class="models__caption">
+                        <h3 class="models__title">02</h3>
+                        <p class="models__subtitle">Покупка майнинг-оборудования с последующей установкой в Дата Центре</p>
+                      </div>
+                    </header>
+                    <ul class="list">
+                      <li>Вы становитесь собственником майнинг фермы</li>
+                      <li>Мы обеспечиваем контроль, обслуживание, уход за вашим оборудованием 24/7</li>
+                      <li>Вы получаете максимальную прибыль от майнинга криптовалют</li>
+                    </ul>
+                    <ol class="list">
+                      <li>Позвоните нам по телефону 8 (800) 500 66 47 И выберите модель и количество оборудования</li>
+                      <li>Заключите 2 (два) Договора: Приобретение оборудования Размещение и обслуживание оборудования</li>
+                      <li>Предоставьте ваш электронный кошелёк для выплат криптовалюты</li>
+                      <li>Мы подключим ваше оборудование в течение 3-х рабочих дней и предоставим вам ссылку на Личный Кабинет. У вас будет возможность выбора Алгоритма майнинга</li>
+                      <li>C этого момента оборудование добывает Криптоактив, который перечисляется на ваш электронный кошелёк</li>
+                      <li>Мы предоставим доступ к помещению, где находится ваше оборудование.bУ вашего оборудования всегда есть остаточная стоимость</li>
+                    </ol>
+                    <div class="models__row">
+                      <a href="" class="link link--icon">Ознакомиться с договором</a>
+                      <button type="button" class="btn">Начать сотрудничество</button>
                     </div>
-                  </header>
-                  <ul class="list">
-                    <li>Вы становитесь собственником майнинг фермы</li>
-                    <li>Мы обеспечиваем контроль, обслуживание, уход за вашим оборудованием 24/7</li>
-                    <li>Вы получаете максимальную прибыль от майнинга криптовалют</li>
-                  </ul>
-                  <ol class="list">
-                    <li>Позвоните нам по телефону 8 (800) 500 66 47 И выберите модель и количество оборудования</li>
-                    <li>Заключите 2 (два) Договора: Приобретение оборудования Размещение и обслуживание оборудования</li>
-                    <li>Предоставьте ваш электронный кошелёк для выплат криптовалюты</li>
-                    <li>Мы подключим ваше оборудование в течение 3-х рабочих дней и предоставим вам ссылку на Личный Кабинет. У вас будет возможность выбора Алгоритма майнинга</li>
-                    <li>C этого момента оборудование добывает Криптоактив, который перечисляется на ваш электронный кошелёк</li>
-                    <li>Мы предоставим доступ к помещению, где находится ваше оборудование.bУ вашего оборудования всегда есть остаточная стоимость</li>
-                  </ol>
-                  <div class="models__row">
-                    <a href="" class="link link--icon">Ознакомиться с договором</a>
-                    <button type="button" class="btn">Начать сотрудничество</button>
-                  </div>
-                  <div class="models__row">
-                    <button type="button" class="link js-close">Свернуть</button>
+                    <div class="models__row">
+                      <button type="button" class="link js-close">Свернуть</button>
+                    </div>
                   </div>
                 </div>
               </div>

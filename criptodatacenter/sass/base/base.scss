@@ -1,8 +1,8 @@
 html {
  font-family: $ff;
  color: $text;
- font-size: $fz;
- // @include fFS(16px, $fz, 320px, 1900px, 20px);
+ // font-size: $fz;
+ @include fFS(16px, $fz, 320px, 1900px, 20px);
  height: -webkit-fill-available;
 }
 
@@ -50,6 +50,7 @@ img {
 .section__header {
  @include fFS(35px, 48px, 320px, 1500px, 20px);
  font-family: $accent-ff;
+ letter-spacing: 0.08em;
  font-weight: 600;
  text-transform: uppercase;
  text-align: center;
