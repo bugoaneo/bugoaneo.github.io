@@ -1,0 +1,25 @@
+.footer {
+  padding: 4em 0;
+  background: rgba(32, 32, 32, 0.62);
+  .logo {
+    width: 165px;
+    margin-bottom: 0.5em;
+  }
+}
+
+.footer__row {
+  @include row(jsb, ac);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.footer__info {
+  flex: 0 1 auto;
+  @include bp(600px) {
+    flex: 0 1 100%;
+    margin-bottom: 1em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

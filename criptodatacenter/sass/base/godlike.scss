@@ -318,10 +318,10 @@ textarea {
 }
 
 // Fix placeholder color in Firefox 19+ and Firefox 18-
-::placeholder,
-::-moz-placeholder {
-    opacity: 1;
-}
+// ::placeholder,
+// ::-moz-placeholder {
+//     opacity: 1;
+// }
 
 // Remove default spacing
 table {

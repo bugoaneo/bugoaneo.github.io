@@ -1,133 +1,141 @@
 .header {
- position: fixed;
- left: 0;
- top: 0;
- width: 100%;
- min-width: 320px;
- padding-top: 20px;
- z-index: 10;
- @include bp(1100px) {
-  padding-top: 0;
-  background: #111;
- }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 320px;
+  padding-top: 20px;
+  z-index: 10;
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+
+  &.sticky {
+    padding-top: 0;
+    background-color: $bg;
+  }
+  @include bp(1100px) {
+    padding-top: 0;
+    background-color: #111;
+  }
 }
 .header__container {
- @include row(jsb, ac);
- max-width: 1770px;
- padding: 0 10px;
- margin: 0 auto;
- @include bp(1100px) {
-  padding: 0 10px 0 0;
- }
+  @include row(jsb, ac);
+  max-width: 1770px;
+  padding: 0 10px;
+  margin: 0 auto;
+  @include bp(1100px) {
+    padding: 0 10px 0 0;
+  }
 }
 
 .logo {
- flex: 0 1 165px;
- a {
-  display: block;
-  line-height: 0;
- }
- @include bp(1100px) {
-  margin-right: auto;
-  flex: 0 1 135px;
- }
+  flex: 0 1 165px;
+  a {
+    display: block;
+    line-height: 0;
+  }
+  @include bp(1100px) {
+    margin-right: auto;
+    flex: 0 1 135px;
+  }
 }
 
 .nav__wrapper {
- flex: 0 1 1120px;
- padding: 0 10px;
- margin: 0 auto;
- @include bp(1500px) {
-  flex: 1 1 auto;
- }
- @include bp(1100px) {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #111;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
-  &.open {
-   transform: translateX(0);
-   opacity: 1;
+  flex: 0 1 1120px;
+  padding: 0 10px;
+  margin: 0 auto;
+  @include bp(1500px) {
+    flex: 1 1 auto;
   }
- }
+  @include bp(1100px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 .nav__list {
- @include row(jsb, ac);
- @include bp(1100px) {
-  display: block;
- }
- &.tablet {
-  margin-right: 0.5em;
- }
+  @include row(jsb, ac);
+  @include bp(1100px) {
+    display: block;
+  }
+  &.tablet {
+    margin-right: 0.5em;
+  }
 }
 
 .nav__item {
- a {
-  @include row(jfs, ac);
-  padding: 1.1em 0.3em;
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 1;
-  @include bp(1100px) {
-   font-size: 15px;
+  a {
+    @include row(jfs, ac);
+    padding: 1.1em 0.3em;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1;
+    @include bp(1100px) {
+      font-size: 15px;
+    }
   }
- }
- &:hover {
-  > a {
-   color: $link;
+  &:hover,
+  &.current {
+    > a {
+      color: $link;
+    }
   }
- }
 }
 
 .nav__mobil-text {
- display: none;
- @include bp(1100px) {
-  display: block;
- }
+  display: none;
+  @include bp(1100px) {
+    display: block;
+  }
 }
 
 .nav__text {
- + * {
-  margin-left: 0.4em;
- }
+  + * {
+    margin-left: 0.4em;
+  }
 }
 
 .tablet {
- display: none;
- @include bp(1100px) {
-  display: flex;
- }
- @include bp(650px) {
   display: none;
- }
+  @include bp(1100px) {
+    display: flex;
+  }
+  @include bp(650px) {
+    display: none;
+  }
 }
 
 .nav__icon,
 .login__icon {
- display: flex;
- margin-right: 0.4em;
+  display: flex;
+  margin-right: 0.4em;
 }
 
 .login__link {
- @include row(jfs, ac);
- padding: 1.1em 0.1em;
- font-size: 16px;
- text-transform: uppercase;
- line-height: 1;
- @include bp(1100px) {
-  font-size: 14px;
- }
+  @include row(jfs, ac);
+  padding: 1.1em 0.1em;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+  @include bp(1100px) {
+    font-size: 14px;
+  }
 }
 
 .login {
- &:hover {
-  > a {
-   color: $link;
+  &:hover {
+    > a {
+      color: $link;
+    }
   }
- }
 }

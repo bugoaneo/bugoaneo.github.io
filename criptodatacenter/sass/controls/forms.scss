@@ -1,0 +1,25 @@
+.form {
+ width: 100%;
+ min-width: 21em;
+ @include bp(1000px) {
+  min-width: 0;
+ }
+}
+
+.form__row {
+ position: relative;
+ margin-bottom: 0.8em;
+ &:last-of-type {
+  margin-bottom: 0;
+ }
+ .btn:only-child {
+  width: 100%;
+ }
+}
+input {
+ padding: 0.9em;
+ border-radius: 4px;
+ font-family: inherit;
+ color: $formInpColor;
+ background: $formInpBg;
+}

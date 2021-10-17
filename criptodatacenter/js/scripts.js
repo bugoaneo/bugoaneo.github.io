@@ -7,9 +7,8 @@ document.querySelectorAll('[data-title="scroll"]').forEach(link => {
   e.preventDefault();
   let href = this.getAttribute('href').substring(1);
   const scrollTarget = document.getElementById(href);
-
   // const topOffset = document.querySelector('a[data-title]').offsetHeight;
-  const topOffset = 45; // если не нужен отступ сверху
+  const topOffset = 60; // если не нужен отступ сверху
   const elementPosition = scrollTarget.getBoundingClientRect().top;
   const offsetPosition = elementPosition - topOffset;
 
@@ -17,10 +16,8 @@ document.querySelectorAll('[data-title="scroll"]').forEach(link => {
    top: offsetPosition,
    behavior: 'smooth'
   });
-
   menuBTN.classList.remove('open');
   menu.classList.remove('open');
-
  });
 
 });
@@ -31,26 +28,32 @@ menuBTN.addEventListener('click', function (e) {
 });
 
 
+let header = document.querySelector('.header');
+let sticky = header.offsetTop;
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+ if (window.pageYOffset > sticky) {
+  header.classList.add("sticky");
+ } else {
+  header.classList.remove("sticky");
+ }
+}
+
 
 
 /* sliders */
 (function () {
  'use strict';
- // breakpoint where swiper will be destroyed
- // and switches to a dual-column layout
  const breakpoint = window.matchMedia('(min-width:900px)');
- // keep track of swiper instances to destroy later
  let mySwiper;
  const breakpointChecker = function () {
-  // if larger viewport and multi-row layout needed
   if (breakpoint.matches === true) {
-   // clean up old instances and inline styles when available
    if (mySwiper !== undefined) mySwiper.destroy(true, true);
-   // or/and do nothing
    return;
-   // else if a small viewport and single column layout needed
   } else if (breakpoint.matches === false) {
-   // fire small viewport version of swiper
+
    return enableSwiper();
   }
  };
@@ -77,8 +80,73 @@ menuBTN.addEventListener('click', function (e) {
 
  };
 
- // keep an eye on viewport size changes
  breakpoint.addListener(breakpointChecker);
- // kickstart
  breakpointChecker();
 })();
+
+
+
+(function () {
+ 'use strict';
+ const breakpoint2 = window.matchMedia('(min-width:800px)');
+ let AboutSwiper;
+ const breakpointChecker2 = function () {
+  if (breakpoint2.matches === true) {
+   if (AboutSwiper !== undefined) AboutSwiper.destroy(true, true);
+   return;
+  } else if (breakpoint2.matches === false) {
+
+   return about();
+  }
+ };
+
+ const about = function () {
+  AboutSwiper = new Swiper('.about__slider-container', {
+   slidesPerView: 1,
+   observer: true,
+   resizeObserver: true,
+    spaceBetween: 10,
+    loop: true,
+     autoplay: {
+       delay: 4000,
+      },
+  });
+
+ };
+
+ breakpoint2.addListener(breakpointChecker2);
+ breakpointChecker2();
+})();
+
+
+var hero = new Swiper('.hero__slider-container', {
+ slidesPerView: 1,
+ spaceBetween: 10,
+ loop: true,
+ effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+ },
+  autoplay: {
+    delay: 4000,
+   },
+ // navigation: {
+ //  nextEl: '.swiper-button-next',
+ //  prevEl: '.swiper-button-prev',
+ // },
+});
+
+
+/* */
+
+
+const modelsContainer = document.querySelector('.models__list')
+const modelsItems = modelsContainer.querySelectorAll('.models__item')
+modelsContainer.addEventListener('click', (e) => {
+ if (e.target.classList.contains('js-close')) {
+  const item = e.target.closest('.models__item')
+  modelsItems.forEach(modalItem => modalItem != item && modalItem.classList.remove('open'))
+  item.classList.toggle('open')
+ }
+
+})
