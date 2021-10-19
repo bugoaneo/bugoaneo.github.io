@@ -863,9 +863,18 @@ img {
 }
 
 /*partners*/
+.partners {
+  padding-bottom: 4em;
+}
+
 .partners__slider {
   max-width: 1380px;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .partners__slider {
+    margin: 0 -20px;
+  }
 }
 
 .partners__slide {
@@ -880,7 +889,7 @@ img {
 .partners__slide svg {
   display: block;
   width: 80%;
-  height: 23px;
+  height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   margin: auto;
@@ -1268,7 +1277,7 @@ img {
   -webkit-flex: 0 1 50%;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  padding: 4em 2em 5em 2em;
+  padding: 4em 2em;
   background: #58565e;
 }
 @media (max-width: 800px) {
@@ -1881,6 +1890,41 @@ input {
   font-family: inherit;
   color: #b9b9b9;
   background: #807f87;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
 }
 
 .menu-trigger {

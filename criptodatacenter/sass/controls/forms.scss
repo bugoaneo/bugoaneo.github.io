@@ -23,3 +23,15 @@ input {
  color: $formInpColor;
  background: $formInpBg;
 }
+::placeholder {
+ color: inherit;
+ opacity: 1;
+}
+::-moz-placeholder {
+ color: inherit;
+ opacity: 1;
+}
+::-webkit-input-placeholder {
+ color: inherit;
+ opacity: 1;
+}

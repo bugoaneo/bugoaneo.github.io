@@ -97,6 +97,34 @@
   }
 }
 
+/*partners*/
+.partners {
+  padding-bottom: 4em;
+}
+.partners__slider {
+  max-width: 1380px;
+  margin: 0 auto;
+  @include bp(600px) {
+    margin: 0 -20px;
+  }
+}
+
+.partners__slide {
+  display: flex;
+  height: 38px;
+  background: #46434b;
+  // padding: 8px 0;
+
+  img,
+  svg {
+    display: block;
+    width: 80%;
+    height: 20px;
+    object-fit: contain;
+    margin: auto;
+  }
+}
+
 /*benefits*/
 .benefits {
   padding-bottom: 4.5%;
@@ -135,8 +163,7 @@
 .benefits__item-icon {
   width: 58px;
   // filter: drop-shadow(0px 0px 24px #5012ff) drop-shadow(0px -1px 24px #fb8000);
-  filter: drop-shadow(0px -1px 0px rgba(#ffb800, 21%))
-    drop-shadow(0px 1px 0px rgba(#0047ff, 47%));
+  filter: drop-shadow(0px -1px 0px rgba(#ffb800, 21%)) drop-shadow(0px 1px 0px rgba(#0047ff, 47%));
 }
 
 .benefits__item-text {
@@ -277,8 +304,7 @@
   height: 190px;
   margin: 0 auto 5px auto;
   svg {
-    filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.47))
-      drop-shadow(0px -1px 0px rgba(255, 184, 0, 0.31));
+    filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.47)) drop-shadow(0px -1px 0px rgba(255, 184, 0, 0.31));
   }
   @include bp(650px) {
     width: 90px;
@@ -348,7 +374,7 @@
 
 .contacts__form {
   flex: 0 1 50%;
-  padding: 4em 2em 5em 2em;
+  padding: 4em 2em;
   background: $callout;
   @include bp(800px) {
     flex: 0 1 100%;
