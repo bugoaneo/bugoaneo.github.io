@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/main.css">
   <style>
     .hero {
-      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98.01%) bottom center/auto 20% no-repeat, url(video/noise.png) center center/contain;
+      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98.01%) bottom center/auto 20% no-repeat;
     }
 
     .models {
@@ -80,7 +80,7 @@
         <nav class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="" data-title="scroll">
+              <a href="#hero" data-title="scroll">
                 О компании
               </a>
             </li>
@@ -107,14 +107,14 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#services">
+              <a href="#services" data-title="scroll">
                 Услуги
               </a>
             </li>
             <li class="nav__item mobil">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="tel:+78005006647">
+                  <a href="#contacts" data-title="scroll">
                     <span class="nav__text">
                       Мы на связи
                     </span>
@@ -206,7 +206,7 @@
         </div>
       </div>
     </header>
-    <section class="section hero">
+    <section class="section hero" id="hero">
       <video class="hero__video" poster="video/video_bg.jpg" playsinline autoplay muted loop>
         <source src="video/video.mp4" type="video/mp4">
         <source src="video/video.webm" type="video/webm">
@@ -270,6 +270,51 @@
                     <div class="about__text">За время работы нашего Дата Центра добыто более 40 000,5464 ETH на сумму более <b>$86 000 000</b></div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section partners">
+      <div class="container">
+        <div class="partners__slider">
+          <div class="swiper-container partners__slider-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide partners__slide">
+                <svg viewBox="0 0 89 18">
+                  <use xlink:href="img/sprite.svg#p1">
+                  </use>
+                </svg>
+                <!-- <img src="img/content/p1.svg" alt=""> -->
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p2.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p3.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p4.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p5.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p6.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p7.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p8.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p9.svg" alt="">
+              </div>
+              <div class="swiper-slide partners__slide">
+                <img src="img/content/p10.svg" alt="">
               </div>
             </div>
           </div>
@@ -621,7 +666,7 @@
                   <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
                 </div>
                 <div class="form__row">
-                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7">
+                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
                 </div>
                 <div class="form__row">
                   <button class="btn">Жду звонка</button>
@@ -720,7 +765,7 @@
                   <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
                 </div>
                 <div class="form__row">
-                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7">
+                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
                 </div>
                 <div class="form__row">
                   <button class="btn">Жду звонка</button>
