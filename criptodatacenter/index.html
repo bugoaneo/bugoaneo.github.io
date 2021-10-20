@@ -21,12 +21,13 @@
   <link rel="stylesheet" href="css/main.css">
   <style>
     .hero {
-      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98.01%) bottom center/auto 20% no-repeat;
+      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98%) bottom center/auto 20% no-repeat;
     }
 
     .models {
       background:
-        /*linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(31, 25, 50, 0.58) 94%) top center/auto 10% no-repeat,*/
+        linear-gradient(to bottom, #343434 0%, rgba(255, 255, 255, 0) 94%) top center/auto 10% no-repeat,
+        linear-gradient(to top, #1f1932 0%, rgba(255, 255, 255, 0) 94%) bottom center/auto 10% no-repeat,
         url(img/bg/model-bg.jpg)top center/100% auto no-repeat,
         #1f1932;
     }
@@ -501,10 +502,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desk">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -556,10 +558,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desc">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -612,10 +615,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desc">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -673,10 +677,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desc">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -746,94 +751,93 @@
         </div>
       </div>
     </section>
-    <div class="bg-contacts">
-
-      <section class="section contacts" id="contacts">
-        <div class="container">
-          <h2 class="section__header">Контакты</h2>
-          <div class="contacts__row">
-            <div class="contacts__content">
-              <p class="section__caption">ООО “РуТехнолоджис”<br>
-                Россия, г. Новосибирск, ул. Воинская, 63</p>
-              <ul class="contacts__list">
-                <li>
-                  <a href="tel:+78005006647">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-tel">
-                      </use>
-                    </svg>
-                    8 (800) 500 66 47
-                  </a>
-
-                </li>
-                <li>
-                  <a href="mailto: sale@prominers.ru">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-email">
-                      </use>
-                    </svg>
-                    sale@prominers.ru
-                  </a>
-                </li>
-                <li>
-                  <a href="https://api.whatsapp.com/send?phone=ХХХ">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-wtp">
-                      </use>
-                    </svg>
-                    Whatsapp: некий текст
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-telegram">
-                      </use>
-                    </svg>
-                    Telegramm: некий текст
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="contacts__form">
-              <p class="section__caption">Наши специалисты готовы<br>
-                проконсультировать&nbsp;вас</p>
-              <form action="" method="POST" class="form" name="" id="">
-                <div class="form__row">
-                  <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
-                </div>
-                <div class="form__row">
-                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
-                </div>
-                <div class="form__row">
-                  <button class="btn">Жду звонка</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__row">
-            <div class="footer__info">
-              <div class="logo">
-                <a href="/">
-                  <svg viewBox="0 0 164 19" width="165">
-                    <use xlink:href="img/sprite.svg#logo">
+  </div>
+  <div class="bg-contacts">
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <h2 class="section__header">Контакты</h2>
+        <div class="contacts__row">
+          <div class="contacts__content">
+            <p class="section__caption">ООО “РуТехнолоджис”<br>
+              Россия, г. Новосибирск, ул. Воинская, 63</p>
+            <ul class="contacts__list">
+              <li>
+                <a href="tel:+78005006647">
+                  <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-tel">
                     </use>
                   </svg>
+                  8 (800) 500 66 47
                 </a>
+
+              </li>
+              <li>
+                <a href="mailto: sale@prominers.ru">
+                  <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-email">
+                    </use>
+                  </svg>
+                  sale@prominers.ru
+                </a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=ХХХ">
+                  <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-wtp">
+                    </use>
+                  </svg>
+                  Whatsapp: некий текст
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-telegram">
+                    </use>
+                  </svg>
+                  Telegramm: некий текст
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__form">
+            <p class="section__caption">Наши специалисты готовы<br>
+              проконсультировать&nbsp;вас</p>
+            <form action="" method="POST" class="form" name="" id="">
+              <div class="form__row">
+                <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
               </div>
-              <p>Инвестируем в блокчейн с 2010 года</p>
-            </div>
-            <div class="footer__info footer__info">
-              © ООО РуТехнолоджис 2021
-            </div>
+              <div class="form__row">
+                <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+              </div>
+              <div class="form__row">
+                <button class="btn">Жду звонка</button>
+              </div>
+            </form>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__info">
+            <div class="logo">
+              <a href="/">
+                <svg viewBox="0 0 164 19" width="165">
+                  <use xlink:href="img/sprite.svg#logo">
+                  </use>
+                </svg>
+              </a>
+            </div>
+            <p>Инвестируем в блокчейн с 2010 года</p>
+          </div>
+          <div class="footer__info footer__info">
+            © ООО РуТехнолоджис 2021
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
   <!-- <script src="js/jquery.min.js">  </script> -->
   <script src="js/swiper-bundle.min.js">  </script>

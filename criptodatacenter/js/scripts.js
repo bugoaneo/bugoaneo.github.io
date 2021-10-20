@@ -40,30 +40,6 @@ function scrollFunction() {
   }
 }
 
-
-/*scroll spy */
-
-// let section = document.querySelectorAll(".section");
-// let sections = {};
-// let i = 0;
-
-// Array.prototype.forEach.call(section, function (e) {
-//   sections[e.id] = e.offsetTop;
-// });
-
-// window.onscroll = function () {
-//   var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-//   for (i in sections) {
-//     if (sections[i] <= scrollPosition) {
-//       document.querySelector('.current').setAttribute('class', ' ');
-//       document.querySelector('a[href*=' + i + ']').setAttribute('class', 'current');
-//     }
-//   }
-// };
-
-
-
 /* sliders */
 (function () {
   'use strict';
@@ -105,8 +81,6 @@ function scrollFunction() {
   breakpointChecker();
 })();
 
-
-
 (function () {
   'use strict';
   const breakpoint2 = window.matchMedia('(min-width:800px)');
@@ -138,7 +112,6 @@ function scrollFunction() {
   breakpoint2.addListener(breakpointChecker2);
   breakpointChecker2();
 })();
-
 
 var hero = new Swiper('.hero__slider-container', {
   slidesPerView: 1,
@@ -235,3 +208,19 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+/*scroll */
+
+// let modelWrap = document.querySelectorAll('.models__info');
+
+// modelWrap.forEach(function (item) {
+//   item.onscroll = function () {
+//     if (item.scrollTop > 0) {
+//       this.classList.add("scroll");
+//     } else {
+//       this.classList.remove("scroll");
+//     }
+//   };
+
+// })

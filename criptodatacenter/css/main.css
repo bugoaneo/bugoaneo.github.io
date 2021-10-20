@@ -1268,6 +1268,11 @@ img {
 .contacts .container {
   width: 100%;
 }
+@media (max-width: 1100px) {
+  .contacts {
+    min-height: 0;
+  }
+}
 
 .contacts__row {
   display: -webkit-box;
