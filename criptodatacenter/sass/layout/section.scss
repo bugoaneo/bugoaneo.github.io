@@ -35,8 +35,8 @@
 }
 
 .hero__title {
-  @include fFS(35px, 64px, 320px, 1500px, 20px);
-  margin-bottom: 0.4em;
+  @include fFS(35px, 78px, 320px, 1500px, 20px);
+  margin-bottom: 0.3em;
   font-family: $accent-ff;
   font-weight: 600;
   line-height: 1;
@@ -44,6 +44,7 @@
 }
 
 .hero__text {
+  font-size: 1.5em;
   margin-bottom: 1em;
 }
 
@@ -163,7 +164,8 @@
 .benefits__item-icon {
   width: 58px;
   // filter: drop-shadow(0px 0px 24px #5012ff) drop-shadow(0px -1px 24px #fb8000);
-  filter: drop-shadow(0px -1px 0px rgba(#ffb800, 21%)) drop-shadow(0px 1px 0px rgba(#0047ff, 47%));
+  filter: drop-shadow(0px -1px 0px rgba(#ffb800, 21%))
+    drop-shadow(0px 1px 0px rgba(#0047ff, 47%));
 }
 
 .benefits__item-text {
@@ -277,6 +279,10 @@
   background: $accent-bg;
 }
 
+.services__title {
+  @extend .models__title;
+}
+
 .services__list {
   @include row(jc);
 }
@@ -289,6 +295,14 @@
     margin-bottom: 1em;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  &:nth-child(3) {
+    .services__icon {
+      width: 220px;
+      @include bp(650px) {
+        width: 150px;
+      }
     }
   }
   @include bp(650px) {
@@ -304,7 +318,8 @@
   height: 190px;
   margin: 0 auto 5px auto;
   svg {
-    filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.47)) drop-shadow(0px -1px 0px rgba(255, 184, 0, 0.31));
+    filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.47))
+      drop-shadow(0px -1px 0px rgba(255, 184, 0, 0.31));
   }
   @include bp(650px) {
     width: 90px;
