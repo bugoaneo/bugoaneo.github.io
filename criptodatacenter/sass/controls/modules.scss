@@ -60,3 +60,29 @@ ol.list {
   margin-bottom: 1em;
  }
 }
+
+/*breadcrambs*/
+.breadcrambs {
+ @include row(jfs, ac);
+ li {
+  position: relative;
+  &:before {
+   content: "";
+   @include center(y);
+   right: 9px;
+   height: 14px;
+   width: 7px;
+   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 9 15'%3E%3Cpath stroke='%23fff' stroke-opacity='.65' d='m1 14.5 7-7-7-7'/%3E%3C/svg%3E")
+    center center/contain no-repeat;
+  }
+  &:last-child {
+   &:before {
+    display: none;
+   }
+  }
+  * {
+   display: block;
+   padding: 5px 1.8em 5px 0;
+  }
+ }
+}
