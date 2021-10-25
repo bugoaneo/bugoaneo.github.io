@@ -188,7 +188,8 @@
 }
 
 .how__list {
-  justify-content: space-between;
+  @include row(jsb);
+  // justify-content: space-between;
 }
 
 .how__item {
@@ -209,6 +210,16 @@
       &:after {
         display: none;
       }
+    }
+  }
+  @include bp(900px) {
+    width: 50%;
+  }
+  @include bp(650px) {
+    width: 100%;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

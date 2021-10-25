@@ -41,45 +41,45 @@ function scrollFunction() {
 }
 
 /* sliders */
-(function () {
-  'use strict';
-  const breakpoint = window.matchMedia('(min-width:900px)');
-  let mySwiper;
-  const breakpointChecker = function () {
-    if (breakpoint.matches === true) {
-      if (mySwiper !== undefined) mySwiper.destroy(true, true);
-      return;
-    } else if (breakpoint.matches === false) {
+// (function () {
+//   'use strict';
+//   const breakpoint = window.matchMedia('(min-width:900px)');
+//   let mySwiper;
+//   const breakpointChecker = function () {
+//     if (breakpoint.matches === true) {
+//       if (mySwiper !== undefined) mySwiper.destroy(true, true);
+//       return;
+//     } else if (breakpoint.matches === false) {
 
-      return enableSwiper();
-    }
-  };
+//       return enableSwiper();
+//     }
+//   };
 
-  const enableSwiper = function () {
-    mySwiper = new Swiper('.how__slider', {
-      slidesPerView: 1,
-      loop: true,
-      observer: true,
-      resizeObserver: true,
-      navigation: {
-        nextEl: '.how__button-next',
-        prevEl: '.how__button-prev',
-      },
-      autoplay: {
-        delay: 5000,
-      },
-      breakpoints: {
-        500: {
-          slidesPerView: 2,
-        },
-      }
-    });
+//   const enableSwiper = function () {
+//     mySwiper = new Swiper('.how__slider', {
+//       slidesPerView: 1,
+//       loop: true,
+//       observer: true,
+//       resizeObserver: true,
+//       navigation: {
+//         nextEl: '.how__button-next',
+//         prevEl: '.how__button-prev',
+//       },
+//       autoplay: {
+//         delay: 5000,
+//       },
+//       breakpoints: {
+//         500: {
+//           slidesPerView: 2,
+//         },
+//       }
+//     });
 
-  };
+//   };
 
-  breakpoint.addListener(breakpointChecker);
-  breakpointChecker();
-})();
+//   breakpoint.addListener(breakpointChecker);
+//   breakpointChecker();
+// })();
 
 (function () {
   'use strict';
@@ -168,8 +168,25 @@ modelsContainer.addEventListener('click', (e) => {
     modelsItems.forEach(modalItem => modalItem != item && modalItem.classList.remove('open'))
     item.classList.toggle('open')
   }
+});
 
-})
+document.querySelectorAll('a.js-close').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    let link = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(link);
+    // const topOffset = document.querySelector('a[data-title]').offsetHeight;
+    const topOffset = 60; // если не нужен отступ сверху
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
 
 /*form mask*/
 window.addEventListener("DOMContentLoaded", function () {
