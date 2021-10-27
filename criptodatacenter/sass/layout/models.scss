@@ -184,8 +184,10 @@
 .models__footer {
   .js-close {
     display: block;
-    margin-left: auto;
+    width: 100%;
+    // margin-left: auto;
     color: #878787;
+    text-align: right;
   }
   @include bp(600px) {
     padding: 1em 0;
@@ -283,11 +285,15 @@
 }
 
 .models__link {
+  display: block;
   padding: 1em 1em 1em 0;
   color: $more;
   @include bp(600px) {
     text-transform: uppercase;
     text-decoration: underline;
+  }
+  &:hover {
+    color: #fff;
   }
 }
 

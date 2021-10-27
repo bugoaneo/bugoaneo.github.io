@@ -48,7 +48,7 @@
     flex: 1 1 auto;
     padding: 0 10px 0 5%;
   }
-  @include bp(1150px) {
+  @include bp(1200px) {
     padding: 0 10px;
   }
   @include bp(1100px) {
@@ -85,7 +85,7 @@
     text-transform: uppercase;
     line-height: 1;
     color: #fff;
-    @include bp(1100px) {
+    @include bp(1200px) {
       font-size: 15px;
     }
   }

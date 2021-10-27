@@ -24,8 +24,11 @@
 }
 
 .ferms__item {
+ position: relative;
  flex: 0 1 calc(50% - 1.5em);
  margin-bottom: 2.5em;
+ border: 1px solid transparent;
+ border-radius: 4px;
  background-color: #3a3a3a;
  transition: all 0.5s ease-in-out;
  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.45);
@@ -33,6 +36,7 @@
   width: 100%;
  }
  &:hover {
+  border: 1px solid #f5c25b;
   background-color: #4a4c50;
   box-shadow: 0px 1.8em 3.83em rgba(0, 0, 0, 0.45);
   .ferms__pic {
@@ -42,6 +46,24 @@
    &--back {
     opacity: 1;
    }
+  }
+ }
+ &.hit {
+  border: 1px solid #f5c25b;
+  &:before {
+   content: "Хит продаж";
+   position: absolute;
+   top: 1.5em;
+   left: -1px;
+   padding: 1em 1em 1em 0.5em;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 0;
+   text-transform: uppercase;
+   color: #111;
+   background: linear-gradient(180deg, #fffa8b 0%, #f5c25b 100%);
+   clip-path: polygon(100% 0%, 95% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+   z-index: 1;
   }
  }
  @include bp(700px) {
