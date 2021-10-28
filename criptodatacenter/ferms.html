@@ -176,6 +176,7 @@
     <div class="section section--top">
       <div class="container">
         <ul class="breadcrambs">
+          <li><a href="index.html#models">На главную</a></li>
           <li><a href="index.html#models4">Модель сотрудничества №4</a></li>
           <li><b>Каталог майнинг ферм от RuTechnologies</b></li>
         </ul>
@@ -216,7 +217,7 @@
                 <li>EThash (Ethernum) - <b>480мх</b></li>
                 <li>Потребляемая мощность - <b>1350 Вт/Ч</b></li>
               </ul>
-              <a href="" class="btn">Приобрести</a>
+              <button type="button" class="btn js-ferm-select">Приобрести</button>
             </div>
           </div>
           <div class="ferms__item">
@@ -233,7 +234,7 @@
                     </use>
                   </svg>
                 </span>
-                6 видеокарты
+                6 видеокарт
               </div>
               <ul class="ferms__features">
                 <li>Материнская плата - <b>ASUS Z390 P - 1шт</b></li>
@@ -246,7 +247,7 @@
                 <li>EThash (Ethernum) - <b>480мх</b></li>
                 <li>Потребляемая мощность - <b>1350 Вт/Ч</b></li>
               </ul>
-              <a href="" class="btn">Приобрести</a>
+              <button type="button" class="btn js-ferm-select">Приобрести</button>
             </div>
           </div>
           <div class="ferms__item hit">
@@ -263,7 +264,7 @@
                     </use>
                   </svg>
                 </span>
-                8 видеокарты
+                8 видеокарт
               </div>
               <ul class="ferms__features">
                 <li>Материнская плата - <b>ASUS Z390 P - 1шт</b></li>
@@ -276,7 +277,7 @@
                 <li>EThash (Ethernum) - <b>480мх</b></li>
                 <li>Потребляемая мощность - <b>1350 Вт/Ч</b></li>
               </ul>
-              <a href="" class="btn">Приобрести</a>
+              <button type="button" class="btn js-ferm-select">Приобрести</button>
             </div>
           </div>
           <div class="ferms__item">
@@ -293,7 +294,7 @@
                     </use>
                   </svg>
                 </span>
-                12 видеокарты
+                12 видеокарт
               </div>
               <ul class="ferms__features">
                 <li>Материнская плата - <b>ASUS Z390 P - 1шт</b></li>
@@ -306,7 +307,7 @@
                 <li>EThash (Ethernum) - <b>480мх</b></li>
                 <li>Потребляемая мощность - <b>1350 Вт/Ч</b></li>
               </ul>
-              <a href="" class="btn">Приобрести</a>
+              <button type="button" class="btn js-ferm-select">Приобрести</button>
             </div>
           </div>
         </div>
@@ -347,7 +348,7 @@
                 <li>EThash (Ethernum) - <b>480мх</b></li>
                 <li>Потребляемая мощность - <b>1350 Вт/Ч</b></li>
               </ul>
-              <a href="" class="btn">Приобрести</a>
+              <button type="button" class="btn js-ferm-select">Приобрести</button>
             </div>
           </div>
         </div>
@@ -374,8 +375,63 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js">  </script>
+  <div class="overlay" id="model-selection">
+    <div class="popup">
+      <div class="popup__close"></div>
+      <div class="popup__header">
+        <div class="popup__icon"><img src="img/popup.svg" alt=""></div>
+        <div class="popup__caption">
+          <div class="popup__title">Выбрано оборудование</div>
+          <div class="popup__subtitle"><span class="ferm-descr">RIG на базе GeForce RTX 3070 8gb</span> на <span class="ferm-cards">4 видеокарты</span></div>
+        </div>
+      </div>
+      <div class="popup__body">
+        <form action="" method="POST" class="form" name="" id="">
+          <p class="form__caption">Заполните форму, наш менеджер свяжется с вами</p>
+          <div class="form__row">
+            <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
+          </div>
+          <div class="form__row">
+            <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+          </div>
+          <div class="form__row">
+            <button class="btn">Жду звонка</button>
+          </div>
+        </form>
+        <div class="answer" style="display: none;">
+          <div class="form__row">
+            <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+            <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+          </div>
+          <div class="form__row">
+            <button class="btn">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <script src="js/scripts.js"></script>
+  <script>
+    let fermSelect = document.querySelectorAll('.js-ferm-select');
+
+    fermSelect.forEach(function (ferm) {
+      ferm.addEventListener('click', function (e) {
+        for (let i = 0; i < this.parentElement.children.length; i++) {
+          if (this.parentElement.children[i].className == 'ferms__power') {
+            let power = this.parentElement.children[i].innerText;
+            localStorage.setItem('power', power);
+            // console.log(this.parentElement.children[i].innerText);
+          }
+          if (this.parentElement.children[i].className == 'ferms__title') {
+            let titles = this.parentElement.children[i].innerText;
+            localStorage.setItem('titles', titles);
+            // console.log(this.parentElement.children[i].innerText);
+          }
+        }
+      })
+    })
+  </script>
 </body>
 
 </html>

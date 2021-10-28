@@ -123,11 +123,7 @@ var hero = new Swiper('.hero__slider-container', {
   },
   autoplay: {
     delay: 10000,
-  },
-  // navigation: {
-  //  nextEl: '.swiper-button-next',
-  //  prevEl: '.swiper-button-prev',
-  // },
+  }
 });
 
 var partners = new Swiper('.partners__slider-container', {
@@ -150,16 +146,10 @@ var partners = new Swiper('.partners__slider-container', {
       slidesPerView: 10,
     },
   }
-  // navigation: {
-  //  nextEl: '.swiper-button-next',
-  //  prevEl: '.swiper-button-prev',
-  // },
 });
 
 
 /*models accordion*/
-
-
 const modelsContainer = document.querySelector('.models__list')
 const modelsItems = modelsContainer.querySelectorAll('.models__item')
 modelsContainer.addEventListener('click', (e) => {
@@ -216,28 +206,10 @@ window.addEventListener("DOMContentLoaded", function () {
       if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
       if (event.type == "blur" && this.value.length < 5) this.value = ""
     }
-
     input.addEventListener("input", mask, false);
     input.addEventListener("focus", mask, false);
     input.addEventListener("blur", mask, false);
     input.addEventListener("keydown", mask, false)
-
   });
 
 });
-
-
-/*scroll */
-
-// let modelWrap = document.querySelectorAll('.models__info');
-
-// modelWrap.forEach(function (item) {
-//   item.onscroll = function () {
-//     if (item.scrollTop > 0) {
-//       this.classList.add("scroll");
-//     } else {
-//       this.classList.remove("scroll");
-//     }
-//   };
-
-// })
