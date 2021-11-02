@@ -2229,12 +2229,15 @@ ol.list > li:before {
 
 .popup {
   position: relative;
+  top: -100%;
   margin: auto;
   width: 100%;
   max-width: 635px;
   padding: 2.7em 3em 2em 3em;
   border-radius: 4px;
   background-color: #58565e;
+  -webkit-animation: toUp 1s ease 0.2s forwards;
+          animation: toUp 1s ease 0.2s forwards;
 }
 @media (max-width: 600px) {
   .popup {
@@ -2242,6 +2245,17 @@ ol.list > li:before {
   }
 }
 
+@-webkit-keyframes toUp {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes toUp {
+  100% {
+    top: 0;
+  }
+}
 .popup__header {
   display: -webkit-box;
   display: -webkit-flex;

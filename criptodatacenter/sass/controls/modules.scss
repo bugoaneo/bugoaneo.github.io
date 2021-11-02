@@ -105,16 +105,25 @@ ol.list {
 
 .popup {
   position: relative;
+  top: -100%;
   margin: auto;
   width: 100%;
   max-width: 635px;
   padding: 2.7em 3em 2em 3em;
   border-radius: 4px;
   background-color: $callout;
+  animation: toUp 1s ease 0.2s forwards;
   @include bp(600px) {
     padding: 1.7em 1.5em;
   }
 }
+
+@keyframes toUp {
+  100% {
+    top: 0;
+  }
+}
+
 .popup__header {
   @include row(jsb, ac);
   margin-bottom: 1.5em;

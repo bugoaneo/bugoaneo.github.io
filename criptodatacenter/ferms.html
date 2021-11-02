@@ -382,7 +382,7 @@
         <div class="popup__icon"><img src="img/popup.svg" alt=""></div>
         <div class="popup__caption">
           <div class="popup__title">Выбрано оборудование</div>
-          <div class="popup__subtitle"><span class="ferm-descr">RIG на базе GeForce RTX 3070 8gb</span> на <span class="ferm-cards">4 видеокарты</span></div>
+          <div class="popup__subtitle"><span class="ferm-title">RIG на базе GeForce RTX 3070 8gb</span> на <span class="ferm-power">4 видеокарты</span></div>
         </div>
       </div>
       <div class="popup__body">
@@ -410,27 +410,48 @@
       </div>
     </div>
   </div>
-
+  <!-- <script src="js/swiper-bundle.min.js"></script> -->
   <script src="js/scripts.js"></script>
   <script>
-    let fermSelect = document.querySelectorAll('.js-ferm-select');
+    // let fermSelect = document.querySelectorAll('.js-ferm-select');
 
-    fermSelect.forEach(function (ferm) {
-      ferm.addEventListener('click', function (e) {
-        for (let i = 0; i < this.parentElement.children.length; i++) {
-          if (this.parentElement.children[i].className == 'ferms__power') {
-            let power = this.parentElement.children[i].innerText;
-            localStorage.setItem('power', power);
-            // console.log(this.parentElement.children[i].innerText);
-          }
-          if (this.parentElement.children[i].className == 'ferms__title') {
-            let titles = this.parentElement.children[i].innerText;
-            localStorage.setItem('titles', titles);
-            // console.log(this.parentElement.children[i].innerText);
-          }
-        }
+    // fermSelect.forEach(function (ferm) {
+    //   ferm.addEventListener('click', function (e) {
+    //     for (let i = 0; i < this.parentElement.children.length; i++) {
+    //       if (this.parentElement.children[i].className == 'ferms__power') {
+    //         let power = this.parentElement.children[i].innerText;
+    //         localStorage.setItem('power', power);
+    //         // console.log(this.parentElement.children[i].innerText);
+    //       }
+    //       if (this.parentElement.children[i].className == 'ferms__title') {
+    //         let titles = this.parentElement.children[i].innerText;
+    //         localStorage.setItem('titles', titles);
+    //         // console.log(this.parentElement.children[i].innerText);
+    //       }
+    //     }
+    //   })
+    // })
+
+    const fermItems = document.querySelectorAll('.ferms__item');
+    const popupTitle = document.querySelector('.ferm-title');
+    const popupPower = document.querySelector('.ferm-power');
+    const popupFerms = document.querySelector('#model-selection');
+
+    fermItems.forEach((ferm) => {
+      const fermBtn = ferm.querySelector('.js-ferm-select');
+      const fermPowerContent = ferm.querySelector('.ferms__power').innerText;
+      const fermTitleContent = ferm.querySelector('.ferms__title').innerText;
+
+      fermBtn.addEventListener('click', () => {
+        localStorage.setItem('power', fermPowerContent);
+        localStorage.setItem('title', fermTitleContent);
+        popupTitle.innerText = localStorage.getItem('title');
+        popupPower.innerText = localStorage.getItem('power');
+        fermBtn.innerText = 'Забронировано';
+        popupFerms.classList.add('visible');
       })
     })
+
   </script>
 </body>
 
