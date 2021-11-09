@@ -1,0 +1,156 @@
+.footer {
+  position: relative;
+  padding: 4.5% 0;
+  background-color: $dark;
+  a {
+  color: $light-text;
+  }
+  @include breakpoint(600px) {
+  padding: 10% 0;
+  }
+}
+
+.footer__top {
+  @include flex;
+  @include breakpoint(1050px) {
+  flex-direction: column;
+  }
+}
+
+.footer__logo {
+  order: 1;
+  @include breakpoint(1050px) {
+  order: 0;
+  margin-bottom: 10px;
+ }
+}
+
+.footer__menu {
+  flex: 0 1 auto;
+  margin: 0 -15px;  
+  &:nth-child(2) {
+  order: 1;
+  @include breakpoint(1050px) {
+    order: 0;
+    margin-bottom: 30px;
+  }
+ }
+}
+
+.footer__menu-tiger {
+ position: relative;
+ &.mobile {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  color: $light-text;
+  cursor: pointer;
+  @include breakpoint(600px) {
+   display: block;
+   &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: transparent; 
+    transition: all 0.5s $transit;
+   }
+  }
+ }
+ &.active {
+  color: #fff;
+   &:after {
+    background-color: $accent;
+  }
+ }
+}
+
+
+.footer__menu-list {
+  @include flex;
+  @include breakpoint(600px) {
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+ }
+}
+.footer__menu-item {
+  position: relative;
+  a {
+   display: block;
+   padding: 15px;
+   font-size: 14px;
+   font-weight: bold;
+  }
+  &:after {
+   content: '';
+   position: absolute;
+   display: block;
+   top: 100%;
+   left: 15px;
+   right: 15px;
+   height: 2px;
+   background-color: transparent;
+   transition: all 0.5s $transit;
+  }
+  &:hover {
+  a {
+    color: #fff;
+  }
+  &:after {
+    background-color: $accent;
+ }
+  }
+}
+.footer__icon {
+  margin: 30px 0 50px;
+}
+.footer__icon-list {
+  position: relative;
+  @include flex (center);
+  margin: 0 -6px;
+  &:after,
+  &:before {
+   content: '';
+   flex: 1 1 auto;
+   height: 1px;
+   background-color: $light-text;
+   margin-right: 10px;
+  }
+  &:before {
+   margin-right: 10px;
+  }
+  &:after {
+   margin-left: 10px;
+  }
+}
+
+.footer__icon-item {
+  margin: 0 6px;
+  a {
+   display: block;
+   width: 32px;
+   height: 32px;
+   border-radius: 100%;
+   border: 2px solid;
+   font-size: 14px;
+  span {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+  }
+ }
+ &:hover {
+  a {
+   color: $accent;
+  }
+ }
+}
+.copy {
+  color: $light-text;
+  text-align: center;
+}

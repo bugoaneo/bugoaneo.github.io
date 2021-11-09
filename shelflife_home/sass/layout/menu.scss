@@ -1,0 +1,122 @@
+/*menu*/
+.header__nav {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  background-color: #fff;
+  .container {
+    @include flex;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+.menu {
+  position: relative;
+  @include flex;
+  margin-left: 170px;
+  background-color: #fff;
+  z-index: 10;
+  li {
+   position: relative;
+    border-right: 1px solid #ebebeb;
+    a {
+      display: block;
+      padding: 28px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    &:after {
+     content: '';
+     position: absolute;
+     display: block;
+     top: 100%;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background-color: $accent;
+     transition: width 0.5s ease;
+    }
+    &:hover, &.current {
+     &:after {
+      width: 100%;
+     }
+    }
+  }
+  @include breakpoint(965px) {
+    position: absolute;
+    top: 102%;
+    left: -9999px;
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    transition: left 0.5s;
+    li {
+      width: 100%;
+      border-right: none;
+      a,
+      a:first-child {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+    &.open {
+      left: 0;
+    }
+  }
+}
+
+.header__control {
+  @include flex;
+  @include breakpoint(965px) {
+    margin-left: auto;
+  }
+}
+
+.search-btn {
+  font-size: 22px;
+  padding: 25px;
+  border-right: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+  @include breakpoint(965px) {
+    padding: 15px;
+  }
+  .icon-search {
+    color: #4c4c4c;
+  }
+}
+
+.cart {
+  a {
+    position: relative;
+    display: block;
+    padding: 22px;
+    font-size: 26px;
+    border-right: 1px solid #ebebeb;
+    @include breakpoint(965px) {
+      padding: 12px;
+    }
+  }
+  .cart-order {
+    position: absolute;
+    right: 0.8em;
+    top: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: $accent;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+  }
+  .icon-shopping-cart {
+    color: #4c4c4c;
+  }
+}
