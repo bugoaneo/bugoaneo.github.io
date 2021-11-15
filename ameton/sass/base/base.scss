@@ -1,0 +1,48 @@
+html {
+ font-family: $ff;
+ color: $text;
+ font-size: $fz;
+ // @include fFS(16px, $fz, 320px, 1900px, 20px);
+ height: -webkit-fill-available;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+ min-height: -webkit-fill-available;
+}
+
+.wrapper {
+ position: relative;
+ min-width: 320px;
+ min-height: 100vh;
+ flex-grow: 1;
+ overflow: hidden;
+ // background-color: $bg;
+}
+
+.footer {
+ flex-grow: 0;
+}
+
+a {
+ display: inline-block;
+ vertical-align: middle;
+}
+
+img {
+ display: inline-block;
+}
+
+.container {
+ max-width: $container;
+ margin: 0 auto;
+ padding: 0 15px;
+ &--narrow {
+  max-width: 1000px;
+ }
+}
+
+.center {
+ text-align: center;
+}
