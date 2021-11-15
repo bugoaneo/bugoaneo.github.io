@@ -21,7 +21,7 @@ glide.mount();
 
 /*accordion*/
 
-const accordion = document.querySelector('.help__list')
+const accordion = document.querySelector('.help__list');
 accordion.addEventListener('click', toggleAccordion)
 const accordionHeaders = accordion.querySelectorAll('.help__panel');
 
@@ -40,3 +40,25 @@ function toggleOtherItems(accordionHeader) {
   }
  });
 }
+
+
+/*height SVG */
+const svgIcons = document.querySelectorAll('svg');
+svgIcons.forEach(function (icon) {
+ if (icon.hasAttribute('height')) {
+  let h = icon.getAttribute('height') + "px";
+  icon.setAttribute('style', 'height');
+  icon.style.height = h;
+ }
+})
+
+
+/*IE11 */
+// const svgIcons = document.querySelectorAll('svg');
+// for (i = 0; svgIcons.length > i; i++) {
+//  if (svgIcons[i].hasAttribute('height')) {
+//   let h = svgIcons[i].getAttribute('height') + "px";
+//   svgIcons[i].setAttribute('style', 'height');
+//   svgIcons[i].style.height = h;
+//  }
+// }
