@@ -11,7 +11,6 @@
 
 .models__container {
   max-width: 1060px;
-  // min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -124,7 +123,7 @@
     }
     &:last-child {
       &:after {
-        bottom: 0;
+        display: none;
       }
     }
   }
@@ -150,6 +149,18 @@
     transition: transform 0.5s ease-in-out;
     will-change: transform;
   }
+  .btn.mob {
+    display: none;
+    @include bp(600px) {
+      display: block;
+      margin: auto;
+    }
+  }
+  .btn.desk {
+    @include bp(600px) {
+      display: none;
+    }
+  }
 }
 
 .models__row {
@@ -173,11 +184,16 @@
 .models__footer {
   .js-close {
     display: block;
-    margin-left: auto;
+    width: 100%;
+    // margin-left: auto;
     color: #878787;
+    text-align: right;
   }
   @include bp(600px) {
-    padding: 0 1em 2em 1em;
+    padding: 1em 0;
+    .js-close {
+      display: none;
+    }
   }
 }
 
@@ -208,7 +224,7 @@
   display: flex;
   width: 60px;
   text-align: center;
-  background: #1f1932;
+  background: #646369;
   svg,
   img {
     margin: auto;
@@ -218,7 +234,7 @@
 
 .models__caption {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   padding: 0.4em 1.1em;
   flex: 0 1 calc(100% - 60px);
 }
@@ -245,8 +261,7 @@
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.26))
-    drop-shadow(0px 0px 90px rgba(80, 18, 255, 0.79));
+  filter: drop-shadow(0px 1px 0px rgba(0, 71, 255, 0.26)) drop-shadow(0px 0px 90px rgba(80, 18, 255, 0.79));
   @include bp(600px) {
     display: none;
   }
@@ -270,11 +285,15 @@
 }
 
 .models__link {
+  display: block;
   padding: 1em 1em 1em 0;
   color: $more;
   @include bp(600px) {
     text-transform: uppercase;
     text-decoration: underline;
+  }
+  &:hover {
+    color: #fff;
   }
 }
 

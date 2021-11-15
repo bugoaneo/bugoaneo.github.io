@@ -5,11 +5,11 @@ like.forEach(function (el) {
  });
 })
 
-let btnHide = document.querySelector('.btn--hide');
-btnHide.addEventListener('click', function () {
- this.classList.toggle('open');
- btnHide.previousElementSibling.classList.toggle('open');
-});
+// let btnHide = document.querySelector('.btn--hide');
+// btnHide.addEventListener('click', function () {
+//  this.classList.toggle('open');
+//  btnHide.previousElementSibling.classList.toggle('open');
+// });
 
 
 var header = document.querySelector('.header');

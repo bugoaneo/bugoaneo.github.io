@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-bottom: calc(48.125% + 60px);
+  padding-bottom: calc(48.125%);
   min-height: 400px; /**/
   overflow: hidden;
   .container {
@@ -16,6 +16,15 @@
   }
   @include bp(600px) {
     min-height: 100vh;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#343434, 40%);
   }
 }
 
@@ -35,8 +44,8 @@
 }
 
 .hero__title {
-  @include fFS(35px, 64px, 320px, 1500px, 20px);
-  margin-bottom: 0.4em;
+  @include fFS(35px, 78px, 320px, 1500px, 20px);
+  margin-bottom: 0.3em;
   font-family: $accent-ff;
   font-weight: 600;
   line-height: 1;
@@ -44,6 +53,7 @@
 }
 
 .hero__text {
+  font-size: 1.5em;
   margin-bottom: 1em;
 }
 
@@ -178,7 +188,8 @@
 }
 
 .how__list {
-  justify-content: space-between;
+  @include row(jsb);
+  // justify-content: space-between;
 }
 
 .how__item {
@@ -199,6 +210,16 @@
       &:after {
         display: none;
       }
+    }
+  }
+  @include bp(900px) {
+    width: 50%;
+  }
+  @include bp(650px) {
+    width: 100%;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -277,6 +298,10 @@
   background: $accent-bg;
 }
 
+.services__title {
+  @extend .models__title;
+}
+
 .services__list {
   @include row(jc);
 }
@@ -289,6 +314,14 @@
     margin-bottom: 1em;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  &:nth-child(3) {
+    .services__icon {
+      width: 220px;
+      @include bp(650px) {
+        width: 150px;
+      }
     }
   }
   @include bp(650px) {
@@ -355,6 +388,9 @@
   padding: 4em 0;
   .container {
     width: 100%;
+  }
+  @include bp(1100px) {
+    min-height: 0;
   }
 }
 

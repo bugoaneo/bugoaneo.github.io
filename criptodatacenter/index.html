@@ -21,12 +21,13 @@
   <link rel="stylesheet" href="css/main.css">
   <style>
     .hero {
-      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98.01%) bottom center/auto 20% no-repeat;
+      background: linear-gradient(0deg, #343434 0%, rgba(52, 52, 52, 0) 98%) bottom center/auto 20% no-repeat;
     }
 
     .models {
       background:
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(31, 25, 50, 0.58) 50%, rgba(31, 25, 50, 1) 94%),
+        linear-gradient(to bottom, #343434 0%, rgba(255, 255, 255, 0) 94%) top center/auto 10% no-repeat,
+        linear-gradient(to top, #1f1932 0%, rgba(255, 255, 255, 0) 94%) bottom center/auto 10% no-repeat,
         url(img/bg/model-bg.jpg)top center/100% auto no-repeat,
         #1f1932;
     }
@@ -81,14 +82,14 @@
         <nav class="nav__wrapper">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#hero" data-title="scroll">
+              <a href="#about" data-title="scroll">
                 О компании
               </a>
             </li>
             <li class="nav__item">
               <a href="#models" data-title="scroll">
                 <span class="nav__icon">
-                  <svg viewBox="0 0 20 23" width="20">
+                  <svg viewBox="0 0 20 23" width="17">
                     <use xlink:href="img/sprite.svg#icon-cube">
                     </use>
                   </svg>
@@ -97,9 +98,9 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="">
+              <a href="ferms.html">
                 <span class="nav__icon">
-                  <svg viewBox="0 0 23 22" width="20">
+                  <svg viewBox="0 0 23 22" width="17">
                     <use xlink:href="img/sprite.svg#icon-maining">
                     </use>
                   </svg>
@@ -120,37 +121,40 @@
                       Мы на связи
                     </span>
                     <span class="nav__icon">
-                      <svg viewBox="0 0 17 17" width="16">
+                      <svg viewBox="0 0 17 17" width="17">
                         <use xlink:href="img/sprite.svg#icon-tel">
                         </use>
                       </svg>
                     </span>
-                    8 (800) 500 66 47
+                    <!-- <span class="nav__mobil-text">
+                      <b>8 (800) 500 66 47</b>47 Мы на связи
+                    </span> -->
+
                   </a>
                 </li>
                 <li class="nav__item">
                   <a href="">
                     <span class="nav__icon">
-                      <svg viewBox="0 0 14 12" width="16">
+                      <svg viewBox="0 0 19 16" width="17">
                         <use xlink:href="img/sprite.svg#icon-telegram">
                         </use>
                       </svg>
                     </span>
                     <span class="nav__mobil-text">
-                      Телеграмм
+                      <b>@DIENDND</b> НАПИСАТЬ В ТЕЛЕГРАМ
                     </span>
                   </a>
                 </li>
                 <li class="nav__item">
                   <a href="mailto: sale@prominers.ru">
                     <span class="nav__icon">
-                      <svg viewBox="0 0 17 12" width="16">
+                      <svg viewBox="0 0 23 16" width="17">
                         <use xlink:href="img/sprite.svg#icon-email">
                         </use>
                       </svg>
                     </span>
                     <span class="nav__mobil-text">
-                      E-mail
+                      <b>Mining@rutech.ru</b> Написать письмо
                     </span>
                   </a>
                 </li>
@@ -165,7 +169,7 @@
                 Мы на связи
               </span>
               <span class="nav__icon">
-                <svg viewBox="0 0 17 17" width="16">
+                <svg viewBox="0 0 17 17" width="17">
                   <use xlink:href="img/sprite.svg#icon-tel">
                   </use>
                 </svg>
@@ -176,7 +180,7 @@
           <li class="nav__item">
             <a href="">
               <span class="nav__icon">
-                <svg viewBox="0 0 14 12" width="16">
+                <svg viewBox="0 0 14 12" width="17">
                   <use xlink:href="img/sprite.svg#icon-telegram">
                   </use>
                 </svg>
@@ -186,7 +190,7 @@
           <li class="nav__item">
             <a href="mailto: sale@prominers.ru">
               <span class="nav__icon">
-                <svg viewBox="0 0 17 12" width="16">
+                <svg viewBox="0 0 17 12" width="17">
                   <use xlink:href="img/sprite.svg#icon-email">
                   </use>
                 </svg>
@@ -197,7 +201,7 @@
         <div class="login">
           <a href="" class="login__link">
             <span class="login__icon">
-              <svg viewBox="0 0 12 12" width="12">
+              <svg viewBox="0 0 12 12" width="16">
                 <use xlink:href="img/sprite.svg#icon-user">
                 </use>
               </svg>
@@ -289,10 +293,8 @@
                   <use xlink:href="img/sprite.svg#p1">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p1.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
-                <!-- <img src="img/content/p2.svg" alt=""> -->
                 <svg viewBox="0 0 90 18">
                   <use xlink:href="img/sprite.svg#p2">
                   </use>
@@ -303,56 +305,48 @@
                   <use xlink:href="img/sprite.svg#p3">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p3.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 89 10">
                   <use xlink:href="img/sprite.svg#p4">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p4.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 89 17">
                   <use xlink:href="img/sprite.svg#p5">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p5.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 68 17">
                   <use xlink:href="img/sprite.svg#p6">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p6.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 84 22">
                   <use xlink:href="img/sprite.svg#p7">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p7.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 89 24">
                   <use xlink:href="img/sprite.svg#p8">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p8.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 79 14">
                   <use xlink:href="img/sprite.svg#p9">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p9.svg" alt=""> -->
               </div>
               <div class="swiper-slide partners__slide">
                 <svg viewBox="0 0 70 16">
                   <use xlink:href="img/sprite.svg#p10">
                   </use>
                 </svg>
-                <!-- <img src="img/content/p10.svg" alt=""> -->
               </div>
             </div>
           </div>
@@ -422,31 +416,23 @@
       <div class="container">
         <div class="how">
           <h2 class="section__title center">Как наши клиенты получают прибыль, инвестируя в&nbsp;блокчейн</h2>
-          <div class="swiper-container how__slider">
-            <div class="swiper-wrapper how__list">
-              <!-- Slides -->
-              <div class="swiper-slide how__item">
-                <div class="how__pic"><img src="img/content/how-01.png" alt=""></div>
-                <div class="how__text">Оборудование Дата Центра собрано<br> в&nbsp;систему</div>
-              </div>
-              <div class="swiper-slide how__item">
-                <div class="how__pic"><img src="img/content/how-02.png" alt=""></div>
-                <div class="how__text">Мы&nbsp;предлагаем клиентам подключить оборудование к&nbsp;нашей системе</div>
-              </div>
-              <div class="swiper-slide how__item">
-                <div class="how__pic"><img src="img/content/how-03.png" alt=""></div>
-                <div class="how__text">Система интегрирована в&nbsp;крипто-площадки, работающие по&nbsp;технологии Блокчейн, где за&nbsp;факт обработки данных начисляется вознаграждение в&nbsp;криптовалюте</div>
-              </div>
-              <div class="swiper-slide how__item">
-                <div class="how__pic"><img src="img/content/how-04.png" alt=""></div>
-                <div class="how__text">Криптовалюта, добытая Дата Центром, начисляется на&nbsp;счёт клиента, в&nbsp;объёме, оговоренном при заключении договора</div>
-              </div>
-
+          <div class="how__list">
+            <!-- Slides -->
+            <div class="how__item">
+              <div class="how__pic"><img src="img/content/how-01.png" alt=""></div>
+              <div class="how__text">Оборудование Дата Центра собрано<br> в&nbsp;систему</div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-button how__button">
-              <div class="swiper-button-prev how__button-prev"></div>
-              <div class="swiper-button-next how__button-next"></div>
+            <div class="how__item">
+              <div class="how__pic"><img src="img/content/how-02.png" alt=""></div>
+              <div class="how__text">Мы&nbsp;предлагаем клиентам подключить оборудование к&nbsp;нашей системе</div>
+            </div>
+            <div class="how__item">
+              <div class="how__pic"><img src="img/content/how-03.png" alt=""></div>
+              <div class="how__text">Система интегрирована в&nbsp;крипто-площадки, работающие по&nbsp;технологии Блокчейн, где за&nbsp;факт обработки данных начисляется вознаграждение в&nbsp;криптовалюте</div>
+            </div>
+            <div class="how__item">
+              <div class="how__pic"><img src="img/content/how-04.png" alt=""></div>
+              <div class="how__text">Криптовалюта, добытая Дата Центром, начисляется на&nbsp;счёт клиента, в&nbsp;объёме, оговоренном при заключении договора</div>
             </div>
           </div>
         </div>
@@ -454,7 +440,7 @@
           <h2 class="section__header">Предлагаем 4 модели сотрудничества</h2>
           <div class="models__list">
             <!-- model 1 -->
-            <section class="models__item">
+            <section class="models__item" id="models1">
               <div class="models__content">
                 <header class="models__header">
                   <div class="models__icon">
@@ -465,12 +451,11 @@
                   </div>
                   <h3 class="models__title">Модель#1</h3>
                   <p class="models__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</p>
-                  <button type="button" class="models__link js-close">Подробнее</button>
+                  <a href="#models1" class="models__link js-close">Подробнее</a>
                 </header>
                 <div class="models__wrapper">
                   <header class="models__header-mobil">
                     <button type="button" class="models__btn js-close">
-                      <!-- close -->
                       <svg viewBox="0 0 23 16" width="23">
                         <use xlink:href="img/sprite.svg#arrow-close"></use>
                       </svg>
@@ -501,17 +486,18 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desk" data-model="1">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob" data-model="1">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
               </div>
             </section>
             <!-- model 2 -->
-            <section class="models__item">
+            <section class="models__item" id="models2">
               <div class="models__content">
                 <header class="models__header">
                   <div class="models__icon">
@@ -522,7 +508,7 @@
                   </div>
                   <h3 class="models__title">Модель#2</h3>
                   <p class="models__subtitle">Покупка майнинг-оборудования с последующей установкой в Дата Центре</p>
-                  <button type="button" class="models__link js-close">Подробнее</button>
+                  <a href="#models2" class="models__link js-close">Подробнее</a>
                 </header>
                 <div class="models__wrapper">
                   <header class="models__header-mobil">
@@ -548,7 +534,7 @@
                       <li>Предоставьте ваш электронный кошелёк для выплат криптовалюты</li>
                       <li>Мы подключим ваше оборудование в течение 3-х рабочих дней и предоставим вам ссылку на Личный Кабинет. У вас будет возможность выбора Алгоритма майнинга</li>
                       <li>C этого момента оборудование добывает Криптоактив, который перечисляется на ваш электронный кошелёк</li>
-                      <li>Мы предоставим доступ к помещению, где находится ваше оборудование.bУ вашего оборудования всегда есть остаточная стоимость</li>
+                      <li>Мы предоставим доступ к помещению, где находится ваше оборудование. У вашего оборудования всегда есть остаточная стоимость</li>
                     </ol>
                     <div class="models__row">
                       <a href="" class="link link--icon">
@@ -556,17 +542,18 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desk" data-model="2">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob" data-model="2">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
               </div>
             </section>
             <!-- model 3 -->
-            <section class="models__item">
+            <section class="models__item" id="models3">
               <div class="models__content">
                 <header class="models__header">
                   <div class="models__icon">
@@ -577,7 +564,8 @@
                   </div>
                   <h3 class="models__title">Модель#3</h3>
                   <p class="models__subtitle">Покупка мощностей Дата Центра</p>
-                  <button type="button" class="models__link js-close">Подробнее</button>
+                  <a href="#models3" class="models__link js-close">Подробнее</a>
+                  <!-- <button type="button" class="models__link js-close">Подробнее</button> -->
                 </header>
                 <div class="models__wrapper">
                   <header class="models__header-mobil">
@@ -612,17 +600,18 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desk" data-model="3">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob" data-model="3">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
               </div>
             </section>
             <!-- model 4 -->
-            <section class="models__item">
+            <section class="models__item" id="models4">
               <div class="models__content">
                 <header class="models__header">
                   <div class="models__icon">
@@ -633,7 +622,7 @@
                   </div>
                   <h3 class="models__title">Модель#4</h3>
                   <p class="models__subtitle">Покупка готовой майнинг фермы</p>
-                  <button type="button" class="models__link js-close">Подробнее</button>
+                  <a href="#models4" class="models__link js-close">Подробнее</a>
                 </header>
                 <div class="models__wrapper">
                   <header class="models__header-mobil">
@@ -665,7 +654,7 @@
                     </ol>
                     <div class="models__row callout">
                       <div class="callout__text">Перейдите в каталог, чтобы ознакомиться с&nbsp;ассортиментом майнинг ферм</div>
-                      <a class="btn btn--clean" href="">Перейти</a>
+                      <a class="btn btn--clean" href="ferms.html">Перейти</a>
                     </div>
                     <div class="models__row">
                       <a href="" class="link link--icon">
@@ -673,10 +662,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn">Начать сотрудничество</button>
+                      <button type="button" class="btn desk" data-model="4">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
+                    <button type="button" class="btn mob" data-model="4">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -691,15 +681,15 @@
         <div class="result">
           <div class="result__list">
             <div class="result__text">
-              <h3 class="section__title">Выводите добытый Эфир, когда пожелаете</h3>
+              <h3 class="services__title">Выводите добытый Эфир, когда&nbsp;пожелаете</h3>
               <p>Сотрудничая с нами, вы имеете полный контроль
                 над вашими инвестициями.</p>
               <p>Мы предлагаем конкурентноспособные процентные ставки на вывод любого количества криптовалюты с инвестиционного счёта.</p>
             </div>
             <div class="result__media">
-              <p class="section__caption">Наши специалисты готовы<br>
-                проконсультировать&nbsp;вас</p>
               <form action="" method="POST" class="form" name="" id="">
+                <p class="form__caption">Наши специалисты готовы<br>
+                  проконсультировать&nbsp;вас</p>
                 <div class="form__row">
                   <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
                 </div>
@@ -710,6 +700,15 @@
                   <button class="btn">Жду звонка</button>
                 </div>
               </form>
+              <div class="answer">
+                <div class="form__row">
+                  <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+                  <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+                </div>
+                <div class="form__row">
+                  <button class="btn">OK</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -719,7 +718,7 @@
           <div class="services__list">
             <div class="services__item">
               <div class="services__icon">
-                <svg viewBox="0 0 146 191" width="144">
+                <svg viewBox="0 0 107 162" width="144">
                   <use xlink:href="img/sprite.svg#service01"></use>
                 </svg>
               </div>
@@ -736,7 +735,7 @@
             </div>
             <div class="services__item">
               <div class="services__icon">
-                <svg viewBox="0 0 146 121" width="144">
+                <svg viewBox="0 0 193 160">
                   <use xlink:href="img/sprite.svg#service03"></use>
                 </svg>
               </div>
@@ -746,99 +745,237 @@
         </div>
       </div>
     </section>
-    <div class="bg-contacts">
-
-      <section class="section contacts" id="contacts">
-        <div class="container">
-          <h2 class="section__header">Контакты</h2>
-          <div class="contacts__row">
-            <div class="contacts__content">
-              <p class="section__caption">ООО “РуТехнолоджис”<br>
-                Россия, г. Новосибирск, ул. Воинская, 63</p>
-              <ul class="contacts__list">
-                <li>
-                  <a href="tel:+78005006647">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-tel">
-                      </use>
-                    </svg>
-                    8 (800) 500 66 47
-                  </a>
-
-                </li>
-                <li>
-                  <a href="mailto: sale@prominers.ru">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-email">
-                      </use>
-                    </svg>
-                    sale@prominers.ru
-                  </a>
-                </li>
-                <li>
-                  <a href="https://api.whatsapp.com/send?phone=ХХХ">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-wtp">
-                      </use>
-                    </svg>
-                    Whatsapp: некий текст
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <svg viewBox="0 0 17 12" width="16" class="contacts__icon">
-                      <use xlink:href="img/sprite.svg#icon-telegram">
-                      </use>
-                    </svg>
-                    Telegramm: некий текст
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="contacts__form">
-              <p class="section__caption">Наши специалисты готовы<br>
-                проконсультировать&nbsp;вас</p>
-              <form action="" method="POST" class="form" name="" id="">
-                <div class="form__row">
-                  <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
-                </div>
-                <div class="form__row">
-                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
-                </div>
-                <div class="form__row">
-                  <button class="btn">Жду звонка</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__row">
-            <div class="footer__info">
-              <div class="logo">
-                <a href="/">
-                  <svg viewBox="0 0 164 19" width="165">
-                    <use xlink:href="img/sprite.svg#logo">
+  </div>
+  <div class="bg-contacts">
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <h2 class="section__header">Контакты</h2>
+        <div class="contacts__row">
+          <div class="contacts__content">
+            <p class="section__caption">ООО “РуТехнолоджис”<br>
+              Россия, г. Новосибирск, ул. Воинская, 63</p>
+            <ul class="contacts__list">
+              <li>
+                <a href="tel:+78005006647">
+                  <svg viewBox="0 0 17 17" width="17" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-tel">
                     </use>
                   </svg>
+                  8 (800) 500 66 47
                 </a>
+
+              </li>
+              <li>
+                <a href="mailto: sale@prominers.ru">
+                  <svg viewBox="0 0 23 16" width="17" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-email">
+                    </use>
+                  </svg>
+                  sale@prominers.ru
+                </a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=ХХХ">
+                  <svg viewBox="0 0 17 17" width="17" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-wtp">
+                    </use>
+                  </svg>
+                  Whatsapp: некий текст
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg viewBox="0 0 19 16" width="17" class="contacts__icon">
+                    <use xlink:href="img/sprite.svg#icon-telegram">
+                    </use>
+                  </svg>
+                  Telegramm: некий текст
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__form">
+            <form action="" method="POST" class="form" name="" id="">
+              <p class="form__caption">Наши специалисты готовы<br>
+                проконсультировать&nbsp;вас</p>
+              <div class="form__row">
+                <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
               </div>
-              <p>Инвестируем в блокчейн с 2010 года</p>
-            </div>
-            <div class="footer__info footer__info">
-              © ООО РуТехнолоджис 2021
+              <div class="form__row error">
+                <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+              </div>
+              <div class="form__row">
+                <button class="btn">Жду звонка</button>
+              </div>
+            </form>
+            <div class="answer" style="display: none;">
+              <div class="form__row">
+                <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+                <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+              </div>
+              <div class="form__row">
+                <button class="btn">OK</button>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__info">
+            <div class="logo">
+              <a href="/">
+                <svg viewBox="0 0 164 19" width="165">
+                  <use xlink:href="img/sprite.svg#logo">
+                  </use>
+                </svg>
+              </a>
+            </div>
+            <p>Инвестируем в блокчейн с 2010 года</p>
+          </div>
+          <div class="footer__info footer__info">
+            © ООО РуТехнолоджис 2021
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="overlay" id="model-selection">
+      <div class="popup">
+        <div class="popup__close"></div>
+        <div class="popup__header">
+          <div class="popup__icon"><img src="img/popup.svg" alt=""></div>
+          <div class="popup__caption">
+            <div class="popup__title">Выбрана модель сотрудничества №<span>1</span></div>
+            <div class="popup__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</div>
+          </div>
+        </div>
+        <div class="popup__body">
+          <form action="" method="POST" class="form" name="" id="">
+            <p class="form__caption">Заполните форму, наш менеджер свяжется с вами</p>
+            <div class="form__row">
+              <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
+            </div>
+            <div class="form__row">
+              <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+            </div>
+            <div class="form__row">
+              <button class="btn">Жду звонка</button>
+            </div>
+          </form>
+          <div class="answer" style="display: none;">
+            <div class="form__row">
+              <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+              <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+            </div>
+            <div class="form__row">
+              <button class="btn">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- <script src="js/jquery.min.js">  </script> -->
   <script src="js/swiper-bundle.min.js">  </script>
-  <script src="js/scripts.js">  </script>
+  <script src="js/scripts.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      const breakpoint2 = window.matchMedia('(min-width:800px)');
+      let AboutSwiper;
+      const breakpointChecker2 = function () {
+        if (breakpoint2.matches === true) {
+          if (AboutSwiper !== undefined) AboutSwiper.destroy(true, true);
+          return;
+        } else if (breakpoint2.matches === false) {
 
+          return about();
+        }
+      };
+
+      const about = function () {
+        AboutSwiper = new Swiper('.about__slider-container', {
+          slidesPerView: 1,
+          observer: true,
+          resizeObserver: true,
+          spaceBetween: 10,
+          loop: true,
+          autoplay: {
+            delay: 4000,
+          },
+        });
+
+      };
+
+      breakpoint2.addListener(breakpointChecker2);
+      breakpointChecker2();
+    })();
+
+    var hero = new Swiper('.hero__slider-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 10000,
+      }
+    });
+
+    var partners = new Swiper('.partners__slider-container', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      breakpoints: {
+        700: {
+          slidesPerView: 5,
+          spaceBetween: 15,
+        },
+        900: {
+          slidesPerView: 8,
+          spaceBetween: 20,
+        },
+        1000: {
+          slidesPerView: 10,
+        },
+      }
+    });
+
+
+    /*models accordion*/
+    const modelsContainer = document.querySelector('.models__list')
+    const modelsItems = modelsContainer.querySelectorAll('.models__item')
+    modelsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('js-close')) {
+        const item = e.target.closest('.models__item')
+        modelsItems.forEach(modalItem => modalItem != item && modalItem.classList.remove('open'))
+        item.classList.toggle('open')
+      }
+    });
+
+    document.querySelectorAll('a.js-close').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        let link = this.getAttribute('href').substring(1);
+        const scrollTarget = document.getElementById(link);
+        // const topOffset = document.querySelector('a[data-title]').offsetHeight;
+        const topOffset = 60; // если не нужен отступ сверху
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

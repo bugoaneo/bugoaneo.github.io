@@ -1,0 +1,156 @@
+.banner {
+ position: relative;
+ margin-top: -3%;
+ z-index: 10;
+ @include breakpoint(600px) {
+  margin-top: 0;
+ }
+}
+
+.banner__list {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.banner__item {
+ position: relative;
+ flex: 1 1 350px;
+ padding: 3%;
+ overflow: hidden;
+}
+
+.banner__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(5px);
+  background-position: 0 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__window {
+  margin-bottom: 30px;
+  @include fluidFontSize(28px, 50px, 480px, 1280px, 18px);
+  font-weight: bold;
+  border-bottom: 0.1em solid;
+  border-right: 0.1em solid;
+  background-position: 0 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.banner__header {
+  height: 250px;
+  
+}
+.banner__header-text {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background-color: currentColor;
+  }
+  &:before {
+    left: 100%;
+    top: 0;
+    height: 0.1em;
+    width: 500%;
+    margin-left: 10px;
+  }
+  &:after {
+    left: 0;
+    top: 100%;
+    width: 0.1em;
+    height: 300px;
+    
+  }
+}
+
+.banner__link {
+ @include flex (flex-start);
+ li {
+  margin-right: 20px;
+  a {
+   position: relative;
+   padding-right: 18px;
+   color: inherit;
+   font-weight: bold;
+   font-size: 12px;
+   text-transform: uppercase;
+   &:after {
+      content: '\0203A';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-55%);
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+  &:last-child:not(:only-child) {
+   margin-right: 0;
+   a {
+    &:after {
+     display: none;
+    }
+   }
+  }
+ }
+}
+
+.brand {
+  padding: 5.5% 0;
+  background-color: #e1e1e1;
+}
+
+.swiper-container2.swiper-container-horizontal {
+  overflow: hidden;
+}
+
+.brand__list {
+&.brand__list {
+  align-items: baseline;
+}
+}
+
+.brand__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    max-height: 85px;
+    max-width: 150px;
+    overflow: hidden;
+  }
+  span {
+    position: relative;
+    display: inline-block;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $light-text;
+      display: block;
+      width: 10px;
+      height: 1px;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    @include breakpoint (640px) {
+      display: none;
+    }
+  }
+}

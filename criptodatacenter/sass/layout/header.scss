@@ -46,6 +46,10 @@
   margin: 0 auto;
   @include bp(1500px) {
     flex: 1 1 auto;
+    padding: 0 10px 0 5%;
+  }
+  @include bp(1200px) {
+    padding: 0 10px;
   }
   @include bp(1100px) {
     position: absolute;
@@ -80,14 +84,20 @@
     font-size: 16px;
     text-transform: uppercase;
     line-height: 1;
-    @include bp(1100px) {
+    color: #fff;
+    @include bp(1200px) {
       font-size: 15px;
     }
   }
-  &:hover,
-  &.current {
+  &:hover {
     > a {
       color: $link;
+    }
+  }
+  &.current {
+    > a {
+      filter: drop-shadow(0px 0px 10px #f5c25b);
+      // text-shadow: 0px 0px 24px #f5c25b;
     }
   }
 }
@@ -117,7 +127,7 @@
 
 .nav__icon,
 .login__icon {
-  display: flex;
+  display: block;
   margin-right: 0.4em;
 }
 

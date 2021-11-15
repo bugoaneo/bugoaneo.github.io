@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('../fonts/ProximaNova-Regular.eot');
+	src: local('../fonts/Proxima Nova Regular'), local('ProximaNova-Regular'),
+		url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('../fonts/ProximaNova-Bold.eot');
+	src: local('../fontsProxima Nova Bold'), local('ProximaNova-Bold'),
+		url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?p9r3sq');
+  src:  url('../fonts/icomoon.eot?p9r3sq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?p9r3sq') format('truetype'),
+    url('../fonts/icomoon.woff?p9r3sq') format('woff'),
+    url('../fonts/icomoon.svg?p9r3sq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shopping-cart:before {
+  content: "\e900";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-f:before {
+  content: "\ea90";
+}
+.icon-i:before {
+  content: "\ea92";
+}
+.icon-t:before {
+  content: "\ea96";
+}
+.icon-p:before {
+  content: "\ead1";
+}

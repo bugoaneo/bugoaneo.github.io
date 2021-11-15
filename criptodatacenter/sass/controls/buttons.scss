@@ -1,70 +1,101 @@
 .menu-trigger {
- display: none;
- position: relative;
- width: 50px;
- height: 40px;
- padding: 19px 14px;
- background-clip: content-box;
- background-color: currentColor;
- cursor: pointer;
- top: 0;
- transition: 0.5s ease-in-out;
- z-index: 11;
- &:before,
- &:after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1px);
-  left: 14px;
-  right: 14px;
-  height: 2px;
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  padding: 19px 14px;
+  background-clip: content-box;
   background-color: currentColor;
-  transform-origin: center center;
+  cursor: pointer;
+  top: 0;
   transition: 0.5s ease-in-out;
- }
- &:before {
-  transform: translateY(-5px);
- }
- &:after {
-  transform: translateY(5px);
- }
- &.open {
-  background-color: transparent;
+  z-index: 11;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: center center;
+    transition: 0.5s ease-in-out;
+  }
   &:before {
-   transform: translateY(0) rotate(45deg);
+    transform: translateY(-5px);
   }
   &:after {
-   transform: translateY(0) rotate(-45deg);
+    transform: translateY(5px);
   }
- }
- @include bp(1100px) {
-  display: block;
- }
+  &.open {
+    background-color: transparent;
+    &:before {
+      transform: translateY(0) rotate(45deg);
+    }
+    &:after {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+  @include bp(1100px) {
+    display: block;
+  }
 }
 .btn {
- padding: 0.6em 2.2em 0.7em 2.2em;
- border-radius: 4px;
- font-size: 1.25em;
- font-weight: 600;
- line-height: 1;
- color: #111;
- background: #ffe175;
- box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.13);
- &--clean {
-  background: transparent;
-  color: #fff;
-  border: 2px solid currentColor;
- }
+  display: inline-block;
+  padding: 0.6em 2.2em 0.7em 2.2em;
+  border-radius: 4px;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1;
+  color: #111;
+  background: #ffe175;
+  box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.13);
+  text-align: center;
+  &:hover {
+    background: #fff;
+  }
+  &--clean {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    &:hover {
+      color: #111;
+    }
+  }
 }
 
 .link {
- padding: 0.3em;
- text-decoration: underline;
- &--icon {
-  padding: 0 2.2em 0 0;
- }
+  padding: 0.3em;
+  text-decoration: underline;
+  &--icon {
+    padding: 0 2.2em 0 0;
+  }
 }
 .link__icon {
- width: 39px;
- margin-right: 0.5em;
+  width: 39px;
+  margin-right: 0.5em;
+}
+
+.close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  &:before,
+  &::after {
+    content: "";
+    @include center(y);
+    top: 50%;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+    background-color: #fff;
+    transform-origin: center;
+  }
+  &:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
 }
