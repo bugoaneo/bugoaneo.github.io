@@ -33,32 +33,32 @@ function toggleAccordion(e) {
  }
 }
 
-// function toggleOtherItems(accordionHeader) {
-//  Array.from(accordionHeaders).forEach(header => {
-//   if (header != accordionHeader) {
-//    header.parentNode.classList.remove('open')
-//   }
-//  });
-// }
+function toggleOtherItems(accordionHeader) {
+ Array.from(accordionHeaders).forEach(header => {
+  if (header != accordionHeader) {
+   header.parentNode.classList.remove('open')
+  }
+ });
+}
 
 
 /*height SVG */
-// const svgIcons = document.querySelectorAll('svg');
-// svgIcons.forEach(function (icon) {
-//  if (icon.hasAttribute('height')) {
-//   let h = icon.getAttribute('height') + "px";
-//   icon.setAttribute('style', 'height');
-//   icon.style.height = h;
-//  }
-// })
+const svgIcons = document.querySelectorAll('svg');
+svgIcons.forEach(function (icon) {
+ if (icon.hasAttribute('height')) {
+  let h = icon.getAttribute('height') + "px";
+  icon.setAttribute('style', 'height');
+  icon.style.height = h;
+ }
+})
 
 
 /*IE11 */
-const svgIcons = document.querySelectorAll('svg');
-for (i = 0; svgIcons.length > i; i++) {
- if (svgIcons[i].hasAttribute('height')) {
-  let h = svgIcons[i].getAttribute('height') + "px";
-  svgIcons[i].setAttribute('style', 'height');
-  svgIcons[i].style.height = h;
- }
-}
+// const svgIcons = document.querySelectorAll('svg');
+// for (i = 0; svgIcons.length > i; i++) {
+//  if (svgIcons[i].hasAttribute('height')) {
+//   let h = svgIcons[i].getAttribute('height') + "px";
+//   svgIcons[i].setAttribute('style', 'height');
+//   svgIcons[i].style.height = h;
+//  }
+// }

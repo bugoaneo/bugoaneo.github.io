@@ -1,5 +1,5 @@
 .section {
- padding: 2.6em 0;
+ padding: 2.5em 0;
 }
 
 .section__row {
@@ -11,7 +11,7 @@
  font-weight: 600;
  line-height: 1;
  + * {
-  margin-top: 2.2em;
+  margin-top: 0.5em;
  }
 }
 
@@ -108,6 +108,7 @@
 /*faq*/
 
 .faq__item {
+  flex: 1 1 auto;
  @include row(jfs);
  min-height: 160px;
  padding: 1.1em;
@@ -149,7 +150,7 @@
 
 .help__list {
  max-width: 1000px;
- margin: 2.2em auto 0 auto;
+ margin: 2em auto 0 auto;
 }
 
 .help__item {
@@ -172,7 +173,7 @@
 
 .help__panel {
  position: relative;
- padding: 1.3em 2.3em 1.3em 1.3em;
+ padding: 1.3em 2.3em 1.3em 1.5em;
  cursor: pointer;
  p {
   display: -webkit-box;
@@ -183,6 +184,7 @@
   margin-top: 0.8em;
   font-size: 0.86em;
   color: $text-light;
+  line-height: 1.1;
  }
  &:after {
   content: "";

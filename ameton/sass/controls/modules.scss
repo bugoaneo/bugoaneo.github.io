@@ -16,7 +16,7 @@
   transform-style: preserve-3d;
   touch-action: pan-Y;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 2.2em 0 1em 0;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -47,6 +47,7 @@
 
   -webkit-touch-callout: none;
   user-select: none;
+  pointer-events: none;
 }
 .glide__arrow {
   width: 3em;
