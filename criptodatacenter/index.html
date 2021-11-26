@@ -60,9 +60,6 @@
 </head>
 
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="0" height="0" style="width: 0;height: 0; visibility: hidden;position:absolute;">
-
-  </svg>
   <!-- [if lt IE 9]>
 		<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="http://browsehappy.com/">обновите</a>
 		<![endif] -->
@@ -146,7 +143,7 @@
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a href="mailto: sale@prominers.ru">
+                  <a href="mailto:sale@prominers.ru">
                     <span class="nav__icon">
                       <svg viewBox="0 0 23 16" width="17">
                         <use xlink:href="img/sprite.svg#icon-email">
@@ -188,7 +185,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="mailto: sale@prominers.ru">
+            <a href="mailto:sale@prominers.ru">
               <span class="nav__icon">
                 <svg viewBox="0 0 17 12" width="17">
                   <use xlink:href="img/sprite.svg#icon-email">
@@ -565,7 +562,6 @@
                   <h3 class="models__title">Модель#3</h3>
                   <p class="models__subtitle">Покупка мощностей Дата Центра</p>
                   <a href="#models3" class="models__link js-close">Подробнее</a>
-                  <!-- <button type="button" class="models__link js-close">Подробнее</button> -->
                 </header>
                 <div class="models__wrapper">
                   <header class="models__header-mobil">
@@ -766,7 +762,7 @@
 
               </li>
               <li>
-                <a href="mailto: sale@prominers.ru">
+                <a href="mailto:sale@prominers.ru">
                   <svg viewBox="0 0 23 16" width="17" class="contacts__icon">
                     <use xlink:href="img/sprite.svg#icon-email">
                     </use>
@@ -819,6 +815,7 @@
             </div>
           </div>
         </div>
+      </div>
     </section>
     <footer class="footer">
       <div class="container">
@@ -949,8 +946,8 @@
 
 
     /*models accordion*/
-    const modelsContainer = document.querySelector('.models__list')
-    const modelsItems = modelsContainer.querySelectorAll('.models__item')
+    const modelsContainer = document.querySelector('.models__list');
+    const modelsItems = modelsContainer.querySelectorAll('.models__item');
     modelsContainer.addEventListener('click', (e) => {
       if (e.target.classList.contains('js-close')) {
         const item = e.target.closest('.models__item')
@@ -968,13 +965,24 @@
         const topOffset = 60; // если не нужен отступ сверху
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
-
         window.scrollBy({
           top: offsetPosition,
           behavior: 'smooth'
         });
       });
     });
+
+
+
+
+    // let rollUps = document.querySelectorAll('.models__item');
+    // let rollupsPanel = document.querySelectorAll('.models__header');
+    // rollUps.forEach(function (item) {
+    //   item.addEventListener('click', function (e) {
+    //     this.classList.toggle('open');
+    //   })
+
+    // })
   </script>
 </body>
 
