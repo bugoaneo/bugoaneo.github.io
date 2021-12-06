@@ -6,13 +6,13 @@
 		overflow: hidden;
 		z-index: 1;
 		}
-		
-		.slide .text {
+
+		<!-- .slide .text {
 		opacity: 0;
 		animation: opacity 7s ease alternate infinite;
-		}
-		
-		.slide .text{
+		} -->
+
+		<!-- .slide .text{
 		animation-delay: -1s;
 		}
 		.slide2 .text{
@@ -23,24 +23,24 @@
 		}
 		.slide4 .text{
 		animation-delay: 6s;
-		}
+		} -->
 		.shadow {
 		position: relative;
 		animation: pulse 3s ease infinite;
 		}
-		
-		.slide:hover{
+
+		<!-- .slide:hover{
 		animation-play-state: paused;
 		opacity: 1;
-		}
-		.slide:hover .shadow{
+		} -->
+		<!-- .slide:hover .shadow{
 		animation-play-state: paused;
-		}
-		
-		.slide .circle:hover + .text{
+		} -->
+
+		<!-- .slide .circle:hover + .text{
 		opacity: 1 !important;
-		}
-		
+		} -->
+
 		@keyframes pulse {
 		0%, 100% {
 		r:20px;
@@ -49,15 +49,15 @@
 		r:15px;
 		}
 		}
-		
-		@keyframes opacity {
+
+		<!-- @keyframes opacity {
 		80% {
 		opacity: 0;
 		}
 		100%{
 		opacity: 1;
 		}
-		}
+		} -->
 	</style>
 	<script>
 	</script>

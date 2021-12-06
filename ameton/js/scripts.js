@@ -42,7 +42,7 @@ function toggleOtherItems(accordionHeader) {
 }
 
 
-/*height SVG */
+// /*height SVG */
 const svgIcons = document.querySelectorAll('svg');
 svgIcons.forEach(function (icon) {
  if (icon.hasAttribute('height')) {
@@ -52,8 +52,7 @@ svgIcons.forEach(function (icon) {
  }
 })
 
-
-/*IE11 */
+// /*IE11 */
 // const svgIcons = document.querySelectorAll('svg');
 // for (i = 0; svgIcons.length > i; i++) {
 //  if (svgIcons[i].hasAttribute('height')) {

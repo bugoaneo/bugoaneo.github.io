@@ -15,11 +15,13 @@ document.querySelectorAll('[data-title="scroll"]').forEach(link => {
       top: offsetPosition,
       behavior: 'smooth'
     });
+
     menuBTN.classList.remove('open');
     menu.classList.remove('open');
   });
-  // link.parent.classList.add('current');
 });
+
+
 
 menuBTN.addEventListener('click', function (e) {
   this.classList.toggle('open');

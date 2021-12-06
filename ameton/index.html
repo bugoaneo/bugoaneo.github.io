@@ -33,15 +33,13 @@
       }
     }
   </style>
+  <script type="text/javascript">
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+      document.write('<script src="js/svg.min.js"><\/script>');
+  </script>
 </head>
 
 <body>
-
-  <!--[if lt IE 9]>
-<p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
-http://browsehappy.com/">обновите</a>
-<![endif]-->
-
   <div class="wrapper">
     <section class="section hero">
       <div class="container">
@@ -238,8 +236,18 @@ http://browsehappy.com/">обновите</a>
     </section>
   </div>
   <script src="js/glide.min.js"></script>
-  <script src="js/svg.min.js"></script>
+  <!-- <script src="js/svg.min.js"></script> -->
   <script src="js/scripts.js"></script>
+  <!-- <script type="text/javascript">
+    const svgIcons = document.querySelectorAll('svg');
+    for (i = 0; svgIcons.length > i; i++) {
+      if (svgIcons[i].hasAttribute('height')) {
+        let h = svgIcons[i].getAttribute('height') + "px";
+        svgIcons[i].setAttribute('style', 'height');
+        svgIcons[i].style.height = h;
+      }
+    }
+  </script> -->
 </body>
 
 </html>

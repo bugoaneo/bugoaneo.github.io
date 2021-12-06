@@ -107,6 +107,123 @@
   }
 }
 
+/*datacenter*/
+.datacenter {
+  padding-bottom: 4em;
+  .container {
+    position: relative;
+  }
+}
+.datacenter__title {
+  position: absolute;
+  top: 2em;
+  left: 11%;
+  z-index: 5;
+  @include bp(900px) {
+    position: static;
+    text-align: center;
+  }
+}
+.datacenter__form {
+  max-width: 21em;
+  margin: 1em auto 0 auto;
+}
+
+.datacenter__slide {
+  display: flex;
+  flex-wrap: wrap;
+  @include bp(900px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.datacenter__slide-content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 27.6%;
+  background: rgba(76, 75, 80, 0.4);
+  @include bp(900px) {
+    flex: 1 1 100%;
+    min-height: 110px;
+    padding: 1em 0 3em 0;
+  }
+}
+
+.datacenter__caption {
+  max-width: 250px;
+  margin: auto;
+  @include bp(900px) {
+    max-width: 80%;
+    text-align: center;
+  }
+}
+
+.datacenter__slide-media {
+  position: relative;
+  // padding-bottom: 45%;
+  flex: 0 1 72.4%;
+  @include bp(900px) {
+    flex: 1 1 100%;
+    // padding-bottom: 0;
+  }
+}
+
+// .datacenter__slide-pic {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   @include bp(900px) {
+//     position: static;
+//   }
+// }
+
+.datacenter-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: #fff;
+    font-size: 22px;
+    @include bp(900px) {
+      top: auto;
+      bottom: 3.5em;
+      margin-top: auto;
+    }
+  }
+  @include bp(900px) {
+    top: auto;
+    bottom: 5em;
+  }
+}
+
+.swiper-pagination.datacenter-pagination {
+  width: 72.4%;
+  left: 27.6%;
+  bottom: 2em;
+  .swiper-pagination-bullet {
+    width: 1.16em;
+    height: 0.8em;
+    border: 1px solid #fff;
+    border-radius: 0;
+    opacity: 1;
+    background: transparent;
+    @include bp(800px) {
+      font-size: 12px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+  @include bp(900px) {
+    width: 100%;
+    left: auto;
+    bottom: 1.5em;
+  }
+}
+
 /*partners*/
 .partners {
   padding-bottom: 4em;
@@ -428,6 +545,12 @@
     margin-bottom: 1em;
     &:last-child {
       margin-bottom: 0;
+    }
+    a {
+      span {
+        vertical-align: baseline;
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -10,8 +10,8 @@
   <meta property="og:description" content="" />
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
   <meta name="theme-color" content="#343434">
   <title>
   </title>
@@ -42,6 +42,10 @@
       background: url(img/bg/contact-bg.jpg) top center/cover;
     }
 
+    .datacenter {
+      background: url(img/bg/slide-show-bg.png) bottom center/cover;
+    }
+
     @media (max-width:1050px) {
       .models {
         background:
@@ -56,7 +60,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -130,7 +133,7 @@
                   </a>
                 </li>
                 <li class="nav__item">
-                  <a href="">
+                  <a href="https://tlgg.ru/@alexx_nsk">
                     <span class="nav__icon">
                       <svg viewBox="0 0 19 16" width="17">
                         <use xlink:href="img/sprite.svg#icon-telegram">
@@ -138,7 +141,7 @@
                       </svg>
                     </span>
                     <span class="nav__mobil-text">
-                      <b>@DIENDND</b> НАПИСАТЬ В ТЕЛЕГРАМ
+                      <b>@alexx_nsk</b> Написать в телеграм
                     </span>
                   </a>
                 </li>
@@ -350,6 +353,106 @@
         </div>
       </div>
     </section>
+    <section class="section datacenter">
+      <div class="container">
+        <h2 class="datacenter__title section__title">О дата центре</h2>
+        <div class="swiper-container datacenter__slider-container">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide datacenter__slide">
+              <div class="datacenter__slide-content">
+                <h3 class="datacenter__caption">Закупаем топовое оборудование</h3>
+              </div>
+              <div class="datacenter__slide-media">
+                <picture class="datacenter__slide-pic">
+                  <source media="(max-width: 600px)" srcset="img/slider/slide1_s.jpg">
+                  <source media="(max-width: 1000px)" srcset="img/slider/slide1_m.jpg">
+                  <img src="img/slider/slide1.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide datacenter__slide">
+              <div class="datacenter__slide-content">
+                <h3 class="datacenter__caption">Работаем с 2016 года</h3>
+              </div>
+              <div class="datacenter__slide-media">
+                <picture class="datacenter__slide-pic">
+                  <source media="(max-width: 600px)" srcset="img/slider/slide2_s.jpg">
+                  <source media="(max-width: 1000px)" srcset="img/slider/slide2_m.jpg">
+                  <img src="img/slider/slide2.jpg" alt="Работаем с 2016 года">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide datacenter__slide">
+              <div class="datacenter__slide-content">
+                <h3 class="datacenter__caption">Ежедневная диагностика работы оборудования</h3>
+              </div>
+              <div class="datacenter__slide-media">
+                <picture class="datacenter__slide-pic">
+                  <source media="(max-width: 600px)" srcset="img/slider/slide3_s.jpg">
+                  <source media="(max-width: 1000px)" srcset="img/slider/slide3_m.jpg">
+                  <img src="img/slider/slide3.jpg" alt="Ежедневная диагностика работы оборудования">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide datacenter__slide">
+              <div class="datacenter__slide-content">
+                <h3 class="datacenter__caption">Система видеонаблюдения с биометрическим доспупом работает 24/7</h3>
+              </div>
+              <div class="datacenter__slide-media">
+                <picture class="datacenter__slide-pic">
+                  <source media="(max-width: 600px)" srcset="img/slider/slide4_s.jpg">
+                  <source media="(max-width: 1000px)" srcset="img/slider/slide4_m.jpg">
+                  <img src="img/slider/slide4.jpg" alt="Система видеонаблюдения с биометрическим доспупом работает 24/7">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide datacenter__slide">
+              <div class="datacenter__slide-content">
+                <h3 class="datacenter__caption">Мощная вентиляция и грамотная электрика для бесперебойной работы майнинг оборудования</h3>
+              </div>
+              <div class="datacenter__slide-media">
+                <picture class="datacenter__slide-pic">
+                  <source media="(max-width: 600px)" srcset="img/slider/slide5_s.jpg">
+                  <source media="(max-width: 1000px)" srcset="img/slider/slide5_m.jpg">
+                  <img src="img/slider/slide5.jpg" alt="Мощная вентиляция и грамотная электрика для бесперебойной работы майнинг оборудования">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="datacenter-nav">
+            <div class="swiper-button-prev datacenter-nav__prev"></div>
+            <div class="swiper-button-next datacenter-nav__next"></div>
+          </div>
+          <div class="swiper-pagination datacenter-pagination"></div>
+        </div>
+        <h2 class="section__title center">Забронируйте посещение дата центра</h2>
+        <p class="center">Заполните форму, менеджер перезвонит, чтобы подобрать удобную вам дату</p>
+        <div class="datacenter__form">
+          <form action="" method="POST" class="form" name="datacenter_form" id="datacenter_form">
+            <div class="form__row">
+              <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+            </div>
+            <div class="form__row">
+              <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+            </div>
+            <div class="form__row">
+              <button class="btn">Жду звонка</button>
+            </div>
+          </form>
+          <div class="answer">
+            <div class="form__row">
+              <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+              <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+            </div>
+            <div class="form__row">
+              <button class="btn">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section benefits">
       <div class="container">
         <div class="benefits__row">
@@ -483,11 +586,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn desk" data-model="1">Начать сотрудничество</button>
+                      <button type="button" class="btn desk js-model_popup" data-model="1">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
-                    <button type="button" class="btn mob" data-model="1">Начать сотрудничество</button>
+                    <button type="button" class="btn mob js-model_popup" data-model="1">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -539,11 +642,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn desk" data-model="2">Начать сотрудничество</button>
+                      <button type="button" class="btn desk js-model_popup" data-model="2">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
-                    <button type="button" class="btn mob" data-model="2">Начать сотрудничество</button>
+                    <button type="button" class="btn mob js-model_popup" data-model="2">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -596,11 +699,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn desk" data-model="3">Начать сотрудничество</button>
+                      <button type="button" class="btn desk js-model_popup" data-model="3">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
-                    <button type="button" class="btn mob" data-model="3">Начать сотрудничество</button>
+                    <button type="button" class="btn mob js-model_popup" data-model="3">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -658,11 +761,11 @@
                           <use xlink:href="img/sprite.svg#pdf">
                           </use>
                         </svg>Ознакомиться с договором</a>
-                      <button type="button" class="btn desk" data-model="4">Начать сотрудничество</button>
+                      <button type="button" class="btn desk js-model_popup" data-model="4">Начать сотрудничество</button>
                     </div>
                   </div>
                   <div class="models__footer">
-                    <button type="button" class="btn mob" data-model="4">Начать сотрудничество</button>
+                    <button type="button" class="btn mob js-model_popup" data-model="4">Начать сотрудничество</button>
                     <button type="button" class="link js-close">Свернуть</button>
                   </div>
                 </div>
@@ -683,14 +786,14 @@
               <p>Мы предлагаем конкурентноспособные процентные ставки на вывод любого количества криптовалюты с инвестиционного счёта.</p>
             </div>
             <div class="result__media">
-              <form action="" method="POST" class="form" name="" id="">
+              <form action="" method="POST" class="form" name="result_form" id="result_form">
                 <p class="form__caption">Наши специалисты готовы<br>
                   проконсультировать&nbsp;вас</p>
                 <div class="form__row">
-                  <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
+                  <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
                 </div>
                 <div class="form__row">
-                  <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+                  <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
                 </div>
                 <div class="form__row">
                   <button class="btn">Жду звонка</button>
@@ -753,52 +856,52 @@
             <ul class="contacts__list">
               <li>
                 <a href="tel:+78005006647">
-                  <svg viewBox="0 0 17 17" width="17" class="contacts__icon">
+                  <svg viewBox="0 0 17 17" width="17" height="17" class="contacts__icon">
                     <use xlink:href="img/sprite.svg#icon-tel">
                     </use>
                   </svg>
-                  8 (800) 500 66 47
+                  <span>8 (800) 500 66 47</span>
                 </a>
 
               </li>
               <li>
                 <a href="mailto:sale@prominers.ru">
-                  <svg viewBox="0 0 23 16" width="17" class="contacts__icon">
+                  <svg viewBox="0 0 23 16" width="17" height="17" class="contacts__icon">
                     <use xlink:href="img/sprite.svg#icon-email">
                     </use>
                   </svg>
-                  sale@prominers.ru
+                  <span>sale@prominers.ru</span>
                 </a>
               </li>
               <li>
-                <a href="https://api.whatsapp.com/send?phone=ХХХ">
-                  <svg viewBox="0 0 17 17" width="17" class="contacts__icon">
+                <a href="https://api.whatsapp.com/send?phone=79232347001">
+                  <svg viewBox="0 0 17 17" width="17" height="17" class="contacts__icon">
                     <use xlink:href="img/sprite.svg#icon-wtp">
                     </use>
                   </svg>
-                  Whatsapp: некий текст
+                  Whatsapp: <span>+79232347001</span>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <svg viewBox="0 0 19 16" width="17" class="contacts__icon">
+                <a href="https://tlgg.ru/@alexx_nsk">
+                  <svg viewBox="0 0 19 16" width="17" height="17" class="contacts__icon">
                     <use xlink:href="img/sprite.svg#icon-telegram">
                     </use>
                   </svg>
-                  Telegramm: некий текст
+                  Telegramm: <span>@alexx_nsk</span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="contacts__form">
-            <form action="" method="POST" class="form" name="" id="">
+            <form action="" method="POST" class="form" name="contacts_form" id="contacts_form">
               <p class="form__caption">Наши специалисты готовы<br>
                 проконсультировать&nbsp;вас</p>
               <div class="form__row">
-                <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
+                <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
               </div>
               <div class="form__row error">
-                <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+                <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
               </div>
               <div class="form__row">
                 <button class="btn">Жду звонка</button>
@@ -823,7 +926,7 @@
           <div class="footer__info">
             <div class="logo">
               <a href="/">
-                <svg viewBox="0 0 164 19" width="165">
+                <svg viewBox="0 0 164 19" width="165" height="19">
                   <use xlink:href="img/sprite.svg#logo">
                   </use>
                 </svg>
@@ -837,37 +940,37 @@
         </div>
       </div>
     </footer>
-    <div class="overlay" id="model-selection">
-      <div class="popup">
-        <div class="popup__close"></div>
-        <div class="popup__header">
-          <div class="popup__icon"><img src="img/popup.svg" alt=""></div>
-          <div class="popup__caption">
-            <div class="popup__title">Выбрана модель сотрудничества №<span>1</span></div>
-            <div class="popup__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</div>
-          </div>
+  </div>
+  <div class="overlay" id="model-selection">
+    <div class="popup">
+      <div class="popup__close"></div>
+      <div class="popup__header">
+        <div class="popup__icon"><img src="img/popup.svg" alt=""></div>
+        <div class="popup__caption">
+          <div class="popup__title">Выбрана модель сотрудничества №<span>1</span></div>
+          <div class="popup__subtitle">Подключение майнинг-оборудования на сумму ваших инвестиций</div>
         </div>
-        <div class="popup__body">
-          <form action="" method="POST" class="form" name="" id="">
-            <p class="form__caption">Заполните форму, наш менеджер свяжется с вами</p>
-            <div class="form__row">
-              <input type="text" name="" id="" required placeholder="Педставьтесь, пожалуйста">
-            </div>
-            <div class="form__row">
-              <input type="tel" name="" id="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
-            </div>
-            <div class="form__row">
-              <button class="btn">Жду звонка</button>
-            </div>
-          </form>
-          <div class="answer" style="display: none;">
-            <div class="form__row">
-              <p class="form__caption"><b>Ваш запрос отправлен</b></p>
-              <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
-            </div>
-            <div class="form__row">
-              <button class="btn">OK</button>
-            </div>
+      </div>
+      <div class="popup__body">
+        <form action="" method="POST" class="form" name="popup_form" id="popup_form">
+          <p class="form__caption">Заполните форму, наш менеджер свяжется с вами</p>
+          <div class="form__row">
+            <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+          </div>
+          <div class="form__row">
+            <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+          </div>
+          <div class="form__row">
+            <button class="btn">Жду звонка</button>
+          </div>
+        </form>
+        <div class="answer" style="display: none;">
+          <div class="form__row">
+            <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+            <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+          </div>
+          <div class="form__row">
+            <button class="btn">OK</button>
           </div>
         </div>
       </div>
@@ -945,6 +1048,25 @@
     });
 
 
+    var datacenter = new Swiper('.datacenter__slider-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 10000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+
     /*models accordion*/
     const modelsContainer = document.querySelector('.models__list');
     const modelsItems = modelsContainer.querySelectorAll('.models__item');
@@ -973,6 +1095,22 @@
     });
 
 
+    // let modelPopupBtn = document.querySelectorAll('.js-model_popup');
+    let popupOverlay = document.querySelector('.overlay');
+    let modelNum = document.querySelector('.popup__title span');
+    let popupModelDescr = document.querySelector('.popup__subtitle');
+
+
+    modelsItems.forEach(function (model) {
+      const modelPopupBtn = model.querySelector('.js-model_popup');
+      const modelDescr = model.querySelector('.models__header .models__subtitle');
+      modelPopupBtn.addEventListener('click', function (e) {
+        popupOverlay.classList.add('visible');
+        modelNum.innerText = this.getAttribute('data-model');
+        let modelSubtitle = modelDescr.innerText;
+        popupModelDescr.innerText = modelSubtitle;
+      })
+    })
 
 
     // let rollUps = document.querySelectorAll('.models__item');
