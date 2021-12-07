@@ -430,18 +430,18 @@
         <h2 class="section__title center">Забронируйте посещение дата центра</h2>
         <p class="center">Заполните форму, менеджер перезвонит, чтобы подобрать удобную вам дату</p>
         <div class="datacenter__form">
-          <form action="" method="POST" class="form" name="datacenter_form" id="datacenter_form">
+          <form action="js/telegram.php" method="POST" class="form" name="datacenter_form" id="datacenter_form">
             <div class="form__row">
-              <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+              <input type="text" name="name" required placeholder="Педставьтесь, пожалуйста">
             </div>
             <div class="form__row">
-              <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+              <input type="tel" name="phone" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
             </div>
             <div class="form__row">
               <button class="btn">Жду звонка</button>
             </div>
           </form>
-          <div class="answer">
+          <div class="answer" style="display: none;">
             <div class="form__row">
               <p class="form__caption"><b>Ваш запрос отправлен</b></p>
               <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
@@ -786,14 +786,14 @@
               <p>Мы предлагаем конкурентноспособные процентные ставки на вывод любого количества криптовалюты с инвестиционного счёта.</p>
             </div>
             <div class="result__media">
-              <form action="" method="POST" class="form" name="result_form" id="result_form">
+              <form action="js/telegram.php" method="POST" class="form" name="result_form" id="result_form">
                 <p class="form__caption">Наши специалисты готовы<br>
                   проконсультировать&nbsp;вас</p>
                 <div class="form__row">
-                  <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+                  <input type="text" name="name" required placeholder="Педставьтесь, пожалуйста">
                 </div>
                 <div class="form__row">
-                  <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+                  <input type="tel" name="phone" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
                 </div>
                 <div class="form__row">
                   <button class="btn">Жду звонка</button>
@@ -894,14 +894,14 @@
             </ul>
           </div>
           <div class="contacts__form">
-            <form action="" method="POST" class="form" name="contacts_form" id="contacts_form">
+            <form action="js/telegram.php" method="POST" class="form" name="contacts_form" id="contacts_form">
               <p class="form__caption">Наши специалисты готовы<br>
                 проконсультировать&nbsp;вас</p>
               <div class="form__row">
-                <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+                <input type="text" name="name" required placeholder="Педставьтесь, пожалуйста">
               </div>
               <div class="form__row error">
-                <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+                <input type="tel" name="phone" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
               </div>
               <div class="form__row">
                 <button class="btn">Жду звонка</button>
@@ -932,7 +932,7 @@
                 </svg>
               </a>
             </div>
-            <p>Инвестируем в блокчейн с 2010 года</p>
+            <p>Инвестируем в блокчейн с 2016 года</p>
           </div>
           <div class="footer__info footer__info">
             © ООО РуТехнолоджис 2021
@@ -952,13 +952,13 @@
         </div>
       </div>
       <div class="popup__body">
-        <form action="" method="POST" class="form" name="popup_form" id="popup_form">
+        <form action="js/telegram.php" method="POST" class="form" name="popup_form" id="popup_form">
           <p class="form__caption">Заполните форму, наш менеджер свяжется с вами</p>
           <div class="form__row">
-            <input type="text" name="" required placeholder="Педставьтесь, пожалуйста">
+            <input type="text" name="name" required placeholder="Педставьтесь, пожалуйста">
           </div>
           <div class="form__row">
-            <input type="tel" name="" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
+            <input type="tel" name="phone" required placeholder="Ваш телефон +7" pattern="\(\d{3}\) \d{3}\-\d{4}" title="Введите 10-значный номер">
           </div>
           <div class="form__row">
             <button class="btn">Жду звонка</button>
