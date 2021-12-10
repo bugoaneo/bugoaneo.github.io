@@ -1,0 +1,115 @@
+.menu-trigger {
+ display: none;
+ position: relative;
+ width: 50px;
+ height: 50px;
+ padding: 24px 14px;
+ background-clip: content-box;
+ background-color: var(--text);
+ cursor: pointer;
+ top: 0;
+ transition: 0.5s ease-in-out;
+ z-index: 11;
+ &:before,
+ &:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: var(--text);
+  transform-origin: center center;
+  transition: 0.5s ease-in-out;
+ }
+ &:before {
+  transform: translateY(-5px);
+ }
+ &:after {
+  transform: translateY(5px);
+ }
+ &.open {
+  background-color: transparent;
+  &:before {
+   transform: translateY(0) rotate(45deg);
+  }
+  &:after {
+   transform: translateY(0) rotate(-45deg);
+  }
+ }
+ @include bp(600px) {
+  display: block;
+  margin-left: auto;
+ }
+}
+
+.btn {
+ position: relative;
+ padding: 0.9em 4em 1.1em 2.2em;
+ border-radius: 2em;
+ background-color: #fff;
+ transition: 0.5s ease-in-out;
+ box-shadow: 0px 5px 15px rgba(26, 33, 47, 0.3);
+ &:after {
+  content: "";
+  @include center(y);
+  right: 0.3em;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 100%;
+  background: url(../img/pow_wt.svg) center/60% no-repeat, var(--main);
+  transition: 0.3s ease-in-out;
+ }
+ &:hover {
+  background-color: var(--main);
+  color: #fff;
+  box-shadow: 0px 5px 5px rgba(26, 33, 47, 0.1);
+  &:after {
+   background: url(../img/pow_or.svg) center/60% no-repeat, #fff;
+  }
+ }
+ &--revers {
+  background-color: var(--main);
+  color: #fff;
+  border: 1px solid transparent;
+  &:after {
+   background: url(../img/pow_or.svg) center/60% no-repeat, #fff;
+  }
+  &:hover {
+   background-color: #fff;
+   color: var(--text);
+   border: 1px solid var(--main);
+   &:after {
+    background: url(../img/pow_wt.svg) center/60% no-repeat, var(--main);
+   }
+  }
+ }
+}
+
+.close {
+ position: absolute;
+ top: max(1.5em, 1.5em);
+ right: max(1.5em, 1.5em);
+ width: 50px;
+ height: 50px;
+ &:before,
+ &:after {
+  content: "";
+  @include center();
+  width: 22px;
+  height: 3px;
+  border-radius: 3px;
+  background: #000;
+  transform-origin: center;
+ }
+ &:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+ }
+ &:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+ }
+ @include bp(600px) {
+  top: 0;
+  right: 0;
+ }
+}

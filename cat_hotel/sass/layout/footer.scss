@@ -1,0 +1,25 @@
+.footer {
+ @include bp(600px) {
+  .menu__list {
+   grid-row: 2;
+   grid-column: 1/-1;
+   a {
+    padding-left: 0;
+   }
+  }
+ }
+ .container--grid {
+  justify-content: space-between;
+ }
+ .container--menu {
+  padding: 12px 15px;
+  @include bp(600px) {
+   padding: 6px 15px;
+  }
+ }
+}
+.copy {
+ padding: 20px 0;
+ border-top: 1px solid var(--border);
+ color: #8f8f8f;
+}

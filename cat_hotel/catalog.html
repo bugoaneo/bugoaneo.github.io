@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#ffffff">
+
+  <title></title>
+  <link rel="preload" href="fonts/latoregular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/bvselect.css">
+  <link rel="stylesheet" href="css/datepicker.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container container--menu">
+        <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
+        <nav class="menu header__menu">
+          <ul class="menu__list">
+            <li><a href="#about">Почему мы?</a></li>
+            <li><a href="#rooms">Номера</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+          <div class="touch">
+            <p><a href="tel:+78003335599">8 (800)333-55-99</a></p>
+            <ul class="soc">
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </nav>
+        <button class="menu-trigger"></button>
+      </div>
+    </header>
+    <section class="section catalog">
+      <div class="container">
+        <div class="section__row">
+          <h2 class="section__title">Наши номера</h2>
+          <div class="catalog__sorting">
+            <select id="catalogFilter">
+              <option data-img="img/arr_up.svg" value="area_up" selected>По площади</option>
+              <option data-img="img/arr_dwn.svg" value="area_down">По площади</option>
+              <option data-img="img/arr_up.svg" value="price_up">По цене</option>
+              <option data-img="img/arr_dwn.svg" value="price_down">По цене</option>
+            </select>
+          </div>
+        </div>
+        <div class="catalog__wrapper">
+          <div class="catalog__filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis sed sit laboriosam quas laudantium et, error voluptate autem dolores.</div>
+          <div class="catalog__list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eos a odio ipsa aliquam eligendi officia error, quam cumque quidem repudiandae magni. Recusandae tempora consectetur dolorem? Explicabo, necessitatibus fugiat facilis dignissimos consequuntur consectetur suscipit itaque voluptates inventore omnis nihil ut deserunt at. Sit corporis magnam nisi minima quam sapiente necessitatibus! Vero quo quis repellendus repudiandae. Quisquam dignissimos quaerat labore eaque sapiente accusamus eligendi optio, deleniti non rerum sed, quae deserunt corrupti maiores, voluptatem soluta saepe dolorum quibusdam consequuntur officia exercitationem dicta. Sunt sapiente vitae exercitationem necessitatibus soluta et excepturi, fuga tenetur fugit quo qui explicabo autem consectetur reiciendis cum aliquid libero ex sit facilis voluptate? Iusto, libero ducimus. Ea neque labore a, eveniet nemo aut nisi suscipit repudiandae dignissimos quis!</div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__info">
+          <h2 class="section__title">Как нас найти</h2>
+          <div class="contact__box">
+            <h3 class="contact__title">Адрес</h3>
+            <div class="contact__text">Санкт-Петербург,<br>
+              ул Большая Конюшенная, д 19</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Режим работы</h3>
+            <div class="contact__text">Ежедневно, с 9:00 до 20:00</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Телефон</h3>
+            <div class="contact__text"><a href="tel:+8800335599">8 (800) 333-55-99</a></div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">E-mail</h3>
+            <div class="contact__text">info@cat-hotel.ru</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Социальные сети</h3>
+            <ul class="soc">
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact__map">
+          <div class="map" id="map"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container container--menu">
+      <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
+      <ul class="menu__list">
+        <li><a href="">Почему мы?</a></li>
+        <li><a href="">Номера</a></li>
+        <li><a href="">Отзывы</a></li>
+        <li><a href="">Контакты</a></li>
+      </ul>
+
+    </div>
+    <div class="copy">
+      <div class="container container--grid">
+        <p>2019 Все права защищены</p>
+        <p><a href="">Политика конфиденциальности</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay">
+    <div class="popup">
+      <button class="close"></button>
+      <div class="popup__body popup__body--action">
+        <div class="popup__header">Забронировать номер</div>
+        <form action="" method="POST" class="form">
+          <div class="form__row">
+            <input class="form__input" type="text" name="autor_name" id="autor_name" placeholder="Ваше имя" required="">
+            <label class="form__label" for="autor_name">Ваше имя</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="text" name="autor_name" id="pet_name" placeholder="Имя Питомца">
+            <label class="form__label" for="pet_name">Имя Питомца</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="tel" name="tel" id="tel" placeholder="Телефон" required="">
+            <label class="form__label" for="tel">Телефон</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="email" name="email" id="email" placeholder="E-mail">
+            <label class="form__label" for="email">E-mail</label>
+          </div>
+          <div class="form__row booking">
+            <div class="form__text">Даты заезда</div>
+            <div class="booking__row" id="booking_catalog">
+              <span>с</span>
+              <input class="form__input" type="text" name="start">
+              <span>по</span>
+              <input class="form__input" type="text" name="end">
+            </div>
+          </div>
+          <div class="form__row">
+            <button class="btn btn--revers">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+      <div class="popup__body popup__body--result hide-form">
+        <div class="popup__header">Спасибо за заявку!</div>
+        <div class="form__row">Мы свяжемся с вами в ближайшее время</div>
+        <div class="form__row">
+
+          <button class="btn btn--revers" type="button">Ок</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=39580c92-67d5-46bf-a874-d9c4638739ba" type="text/javascript"></script>
+  <script src="js/datepicker.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/bvselect.js"></script>
+  <script>
+    const elem2 = document.getElementById('booking_catalog');
+    const rangepickerCat = new DateRangePicker(elem2, {
+      format: 'dd.mm.yy',
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var demo1 = new BVSelect({
+        selector: "#catalogFilter",
+        width: "100%",
+        offset: false,
+        breakpoint: 450,
+      });
+    });
+
+  </script>
+</body>
+
+</html>
