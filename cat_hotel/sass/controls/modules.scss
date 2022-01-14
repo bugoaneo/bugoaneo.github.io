@@ -122,8 +122,6 @@
 /*/glide*/
 
 .icon {
- width: 24px;
- margin: auto;
  a,
  svg {
   display: block;
@@ -138,6 +136,10 @@
   display: flex;
   height: 100%;
  }
+ .icon {
+  width: 24px;
+  margin: auto;
+ }
 }
 
 /*overlay*/
@@ -146,13 +148,12 @@
  position: fixed;
  top: 0;
  left: 0;
- // display: flex;
  display: none;
  width: 100%;
  height: 100%;
  z-index: 20;
- background: rgba(255, 254, 253, 0.8);
- backdrop-filter: blur(8px);
+ @include blur;
+ overflow: auto;
  &.show {
   display: flex;
  }
@@ -200,11 +201,76 @@
  font-weight: 700;
 }
 
-/*bv*/
+/*equipment*/
 
-.bv_ul_inner {
+.equipment {
  li {
-  img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  &:last-child {
+   margin-bottom: 0;
+  }
+  .icon {
+   width: 18px;
+   margin-right: 0.85em;
+  }
+ }
+ &--catalog {
+  margin-left: 1em;
+  @include row(jsb, ast);
+  li {
+   position: relative;
+   margin-bottom: 0;
+   margin-right: 0.6em;
+   &:last-child {
+    margin-right: 0;
+    &:not(:only-child) {
+     span {
+      left: -100%;
+      &:before {
+       left: calc(100% - 2em);
+      }
+     }
+    }
+   }
+   span {
+    position: absolute;
+    bottom: 300%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 99px;
+    padding: 0.65em;
+    border: 1px solid var(--accent);
+    border-radius: 0.5em;
+    font-size: 12px;
+    background: #fffefd;
+    box-shadow: 0px 4px 12px rgba(173, 152, 143, 0.18);
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transition: bottom 0.3s ease-in, opacity 0.4s ease-in;
+    pointer-events: none;
+    &:before {
+     content: "";
+     position: absolute;
+     left: 50%;
+     bottom: -0.5em;
+     width: 0.9em;
+     height: 0.9em;
+     transform: translateX(-50%) rotate(45deg);
+     background: #fffefd;
+     z-index: -1;
+     border-right: 1px solid var(--accent);
+     border-bottom: 1px solid var(--accent);
+    }
+   }
+   &:hover {
+    span {
+     bottom: calc(100% + 1em);
+     opacity: 1;
+    }
+   }
   }
  }
 }

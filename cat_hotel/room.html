@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#ffffff">
+
+  <title></title>
+  <link rel="preload" href="fonts/latoregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/datepicker.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <style>
+    .rooms {
+      background-image: url(img/fish.svg);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container container--menu">
+        <div class="logo"><a href="/"><img src="img/logo.svg"></a></div>
+        <nav class="menu header__menu">
+          <ul class="menu__list">
+            <li><a href="./#about" data-title="scroll">Почему мы?</a></li>
+            <li><a href="./#rooms" data-title="scroll">Номера</a></li>
+            <li><a href="./#reviews" data-title="scroll">Отзывы</a></li>
+            <li><a href="./#contact" data-title="scroll">Контакты</a></li>
+          </ul>
+          <div class="touch">
+            <p><a href="tel:+78003335599">8 (800)333-55-99</a></p>
+            <ul class="soc">
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </nav>
+        <button class="menu-trigger"></button>
+      </div>
+    </header>
+    <section class="section apartment">
+      <div class="container">
+        <div class="apartment__row">
+          <div class="apartment__media">
+            <ul class="apartment__media-bullet">
+              <li><img src="img/catalog/sliderm1.jpg"></li>
+              <li><img src="img/catalog/sliderm2.jpg"></li>
+              <li><img src="img/catalog/sliderm1.jpg"></li>
+              <li><img src="img/catalog/sliderm3.jpg"></li>
+            </ul>
+            <div class="apartment__media-slides">
+              <div class="apartment__media-slide">
+                <img src="img/catalog/slider1.jpg">
+              </div>
+              <div class="apartment__media-slide">
+                <img src="img/catalog/slider2.jpg">
+              </div>
+              <div class="apartment__media-slide">
+                <img src="img/catalog/slider4.jpg">
+              </div>
+              <div class="apartment__media-slide">
+                <img src="img/catalog/slider3.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="apartment__info">
+            <h2 class="section__title">Супер-Люкс</h2>
+            <p>Размеры (ШхГхВ) - 125х125х180 см</p>
+            <p>Площадь - 1,56 м2</p>
+            <p>Оснащение номера</p>
+            <ul class="equipment">
+              <li data-equipment="lounger"><svg class="icon" viewBox="0 0 16 16">
+                  <use xlink:href="img/sprite.svg#lounger"></use>
+                </svg><span>Лежак</span></li>
+              <li data-equipment="house"><svg class="icon" viewBox="0 0 16 16">
+                  <use xlink:href="img/sprite.svg#house"></use>
+                </svg><span>Домик</span></li>
+              <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
+                  <use xlink:href="img/sprite.svg#clew"></use>
+                </svg><span>Когтеточка</span></li>
+            </ul>
+            <p>Цена за сутки: <span class="catalog__price">550₽</span></p>
+            <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section rooms" id="rooms">
+      <div class="container">
+        <h2 class="section__title">Другие номера</h2>
+        <div class="glide rooms__slider">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides rooms__list">
+              <li class="glide__slide rooms__item">
+                <div class="rooms__pic"><img src="img/catalog/slider1.jpg"></div>
+                <div class="rooms__descr">
+                  <h3 class="rooms__title">Эконом плюс</h3>
+                  <ul class="rooms__features">
+                    <li>Площадь - 0,90 м2</li>
+                    <li>Размеры (ШхГхВ) — 90х100х180 см</li>
+                    <li>Цена за сутки: <span>200₽</span></li>
+                  </ul>
+                  <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+                </div>
+              </li>
+              <li class="glide__slide rooms__item">
+                <div class="rooms__pic"><img src="img/catalog/slider2.jpg"></div>
+                <div class="rooms__descr">
+                  <h3 class="rooms__title">Комфорт</h3>
+                  <ul class="rooms__features">
+                    <li>Площадь - 1,13 м2</li>
+                    <li>Размеры (ШхГхВ) — 100х125х180 см</li>
+                    <li>Цена за сутки: <span>250₽</span></li>
+                    <li>Площадь - 1,13 м2</li>
+                    <li>Размеры (ШхГхВ) — 100х125х180 см</li>
+                    <li>Цена за сутки: <span>250₽</span></li>
+                  </ul>
+                  <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+                </div>
+              </li>
+              <li class="glide__slide rooms__item">
+                <div class="rooms__pic"><img src="img/catalog/slider3.jpg"></div>
+                <div class="rooms__descr">
+                  <h3 class="rooms__title">Сьют</h3>
+                  <ul class="rooms__features">
+                    <li>Площадь - 1,56 м2</li>
+                    <li>Размеры (ШхГхВ) — 125х125х180 см</li>
+                    <li>Цена за сутки: <span>350₽</span></li>
+                  </ul>
+                  <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__controls">
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button class="glide__bullet bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet bullet" data-glide-dir="=2"></button>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__info">
+          <h2 class="section__title">Как нас найти</h2>
+          <div class="contact__box">
+            <h3 class="contact__title">Адрес</h3>
+            <div class="contact__text">Санкт-Петербург,<br>
+              ул Большая Конюшенная, д 19</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Режим работы</h3>
+            <div class="contact__text">Ежедневно, с 9:00 до 20:00</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Телефон</h3>
+            <div class="contact__text"><a href="tel:+8800335599">8 (800) 333-55-99</a></div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">E-mail</h3>
+            <div class="contact__text">info@cat-hotel.ru</div>
+          </div>
+          <div class="contact__box">
+            <h3 class="contact__title">Социальные сети</h3>
+            <ul class="soc">
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href=""><svg class="icon" viewBox="0 0 22 22">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact__map">
+          <div class="map" id="map"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="container container--menu">
+      <div class="logo"><a href="/"><img src="img/logo.svg"></a></div>
+      <ul class="menu__list">
+        <li><a href="./#about" data-title="scroll">Почему мы?</a></li>
+        <li><a href="./#rooms" data-title="scroll">Номера</a></li>
+        <li><a href="./#reviews" data-title="scroll">Отзывы</a></li>
+        <li><a href="./#contact" data-title="scroll">Контакты</a></li>./
+      </ul>
+
+    </div>
+    <div class="copy">
+      <div class="container container--grid">
+        <p>2019 Все права защищены</p>
+        <p><a href="">Политика конфиденциальности</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay">
+    <div class="popup">
+      <button class="close"></button>
+      <div class="popup__body popup__body--action">
+        <div class="popup__header">Забронировать номер</div>
+        <form action="" method="POST" class="form">
+          <div class="form__row">
+            <input class="form__input" type="text" name="autor_name" id="autor_name" placeholder="Ваше имя" required="">
+            <label class="form__label" for="autor_name">Ваше имя</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="text" name="autor_name" id="pet_name" placeholder="Имя Питомца">
+            <label class="form__label" for="pet_name">Имя Питомца</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="tel" name="tel" id="tel" placeholder="Телефон" required="">
+            <label class="form__label" for="tel">Телефон</label>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="email" name="email" id="email" placeholder="E-mail">
+            <label class="form__label" for="email">E-mail</label>
+          </div>
+          <div class="form__row booking">
+            <div class="form__text">Даты заезда</div>
+            <div class="booking__row" id="booking">
+              <span>с</span>
+              <input class="form__input" type="text" name="start">
+              <span>по</span>
+              <input class="form__input" type="text" name="end">
+            </div>
+          </div>
+          <div class="form__row">
+            <button class="btn btn--revers">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+      <div class="popup__body popup__body--result hide-form">
+        <div class="popup__header">Спасибо за заявку!</div>
+        <div class="form__row">Мы свяжемся с вами в ближайшее время</div>
+        <div class="form__row">
+
+          <button class="btn btn--revers" type="button">Ок</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=39580c92-67d5-46bf-a874-d9c4638739ba" type="text/javascript"></script>
+  <script src="js/glide.min.js"></script>
+  <script src="js/datepicker.min.js"></script>
+  <script></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    var rooms = new Glide('.rooms__slider', {
+      perView: 1,
+      arrows: true,
+      gap: 20,
+      startAt: 0,
+    });
+
+
+    rooms.mount();
+
+    var reviews = new Glide('.reviews__slider', {
+      perView: 2.5,
+      arrows: true,
+      gap: 30,
+      startAt: 0,
+      breakpoints: {
+        800: {
+          perView: 1.5
+        },
+        600: {
+          perView: 1
+        },
+      }
+    });
+
+    reviews.mount();
+
+    const elem = document.getElementById('booking');
+    const rangepicker = new DateRangePicker(elem, {
+      format: 'dd.mm.yy',
+    });
+  </script>
+</body>
+
+</html>

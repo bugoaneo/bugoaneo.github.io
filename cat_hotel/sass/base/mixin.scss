@@ -66,6 +66,9 @@
   @if ($align == "ast") {
     align-items: flex-start;
   }
+  @if ($justufy == "jfe") {
+    justify-content: flex-end;
+  }
   @if ($justufy == "jc") {
     justify-content: center;
   }

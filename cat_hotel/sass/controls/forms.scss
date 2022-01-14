@@ -1,43 +1,117 @@
 .form__row {
- position: relative;
- margin-bottom: 20px;
- &:last-of-type {
-  margin-bottom: 0;
- }
+  position: relative;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .form__label {
- position: absolute;
- left: 0;
- top: -1em;
- display: flex;
- align-items: center;
- padding-left: 1.5em;
- line-height: 1;
- transition: 0.5s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: -1em;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+  line-height: 1;
+  transition: 0.5s ease-in-out;
 }
 label {
- display: block;
- text-align: initial;
+  display: block;
+  text-align: initial;
 }
 
 .form__input {
- font-size: 1em;
- padding: 1em 1.5em 1.1em 1.5em;
- border: 1px solid var(--border);
- border-radius: 2em;
- line-height: 1;
- &::placeholder {
-  color: transparent;
- }
- &:placeholder-shown + .form__label {
-  top: 0;
-  width: 100%;
-  height: 100%;
- }
+  font-size: 1em;
+  padding: 1em 1.5em 1.1em 1.5em;
+  border: 1px solid var(--border);
+  border-radius: 2em;
+  line-height: 1;
+  &::placeholder {
+    color: transparent;
+  }
+  &:placeholder-shown + .form__label {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .datepicker-input {
- text-align: center;
- color: darken(#d7d7d7, 30%);
+  text-align: center;
+  color: darken(#d7d7d7, 30%);
+}
+
+// catalog__form
+.catalog__form {
+  .btn {
+    width: 100%;
+    margin-top: 1.5em;
+  }
+}
+.catalog__form-group {
+  margin-bottom: 2em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.catalog__form-title {
+  margin-bottom: 1.1em;
+}
+
+.catalog__form-row {
+  @include row(jsb, as);
+}
+
+.catalog__fotm-cell {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  width: 45%;
+  padding: 0 0 0 0.5em;
+  border: 1px solid #e1e1e1;
+  font-size: 14px;
+  input {
+    padding: 0.25em 0.5em;
+    &::placeholder,
+    &::-moz-placeholder {
+      opacity: 0.5;
+    }
+    @include bp(780px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.catalog__form-label {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 1.5em;
+  &:before,
+  &:after {
+    content: "";
+    @include center(y);
+  }
+  &:before {
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+  }
+  &:after {
+    width: 10px;
+    height: 8px;
+    left: 5px;
+    background: transparent;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+input:checked + .catalog__form-label {
+  &:after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 8'%3E%3Cpath stroke='%23141312' stroke-linecap='round' stroke-linejoin='round' d='M1 3.25 4.462 7 10 1'/%3E%3C/svg%3E")
+      center center/contain no-repeat;
+  }
 }

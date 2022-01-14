@@ -80,8 +80,11 @@ ymaps.ready(function () {
 //popup
 let popupBTN = document.querySelectorAll('.js-popup');
 let popupOverlay = document.querySelector('.overlay');
-let closePopup = document.querySelector('.close');
+let closePopup = document.querySelectorAll('.close');
 let popupBody = document.querySelector('.popup');
+let filterBTN = document.querySelector('.catalog__filter-btn');
+let filterOverlay = document.querySelector('.catalog__overlay');
+
 popupBTN.forEach(function (ell) {
   ell.addEventListener('click', function (e) {
     e.preventDefault();
@@ -89,13 +92,28 @@ popupBTN.forEach(function (ell) {
   });
 });
 
-closePopup.addEventListener('click', function (e) {
-  e.preventDefault();
-  popupOverlay.classList.remove('show');
-});
+closePopup.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    popupOverlay.classList.remove('show');
+    filterOverlay.classList.remove('show');
+  });
+})
 
 popupOverlay.addEventListener('click', function (e) {
   if (e.target.closest('.popup') === null) {
     popupOverlay.classList.remove('show');
+  }
+});
+
+
+filterBTN.addEventListener('click', function (e) {
+  e.preventDefault();
+  filterOverlay.classList.add('show');
+});
+
+filterOverlay.addEventListener('click', function (e) {
+  if (e.target.closest('.catalog__filter') === null) {
+    filterOverlay.classList.remove('show');
   }
 });

@@ -84,6 +84,18 @@
    }
   }
  }
+ &--line,
+ &--fill {
+  padding: 0.8em 1.5em 1em 1.5em;
+  border: 1px solid var(--main);
+  box-shadow: none;
+  &:after {
+   display: none;
+  }
+ }
+ &--fill {
+  background: var(--main);
+ }
 }
 
 .close {

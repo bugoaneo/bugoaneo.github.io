@@ -36,7 +36,7 @@ img {
 .container {
  max-width: var(--container);
  margin: 0 auto;
- padding: 0 20px;
+ padding: 0 15px;
  &--grid {
   display: flex;
   flex-wrap: wrap;
@@ -64,5 +64,9 @@ img {
 
 .hide-form {
  transform: scale(0);
+ display: none;
+}
+
+.hidden {
  display: none;
 }

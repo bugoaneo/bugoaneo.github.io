@@ -13,7 +13,7 @@
 
   <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <meta name="theme-color" content="#ffffff">
+  <link name="theme-color" content="#ffffff">
 
   <title></title>
   <link rel="preload" href="fonts/latoregular.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,25 @@
   <link rel="stylesheet" href="css/bvselect.css">
   <link rel="stylesheet" href="css/datepicker.css">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .banner__wrapper {
+      background-image: url('img/pow_b.svg'), url('img/banner.jpg');
+    }
 
+
+    @media (max-width:780px) {
+      .banner__wrapper {
+        background-image: url('img/pow_b.svg'), url('img/banner-t.jpg');
+      }
+    }
+
+
+    @media (max-width:500px) {
+      .banner__wrapper {
+        background-image: url('img/pow_b.svg'), url('img/banner-m.jpg');
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,10 +50,10 @@
         <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
         <nav class="menu header__menu">
           <ul class="menu__list">
-            <li><a href="#about">Почему мы?</a></li>
-            <li><a href="#rooms">Номера</a></li>
-            <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="/#about">Почему мы?</a></li>
+            <li><a href="/">Номера</a></li>
+            <li><a href="/#reviews">Отзывы</a></li>
+            <li><a href="/#contact">Контакты</a></li>
           </ul>
           <div class="touch">
             <p><a href="tel:+78003335599">8 (800)333-55-99</a></p>
@@ -59,21 +77,189 @@
       <div class="container">
         <div class="section__row">
           <h2 class="section__title">Наши номера</h2>
-          <div class="catalog__sorting">
-            <select id="catalogFilter">
-              <option data-img="img/arr_up.svg" value="area_up" selected>По площади</option>
-              <option data-img="img/arr_dwn.svg" value="area_down">По площади</option>
-              <option data-img="img/arr_up.svg" value="price_up">По цене</option>
-              <option data-img="img/arr_dwn.svg" value="price_down">По цене</option>
-            </select>
+          <div class="catalog__filter-row">
+            <button class="catalog__filter-btn" type="button"><svg class="icon" viewBox="0 0 12 15" width="12">
+                <use xlink:href="img/sprite.svg#filter"></use>
+              </svg> Фильтр</button>
+            <div class="catalog__sorting">
+              <select id="catalogFilter">
+                <option data-img="img/arr_up.svg" value="area_up" selected>Больше по площади</option>
+                <option data-img="img/arr_dwn.svg" value="area_down">Меньше по площади</option>
+                <option data-img="img/arr_up.svg" value="price_up">Дороже по цене</option>
+                <option data-img="img/arr_dwn.svg" value="price_down">Дешевле по цене</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="catalog__wrapper">
-          <div class="catalog__filter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quis sed sit laboriosam quas laudantium et, error voluptate autem dolores.</div>
-          <div class="catalog__list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eos a odio ipsa aliquam eligendi officia error, quam cumque quidem repudiandae magni. Recusandae tempora consectetur dolorem? Explicabo, necessitatibus fugiat facilis dignissimos consequuntur consectetur suscipit itaque voluptates inventore omnis nihil ut deserunt at. Sit corporis magnam nisi minima quam sapiente necessitatibus! Vero quo quis repellendus repudiandae. Quisquam dignissimos quaerat labore eaque sapiente accusamus eligendi optio, deleniti non rerum sed, quae deserunt corrupti maiores, voluptatem soluta saepe dolorum quibusdam consequuntur officia exercitationem dicta. Sunt sapiente vitae exercitationem necessitatibus soluta et excepturi, fuga tenetur fugit quo qui explicabo autem consectetur reiciendis cum aliquid libero ex sit facilis voluptate? Iusto, libero ducimus. Ea neque labore a, eveniet nemo aut nisi suscipit repudiandae dignissimos quis!</div>
+          <div class="catalog__overlay">
+            <div class="catalog__filter">
+              <button type="button" class="close"></button>
+              <form action="" method="POST" class="catalog__form">
+                <fieldset class="catalog__form-group">
+                  <legend class="catalog__form-title">Цена за сутки,</legend>
+                  <div class="catalog__form-row">
+                    <div class="catalog__fotm-cell"><span>от</span><input type="text" name="minprice" id="" placeholder="100" inputmode="decimal"></div>
+                    <div class="catalog__fotm-cell"><span>до</span><input type="text" name="maxprice" id="" placeholder="10000" inputmode="decimal"></div>
+                  </div>
+                </fieldset>
+                <fieldset class="catalog__form-group">
+                  <legend class="catalog__form-title">Площадь</legend>
+                  <input type="checkbox" checked name="" class="hidden" id="area-1">
+                  <label for="area-1" class="catalog__form-label">0,63 м2</label>
+                  <input type="checkbox" checked name="" class="hidden" id="area-2">
+                  <label for="area-2" class="catalog__form-label">0,90 м2</label>
+                  <input type="checkbox" checked name="" class="hidden" id="area-3">
+                  <label for="area-3" class="catalog__form-label">1,13 м2</label>
+                  <input type="checkbox" checked name="" class="hidden" id="area-4">
+                  <label for="area-4" class="catalog__form-label">1,56 м2</label>
+                  <input type="checkbox" checked name="" class="hidden" id="area-5">
+                  <label for="area-5" class="catalog__form-label">2,56 м2</label>
+                  <input type="checkbox" checked name="" class="hidden" id="area-6">
+                  <label for="area-6" class="catalog__form-label">2,88 м2</label>
+                </fieldset>
+                <fieldset class="catalog__form-group">
+                  <legend class="catalog__form-title">Оснащение номера</legend>
+                  <input type="checkbox" checked name="" class="hidden" id="empty">
+                  <label for="empty" class="catalog__form-label">Пустой номер</label>
+                  <input type="checkbox" checked name="" class="hidden" id="lounger">
+                  <label for="lounger" class="catalog__form-label">Лежак</label>
+                  <input type="checkbox" checked name="" class="hidden" id="scratching">
+                  <label for="scratching" class="catalog__form-label">Когтеточка</label>
+                  <input type="checkbox" checked name="" class="hidden" id="clew">
+                  <label for="clew" class="catalog__form-label">Игровой-комплекс</label>
+                  <input type="checkbox" checked name="" class="hidden" id="house">
+                  <label for="house" class="catalog__form-label">Домик</label>
+                </fieldset>
+                <button type="reset" class="btn btn--line">Сбросить фильтр</button>
+                <button class="btn btn--fill">Подобрать</button>
+              </form>
+            </div>
+          </div>
+          <div class="catalog__list">
+            <div class="catalog__item">
+              <div class="catalog__pic"><img src="img/catalog/slider1.jpg" alt=""></div>
+              <div class="catalog__descr">
+                <h3 class="catalog__title">Эконом</h3>
+                <ul class="catalog__features">
+                  <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li>Площадь - 1,56 м2</li>
+                  <li class="catalog__row">Оснашение
+                    <ul class="equipment equipment--catalog">
+                      <li data-equipment="empty"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#empty"></use>
+                        </svg><span>Пустой</span></li>
+                    </ul>
+                  </li>
+                  <li>Цена за сутки: <span class="catalog__price">350₽</span></li>
+                </ul>
+                <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__pic"><img src="img/catalog/slider2.jpg" alt=""></div>
+              <div class="catalog__descr">
+                <h3 class="catalog__title">Комфорт</h3>
+                <ul class="catalog__features">
+                  <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li>Площадь - 1,56 м2</li>
+                  <li class="catalog__row">Оснашение
+                    <ul class="equipment equipment--catalog">
+                      <li data-equipment="lounger"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#lounger"></use>
+                        </svg><span>Лежак</span></li>
+                      <li data-equipment="house"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#house"></use>
+                        </svg><span>Домик</span></li>
+                      <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#clew"></use>
+                        </svg><span>Когтеточка</span></li>
+                    </ul>
+                  </li>
+                  <li>Цена за сутки: <span class="catalog__price">550₽</span></li>
+                </ul>
+                <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__pic"><img src="img/catalog/slider3.jpg" alt=""></div>
+              <div class="catalog__descr">
+                <h3 class="catalog__title">Супер Эконом Люкс Плюс</h3>
+                <ul class="catalog__features">
+                  <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li>Площадь - 1,56 м2</li>
+                  <li class="catalog__row">Оснашение
+                    <ul class="equipment equipment--catalog">
+                      <li data-equipment="lounger"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#lounger"></use>
+                        </svg><span>Лежак</span></li>
+                      <li data-equipment="house"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#house"></use>
+                        </svg><span>Домик</span></li>
+                      <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#clew"></use>
+                        </svg><span>Игровой комплекс</span></li>
+                      <li data-equipment="scratching"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#scratching"></use>
+                        </svg>
+                        <span>Когтеточка</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Цена за сутки: <span class="catalog__price">2350₽</span></li>
+                </ul>
+                <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="catalog__item">
+              <div class="catalog__pic"><img src="img/catalog/slider4.jpg" alt=""></div>
+              <div class="catalog__descr">
+                <h3 class="catalog__title">Сьют</h3>
+                <ul class="catalog__features">
+                  <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li>Площадь - 1,56 м2</li>
+                  <li class="catalog__row">Оснашение
+                    <ul class="equipment equipment--catalog">
+                      <li data-equipment="lounger"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#lounger"></use>
+                        </svg><span>Лежак</span></li>
+                      <li data-equipment="house"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#house"></use>
+                        </svg><span>Домик</span></li>
+                      <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#clew"></use>
+                        </svg><span>Игровой комплекс</span></li>
+                      <li data-equipment="scratching"><svg class="icon" viewBox="0 0 16 16">
+                          <use xlink:href="img/sprite.svg#scratching"></use>
+                        </svg>
+                        <span>Когтеточка</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Цена за сутки: <span class="catalog__price">2350₽</span></li>
+                </ul>
+                <button class="btn btn--revers js-popup" type="button">Забронировать</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="section baner">
+      <div class="container">
+        <div class="banner__wrapper">
+          <div class="baner__info">
+            <div class="baner__subtitle">Каждый 7-й день</div>
+            <h1 class="baner__title">бесплатно!</h1>
+            <div class="baner__text">Акция действует при размещении
+              в&nbsp;номерах “Люкс” и “Супер-Люкс”</div>
+            <button class="btn js-popup" type="button">Забронировать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="container">
         <div class="contact__info">
@@ -120,10 +306,10 @@
     <div class="container container--menu">
       <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
       <ul class="menu__list">
-        <li><a href="">Почему мы?</a></li>
-        <li><a href="">Номера</a></li>
-        <li><a href="">Отзывы</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="/#about">Почему мы?</a></li>
+        <li><a href="/">Номера</a></li>
+        <li><a href="/#reviews">Отзывы</a></li>
+        <li><a href="/#contact">Контакты</a></li>
       </ul>
 
     </div>
