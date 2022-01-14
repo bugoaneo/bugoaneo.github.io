@@ -506,27 +506,137 @@
 /*apartment*/
 .apartment__row {
  display: grid;
- grid-template-columns: minmax(min(200px, 100%), 600px) max-content;
+ grid-template-columns: minmax(min(220px, 100%), 600px) max-content;
  gap: 0 3vw;
+ @include bp(500px) {
+  grid-template-columns: auto;
+  gap: 1em 0;
+ }
 }
 
 .apartment__media {
- display: grid;
- grid-template-columns: 70px minmax(min(200px, 100%), 600px);
- justify-content: space-between;
+ @include row(jsb, as);
+ // display: grid;
+ // grid-template-columns: 70px minmax(min(0px, 100%), 600px);
+ // justify-content: space-between;
+ gap: 0 1.5em;
+
  max-width: 600px;
+ max-height: 400px;
+ @include bp(780px) {
+  flex-direction: column-reverse;
+  max-height: none;
+  width: 100%;
+  gap: 1.5em 0;
+ }
 }
+
+.apartment__media-nav {
+ flex: 0 0 70px;
+ height: 100%;
+ width: 100%;
+ overflow: hidden;
+ @include bp(780px) {
+  overflow: auto;
+ }
+}
+
+.apartment__media-bullet {
+ box-sizing: content-box;
+ padding-right: 20px;
+ width: calc(100% + 10px);
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 1em 0;
+ overflow: auto;
+ scrollbar-width: thin;
+ li {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in;
+  cursor: zoom-in;
+  img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+  &.active,
+  &:hover {
+   opacity: 1;
+  }
+ }
+ @include bp(780px) {
+  flex-direction: row;
+  padding-right: 0;
+  width: 100%;
+  gap: 0 0.5em;
+  li {
+   flex: 0 0 104px;
+   height: 100%;
+  }
+ }
+}
+
 .apartment__media-slides {
- display: grid;
- grid-template-areas: "stack";
+ position: relative;
+ border-radius: 8px;
+ flex: 0 1 calc(100% - 70px - 2em);
+ aspect-ratio: 4 / 3;
+ overflow: hidden;
+ // display: grid;
+ // grid-template-areas: "stack";
+ max-height: 400px;
+ @include bp(780px) {
+  flex: 1 1 auto;
+  width: 100%;
+ }
 }
 
 .apartment__media-slide {
- grid-area: stack;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: none;
+ &.active {
+  display: block;
+  animation: opacity 0.8s ease forwards;
+ }
  img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+ }
+}
+
+@keyframes opacity {
+ 0% {
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
+.apartment__info {
+ .section__title {
+  text-align: left;
+  margin-bottom: 0.7em;
+  line-height: 1;
+ }
+ p {
+  margin-bottom: 1em;
+  &:last-of-type {
+   margin-bottom: 0;
+  }
+ }
+ .equipment {
+  margin-bottom: 1.2em;
+ }
+ .btn {
+  margin-top: 1em;
  }
 }

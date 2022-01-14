@@ -63,14 +63,16 @@
       <div class="container">
         <div class="apartment__row">
           <div class="apartment__media">
-            <ul class="apartment__media-bullet">
-              <li><img src="img/catalog/sliderm1.jpg"></li>
-              <li><img src="img/catalog/sliderm2.jpg"></li>
-              <li><img src="img/catalog/sliderm1.jpg"></li>
-              <li><img src="img/catalog/sliderm3.jpg"></li>
-            </ul>
+            <div class="apartment__media-nav">
+              <ul class="apartment__media-bullet">
+                <li class="active"><img src="img/catalog/sliderm1.jpg"></li>
+                <li><img src="img/catalog/sliderm2.jpg"></li>
+                <li><img src="img/catalog/sliderm1.jpg"></li>
+                <li><img src="img/catalog/sliderm3.jpg"></li>
+              </ul>
+            </div>
             <div class="apartment__media-slides">
-              <div class="apartment__media-slide">
+              <div class="apartment__media-slide active">
                 <img src="img/catalog/slider1.jpg">
               </div>
               <div class="apartment__media-slide">
@@ -99,6 +101,9 @@
               <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
                   <use xlink:href="img/sprite.svg#clew"></use>
                 </svg><span>Когтеточка</span></li>
+              <li data-equipment="clew"><svg class="icon" viewBox="0 0 16 16">
+                  <use xlink:href="img/sprite.svg#clew"></use>
+                </svg><span>Игровой комплекс - 3 layer</span></li>
             </ul>
             <p>Цена за сутки: <span class="catalog__price">550₽</span></p>
             <button class="btn btn--revers js-popup" type="button">Забронировать</button>

@@ -117,3 +117,7 @@ filterOverlay.addEventListener('click', function (e) {
     filterOverlay.classList.remove('show');
   }
 });
+
+
+/*slider*/
+let sliders = document.querySelectorAll('.apartment__media-slide');
