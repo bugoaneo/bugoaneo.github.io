@@ -358,9 +358,9 @@ setInterval(function () {
 
 sketch.update = function () {
  // convert sketch.js to more usable number
- dt = sketch.dt / 16;
+ dt = sketch.dt / 9;
  // update the hue over time
- hue += 0.75;
+ hue += 0.7;
  var i = coins.length;
  while (i--) {
   // when updating, pass in the index of the coin
