@@ -1,0 +1,9 @@
+.popup {
+  max-width: 574px;
+  margin: auto;
+  border-radius: 8px;
+  background: #443c46;
+  -webkit-box-shadow: 12px 8px 16px rgba(0, 0, 0, 0.41);
+          box-shadow: 12px 8px 16px rgba(0, 0, 0, 0.41);
+}
+/*# sourceMappingURL=popup.css.map */

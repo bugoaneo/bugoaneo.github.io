@@ -1,0 +1,133 @@
+html {
+  font-family: $ff;
+  color: $text;
+  //  @include fFS(16px, $fz, 320px, 1900px, 20px);
+  // height: -webkit-fill-available;
+  font-size: 16px;
+  line-height: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  // min-height: -webkit-fill-available;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  // height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  // background-color: $bg;
+}
+
+.footer {
+  flex-grow: 0;
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  display: inline-block;
+}
+
+.container {
+  //  max-width: $container;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section {
+  position: relative;
+  padding-top: 5em;
+  background-color: $bg;
+  z-index: 2;
+}
+
+.section__subtitle {
+  @include fFS(24px, 36px, 320px, 1900px, 20px);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section__title {
+  @include fFS(24px, 62px, 320px, 1900px, 20px);
+  margin-bottom: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section__caption {
+  @include fFS(20px, 24px, 320px, 1900px, 20px);
+  margin-bottom: 1.1em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.section__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section__text {
+  text-align: center;
+}
+
+.col-50 {
+  flex: 0 1 48%;
+}
+
+.accent {
+  color: $accent;
+}
+
+.accent2 {
+  color: $accent2;
+}
+
+.accent3 {
+  color: $accent3;
+}
+
+p {
+  line-height: 1.45;
+
+  a {
+    font-weight: 700;
+  }
+}
+
+/**/
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}

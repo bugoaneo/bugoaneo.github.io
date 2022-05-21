@@ -1,0 +1,147 @@
+/*calculator*/
+
+.calculator__list {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 10px;
+}
+
+.calculator__num {
+ position: relative;
+ flex: 0 1 auto;
+ margin-left: 1em;
+ pointer-events: none;
+ &:before {
+  content: "";
+  @include center(x);
+  top: -27px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #fff;
+ }
+ &:first-child {
+  &::before {
+   left: -0.65em;
+  }
+ }
+ &:last-child {
+  &::before {
+   left: 0.95em;
+  }
+ }
+ &.active {
+  color: $accent;
+  &:before {
+   background-color: $accent;
+  }
+  &.current {
+   transform: scale(1.1);
+   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.76);
+  }
+ }
+}
+
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+.calculator__range {
+ position: relative;
+ z-index: 1;
+}
+
+/*progress support*/
+.calculator__range.slider-progress {
+ --range: calc(var(--max) - var(--min));
+ --ratio: calc((var(--value) - var(--min)) / var(--range));
+ --sx: calc(0.5 * 1em + var(--ratio) * (100% - 1em));
+}
+
+/*webkit*/
+
+.calculator__range::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ width: 1.5em;
+ height: 5em;
+ border-radius: 0;
+ background: url(../img/cursor.png) top center/18px auto no-repeat,
+  -webkit-radial-gradient(50% 83%, circle closest-side, $accent, $accent 9px, transparent 10px);
+ border: none;
+ -webkit-box-shadow: none;
+ box-shadow: none;
+ margin-top: -4em;
+ filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.76));
+}
+.calculator__range::-webkit-slider-runnable-track {
+ height: 5px;
+ border: none;
+ border-radius: 0;
+ background: #fff;
+ box-shadow: none;
+}
+
+.calculator__range.slider-progress::-webkit-slider-runnable-track {
+ background: linear-gradient($accent, $accent) 0 / var(--sx) 100% no-repeat, #fff;
+}
+
+/*mozilla*/
+.calculator__range::-moz-range-thumb {
+ width: 1.5em;
+ height: 5em;
+ border-radius: 0;
+ background: url(../img/cursor.png) top center/18px auto no-repeat;
+ border: none;
+ box-shadow: none;
+ filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.76));
+}
+
+.calculator__range::-moz-range-track {
+ height: 5px;
+ border: none;
+ border-radius: 0;
+ background: #fff;
+ box-shadow: none;
+}
+
+.calculator__range.slider-progress::-moz-range-track {
+ background: linear-gradient($accent, $accent) 0 / var(--sx) 100% no-repeat, #fff;
+}
+
+/*ms*/
+.calculator__range::-ms-fill-upper {
+ background: transparent;
+ border-color: transparent;
+}
+
+.calculator__range::-ms-fill-lower {
+ background: transparent;
+ border-color: transparent;
+}
+
+.calculator__range::-ms-thumb {
+ width: 1.5em;
+ height: 5em;
+ border-radius: 0;
+ background: url(../img/cursor.png) top center/18px auto no-repeat;
+ border: none;
+ box-shadow: none;
+ margin-top: -4em;
+ box-sizing: border-box;
+}
+
+.calculator__range::-ms-track {
+ height: 5px;
+ border-radius: 0;
+ background: #fff;
+ border: none;
+ box-shadow: none;
+ box-sizing: border-box;
+}
+
+.calculator__range.slider-progress::-ms-fill-lower {
+ height: 5px;
+ border-radius: 0px 0 0 0px;
+ margin: -undefined 0 -undefined -undefined;
+ background: $accent;
+ border: none;
+ border-right-width: 0;
+}

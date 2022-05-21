@@ -1,0 +1,106 @@
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+  @include bp(1080px) {
+    padding: 0.6em 0;
+  }
+}
+
+.header__container {
+  max-width: 1900px;
+  padding: 0 20px;
+  margin: 0 auto;
+  @include row(jsb, ac);
+  @include bp(1080px) {
+    flex-direction: row-reverse;
+  }
+  .btn.desc {
+    @include bp(400px) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  flex: 0 1 34px;
+}
+
+.nav {
+  flex: 0 1 980px;
+  @include bp(1300px) {
+    flex: 1 1 auto;
+    padding: 0 10px;
+  }
+  @include bp(1080px) {
+    position: absolute;
+    transform: translateX(-100%);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 4em 0 0 0;
+    background-color: rgba(52, 52, 52, 0.8);
+    backdrop-filter: blur(21px);
+    transition: transform 0.5s ease-in;
+    will-change: transform;
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.nav__list {
+  @include row(jsb);
+  width: 100%;
+  @include bp(1080px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    // height: 100%;
+  }
+}
+
+.nav__item {
+  flex: 1 1 auto;
+  transition: all 0.3s ease-in-out;
+  @include bp(1080px) {
+    flex: 0 1 auto;
+  }
+  &.mobil {
+    display: none;
+    @include bp(400px) {
+      display: flex;
+      button {
+        padding: 0.8em;
+        .icon {
+          width: 34px;
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+  &.active,
+  &:hover {
+    background-color: $accent3;
+    a {
+      color: #111;
+    }
+  }
+  a {
+    display: block;
+    padding: 1.4em 0.5em;
+    color: rgba(255, 255, 255, 0.61);
+    text-align: center;
+    @include bp(1080px) {
+      text-align: initial;
+      padding: 1.4em 0.8em;
+    }
+  }
+}
