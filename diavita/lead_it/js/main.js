@@ -1,4 +1,0 @@
-$(document).ready(function(){$('a[data-target^="anchor"]').bind("click.smoothscroll",function(){var e=$(this).attr("href"),o=$(e).offset().top-0
-return $("body, html").animate({scrollTop:o},700),!1})
-new Swiper(".swiper-container",{slidesPerView:"auto",spaceBetween:15,setWrapperSize:!0,grabCursor:!0,navigation:{nextEl:".counter-next"}}),new Swiper(".swiper-container3",{slidesPerView:"auto",spaceBetween:0,grabCursor:!0,navigation:{nextEl:".counter-next"}}),new Swiper(".swiper-container2",{slidesPerView:1,loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}})
-$(function(){$("#popup-1").VideoPopUp({opener:"open-popup-1",idvideo:"v1"}),$("#popup-2").VideoPopUp({opener:"open-popup-2",idvideo:"v2"}),$("#popup-3").VideoPopUp({opener:"open-popup-3",idvideo:"v3"})})})
