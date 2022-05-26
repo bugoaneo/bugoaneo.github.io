@@ -1,0 +1,131 @@
+.menu-trigger {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  padding: 19px 14px;
+  background-clip: content-box;
+  background-color: currentColor;
+  cursor: pointer;
+  top: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 11;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background-color: currentColor;
+    transform-origin: center center;
+    transition: 0.5s ease-in-out;
+  }
+  &:before {
+    transform: translateY(-5px);
+  }
+  &:after {
+    transform: translateY(5px);
+  }
+  &.open {
+    background-color: transparent;
+    &:before {
+      transform: translateY(0) rotate(45deg);
+    }
+    &:after {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+  @include bp(1080px) {
+    display: block;
+  }
+}
+
+.close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  &:before,
+  &:after {
+    content: "";
+    @include center(y);
+    top: 50%;
+    left: 15px;
+    right: 15px;
+    height: 3px;
+    background-color: rgba(#fff, 0.5);
+    transform-origin: center;
+    transition: background-color 0.3s ease-in;
+  }
+  &:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  &:hover {
+    &:before,
+    &:after {
+      background-color: rgba(#fff, 1);
+    }
+  }
+}
+
+.btn {
+  padding: 0.7em 1em 0.85em 1em;
+  border-radius: 4px;
+  font-size: 1.25em;
+  background-color: $accent;
+  box-shadow: 0px 0px 2.2em #00c25c;
+  text-align: center;
+  font-weight: 400;
+  &:hover {
+    background-color: #15d474;
+    box-shadow: none;
+  }
+
+  &--light {
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0px 0px 0.5em $accent3;
+    &:hover {
+      background-color: #ece3f8;
+      box-shadow: none;
+    }
+  }
+
+  &--text {
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0px 0px 0.8em rgba(255, 255, 255, 0.47);
+    &:hover {
+      background-color: #ece3f8;
+      box-shadow: none;
+    }
+  }
+
+  &--small {
+    font-size: 16px;
+    padding: 0.4em 1em 0.45em 1em;
+  }
+}
+.reasons__prompt {
+  padding: 2px 3px 4px 3px;
+  vertical-align: baseline;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  line-height: 1;
+  font-weight: 400;
+  &:hover {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #ffffff;
+  }
+  &.active {
+    color: $accent3;
+    background: rgba(146, 59, 255, 0.25);
+    border: 1px solid $accent3;
+  }
+}

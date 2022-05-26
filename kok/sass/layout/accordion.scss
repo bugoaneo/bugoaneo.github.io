@@ -1,0 +1,163 @@
+.install__subtitle {
+ margin-bottom: 1em;
+}
+
+.install__list {
+ counter-reset: num 0;
+ .plank {
+  padding: 2em;
+  + .order {
+   margin-top: 2em;
+  }
+  p + p {
+   margin-top: 0.5em;
+  }
+ }
+ .order + .plank {
+  margin-top: 2em;
+ }
+}
+
+.install__item {
+ &:first-child {
+  .install__title {
+   border-radius: 0.5em 0.5em 0 0;
+  }
+ }
+ &:last-child {
+  .install__title {
+   border-radius: 0 0 0.5em 0.5em;
+  }
+ }
+ &.open {
+  .install__title {
+   background: #60309d;
+   &:before {
+    color: rgba(255, 255, 255, 0.48);
+   }
+   &:after {
+    transform: translateY(-50%) scaleY(-1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 21 11'%3E%3Cpath stroke='%23fff'  stroke-width='2' d='M19.58 1.553 10.27 9.36.957 1.553'/%3E%3C/svg%3E");
+   }
+  }
+  .install__body {
+   max-height: 1000px;
+   opacity: 1;
+   @include bp(700px) {
+    max-height: 100vh;
+    overflow: auto;
+   }
+  }
+  &:last-child {
+   .install__title {
+    border-radius: 0;
+   }
+   .install__body {
+    border-radius: 0 0 0.5em 0.5em;
+   }
+  }
+ }
+}
+
+.install__title {
+ position: relative;
+ display: flex;
+ align-items: center;
+ padding: 0.6em 1.5em 0.6em 2.2em;
+ background: $accordion;
+ transition: background 0.3s ease-in-out;
+ &:before {
+  content: counter(num);
+  counter-increment: num;
+  color: rgba(191, 191, 191, 0.27);
+  line-height: 1;
+  font-size: 3em;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+ }
+ &:after {
+  content: "";
+  @include center(y);
+  right: 3em;
+  width: 19px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 21 11'%3E%3Cpath stroke='%23fff' stroke-opacity='.47' stroke-width='2' d='M19.58 1.553 10.27 9.36.957 1.553'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-position: center center;
+  transition: transform 0.3s ease-in-out;
+  @include bp(800px) {
+   right: 1.5em;
+  }
+  @include bp(500px) {
+   right: 1em;
+  }
+ }
+
+ @include bp(800px) {
+  padding: 0.6em 2em 0.6em 1em;
+ }
+}
+.install__title-content {
+ flex: 0 1 800px;
+ margin: 0 auto;
+ font-size: 18px;
+ @include bp(800px) {
+  padding-left: 10px;
+ }
+}
+
+.install__body {
+ max-height: 0;
+ overflow: hidden;
+ // visibility: collapse;
+ opacity: 0;
+ // display: none;
+ background: rgba(150, 122, 187, 0.38);
+ backdrop-filter: blur(21px);
+ will-change: max-height;
+ transition: max-height 0.3s ease-out;
+ scrollbar-width: thin;
+ scrollbar-color: $accordion #ddd;
+ -webkit-transition: 0.3s ease-in-out;
+}
+
+.install__content {
+ max-width: 800px;
+ padding: 2em 10px 3em 10px;
+ margin: 0 auto;
+ p,
+ li {
+  line-height: 1.4;
+ }
+}
+
+.plank.install__plank {
+ background: rgba(255, 255, 255, 0.2);
+ margin: 0;
+}
+
+.install__upload {
+ padding: 1.5em 10px;
+ border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+ .icon {
+  width: 30px;
+  margin-right: 0.5em;
+ }
+ .btn {
+  margin-left: 0.5em;
+  @include bp(600px) {
+   display: block;
+   padding: 1.5em;
+   margin-left: 0;
+   margin-top: 0.8em;
+   font-size: 14px;
+  }
+ }
+ &:first-of-type {
+  margin-top: 1.5em;
+ }
+ &:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+ }
+}

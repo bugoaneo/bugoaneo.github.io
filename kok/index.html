@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#ffffff">
+  <title></title>
+  <link rel="preload" href="fonts/pt-sans-regular.woff2 " as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .referral {
+      background: linear-gradient(180deg, #110016 0%, rgba(17, 0, 22, 0.46) 10.53%, rgba(17, 0, 22, 0.21) 24.8%, rgba(18, 1, 22, 0) 100%), url(img/bg/muney.jpg) center center;
+    }
+
+    .install {
+      background: url(img/bg/install_t.jpg) top center/100% auto no-repeat, url(img/bg/install_b.jpg) bottom center/100% auto no-repeat, #2A0A33;
+    }
+
+    .contacts {
+      background: url(img/bg/contact.jpg) top center/cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+   <p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="
+http: //browsehappy.com/">обновите</a>
+  < ![endif]-->
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="logo">
+          <svg viewBox="0 0 34 35" width="33">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#features" data-title="scroll">О площадке KOK Play</a>
+            </li>
+            <li class="nav__item">
+              <a href="#referral" data-title="scroll">Реферальная программа</a>
+            </li>
+            <li class="nav__item">
+              <a href="#install" data-title="scroll">Как поставить Приложение</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" data-title="scroll">Контакты</a>
+            </li>
+            <li class="nav__item mobil">
+              <button class="js-popup" type="button">
+                <svg viewBox="0 0 36 39" width="34" class="icon">
+                  <use xlink:href="img/sprite.svg#logo-buble"></use>
+                </svg>Бесплатная консультация</button>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn btn--light btn--small desc js-popup" type="button">Бесплатная консультация</button>
+        <button class="menu-trigger" type="button"></button>
+      </div>
+    </header>
+    <!-- style="background: url(img/bg/hero.jpg) top center/ cover;" -->
+    <section class="hero" id="hero">
+      <div class="profit">
+        $<span>0</span>
+      </div>
+      <div class="hero__wrapper">
+        <h2 class="hero__title">Ваши доходы</h2>
+        <h1 class="hero__subtitle">Безграничны!</h1>
+        <p class="hero__text">Увеличьте Ваш доход уже в&nbsp;первый месяц с&nbsp;приложением КОК Play</p>
+        <a href="#install" data-title="scroll" class="btn">Поставить приложение</a>
+      </div>
+    </section>
+
+    <section class="section reasons" id="reasons">
+      <div class="container">
+        <h3 class="section__subtitle">Надоело жить</h3>
+        <h3 class="section__title accent2">От зарплаты до зарплаты?</h3>
+        <p class="section__text">Начните зарабатывать в КОК Play и Ваша жизнь изменится к лучшему:</p>
+        <div class="reasons__row">
+          <div class="reasons__text">
+            <p><button type="button" href="#prompt_1" class="reasons__prompt">Токен</button> KOK Play показывает <strong>стабильный рост</strong></p>
+            <p><button type="button" href="#prompt_2" class="reasons__prompt">Стейкинг</button> в KOK Play - это как вклад в банке, но прибыль от стейкинга <strong>выше</strong></p>
+            <p>Прибыль от стейкинга начисляется на Ваш баланс <strong>каждый день</strong> - снимайте когда хотите</p>
+            <p><strong>Нет ограничений</strong> по % заработка в год.
+              Всё зависит от количества привлечённых Вами <button type="button" href="#prompt_3" class="reasons__prompt">рефералов</button></p>
+          </div>
+          <div class="reasons__pic">
+            <img class="phone" src="img/content/reasons_no_galo.png" alt="Телефон с монетками">
+            <img class="coins" src="img/content/reasons_coins.png" alt="Монеты">
+          </div>
+          <!-- prompts -->
+          <div class="overlay prompt__overlay" id="prompt_1">
+            <div class="prompt">
+              <button class="close"></button>
+              <div class="prompt__body">
+                <h3 class="prompt__title">Токен</h3>
+                <p>это способ пассивного заработка, при котором пользователи хранят монеты на алгоритме Proof of Stake (PoS) и обеспечивают работоспособность блокчейна.</p>
+              </div>
+            </div>
+          </div>
+          <div class="overlay prompt__overlay" id="prompt_2">
+            <div class="prompt">
+              <button class="close"></button>
+              <div class="prompt__body">
+                <h3 class="prompt__title">Стейкинг</h3>
+                <p>это способ пассивного заработка, при котором пользователи хранят монеты на алгоритме Proof of Stake (PoS) и обеспечивают работоспособность блокчейна.</p>
+              </div>
+            </div>
+          </div>
+          <div class="overlay prompt__overlay" id="prompt_3">
+            <div class="prompt">
+              <button class="close"></button>
+              <div class="prompt__body">
+                <h3 class="prompt__title">Реферал</h3>
+                <p>это способ пассивного заработка, при котором пользователи хранят монеты на алгоритме Proof of Stake (PoS) и обеспечивают работоспособность блокчейна.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="plank reasons__plank">
+          <p class="reasons__plank-text">Вы будете зарабатывать <span>больше</span> Жмите Начать, чтобы узнать как
+          </p>
+          <a href="#install" data-title="scroll" class="btn btn--light">Начать</a>
+          <svg viewBox="0 0 42 64" width="40" class="reasons__plank-icon">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <h3 class="section__subtitle">Возможности</h3>
+        <h3 class="section__title accent3">Приложения kok play</h3>
+        <p class="section__text">KOK PLAY - блокчейн-платформа для развлекательного контента нового поколения.</p>
+        <p class="section__text">В приложении Кок Play Вы сможете:</p>
+
+        <div class="glide features__slider">
+          <div class="glide__track features__track" data-glide-el="track">
+            <div class="glide__slides features__list">
+              <div class="glide__slide features__item">
+                <div class="features__text">
+                  <h3 class="features__title">Зарабатывать на&nbsp;стейкинге токена KOK&nbsp;Play</h3>
+                </div>
+                <div class="features__pic">
+                  <img src="img/slider/s1_1.png" alt="Рука с телефоном и приложением KOK">
+                  <img class="coins coins--1" src="img/slider/s1_2.png" alt="Монетки">
+                </div>
+              </div>
+              <div class="glide__slide features__item">
+                <div class="features__text">
+                  <h3 class="features__title">Получить выгодную реферальную
+                    программу</h3>
+                </div>
+                <div class="features__pic">
+                  <img src="img/slider/s2_1.png" alt="Руки в приветственном хлопке и смайлик со знаками доллара, плюшка и баксы">
+                  <img class="coins coins--2" src="img/slider/s2_2.png" alt="Монетки">
+                </div>
+              </div>
+              <div class="glide__slide features__item">
+                <div class="features__text">
+                  <h3 class="features__title">Получать токены KOK&nbsp;Play, играя в игры*</h3>
+                  <p>*Функция вскоре станет доступной в России</p>
+                </div>
+                <div class="features__pic">
+                  <img src="img/slider/s3_1.png" alt="Рука, держащая телефон и героиня RPG игры на заднем плане">
+                  <img class="coins coins--3" src="img/slider/s3_2.png" alt="Монетки">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="glide__arrows features__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- style="background: url(img/bg/reasons.png) top center/cover;" -->
+    <section class="section how-it-work" id="how-it-work">
+      <div class="container">
+        <h3 class="section__subtitle">Как</h3>
+        <h3 class="section__title accent3">это работает</h3>
+        <div class="how-it-work__row">
+          <div class="how-it-work__pic">
+            <img class="phone" src="img/content/phone.gif" alt="Телефонная трубка со статистикой на экране">
+            <img class="coins" src="img/content/coins_how-it-work.png" alt="Монетки">
+            <img class="gear" src="img/content/gear.png" alt="Шестеренка">
+          </div>
+          <div class="how-it-work__text">
+            <p>Чтобы начать стейкинг КОК вам нужно зарегистрироваться на криптовалютной бирже и перевести криптовалюту в систему КОК Play. Допустим вы делаете депозит в 300$. Нажимаете на шестеренку <svg viewBox="0 0 512 512" width="16" class="text-icon">
+                <use xlink:href="img/sprite.svg#gear"></use>
+              </svg> и на ваш депозит начинают ежедневно начисляться проценты. Далее проценты вы можете добавлять в тело стейкинга либо выводить деньги на банковскую карту.</p>
+            <div class="plank how-it-work__plank">
+              <p>Всё просто:</p>
+              <ul class="steps">
+                <li>Закинул</li>
+                <li>Приумножил</li>
+                <li>Вывел</li>
+              </ul>
+            </div>
+            <p>Чтобы увеличить доход с монеты в разы, вы можете присоединиться к реферальной программе. О ней мы расскажем в следующем блоке.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section referral" id="referral">
+      <div class="container">
+        <h3 class="section__subtitle">Что такое</h3>
+        <h3 class="section__title accent">Реферальная программа</h3>
+        <p>Система генерирует реферальную ссылку, которой вы делитесь с друзьями и знакомыми. Ваша Реферальная ссылка дает вам 100% дохода всех людей, кто присоединился через нее. И до 50% дохода тех, кто присоединится по реферальным ссылкам ваших людей.</p>
+        <div class="plank referral__plank">
+          <p>Вам ничего не придётся делать - деньги будут умножаться сами, в геометрической прогрессии</p>
+        </div>
+        <h4 class="section__caption accent">5 причин заработать в реферальной программе KOK Play:</h4>
+        <ol class="number referral__list">
+          <li>
+            <h3 class="referral__title">Токен KOK Play показывает стабильный динамичный рост.</h3>
+            <p>За 25 месяцев курс поднялся на 4415%. Что показало возможность хранения добытых монет в долгосрочный период от 6-12 месяцев для увеличения Вашей прибыли.</p>
+            <p><svg viewBox="0 0 32 34" width="32" class="icon">
+                <use xlink:href="img/sprite.svg#statistic"></use>
+              </svg> Статистика токена на <svg viewBox="0 0 150 21" width="150" class="logo">
+                <use xlink:href="img/sprite.svg#coinmarket"></use>
+              </svg> <a href="https://coinmarketcap.com/currencies/keystone-of-opportunity-knowledge/" target="_blank" class="btn btn--text btn--small">Смотреть</a></p>
+          </li>
+          <li>
+            <h3 class="referral__title">Ваш доход не ограничен, потому что Вы можете пригласить сколько угодно людей по реферальной ссылке.</h3>
+            <p><svg viewBox="0 0 37 34" width="39" class="icon">
+                <use xlink:href="img/sprite.svg#install"></use>
+              </svg> Установите приложение и начните богатеть уже сегодня <svg viewBox="0 0 20 16" width="20" class="icon">
+                <use xlink:href="img/sprite.svg#arrow-small"></use>
+              </svg> <a href="#install" data-title="scroll" class="btn btn--text btn--small">Установить</a></p>
+          </li>
+          <li>
+            <h3 class="referral__title">Высокая доходность от стейкинга Вашими рефералами или бизнес партнёрами: Вам начисляется 100% от дохода ваших рефералов 1-й линии в токенах KOK Play. Всего с 1-й линии ваш доход от стейкинга увеличивается в 2 раза.</h3>
+            <p>Вся прибыль начисляется и выводится ежедневно на Ваш внешний или внутренний кошелёк.<br>
+              Выводите Ваши денежные средства каждый день и используйте в повседневных тратах.<br>
+              Это существенно отличается от банковского депозита, где воспользоваться Вашими деньгами Вы можете только по истечении срока вклада.</p>
+          </li>
+          <li>
+            <h3 class="referral__title">Платформа цифрового контента KOK Play поддерживается правительством Южнокорейской Республики и активно развивается создателями.</h3>
+            <p><svg viewBox="0 0 27 34" width="25" class="icon">
+                <use xlink:href="img/sprite.svg#map"></use>
+              </svg> Дорожная карта (White Paper) токена KOK Play <a href="video/KOK_LitePaperEN.pdf" target="_blank" class="btn btn--text btn--small">White Paper токена KOK Play</a></p>
+          </li>
+          <li>
+            <h3 class="referral__title">Токен KOK Play торгуется на крупнейших биржах:</h3>
+            <div class="partner">
+              <div class="partner__list">
+                <div class="partner__item">
+                  <svg viewBox="0 0 117 28" width="116">
+                    <use xlink:href="img/sprite.svg#p1"></use>
+                  </svg>
+                </div>
+                <div class="partner__item">
+                  <svg viewBox="0 0 114 28" width="116">
+                    <use xlink:href="img/sprite.svg#p2"></use>
+                  </svg>
+                </div>
+                <div class="partner__item"><img src="img/p3.png" width="82"></div>
+                <div class="partner__item"><img src="img/p4.png" width="111"></div>
+                <div class="partner__item">
+                  <svg viewBox="0 0 190 28" width=" 190">
+                    <use xlink:href="img/sprite.svg#p5"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <div class="calculator">
+          <h3 class="calculator__caption">Потяните за человечка, чтобы узнать, сколько составит Ваша прибыль с рефералов</h3>
+          <div class="calculator__slider">
+            <input type="range" name="calculator" class="calculator__range slider-progress" id="calculator_range" value="30" min="0" max="60" step="10" list="calculator_number">
+            <datalist class="calculator__list" id="calculator_number">
+              <option class="calculator__num active" data-refer="1" value="0">1</option>
+              <option class="calculator__num active" data-refer="5" value="10">5</option>
+              <option class="calculator__num active" data-refer="10" value="20">10</option>
+              <option class="calculator__num active" data-refer="20" value="30">20</option>
+              <option class="calculator__num" data-refer="30" value="40">30</option>
+              <option class="calculator__num" data-refer="40" value="50">40</option>
+              <option class="calculator__num" data-refer="50" value="60">50</option>
+            </datalist>
+          </div>
+          <div class="plank calculator__plank">
+            <p>Вы пригласили <span class="calculator__referrer">20</span> рефералов</p>
+            <p>Ваш доход составит от <span><span class="calculator__result">6300</span> $ / месяц**</span></p>
+          </div>
+          <p>*При минимальных вложениях ваших партнёров</p>
+          <p>** Ваш реальный доход будет выше, потому что токен КОК постоянно растёт</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section install" id="install">
+      <div class="container">
+        <h3 class="section__subtitle">Как работать</h3>
+        <h3 class="section__title accent3">С приложением KOK Play</h3>
+        <div class="install__row">
+          <div class="install__descr">
+            <div class="install__pic"><img src="img/video.png" alt=""></div>
+            <p class="install__text">Всегда проще увидеть, поэтому мы записали для Вас видео-инструкцию:</p>
+          </div>
+          <div class="install__media video">
+            <div class="video__wrapper">
+              <video class="video__inner" preload="auto" rel="preload" as="video" controls="controls" poster="video/poster.jpg">
+                <source src="video/video.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+                <source src="video/video.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+              </video>
+            </div>
+            <!-- <div class="video__cover">
+              <img src="img/poster.jpg" class="video__poster">
+              <img src="img/play.png" class="video-play" alt="Play video!">
+            </div> -->
+          </div>
+        </div>
+        <p class="install__subtitle">Подробная инструкция по шагам:</p>
+        <div class="install__list" id="install_list">
+          <div class="install__item open" id="install1">
+            <a class="install__title" href="#install1">
+              <span class="install__title-content">Установка</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                <p>Загрузите приложение в устройство, которым будете пользоваться для майнинга:</p>
+                <div class="install__upload">
+                  <svg viewBox="0 0 32 34" width="30" class="icon">
+                    <use xlink:href="img/sprite.svg#google_play"></use>
+                  </svg> Для владельцев Android <a href="" class="btn btn--text btn--small">Загрузить</a>
+                </div>
+                <div class="install__upload">
+                  <svg viewBox="0 0 30 29" width="30" class="icon">
+                    <use xlink:href="img/sprite.svg#iphone"></use>
+                  </svg> Для владельцев iPhone <a href="" class="btn btn--text btn--small">Загрузить</a>
+                </div>
+                <div class="install__upload">
+                  <img src="img/desc_i.png" width="30" class="icon"> Версия для компьютера <a href="" class="btn btn--text btn--small">Загрузить</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="install__item" id="install2">
+            <a class="install__title" href="#install2">
+              <span class="install__title-content">Регистрация</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                <ol class="order">
+                  <li>Открываем приложение. Нажимаем кнопку «Зарегистрироваться»</li>
+                  <li>Вводим свой номер телефона без +7 и жмём кнопку «Аутентификация»</li>
+                  <li>Ждём смс с проверочным номером</li>
+                  <li>Вводим в поле «Проверочный номер» и нажимаем кнопку «Завершить»</li>
+                  <li>После этого жмём на фиолетовую кнопку «Далее»</li>
+                  <li>Вводим данные на ЛАТИНИЦЕ (английскими буквами!). Имя Фамилия (как в загранпаспорте) Например: Ivan Ivanov</li>
+                  <li>Пол: Мужской / Женский</li>
+                  <li>Дата рождения: Сначала год (82), далее месяц (10) и число (12). Например: 821012.</li>
+                  <li>Вводим пароль для входа (не менее 6 символов). Данный пароль потребуется вам для входа в приложение KOK PLAY.<br>
+                    «Проверить пароль для входа» - введите пароль еще раз</li>
+                  <li>Вводим пароль для обмена. Он нужен для роведения финансовых операций – ввода и вывода денежных средств. Можете использовать один пароль – но не менее 8 символов!</li>
+                  <li><b>Важно: не забудьте записать свои пароли/пароль, чтобы не забыть</b><br>
+                    Код рекомендателя: Introduser Code: 8. Нажимаем «Согласиться с условиями кошелька KOK»</li>
+                  <li>Перед вами высветились условия пользования кошелька KOK – жмём «Подтвердить» «Далее». ГОТОВО!</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="install__item" id="install3">
+            <a class="install__title" href="#install3">
+              <span class="install__title-content">Ввод средств</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                <div class="plank install__plank">
+                  <p>Чтобы завести средства, необходимо приобрести криптовалюту USDT (terher). Для этого вам нужно завести аккаунт на Binance. Если у вас нет аккаунта, перейдите на <a href="">binance.com</a> для регистрации.</p>
+                  <p>Электронный кошелек Binance будет использоваться для <b>ввода средств</b> на площадку KOK Play и в удущем, будет необходим для <b>вывода прибыли</b> с площадки KOK Play средств на банковскую карту.</p>
+                </div>
+                <ol class="order">
+                  <li>Как только деньги (Usdt) придут на кошелек, приступайте к заводу их на площадку KOK Play. Для этого заходим в <a href="">www.binance.com</a>.</li>
+                  <li>В верхнем левом углу нажимаем на человечика» и отключаем «Binance Lite». Нам нужна версия Pro!</li>
+                  <li>Выходим из настроек и в правом нижнем углу нажимаем на «Кошелек»</li>
+                  <li>Нажимаем «Вывод», из списка монет выбираем USDT и нажимаем на нее.</li>
+                  <li>«АДРЕС»: Вводим адрес электронного кошелька (Входим в приложение KOK Play – Кошелек – Выбираем USDT – Сделать депозит – Скопировать адрес кошелька).</li>
+                  <li>«СЕТЬ»: Выбираем сеть ERC20</li>
+                  <li>«Сумма» : Вводим сумму перевода + комиссия (фиксированная комиссия за перевод 25$)</li>
+                  <li>Нажимаем на кнопку «Вывод средств»</li>
+                  <li>Подтверждаем вывод через верификацию телефон - код СМС и e-mail – код из сообщения).</li>
+                  <li>Ожидаем зачисление средств на площадку KOK Play (от 10 мин до 2 часов)</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="install__item" id="install4">
+            <a class="install__title" href="#install4">
+              <span class="install__title-content">Размещение средств для запуска стейкинга</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                <ol class="order">
+                  <li>Входим в приложение KOK Play, в правом нижнем углу нажимаем на иконку «Майнинг»</li>
+                  <li>Выбираем и нажимаем опцию «Майнинг» (внизу из 6 иконок, слева снизу иконка Майнинг)</li>
+                  <li>Выбираем монету USDT</li>
+                  <li>Нажимаем «количество». Далее выбираем 100%</li>
+                  <li>В правом нижнем углу нажимаем кнопку «Подтвердить»</li>
+                  <li>Поздравляем! Майнинг на площадке Активирован!</li>
+                </ol>
+                <div class="plank install__plank">
+                  <p><b>Ежедневно происходит начисление монет, которые отображаются в «кошельке».<br>Эти средства можно вывести на криптобиржу (комиссия за вывод 1%), а затем на банковскую карту!</b></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div class="install__item" id="install5">
+            <a class="install__title" href="#install5">
+              <span class="install__title-content">Подключаем Реферальную программу</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                By not having the imagination to imagine what the content "might" be, a design consideration is lost. Meaning becomes obfuscated because "it's just text", understandability gets compromised because nobody realized that this
+              </div>
+            </div>
+          </div> -->
+
+          <div class="install__item" id="install6">
+            <a class="install__title" href="#install6">
+              <span class="install__title-content">Вывод средств из приложения KOK Play</span>
+            </a>
+            <div class="install__body">
+              <div class="install__content">
+                <div class="plank install__plank">
+                  <p><b>Для перевода потребуется адрес кошелька одной из криптобирж KuCoin, BitGlobal. Необходимо на этих биржах пройти регистрацию и верификацию.</b></p>
+                </div>
+                <ol class="order">
+                  <li>Входим в приложение KOK Play. Нажимаем на иконку «Кошелек»</li>
+                  <li>Выбираем монету КОК и нажимаем «Перевод»</li>
+                  <li>Выбираем КОК, нажимаем и выбираем либо в % (10/25/50/75/100) либо вручную проставляем количество. Минимальная сумма на вывод 10$ + 1% - комиссия за вывод</li>
+                  <li>Нажимаем «Подтвердить»</li>
+                  <li>Нажимаем кнопку «fixed rate» и далее нажимаем «Перевод»</li>
+                  <li>В сплывающем окне нажимаем на «Подтвердить»</li>
+                  <li>Проходим аутентификацию через номер мобильного телефона. Из полученного сообщения вводим 6-ти значный код и нажимаем «Завершить»</li>
+                  <li>Вводим «Пароль для обмена» (Это пароль, который был введен при регистрации на KOK Play</li>
+                  <li>Нажимаем «Далее» и кнопку «Подтвердить»</li>
+                </ol>
+                <div class="plank install__plank">
+                  <p><b>Средства на криптобиржу будут зачислены в КОК. Необходимо будет сконвертировать КОК в USDT и далее перевести на криптобиржу Binance. А потом уже можно сделать вывод на банковскую карту либо через обменник.</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <h3 class="section__subtitle">Вступайте</h3>
+        <h3 class="section__title accent">В нашу команду!</h3>
+        <div class="contacts__row">
+          <svg viewBox="0 0 31 27" width="30" class="contacts__icon">
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+          <p>Вступайте в наше сообщество в Телеграм <a href="https://tlgg.ru/@kokplay_mdm">@kokplay_mdm</a></p>
+        </div>
+        <div class="contacts__row">
+          <p>Вас ждёт:</p>
+          <ul class="list">
+            <li>круглосуточная поддержка</li>
+            <li>свежие новости о токене</li>
+            <li>лайфхаки по стейкингу</li>
+          </ul>
+        </div>
+        <div class="section__row">
+          <div class="contacts__row col-50">
+            <svg viewBox="0 0 37 38" width="30" class="contacts__icon">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <p>Мы на связи! Заполните форму и мы перезвоним в ближайшие 5-10 минут.*</p>
+          </div>
+          <div class="contacts__form col-50">
+            <form method="POST" class="form" name="contacts_form" id="contacts_form">
+              <input type="hidden" name="form_name" value="Форма секции контактов">
+              <div class="form__row">
+                <input class="form__input" type="text" name="name" required placeholder="Представьтесь, пожалуйста">
+              </div>
+              <div class="form__row">
+                <input class="form__input" type="tel" name="phone" required placeholder="Ваш телефон +7">
+                <div class="error__msg">Введите 10-значный номер</div>
+              </div>
+              <div class="form__row">
+                <button class="btn">Жду звонка</button>
+              </div>
+            </form>
+            <div class="answer" style="display: none;">
+              <div class="form__row">
+                <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+                <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+              </div>
+              <div class="form__row">
+                <button class="btn">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="popup-overlay">
+    <div class="popup">
+      <button class="close js-close" type="button"></button>
+      <div class="popup__body">
+        <form method="POST" class="form" name="popup_form" id="popup_form">
+          <input type="hidden" name="form_name" value="Форма попап">
+          <div class="form__header">
+            <svg viewBox="0 0 37 38" width="30" class="icon">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <p class="text">Заполните форму, чтобы получить бесплатную консультацию:</p>
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="text" name="name" required placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="tel" name="phone" required placeholder="Ваш телефон +7">
+            <div class="error__msg">Введите 10-значный номер</div>
+          </div>
+          <div class="form__row">
+            <button class="btn">Жду звонка</button>
+          </div>
+        </form>
+        <div class="answer" style="display: none;">
+          <div class="form__row">
+            <p class="form__caption"><b>Ваш запрос отправлен</b></p>
+            <p>Менеджер перезвонит вам в ближайшие 5-10 минут</p>
+          </div>
+          <!-- <div class="form__row">
+            <button class="btn js-close">OK</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"></footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/glide.min.js"></script>
+  <script src="js/sketch.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/form.js"></script>
+
+  <script>
+    features.mount();
+  </script>
+
+</body>
+
+</html>
+<!-- https: //github.com/ederssouza/vanillajs-scrollspy -->

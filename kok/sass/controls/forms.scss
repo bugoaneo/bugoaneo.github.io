@@ -1,0 +1,86 @@
+.form {
+ width: 100%;
+ min-width: 21em;
+ @include bp(1000px) {
+  min-width: 0;
+ }
+}
+
+.form__row {
+ position: relative;
+ margin-bottom: 0.8em;
+ &:last-of-type {
+  margin-bottom: 0;
+ }
+ &.error {
+  color: #ff6d6d;
+
+  input {
+   border: 2px solid currentColor;
+   color: #ff6d6d;
+  }
+  .error__msg {
+   max-height: 100px;
+   opacity: 1;
+  }
+ }
+}
+
+.form__header {
+ margin-bottom: 1.5em;
+ .icon,
+ .text {
+  display: inline-block;
+  vertical-align: middle;
+ }
+ .icon {
+  width: 34px;
+  margin-right: 10px;
+ }
+ .text {
+  width: calc(100% - 50px);
+ }
+}
+
+.error__msg {
+ max-height: 0;
+ opacity: 0;
+ overflow: hidden;
+ transition: all 0.3s ease-in;
+}
+
+.form__input {
+ padding: 0.9em;
+ border: 2px solid transparent;
+ border-radius: 4px;
+ font-family: inherit;
+ color: #8587a7;
+ background: #d7d8e9;
+ transition: 0.5s ease-in-out;
+ &:focus,
+ &:active {
+  border: 2px solid #7d7081;
+  color: #110016;
+
+  + .error__msg {
+   max-height: 100px;
+   margin: 0.5em 0;
+   opacity: 1;
+  }
+ }
+ &:checked ~ .form__label::after {
+  opacity: 1;
+ }
+}
+::placeholder {
+ color: inherit;
+ opacity: 1;
+}
+::-moz-placeholder {
+ color: inherit;
+ opacity: 1;
+}
+::-webkit-input-placeholder {
+ color: inherit;
+ opacity: 1;
+}
