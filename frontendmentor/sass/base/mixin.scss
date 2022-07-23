@@ -1,0 +1,168 @@
+@mixin bp($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+@mixin land {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portret {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number)=="number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+
+  $k: ($f-max - $f-min)/ ($w-max - $w-min);
+  $b: $f-min - $k * $w-min;
+
+  $b: $b +$units;
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
+
+@mixin fFS($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+  font-size: $f-min;
+
+  @media (min-width: $w-min) {
+    @if ($fallback) {
+      font-size: $fallback;
+    }
+
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+  }
+
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
+}
+
+@mixin row($justufy: null, $align: null) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @if ($justufy =="jst") {
+    justify-content: flex-start;
+  }
+
+  @if ($justufy =="jend") {
+    justify-content: flex-end;
+  }
+
+  @if ($justufy =="jc") {
+    justify-content: center;
+  }
+
+  @if ($justufy =="jsb") {
+    justify-content: space-between;
+  }
+
+  @if ($justufy =="jsa") {
+    justify-content: space-around;
+  }
+
+  @if ($align =="ac") {
+    align-items: center;
+  }
+
+  @if ($align =="as") {
+    align-items: stretch;
+  }
+
+  @if ($align =="ab") {
+    align-items: baseline;
+  }
+
+  @if ($align =="ast") {
+    align-items: flex-start;
+  }
+
+}
+
+
+@mixin col($dig: col) {
+  flex: 0 1 auto;
+
+  @include bp(650px) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @if ($dig ==1) {
+    width: 8.33333%;
+  }
+
+  @if ($dig ==2) {
+    width: 16.66667%;
+  }
+
+  @if ($dig ==3) {
+    width: 25%;
+  }
+
+  @if ($dig ==4) {
+    width: 33.33333%;
+  }
+
+  @if ($dig ==5) {
+    width: 41.66667%;
+  }
+
+  @if ($dig ==6) {
+    width: 50%;
+  }
+
+  @if ($dig ==7) {
+    width: 58.33333%;
+  }
+
+  @if ($dig ==8) {
+    width: 66.66667%;
+  }
+
+  @if ($dig ==9) {
+    width: 75%;
+  }
+}
+
+@mixin center($axis: "both") {
+  position: absolute;
+
+  @if ($axis =="both") {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if $axis =="x" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $axis =="y" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

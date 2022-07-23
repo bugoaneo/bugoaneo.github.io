@@ -1,0 +1,23 @@
+// $container: 1280px;
+
+// $fz: 20px;
+// $ff: Arial;
+// $acent-ff: PTSans;
+
+// $text: #222;
+// $accent: #f01;
+
+:root {
+ --container: 1120px;
+ --fz: 16px;
+ --ff: 'Kumbh Sans';
+ --title-text: hsl(218, 12%, 13%);
+ --text: hsl(219, 9%, 45%);
+ --prim: hsl(26, 100%, 55%);
+
+ --prim-light: hsl(25, 100%, 94%);
+ --light-blue: hsl(220, 14%, 75%);
+ --light: hsl(223, 64%, 98%);
+
+ --overlay: rgba(0, 0, 0, 0.7);
+}
