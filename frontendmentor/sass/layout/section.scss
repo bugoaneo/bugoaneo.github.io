@@ -1,5 +1,9 @@
 .product {
  padding-top: 5.5em;
+
+ @include bp(650px) {
+  padding-top: 3.8em;
+ }
 }
 
 .product__slider,
@@ -8,6 +12,12 @@
 
  @include bp(750px) {
   flex: 1 1 100%;
+ }
+}
+
+.product__slider {
+ @include bp(750px) {
+  margin: 0 -10px;
  }
 }
 

@@ -17,6 +17,7 @@
 
   <title></title>
   <link rel="preload" href="fonts/kumbh-sans-v12-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fancybox.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -50,7 +51,26 @@
               <div class="cart__dropdown-header">
                 <b>Cart</b>
               </div>
-              <div class="cart__dropdown-body"></div>
+              <div class="cart__dropdown-body empty">
+                <p>Your cart is empty</p>
+                <div class="cart__dropdown-content">
+                  <div class="cart__dropdown-row">
+                    <div class="cart__dropdown-img"><img src="img/image-product-1-thumbnail.jpg" alt=""></div>
+                    <div class="cart__dropdown-info">
+                      <div class="cart__dropdown-name">Fall Limited Edition Sneakers</div>
+                      <div class="cart__dropdown-total">
+                        <span class="cart__price">$125.00</span> x <span class="cart__amount"></span> <span class="price__total"></span>
+                      </div>
+                    </div>
+                    <button type="button" class="cart__dropdown-clear">
+                      <svg viewBox="0 0 14 16" width="14" class="icon">
+                        <use xlink:href="img/sprite.svg#del"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <button type="button" class="btn">Checkout</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="user__avatar">
@@ -61,7 +81,38 @@
     </header>
     <main class="product">
       <div class="container row">
-        <div class="product__slider slider"></div>
+        <div class="product__slider">
+          <div class="product__slider-wrap">
+            <div id="mainCarousel" class="carousel carousel--main">
+              <div class="carousel__slide carousel__slide--big" data-src="img/image-product-1.jpg" data-fancybox="gallery">
+                <img src="img/image-product-1.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--big" data-src="img/image-product-2.jpg" data-fancybox="gallery">
+                <img src="img/image-product-2.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--big" data-src="img/image-product-3.jpg" data-fancybox="gallery">
+                <img src="img/image-product-3.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--big" data-src="img/image-product-4.jpg" data-fancybox="gallery">
+                <img src="img/image-product-4.jpg" />
+              </div>
+            </div>
+            <div id="thumbCarousel" class="carousel carousel--thumb">
+              <div class="carousel__slide carousel__slide--small">
+                <img class="panzoom__content" src="img/image-product-1-thumbnail.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--small">
+                <img class="panzoom__content" src="img/image-product-2-thumbnail.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--small">
+                <img class="panzoom__content" src="img/image-product-3-thumbnail.jpg" />
+              </div>
+              <div class="carousel__slide carousel__slide--small">
+                <img class="panzoom__content" src="img/image-product-4-thumbnail.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="product__content content">
           <div class="content__subtitle accent">Sneaker company</div>
           <h1 class="content__title">Fall Limited Edition Sneakers</h1>
@@ -79,7 +130,7 @@
               <input type="number" class="quantity__value" min="0" max="10" value="0">
               <button type="button" class="quantity__btn quantity__btn--up"></button>
             </div>
-            <button class="btn"><svg viewBox="0 0 20 20" width="20" class="icon">
+            <button class="btn btn-order"><svg viewBox="0 0 20 20" width="20" class="icon">
                 <use xlink:href="img/sprite.svg#cart"></use>
               </svg>Add to cart</button>
           </div>
@@ -88,7 +139,7 @@
     </main>
   </div>
 
-  <!-- <script src="js/jquery.min.js"></script> -->
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 

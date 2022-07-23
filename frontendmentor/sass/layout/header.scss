@@ -13,6 +13,13 @@
   }
  }
 
+ @include bp(650px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+ }
 }
 
 .logo {
@@ -124,18 +131,24 @@
 
 /*user*/
 .user {
+ position: relative;
  @include row(jsb, ac)
 }
 
 .user__avatar {
  width: 3.6em;
  height: 3.6em;
- border: 2px solid transparent;
+ border: 3px solid transparent;
  border-radius: 100%;
  overflow: hidden;
+ transition: border 0.3s linear;
 
  @include bp(650px) {
   font-size: 0.6em;
+ }
+
+ &:hover {
+  border: 3px solid var(--prim);
  }
 }
 
@@ -172,13 +185,10 @@
   font-weight: 700;
   text-align: center;
   background-color: var(--prim);
+  pointer-events: none;
  }
 
  &:hover {
   color: var(--title-text);
  }
-}
-
-.cart__dropdown {
- display: none;
 }
