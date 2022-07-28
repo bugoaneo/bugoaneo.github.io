@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Orchidea';
+  src: local('Orchidea Pro Regular'), local('Orchidea-Pro-Regular'),
+    url('../fonts/OrchideaPro-Regular.woff2') format('woff2'),
+    url('../fonts/OrchideaPro-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Regular'), local('Manrope-Regular'),
+    url('../fonts/Manrope-Regular.woff2') format('woff2'),
+    url('../fonts/Manrope-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
