@@ -1,0 +1,37 @@
+.slider__pagination {
+ position: relative;
+ display: flex;
+ justify-content: space-around;
+ max-width: 620px;
+ padding: 0 10px;
+ z-index: 1;
+
+ li {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  padding: 10px 0.3em;
+  transition: flex-grow 0.3s ease-in-out, text-shadow 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:after {
+   content: '';
+   height: 3px;
+   margin: 0 0 0 0.5em;
+   background: linear-gradient(90deg, #F4FFE7 0%, rgba(244, 255, 231, 0.6) 100%);
+   transition: flex-grow 0.3s ease-in-out;
+  }
+
+  &.current {
+   flex-grow: 2;
+
+   &:after {
+    flex-grow: 1;
+   }
+  }
+
+  &:hover {
+   text-shadow: 0.2em 0.2em 0.12em #333;
+  }
+ }
+}

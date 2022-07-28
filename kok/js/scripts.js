@@ -37,7 +37,7 @@ menuBTN.addEventListener('click', function (e) {
 //popup
 let popupBTN = document.querySelectorAll('.js-popup');
 let popupOverlay = document.querySelector('.popup-overlay');
-let closePopup = document.querySelectorAll('.js-close');
+let closePopup = document.querySelector('.popup .close');
 let mobilPopupBTN = document.querySelectorAll('.nav__item.mobil .js-popup');
 
 popupBTN.forEach(function (ell) {
@@ -47,12 +47,10 @@ popupBTN.forEach(function (ell) {
  });
 });
 
-closePopup.forEach(function (item) {
- item.addEventListener('click', function (e) {
-  e.preventDefault();
-  popupOverlay.classList.remove('open');
- });
-})
+closePopup.addEventListener('click', function (e) {
+ e.preventDefault();
+ popupOverlay.classList.remove('open');
+});
 
 popupOverlay.addEventListener('click', function (e) {
  if (e.target.closest('.popup') === null) {
@@ -118,15 +116,17 @@ calc.oninput = function () {
  calcNum.forEach(function (item) {
   if (item.value == calc.value) {
    referNum.textContent = item.getAttribute('data-refer');
-   calcRez.textContent = (+item.getAttribute('data-refer') * 300) + 300;
    // console.log(`${item.value} opt`)
   }
   if (item.value <= calc.value) {
    item.classList.add('active');
+   // item.classList.remove('current');
   }
   else {
    item.classList.remove('active');
+   // item.classList.remove('current');
   }
+
  })
  // console.log(`${this.value} inp`);
 }
@@ -140,33 +140,21 @@ for (let e of document.querySelectorAll('.calculator__range')) {
 }
 
 
-/*accordion*/
+// https://codepen.io/johanmouchet/pen/jrRwMK
 
-const accordion = document.querySelector('#install_list')
-accordion.addEventListener('click', toggleAccordion)
-const accordionHeaders = accordion.querySelectorAll('.install__title');
+// https://codepen.io/zenki14/pen/LEyXzG
 
-function toggleAccordion(e) {
- const itemHeader = e.target.closest('.install__title');
- if (itemHeader) {
-  itemHeader.parentNode.classList.toggle('open')
-  toggleOtherItems(itemHeader)
- }
 
-}
+$(function () {
+ // (Optional) Active an item if it has the class "open"
+ $(".install__item.open").children(".install__body").slideDown();
 
-function toggleOtherItems(accordionHeader) {
- Array.from(accordionHeaders).forEach(header => {
-  if (header != accordionHeader) {
-   header.parentNode.classList.remove('open');
-  }
+ $(".install__item").click(function () {
+  // Cancel the siblings
+  $(this).siblings(".install__item").removeClass("open").children(".install__body").slideUp();
+  // Toggle the item
+  $(this).toggleClass("open").children(".install__body").slideToggle();
  });
-}
-
-
-$(".install__title").click(function (e) {
- e.preventDefault();
- $('html').animate({ scrollTop: $('.install__item.open').offset().top }, 'fast');
 });
 
 
@@ -358,9 +346,9 @@ setInterval(function () {
 
 sketch.update = function () {
  // convert sketch.js to more usable number
- dt = sketch.dt / 9;
+ dt = sketch.dt / 16;
  // update the hue over time
- hue += 0.7;
+ hue += 0.75;
  var i = coins.length;
  while (i--) {
   // when updating, pass in the index of the coin

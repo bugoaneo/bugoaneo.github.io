@@ -1,0 +1,21 @@
+.menu-trigger {
+ display: none;
+ padding: 1vmax 1em 0.5em 1em;
+ margin-left: auto;
+ line-height: 1;
+
+ @include bp(800px) {
+  display: block;
+ }
+}
+
+.menu-btn {
+ position: relative;
+ width: 1.5em;
+ line-height: 1;
+ transition: filter 0.3s ease-in-out;
+
+ &:hover {
+  filter: drop-shadow(0.2em 0.2em 0.2em #222);
+ }
+}
