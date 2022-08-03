@@ -1,0 +1,51 @@
+.footer {
+
+ background: rgba(255, 255, 255, 0.5);
+ backdrop-filter: blur(30px);
+}
+
+.footer__menu {
+ @include row(jsb);
+}
+
+.footer__menu-item {
+ color: #BCA5FF;
+
+ &.current {
+  color: $prim;
+ }
+}
+
+.footer__menu-btn {
+ width: 60px;
+ height: 64px;
+ padding: 15px;
+
+ svg,
+ img {
+  display: block;
+  min-width: 24px;
+  // width: 34px;
+  // max-width: 24px;
+ }
+}
+
+
+
+
+/*user*/
+
+.user__avatar {
+ width: 24px;
+ height: 24px;
+ border: 2px solid $prim;
+ border-radius: 100%;
+ overflow: hidden;
+
+ img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+}

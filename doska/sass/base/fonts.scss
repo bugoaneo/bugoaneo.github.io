@@ -1,0 +1,29 @@
+/* source-sans-pro-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Source Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.eot');
+  src: local(''),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff') format('woff'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-regular.svg#SourceSansPro') format('svg');
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.eot');
+  src: local(''),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.woff2') format('woff2'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.woff') format('woff'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.ttf') format('truetype'),
+    url('../fonts/source-sans-pro-v21-latin-ext_latin_cyrillic-ext_cyrillic-600.svg#SourceSansPro') format('svg');
+
+}

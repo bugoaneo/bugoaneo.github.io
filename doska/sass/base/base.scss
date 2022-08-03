@@ -1,0 +1,143 @@
+html {
+  font-family: $ff;
+  color: $text;
+  font-size: $fz;
+  height: 100%;
+  //  @include fFS(16px, $fz, 320px, 1900px, 20px);
+  height: -webkit-fill-available;
+}
+
+body {
+  height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  min-height: -webkit-fill-available;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  max-width: $container;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  // min-height: 100vh;
+  // flex-grow: 1;
+}
+
+.footer {
+  flex-grow: 0;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F6F6F6;
+}
+
+.container {
+  height: 100%;
+  padding: 0 20px;
+
+  @include bp(360px) {
+    padding: 0 12px;
+  }
+}
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: auto;
+  scrollbar-width: thin;
+  // scrollbar-color: var(--primary) var(--lightest);
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    // background-color: var(--lightest);
+    border-radius: 0.2em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // background-color: var(--primary);
+    border-radius: 0.2em;
+  }
+}
+
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.out-link {
+  font-size: 15px;
+}
+
+img {
+  display: inline-block;
+}
+
+.color-prim {
+  color: $prim;
+}
+
+
+.color-teal {
+  color: $teal;
+}
+
+.bg-prim {
+  background-color: $prim;
+}
+
+
+.bg-teal {
+  background-color: $teal;
+}
+
+
+.right-coner {
+  margin-left: auto;
+}
+
+
+.eye {
+  &.close {
+    .icon__open {
+      opacity: 0;
+    }
+  }
+}
+
+/**/
+
+// *::-webkit-media-controls-panel {
+//   display: none !important;
+//   -webkit-appearance: none;
+// }
+
+// /* Old shadow dom for play button */
+
+// *::-webkit-media-controls-play-button {
+//   display: none !important;
+//   -webkit-appearance: none;
+// }
+
+// /* New shadow dom for play button */
+
+// /* This one works! */
+
+// *::-webkit-media-controls-start-playback-button {
+//   display: none !important;
+//   -webkit-appearance: none;
+// }
