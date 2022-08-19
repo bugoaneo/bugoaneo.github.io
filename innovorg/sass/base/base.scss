@@ -1,0 +1,65 @@
+html {
+  font-family: var(--ff), Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-size: var(--fz);
+  //  @include fFS(16px, $fz, 320px, 1900px, 20px);
+  // height: -webkit-fill-available;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  // min-height: -webkit-fill-available;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  // height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.footer {
+  flex-grow: 0;
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  display: inline-block;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+/**/
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}

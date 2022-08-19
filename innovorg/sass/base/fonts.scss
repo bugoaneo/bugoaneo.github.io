@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'suisse';
+  src: url('../fonts/suisseintl-thin.woff2') format('woff2'),
+    url('../fonts/suisseintl-thin.woff') format('woff'),
+    url('../fonts/suisseintl-thin.svg#suisse_intlthin') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'suisse';
+  src: url('../fonts/suisseintl-regular.woff2') format('woff2'),
+    url('../fonts/suisseintl-regular.woff') format('woff'),
+    url('../fonts/suisseintl-regular.svg#suisse_intlregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'suisse';
+  src: url('../fonts/suisseintl-book.woff2') format('woff2'),
+    url('../fonts/suisseintl-book.woff') format('woff'),
+    url('../fonts/suisseintl-book.svg#suisse_intlbook') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'suisse';
+  src: url('../fonts/suisseintl-bold.woff2') format('woff2'),
+    url('../fonts/suisseintl-bold.woff') format('woff'),
+    url('../fonts/suisseintl-bold.svg#suisse_intlbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+
+}
