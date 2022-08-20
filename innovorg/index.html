@@ -2,40 +2,193 @@
 <html lang="ru">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
- <meta name="robots" content="all">
- <meta property="og:title" content="" />
- <meta property="og:image" content="img/logo.png" />
- <meta property="og:description" content="" />
- <meta name="description" content="" />
- <meta name="keywords" content="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="robots" content="all">
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
- <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
- <link rel="icon" href="img/favicon.ico" type="image/x-icon">
- <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#ffffff">
 
- <title></title>
- <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
- <link rel="stylesheet" href="css/main.css">
+  <title></title>
+  <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="logo">Innovorg</div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="">Platform</a></li>
+            <li class="menu__item"><a href="">Solutions</a></li>
+            <li class="menu__item"><a href="">Blog</a></li>
+            <li class="menu__item"><a href="">Company</a></li>
+            <li class="menu__item"><a href="" class="btn">Book the Demo</a></li>
+          </ul>
+        </nav>
+        <div class="user-action"><a href="">Login</a></div>
+      </div>
+    </header>
+    <section class="section hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__subtitle">Innovorg skills engine</div>
+          <h1 class="hero__title">AI technologies to identify & bridge the skills gaps for your employees and channel partners</h1>
+          <a href="" class="btn btn--action">Book the Demo</a>
+        </div>
+      </div>
+      <!-- c -->
+      <div class="hero__media"></div>
+    </section>
+    <section class="section media">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Some header for the video</h2>
+          <p>Innovorg platform not only identifies the skills and certifications gaps and delivers high-quality adaptive training content. But also builds connections between roles</p>
+        </div>
+        <div class="video">
+          <div class="video__wrapper">
+            <!-- for inline video add class "video__inner" on video tag -->
+            <iframe class="video__inner" src="https://www.youtube.com/embed/mypnwpywaaw" crossorigin="anonymous" rel="preload" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section about">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Why Innovorg?</h2>
+          <p>Innovorg platform not only identifies the skills and certifications gaps and delivers high-quality adaptive training content. But also builds connections between roles, skills, products, services and outcomes delivering real-time ongoing view at every level of the business never seen before.</p>
+        </div>
+        <div class="about__box">
+          <div class="about__box-header">Real Companies <span class="icon"></span>
+            Real Challenges</div>
+          <div class="about__box-slider">
+            <img src="" alt="" class="about__box-bg">
+            <div class="about__box-list">
+              <div class="about__box-item">
+                <h3 class="about__box-title">Pressure to innovate = revenue
+                </h3>
+                <div class="about__box-content">
+                  <p>Must be best in class to drive innovation, which turns into new projects & client revenue.
+                  </p>
+                  <p>Exceptional services & support also required to retain clients.
+                  </p>
+                </div>
+              </div>
+              <div class="about__box-item">
+                <h3 class="about__box-title">Best in class skills
+                  required</h3>
+                <div class="about__box-content">
+                  <p>Specific skills are a must-have to innovate in these spaces.</p>
+                  <p>Most employees and partners are under-skilled, and most skills management processes (such as role creation, skills matching and gap assessments) are manual.</p>
+                </div>
+              </div>
+              <div class="about__box-item">
+                <h3 class="about__box-title">Certified workforce
+                  = competitive advantage
+                </h3>
+                <div class="about__box-content">
+                  <p>Certification processes, and compliance for teams are often manual, time consuming and a burden
+                    on managers.</p>
+                  <p>Skills management x Personalized training means securing new opportunities AND retaining employees.</p>
+                </div>
+              </div>
+              <div class="about__box-item">
+                <h3 class="about__box-title">Top talent
+                  drives performance</h3>
+                <div class="about__box-content">
+                  <p>A skilled workforce can handle more complex projects and client demands.</p>
+                  <p>Finding the right personalized training for teams can be difficult and slow.</p>
+                </div>
+              </div>
+            </div>
+            <!-- / about__box-list -->
+          </div>
+          <!-- / about__box-slider -->
+        </div>
+        <!-- / about__box -->
+      </div>
+    </section>
 
- <div class="warapper">
-  <div class="container">
-   <h1>AI technologies to identify & bridge the skills gaps for your employees and channel partners</h1>
-   <h2>Why Innovorg?</h2>
-   <p>Innovorg platform not only identifies the skills and certifications gaps and delivers high-quality adaptive training content. But also builds connections between roles, skills, products, services
-    and outcomes delivering real-time ongoing view at every level of the business never seen before.</p>
+    <section class="section solutions">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Innovorg Platform provides these Solutions for the areas where high skilled specialists are needed</h2>
+        </div>
+
+        <div class="section__row section__row--rewerse">
+          <div class="section__content">
+            <h3 class="section__caption">Managed Services Providers</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Quis risus sed vulputate odio ut. Molestie at elementum eu facilisis sed odio morbi.</p>
+            <a href="" class="btn btn--clean">Explore the Solution</a>
+          </div>
+          <div class="section__media"><img src="" alt=""></div>
+        </div>
+
+        <div class="section__row">
+          <div class="section__content">
+            <h3 class="section__caption">Hosting & Data Center Providers</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Quis risus sed vulputate odio ut. </p>
+            <p>Quis risus sed vulputate odio ut. Molestie at elementum eu facilisis sed odio morbi.</p>
+            <p> Molestie at elementum eu facilisis sed odio morbi.</p>
+            <a href="" class="btn btn--clean">Explore the Solution</a>
+          </div>
+          <div class="section__media"><img src="" alt=""></div>
+        </div>
+
+        <div class="section__row section__row--rewerse">
+          <div class="section__content">
+            <h3 class="section__caption">Cloud SaaS</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="" class="btn btn--clean">Explore the Solution</a>
+          </div>
+          <div class="section__media"><img src="" alt=""></div>
+        </div>
+
+        <div class="section__row">
+          <div class="section__content">
+            <h3 class="section__caption">Channel</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+            <a href="" class="btn btn--clean">Explore the Solution</a>
+          </div>
+          <div class="section__media"><img src="" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform">
+      <div class="container">
+        <div class="section__row section__row--rewerse">
+          <div class="section__content">
+            <h2 class="section__title">Meet the Platform</h2>
+            <p>Short description of the modules.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Quis risus sed vulputate odio ut. Molestie at elementum eu facilisis sed odio morbi.</p>
+            <a href="" class="btn btn--clean">Read more</a>
+          </div>
+          <div class="section__media"><img src="" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+
   </div>
- </div>
+  <footer class="footer">
+    <div class="contiainer">
 
- <div class="wrapper"></div>
- <footer class="footer"></footer>
+    </div>
+  </footer>
 
- <script src="js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

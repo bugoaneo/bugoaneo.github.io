@@ -29,10 +29,8 @@ body {
     word-wrap: break-word;
 
     // Fix rendering fonts
-    // -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    //user
-    -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -41,13 +39,10 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-
     // Fix tap color
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
     // Fix horisontal scroll
     -webkit-overflow-scrolling: touch;
-
     // Remove 300ms delay on Mobile Devices
     -ms-touch-action: manipulation;
     touch-action: manipulation;
