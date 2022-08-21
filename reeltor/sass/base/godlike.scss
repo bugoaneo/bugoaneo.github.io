@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+// Fix adaptive in mobile browsers
+@-ms-viewport {
+    width: device-width;
+    initial-scale: 1;
+}
+
+@-moz-viewport {
+    width: device-width;
+    initial-scale: 1;
+}
+
+@-webkit-viewport {
+    width: device-width;
+    initial-scale: 1;
+}
+
 // Fix default box-sizing
 *,
 :before,

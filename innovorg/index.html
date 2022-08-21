@@ -17,6 +17,7 @@
 
   <title></title>
   <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/sal.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -24,8 +25,9 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="header__container">
-        <div class="logo">Innovorg</div>
+      <p class="center">тут будет меню. Честно. Зуб даю.</p>
+      <!-- <div class="header__container">
+        <div class="logo"><img src="img/logo.svg" alt="" width="92"></div>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item"><a href="">Platform</a></li>
@@ -36,18 +38,18 @@
           </ul>
         </nav>
         <div class="user-action"><a href="">Login</a></div>
-      </div>
+      </div> -->
     </header>
-    <section class="section hero">
-      <div class="container">
-        <div class="hero__content">
+    <section class="hero">
+      <div class="hero__row">
+        <div class="hero__content" data-sal="slide-right" style="--sal-duration: 1s;">
           <div class="hero__subtitle">Innovorg skills engine</div>
-          <h1 class="hero__title">AI technologies to identify & bridge the skills gaps for your employees and channel partners</h1>
+          <h1 class="hero__title">AI&nbsp;technologies to&nbsp;identify &amp;&nbsp;bridge the skills gaps for&nbsp;your employees and&nbsp;channel partners</h1>
           <a href="" class="btn btn--action">Book the Demo</a>
         </div>
+        <div class="hero__media"><img src="img/hero.svg" class="hero__minepic" data-sal="slide-left" style="--sal-duration: 1s;" alt=""></div>
       </div>
       <!-- c -->
-      <div class="hero__media"></div>
     </section>
     <section class="section media">
       <div class="container">
@@ -63,17 +65,21 @@
         </div>
       </div>
     </section>
+
     <section class="section about">
       <div class="container">
-        <div class="section__head">
+        <div class="section__head ligth">
           <h2 class="section__title">Why Innovorg?</h2>
           <p>Innovorg platform not only identifies the skills and certifications gaps and delivers high-quality adaptive training content. But also builds connections between roles, skills, products, services and outcomes delivering real-time ongoing view at every level of the business never seen before.</p>
         </div>
         <div class="about__box">
-          <div class="about__box-header">Real Companies <span class="icon"></span>
-            Real Challenges</div>
+          <div class="about__box-header ligth">Real Companies<br>
+            <span class="icon"><svg viewBox="0 0 64 24" width="64">
+                <use xlink:href="img/sprite.svg#long_arrow"></use>
+              </svg></span>Real Challenges
+          </div>
           <div class="about__box-slider">
-            <img src="" alt="" class="about__box-bg">
+            <img src="img/about_bg.png" alt="" class="about__box-bg">
             <div class="about__box-list">
               <div class="about__box-item">
                 <h3 class="about__box-title">Pressure to innovate = revenue
@@ -116,8 +122,8 @@
           </div>
           <!-- / about__box-slider -->
         </div>
-        <!-- / about__box -->
       </div>
+      <!-- / about__box -->
     </section>
 
     <section class="section solutions">
@@ -180,15 +186,83 @@
       </div>
     </section>
 
+    <!-- <section class="section testimonials">
+      <div class="contiainer"></div>
+    </section> -->
+
+    <section class="section request">
+      <div class="section__row">
+        <div class="section__col">
+          <div class="section__content">
+            <h2 class="section__title">Only the right skills for&nbsp;the right people in&nbsp;the right time</h2>
+            <p>Get all the advantages now! Discover the Innovorg Innovative learning Platform</p>
+            <a href="" class="btn btn--action">Request the Demo</a>
+          </div>
+        </div>
+
+        <div class="section__col"><img src="img/hero_bottom.jpg" alt=""></div>
+      </div>
+    </section>
 
   </div>
   <footer class="footer">
-    <div class="contiainer">
-
+    <div class="container">
+      <ul class="footer__menu">
+        <li class="footer__menu-item">
+          <a href="./" class="footer__menu-caption">Home page</a>
+        </li>
+        <li class="footer__menu-item submenu">
+          <span class="submenu__title">Platform</span>
+          <ul class="submenu__list">
+            <li class="submenu__item"><a href="">Skills module</a></li>
+            <li class="submenu__item"><a href="">Training module</a></li>
+            <li class="submenu__item"><a href="">Sertification module</a></li>
+          </ul>
+        </li>
+        <li class="footer__menu-item submenu">
+          <span class="submenu__title">Solutions</span>
+          <ul class="submenu__list">
+            <li class="submenu__item"><a href="">Managed Services</a></li>
+            <li class="submenu__item"><a href="">Cloud SaaS</a></li>
+            <li class="submenu__item"><a href="">Data Centers</a></li>
+            <li class="submenu__item"><a href="">Channel</a></li>
+          </ul>
+        </li>
+        <li class="footer__menu-item">
+          <a href="./" class="footer__menu-caption">Blog</a>
+        </li>
+        <li class="footer__menu-item submenu">
+          <span class="submenu__title">Company</span>
+          <ul class="submenu__list">
+            <li class="submenu__item"><a href="">About</a></li>
+            <li class="submenu__item"><a href="">Careers</a></li>
+            <li class="submenu__item"><a href="">Contacts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__row">
+      <div class="footer__info">
+        <div class="footer__logo">
+          <svg viewBox="0 0  92 21" width="92">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </div>
+        <p>AI technologies to identify & bridge the skills gaps for your employees and channel partners</p>
+      </div>
+      <div class="footer__copy">© Innovorg 2022</div>
     </div>
   </footer>
 
+  <script src="js/glide.min.js"></script>
+  <script src="js/sal.js"></script>
   <script src="js/scripts.js"></script>
+
+  <script>
+    sal({
+      once: true
+    });
+  </script>
 </body>
 
 </html>

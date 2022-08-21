@@ -40,22 +40,42 @@ img {
   padding: 0 10px;
 }
 
-// h1 {
-//   margin-bottom: 1em;
-//   @include fFS(48px, 65px, 320px, 1900px, 20px);
-//   font-weight: 600;
-//   line-height: 1.1;
-//   color: var(--hero);
+.section {
+  padding: 7vmax 0;
+}
 
-// }
+.section__head {
+  text-align: center;
+  @include fFS(16px, 28px, 320px, 1900px, 20px);
+  font-weight: 500;
+}
 
-// h2 {
-//   margin-bottom: 0.4em;
-//   @include fFS(26px, 48px, 320px, 1900px, 20px);
-//   font-weight: 600;
-//   line-height: 1.1;
-// }
+.section__title {
+  margin-bottom: 0.4em;
+  @include fFS(26px, 48px, 320px, 1900px, 20px);
+  font-weight: 700;
+  line-height: 1.1;
+}
 
+.section__row {
+  @include row(jc, ac);
+}
+
+.section__col {
+  flex: 1 1 50%;
+
+  @include bp(650px) {
+    flex: 1 1 100%;
+  }
+}
+
+.ligth {
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
 
 /**/
 

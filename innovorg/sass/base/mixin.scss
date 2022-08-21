@@ -78,6 +78,14 @@
     justify-content: space-around;
   }
 
+  @if ($align =="ast") {
+    align-items: flex-start;
+  }
+
+  @if ($align =="and") {
+    align-items: flex-end;
+  }
+
   @if ($align =="ac") {
     align-items: center;
   }
@@ -89,11 +97,6 @@
   @if ($align =="ab") {
     align-items: baseline;
   }
-
-  @if ($align =="ast") {
-    align-items: flex-start;
-  }
-
 }
 
 
