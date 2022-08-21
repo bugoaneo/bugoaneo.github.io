@@ -531,7 +531,7 @@ img {
 }
 
 .hero {
-  padding-top: 5%;
+  padding-top: 75px;
   background: -o-linear-gradient(165.36deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
   background: linear-gradient(284.64deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
   overflow: hidden;
@@ -742,10 +742,6 @@ img {
     width: 270px;
     height: 250px;
     overflow: auto;
-    -webkit-scroll-snap-type: y mandatory;
-        -ms-scroll-snap-type: y mandatory;
-            scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--hero) #ddd;
   }
@@ -967,6 +963,16 @@ img {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+/**/
+@media (max-width: 650px) {
+  [data-sal] {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    opacity: 1;
+  }
 }
 
 .btn {

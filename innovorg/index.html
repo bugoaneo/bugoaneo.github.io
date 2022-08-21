@@ -73,15 +73,15 @@
           <p>Innovorg platform not only identifies the skills and certifications gaps and delivers high-quality adaptive training content. But also builds connections between roles, skills, products, services and outcomes delivering real-time ongoing view at every level of the business never seen before.</p>
         </div>
         <div class="about__box">
-          <div class="about__box-header ligth">Real Companies<br>
+          <div class="about__box-header ligth" data-sal="slide-right" style="--sal-duration: 1s;">Real Companies<br>
             <span class="icon"><svg viewBox="0 0 64 24" width="64">
                 <use xlink:href="img/sprite.svg#long_arrow"></use>
               </svg></span>Real Challenges
           </div>
-          <div class="about__box-slider">
+          <div class="about__box-slider" data-sal="slide-left" style="--sal-duration: 1s;">
             <img src="img/about_bg.png" alt="" class="about__box-bg">
             <div class="about__box-list">
-              <div class="about__box-item">
+              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 1s;">
                 <h3 class="about__box-title">Pressure to innovate = revenue
                 </h3>
                 <div class="about__box-content">
@@ -91,7 +91,7 @@
                   </p>
                 </div>
               </div>
-              <div class="about__box-item">
+              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 2s;">
                 <h3 class="about__box-title">Best in class skills
                   required</h3>
                 <div class="about__box-content">
@@ -99,7 +99,7 @@
                   <p>Most employees and partners are under-skilled, and most skills management processes (such as role creation, skills matching and gap assessments) are manual.</p>
                 </div>
               </div>
-              <div class="about__box-item">
+              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 3s;">
                 <h3 class="about__box-title">Certified workforce
                   = competitive advantage
                 </h3>
@@ -109,7 +109,7 @@
                   <p>Skills management x Personalized training means securing new opportunities AND retaining employees.</p>
                 </div>
               </div>
-              <div class="about__box-item">
+              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 4s;">
                 <h3 class="about__box-title">Top talent
                   drives performance</h3>
                 <div class="about__box-content">
@@ -259,9 +259,22 @@
   <script src="js/scripts.js"></script>
 
   <script>
-    sal({
-      once: true
-    });
+    (function () {
+      'use strict';
+      const breakpoint = window.matchMedia('(min-width:650px)');
+      const breakpointChecker = function () {
+        if (breakpoint.matches === true) {
+          const scrollAnimations = sal({ once: true, });
+          return;
+        } else if (breakpoint.matches === false) {
+          return;
+        }
+      };
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+    })();
+
+
   </script>
 </body>
 

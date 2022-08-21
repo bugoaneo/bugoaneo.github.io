@@ -1,5 +1,5 @@
 .hero {
- padding-top: 5%;
+ padding-top: 75px;
  background: linear-gradient(284.64deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
  overflow: hidden;
 }
@@ -127,8 +127,8 @@
   width: 270px;
   height: 250px;
   overflow: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  // scroll-snap-type: y mandatory;
+  // scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--hero) #ddd;
 

@@ -12,3 +12,12 @@
  top: 0;
  left: 0;
 }
+
+/**/
+
+[data-sal] {
+ @include bp(650px) {
+  transform: none;
+  opacity: 1;
+ }
+}
