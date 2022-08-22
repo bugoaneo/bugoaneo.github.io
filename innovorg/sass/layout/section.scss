@@ -95,6 +95,7 @@
 }
 
 .about__box-bg {
+ position: relative;
  display: block;
  margin: auto;
 }
@@ -163,7 +164,7 @@
 
  @include bp(650px) {
   width: 250px;
-  min-height: 250px;
+  height: 250px;
   margin: 0 auto 20px auto;
 
   &:last-of-type {

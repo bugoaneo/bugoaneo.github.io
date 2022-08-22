@@ -1,9 +1,128 @@
 .header {
  position: fixed;
  width: 100%;
- height: 68px;
+ // height: 68px;
  top: 0;
  left: 0;
- background-color: rgba(255, 255, 255, 0.5);
+ padding: 1em;
  z-index: 100;
+ background: rgba(255, 255, 255, 0);
+ transition: all 0.3s ease-in-out;
+
+ &.scrolled {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+ }
+}
+
+.header__container {
+ @include row(jsb, ac);
+ width: 95%;
+ margin: auto;
+ color: var(--bg)
+}
+
+.menu {
+ flex: 0 1 45%;
+
+ // width: 100%;
+ // max-width: 40.9%;
+ @include bp(1400px) {
+  flex: 1 1 auto;
+  padding: 0 1em;
+ }
+}
+
+.menu__list {
+ @include row(jsb, ac);
+}
+
+.menu__item {
+ a {
+  display: block;
+  padding: 0.75em 0.75em 0.8em 0.75em;
+  border-radius: 0.55em;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1;
+ }
+
+ &:hover {
+  >a {
+   color: #fff;
+   background-color: var(--menu-hover);
+  }
+ }
+}
+
+/*breadcrambs*/
+.breadcrambs {
+ position: relative;
+ border-radius: 0.55em;
+ background-color: var(--ligth-bg);
+
+ &:hover {
+
+  .breadcrambs__header .icon,
+  .breadcrambs__current {
+   opacity: 0;
+  }
+
+  .breadcrambs__list {
+   max-height: 1000px;
+  }
+ }
+}
+
+.breadcrambs__header {
+ @include row(jc, ac);
+ padding: 0.75em;
+ // cursor: pointer;
+
+ a {
+  padding: 0;
+ }
+
+ .icon {
+  margin: 0 3px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+ }
+}
+
+.breadcrambs__list {
+ position: absolute;
+ width: 100%;
+ background-color: inherit;
+ margin-top: -0.55em;
+ border-radius: 0 0 0.55em 0.55em;
+ box-shadow: 0px 4px 6px -5px rgba(0, 0, 0, 0.342);
+ overflow: hidden;
+ max-height: 0;
+ transition: max-height 0.3s 0.3s ease-in-out;
+
+ .icon {
+  position: relative;
+  display: block;
+  width: 1.5em;
+  margin: auto;
+  padding-top: 5px;
+  // text-align: center;
+ }
+}
+
+.breadcrambs__item {
+ &:hover {
+  >a {
+   color: #fff;
+   background-color: var(--menu-hover);
+  }
+ }
+}
+
+.breadcrambs__current {
+ opacity: 1;
+ transition: opacity 0.3s ease-in-out;
 }

@@ -25,20 +25,43 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <p class="center">тут будет меню. Честно. Зуб даю.</p>
-      <!-- <div class="header__container">
-        <div class="logo"><img src="img/logo.svg" alt="" width="92"></div>
+      <div class="header__container">
+        <div class="logo"><svg viewBox="0 0 92 21" width="92">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg></div>
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a href="">Platform</a></li>
-            <li class="menu__item"><a href="">Solutions</a></li>
+            <li class="menu__item breadcrambs">
+              <div class="breadcrambs__header">
+                <a href="/">Platform</a>
+                <span class="icon">
+                  <svg viewBox="0 0 16 7" width="15">
+                    <use xlink:href="img/sprite.svg#menu_arrow"></use>
+                  </svg>
+                </span>
+                <span class="breadcrambs__current">Sertification module</span>
+              </div>
+              <ul class="breadcrambs__list">
+                <li class="breadcrambs__icon">
+                  <span class="icon">
+                    <svg viewBox="0 0 6 15" width="6">
+                      <use xlink:href="img/sprite.svg#submenu_arrow"></use>
+                    </svg>
+                  </span>
+                </li>
+                <li class="breadcrambs__item"><a href="">Skills module</a></li>
+                <li class="breadcrambs__item"><a href="">Training module</a></li>
+                <li class="breadcrambs__item"><a href="">Sertification module</a></li>
+              </ul>
+            </li>
+            <li class="menu__item current"><a href="">Solutions</a></li>
             <li class="menu__item"><a href="">Blog</a></li>
             <li class="menu__item"><a href="">Company</a></li>
-            <li class="menu__item"><a href="" class="btn">Book the Demo</a></li>
+            <li class="menu__item"><button type="button" class="btn btn--dark">Book the Demo</button></li>
           </ul>
         </nav>
         <div class="user-action"><a href="">Login</a></div>
-      </div> -->
+      </div>
     </header>
     <section class="hero">
       <div class="hero__row">
@@ -78,10 +101,10 @@
                 <use xlink:href="img/sprite.svg#long_arrow"></use>
               </svg></span>Real Challenges
           </div>
-          <div class="about__box-slider" data-sal="slide-left" style="--sal-duration: 1s;">
-            <img src="img/about_bg.png" alt="" class="about__box-bg">
+          <div class="about__box-slider">
+            <img src="img/about_bg.png" alt="" class="about__box-bg" data-sal="slide-left" style="--sal-duration: 1s;">
             <div class="about__box-list">
-              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 1s;">
+              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 0.5s;">
                 <h3 class="about__box-title">Pressure to innovate = revenue
                 </h3>
                 <div class="about__box-content">
@@ -91,7 +114,7 @@
                   </p>
                 </div>
               </div>
-              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 2s;">
+              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 1s;">
                 <h3 class="about__box-title">Best in class skills
                   required</h3>
                 <div class="about__box-content">
@@ -99,7 +122,7 @@
                   <p>Most employees and partners are under-skilled, and most skills management processes (such as role creation, skills matching and gap assessments) are manual.</p>
                 </div>
               </div>
-              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 3s;">
+              <div class="about__box-item" data-sal="slide-right" style="--sal-duration: 1s; --sal-delay: 1.5s;">
                 <h3 class="about__box-title">Certified workforce
                   = competitive advantage
                 </h3>
@@ -109,7 +132,7 @@
                   <p>Skills management x Personalized training means securing new opportunities AND retaining employees.</p>
                 </div>
               </div>
-              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 4s;">
+              <div class="about__box-item" data-sal="slide-left" style="--sal-duration: 1s; --sal-delay: 2s;">
                 <h3 class="about__box-title">Top talent
                   drives performance</h3>
                 <div class="about__box-content">
@@ -261,12 +284,12 @@
   <script>
     (function () {
       'use strict';
-      const breakpoint = window.matchMedia('(min-width:650px)');
+      const breakpoint = window.matchMedia('(max-width:650px)');
       const breakpointChecker = function () {
         if (breakpoint.matches === true) {
-          const scrollAnimations = sal({ once: true, });
           return;
         } else if (breakpoint.matches === false) {
+          const scrollAnimations = sal({ once: true, });
           return;
         }
       };
