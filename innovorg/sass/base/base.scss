@@ -37,7 +37,15 @@ img {
 .container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
+
+  @include bp(650px) {
+    padding: 0 40px;
+  }
+
+  @include bp(350px) {
+    padding: 0 10px;
+  }
 }
 
 .section {
@@ -45,6 +53,7 @@ img {
 }
 
 .section__head {
+  margin-bottom: 3em;
   text-align: center;
   @include fFS(16px, 28px, 320px, 1900px, 20px);
   font-weight: 500;
@@ -59,13 +68,36 @@ img {
 
 .section__row {
   @include row(jc, ac);
+
+  &--rewerse {
+    flex-direction: row-reverse;
+  }
 }
 
 .section__col {
-  flex: 1 1 50%;
+  flex: 0 1 50%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 
   @include bp(650px) {
-    flex: 1 1 100%;
+    flex: 0 1 100%;
+  }
+}
+
+.section__content {
+  margin: 0 auto;
+  padding: 0 10px;
+  font-size: 16px;
+
+  p {
+    margin-bottom: 1em;
   }
 }
 
