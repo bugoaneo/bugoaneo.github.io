@@ -21,14 +21,12 @@
  @include row(jsb, ac);
  width: 95%;
  margin: auto;
- color: var(--bg)
+ color: var(--text)
 }
 
 .menu {
  flex: 0 1 45%;
 
- // width: 100%;
- // max-width: 40.9%;
  @include bp(1400px) {
   flex: 1 1 auto;
   padding: 0 1em;

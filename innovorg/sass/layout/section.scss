@@ -1,21 +1,22 @@
 .hero {
  padding-top: 75px;
- background: linear-gradient(284.64deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
+ background: radial-gradient(52.6% 75.73% at 57.53% 51.73%, #9393AC 0%, #D7DFEA 100%),
+  linear-gradient(284.64deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
  overflow: hidden;
 }
 
 .hero__subtitle {
- @include fFS(18px, 28px, 320px, 1900px, 20px);
+ @include fFS(18px, 28px, 320px, 1900px, 18px);
  margin-bottom: 1em;
- color: var(--hero);
+ color: var(--text);
 }
 
 .hero__title {
  margin-bottom: .5em;
- @include fFS(40px, 65px, 320px, 1900px, 20px);
+ @include fFS(40px, 65px, 320px, 1900px, 18px);
  font-weight: 600;
  line-height: 1;
- color: var(--hero);
+ color: var(--text);
 
 }
 
@@ -33,24 +34,28 @@
  max-width: 712px;
  padding: 0 15px;
  /*!!!!!!!*/
- margin: -10% -18% 0 auto;
+ margin: -10% -16% 0 auto;
+
+ .btn--action {
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+ }
 }
 
 .hero__media {
- padding-bottom: 74%;
+ padding-bottom: 73%;
 }
 
 .hero__minepic {
  position: absolute;
  bottom: -3px;
  right: -3px;
- width: 63%;
+ width: 68%;
 }
 
 
 /*about*/
 .about {
- background-color: var(--bg);
+ background: linear-gradient(46.53deg, #DBEBFE 51.48%, #FFE6C9 87.16%);
 
  .section__head {
   margin-bottom: 3.5em;
