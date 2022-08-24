@@ -1,40 +1,144 @@
 .header {
  position: fixed;
  width: 100%;
- // height: 68px;
  top: 0;
  left: 0;
  padding: 1em;
  z-index: 100;
  background: rgba(255, 255, 255, 0);
+ backdrop-filter: blur(0px);
  transition: all 0.3s ease-in-out;
 
  &.scrolled {
   background: rgba(255, 255, 255, 0.72);
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease-in-out;
+  // @include bp(1000px){
+
+  // }
  }
+
+ &--innersite {
+  .breadcrambs {
+   &:hover {
+
+    .breadcrambs__header .icon,
+    .breadcrambs__current {
+     opacity: 0;
+
+     @include bp(1000px) {
+      opacity: 1;
+     }
+    }
+   }
+  }
+
+  .breadcrambs__list {
+   width: 100%;
+  }
+
+  .breadcrambs__homelink .icon {
+   display: inline-block;
+  }
+
+  .breadcrambs__current {
+   @include bp(1000px) {
+    display: none;
+   }
+  }
+ }
+
+ .logo {
+  position: relative;
+  z-index: 1;
+ }
+
+ // @include bp(650px) {
+ //  padding: 1em 40px;
+ // }
+
+ // @include bp(350px) {
+ //  padding: 1em;
+ // }
 }
 
 .header__container {
  @include row(jsb, ac);
  width: 95%;
  margin: auto;
- color: var(--text)
+ color: var(--text);
+
+ @include bp(1400px) {
+  width: 100%;
+ }
 }
 
 .menu {
- flex: 0 1 45%;
+ flex: 0 1 48%;
 
- @include bp(1400px) {
-  flex: 1 1 auto;
+ @include bp(1500px) {
+  flex: 0 1 75%;
   padding: 0 1em;
+ }
+
+ @include bp(1200px) {
+  flex: 0 1 85%;
+ }
+
+ @include bp(1000px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 68px 20px 1em 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transform: translateX(-100%);
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+
+  // min-height: -webkit-fill-available;
+  // &:before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100vh;
+  //  // bottom: 0;
+  //  // right: 0;
+  //  background: rgba(255, 255, 255, 0.72);
+  //  -webkit-backdrop-filter: blur(10px);
+  //  backdrop-filter: blur(10px);
+  //  z-index: -1;
+  // }
+
+  &.open {
+   transform: translateX(0);
+  }
+ }
+
+ @include bp(650px) {
+  padding: 68px 40px 1em 40px;
+ }
+
+ @include bp(350px) {
+  padding: 68px 20px 1em 20px;
  }
 }
 
 .menu__list {
  @include row(jsb, ac);
+
+ @include bp(1000px) {
+  display: block;
+  flex: 1;
+  overflow: auto;
+ }
 }
 
 .menu__item {
@@ -45,61 +149,155 @@
   text-align: center;
   font-weight: 500;
   line-height: 1;
+  word-break: normal;
+  white-space: nowrap;
+
+  @include bp(1000px) {
+   display: inline-block;
+   border-radius: 4px;
+   text-align: left;
+  }
+
+ }
+
+ &.current {
+  @include bp(1000px) {
+   >a {
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--text);
+   }
+  }
  }
 
  &:hover {
+
   >a {
    color: #fff;
    background-color: var(--menu-hover);
+
+   @include bp(1000px) {
+    font-weight: 700;
+    background-color: var(--menu-hover_mob);
+   }
   }
  }
+
+ &--desk {
+  @include bp(1000px) {
+   display: none;
+  }
+ }
+
+ &--mobil {
+  display: none;
+
+  @include bp(1000px) {
+   display: block;
+  }
+ }
+
+ @include bp(1000px) {
+  margin-bottom: 24px;
+ }
+
 }
 
 /*breadcrambs*/
 .breadcrambs {
  position: relative;
+ flex: 0 0 auto;
  border-radius: 0.55em;
- background-color: var(--ligth-bg);
 
  &:hover {
-
-  .breadcrambs__header .icon,
-  .breadcrambs__current {
-   opacity: 0;
-  }
-
   .breadcrambs__list {
-   max-height: 1000px;
+   transform: translateX(0);
+   max-height: 500px;
+   opacity: 1;
+
+   @include bp(1000px) {
+    transform: none;
+    max-height: 0;
+    opacity: 0;
+
+    &.open {
+     transform: translateX(0);
+     max-height: 500px;
+     opacity: 1;
+    }
+   }
   }
  }
 }
 
 .breadcrambs__header {
+ position: relative;
  @include row(jc, ac);
  padding: 0.75em;
- // cursor: pointer;
+ z-index: 1;
 
  a {
   padding: 0;
+
+  @include bp(1000px) {
+   padding: 0.75em 0.75em 0.8em 0.75em;
+  }
  }
 
  .icon {
   margin: 0 3px;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+ }
+
+ @include bp(1000px) {
+  display: block;
+  padding: 0;
+
+  &.open {
+   .breadcrambs__homelink {
+    font-weight: 700;
+    color: var(--text);
+
+    .icon {
+     transform: rotate(90deg);
+    }
+   }
+  }
+
+  &:hover {
+   .breadcrambs__homelink {
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--menu-hover_mob);
+   }
+  }
+ }
+}
+
+.breadcrambs__homelink {
+ position: relative;
+
+ .icon {
+  display: none;
+
+  @include bp(1000px) {
+   display: inline-block;
+  }
  }
 }
 
 .breadcrambs__list {
  position: absolute;
- width: 100%;
- background-color: inherit;
+ transform: translateX(-15555%);
+ min-width: 160px;
+ background-color: var(--ligth-bg);
  margin-top: -0.55em;
  border-radius: 0 0 0.55em 0.55em;
  box-shadow: 0px 4px 6px -5px rgba(0, 0, 0, 0.342);
- overflow: hidden;
  max-height: 0;
- transition: max-height 0.3s 0.3s ease-in-out;
+ opacity: 0;
+ transition: max-height 0.3s linear;
 
  .icon {
   position: relative;
@@ -107,7 +305,41 @@
   width: 1.5em;
   margin: auto;
   padding-top: 5px;
-  // text-align: center;
+
+  @include bp(1000px) {
+   display: none;
+  }
+ }
+
+ &::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 2em;
+  border-radius: 0.55em 0.55em 0 0;
+  background-color: inherit;
+ }
+
+ @include bp(1000px) {
+  position: relative;
+  border-radius: 0;
+  margin-top: 0;
+  margin-left: 20px;
+  transform: none;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+
+  &::before {
+   display: none;
+  }
+
+  &.open {
+   max-height: 500px;
+   opacity: 1;
+  }
  }
 }
 
@@ -116,6 +348,21 @@
   >a {
    color: #fff;
    background-color: var(--menu-hover);
+
+   @include bp(1000px) {
+    font-weight: 700;
+    background-color: var(--menu-hover_mob);
+   }
+  }
+ }
+
+ &.current {
+  @include bp(1000px) {
+   a {
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--text);
+   }
   }
  }
 }
@@ -123,4 +370,33 @@
 .breadcrambs__current {
  opacity: 1;
  transition: opacity 0.3s ease-in-out;
+}
+
+.action-block {
+ @include bp(1000px) {
+  display: none;
+ }
+}
+
+.menu__footer {
+ display: none;
+ text-align: center;
+
+ .btn {
+  border-radius: 4px;
+  margin-bottom: 1em;
+ }
+
+ .action-block {
+  display: block;
+
+  a {
+   display: block;
+   padding: 0.75em 0.75em 0.8em 0.75em;
+  }
+ }
+
+ @include bp(1000px) {
+  display: block;
+ }
 }

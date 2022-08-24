@@ -9,7 +9,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  // min-height: -webkit-fill-available;
+
+  &.hidden {
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+  }
+
 }
 
 .wrapper {
@@ -61,7 +66,7 @@ img {
 
 .section__title {
   margin-bottom: 0.4em;
-  @include fFS(26px, 48px, 320px, 1900px, 20px);
+  @include fFS(28px, 48px, 320px, 1900px, 20px);
   font-weight: 700;
   line-height: 1.1;
 }

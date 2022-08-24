@@ -5,8 +5,8 @@
 <symbol id="long_arrow" fill="none" viewBox="0 0 64 24">
 <path fill="currentColor" d="M63.06 13.06a1.5 1.5 0 0 0 0-2.12l-9.545-9.547a1.5 1.5 0 1 0-2.122 2.122L59.88 12l-8.486 8.485a1.5 1.5 0 1 0 2.122 2.122l9.546-9.546ZM0 13.5h62v-3H0v3Z"/>
 </symbol>
-<symbol id="menu_arrow" viewBox="0 0 16 7"><path fill="currentColor" d="M15.75 3.375 10.703.572l.096 5.773 4.951-2.97Zm-14.992.75L11.26 3.95l-.017-1-10.5.175.016 1Z"/></symbol>
-<symbol id="submenu_arrow" viewBox="0 0 6 15"><path fill="currentColor" d="m3 14.509 2.887-5H.113l2.887 5ZM2.5 0v10.009h1V0h-1Z"/></symbol>
+<symbol id="horizontal_arrow" viewBox="0 0 16 7"><path fill="currentColor" d="M15.75 3.375 10.703.572l.096 5.773 4.951-2.97Zm-14.992.75L11.26 3.95l-.017-1-10.5.175.016 1Z"/></symbol>
+<symbol id="vertical_arrow" viewBox="0 0 6 15"><path fill="currentColor" d="m3 14.509 2.887-5H.113l2.887 5ZM2.5 0v10.009h1V0h-1Z"/></symbol>
 
 <symbol></symbol>
 <symbol></symbol>
