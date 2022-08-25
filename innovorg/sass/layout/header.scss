@@ -20,32 +20,48 @@
 
  &--innersite {
   .breadcrambs {
-   &:hover {
+   &.current {
 
-    .breadcrambs__header .icon,
-    .breadcrambs__current {
-     opacity: 0;
+    .breadcrambs__current,
+    .breadcrambs__homelink .icon {
+     display: inline-block;
+    }
 
-     @include bp(1000px) {
-      opacity: 1;
+    &:hover {
+
+     .breadcrambs__current,
+     .breadcrambs__homelink .icon {
+      opacity: 0;
+
+      @include bp(1000px) {
+       opacity: 1;
+      }
      }
     }
    }
-  }
 
-  .breadcrambs__list {
-   width: 100%;
-  }
+   .breadcrambs__list {
+    width: 100%;
+   }
 
-  .breadcrambs__homelink .icon {
-   display: inline-block;
+   .breadcrambs__homelink .icon {
+    display: none;
+
+    @include bp(1000px) {
+     display: inline-block;
+    }
+   }
+
   }
 
   .breadcrambs__current {
+   display: none;
+
    @include bp(1000px) {
     display: none;
    }
   }
+
  }
 
  .logo {
@@ -76,7 +92,9 @@
 .menu {
  flex: 0 1 48%;
 
- @include bp(1500px) {
+
+
+ @include bp(1600px) {
   flex: 0 1 75%;
   padding: 0 1em;
  }
@@ -347,7 +365,7 @@
  &:hover {
   >a {
    color: #fff;
-   background-color: var(--menu-hover);
+   background-color: var(--text);
 
    @include bp(1000px) {
     font-weight: 700;

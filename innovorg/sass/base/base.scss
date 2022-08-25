@@ -41,8 +41,14 @@ img {
 
 .container {
   max-width: var(--container);
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+
+  &--inner {
+    max-width: 1340px;
+    width: 100%;
+  }
 
   @include bp(650px) {
     padding: 0 40px;
@@ -55,6 +61,18 @@ img {
 
 .section {
   padding: 7vmax 0;
+
+  &:only-of-type {
+    min-height: 100vh;
+    /*!!!!!!*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--gradient {
+    background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
+  }
 }
 
 .section__head {
@@ -81,7 +99,26 @@ img {
 
 .section__col {
   flex: 0 1 50%;
-  overflow: hidden;
+  // overflow: hidden;
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+  }
+}
+
+.section__pic {
+  img {
+    display: block;
+    max-width: 95%;
+    margin: auto;
+
+    @include bp(650px) {
+      width: 100%;
+    }
+  }
+}
+
+.section__media {
 
   img {
     display: block;
@@ -90,18 +127,13 @@ img {
     object-fit: cover;
     object-position: center;
   }
-
-  @include bp(650px) {
-    flex: 0 1 100%;
-  }
 }
 
 .section__content {
   margin: 0 auto;
-  padding: 0 10px;
   font-size: 16px;
 
-  p {
+  p:not(:last-child) {
     margin-bottom: 1em;
   }
 }

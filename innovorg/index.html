@@ -32,7 +32,7 @@
       .platform {
         background-image: url('img/platform_mob.png');
         background-position: 0 85%;
-        background-size: 80% auto;
+        background-size: 70% auto;
         background-repeat: no-repeat;
       }
 
@@ -301,7 +301,11 @@
               <a href="" class="btn">Read more</a>
             </div>
           </div>
-          <div class="section__col platform__picture"><img src="img/meet.png" alt=""></div>
+          <div class="section__col">
+            <div class="platform__picture">
+              <img src="img/meet.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -380,7 +384,8 @@
       </div>
     </section>
 
-    <section class="section request splitescreen">
+    <section class="section request">
+      <!--TODO => Here DON'T NEED CONTAINER! For splite on two half screen -->
       <div class="section__row">
         <div class="section__col">
           <div class="section__content center">
@@ -391,7 +396,7 @@
         </div>
 
         <div class="section__col">
-          <picture class="section__pic">
+          <picture class="section__media">
             <source media="(max-width: 650px)" srcset="img/hero_bottom-m.jpg">
             <img src="img/hero_bottom.jpg" alt="">
           </picture>

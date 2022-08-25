@@ -13,11 +13,53 @@
  left: 0;
 }
 
-/**/
+/*SAL*/
 
 [data-sal] {
  @include bp(650px) {
   transform: none;
   opacity: 1;
+ }
+}
+
+
+/*error-msg*/
+
+.error-msg {
+ position: absolute;
+ top: calc(100% + 12px);
+ padding: 0.8em 1em;
+ border-radius: 4px;
+ color: var(--warning);
+ text-align: center;
+ font-weight: 700;
+ white-space: nowrap;
+ background-color: var(--warning-bg);
+ z-index: 1;
+
+ &:before {
+  content: '';
+  position: absolute;
+  left: 0.8em;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 11px;
+  border-left-width: 11px;
+  border-bottom: 10px solid var(--warning-bg);
+ }
+
+ &--plank {
+  position: static;
+  margin: 1em 0;
+
+  &::before {
+   display: none;
+  }
+ }
+
+ @include bp(1000px) {
+  white-space: normal;
  }
 }
