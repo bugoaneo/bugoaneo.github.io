@@ -15,7 +15,7 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#ffffff">
 
-  <title></title>
+  <title>Contact us</title>
   <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/sal.css">
   <link rel="stylesheet" href="css/main.css">
@@ -41,7 +41,6 @@
                     </svg>
                   </span>
                 </a>
-                <span class="breadcrambs__current">Sertification module</span>
               </div>
               <ul class="breadcrambs__list">
                 <li class="breadcrambs__icon">
@@ -56,7 +55,30 @@
                 <li class="breadcrambs__item"><a href="">Sertification module</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="">Solutions</a></li>
+            <li class="menu__item breadcrambs">
+              <div class="breadcrambs__header">
+                <a href="/" class="breadcrambs__homelink">Solutions
+                  <span class="icon">
+                    <svg viewBox="0 0 16 7" width="15">
+                      <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <ul class="breadcrambs__list">
+                <li class="breadcrambs__item">
+                  <span class="icon">
+                    <svg viewBox="0 0 6 15" width="6">
+                      <use xlink:href="img/sprite.svg#vertical_arrow"></use>
+                    </svg>
+                  </span>
+                </li>
+                <li class="breadcrambs__item"><a href="">Managed services</a></li>
+                <li class="breadcrambs__item"><a href="">Hosting & Data center</a></li>
+                <li class="breadcrambs__item"><a href="">Cloud Saas</a></li>
+                <li class="breadcrambs__item"><a href="">Channel</a></li>
+              </ul>
+            </li>
             <li class="menu__item"><a href="">Blog</a></li>
             <li class="menu__item breadcrambs current">
               <div class="breadcrambs__header">
@@ -82,7 +104,7 @@
                 <li class="breadcrambs__item"><a href="">Careers</a></li>
               </ul>
             </li>
-            <li class="menu__item"><button type="button" class="btn btn--dark">Book the Demo</button></li>
+            <li class="menu__item"><a href="" class="btn btn--dark">Book the Demo</a></li>
           </ul>
           <!-- hidden on desctop -->
           <ul class="menu__footer">
@@ -101,11 +123,9 @@
       <div class="container container--inner">
         <div class="section__row">
           <div class="section__col">
-            <div class="contact__container">
-              <div class="section__content">
-                <h1 class="section__title">We are here to help</h1>
-                <p>For any questions or if you just want to say “thank you”, just fill this form. And some other text goes here.</p>
-              </div>
+            <div class="section__content">
+              <h1 class="section__title">We are here to help</h1>
+              <p>For any questions or if you just want to say “thank you”, just fill this form. And some other text goes here.</p>
               <form action="" class="form" name="" id="">
                 <div class="form__row">
                   <div class="form__col">
@@ -120,9 +140,11 @@
                   </div>
                 </div>
                 <div class="form__row">
+                  <!-- TODO => Error class for invalid state of input. -->
                   <div class="form__col error">
                     <label for="" class="form__label">Your Email</label>
-                    <input type="email" name="" id="" class="form__input" placeholder="" required>
+                    <input type="email" name="" id="" class="form__input" placeholder="">
+                    <!-- TODO => For display of error message add class <.shown> -->
                     <div class="error-msg shown">Wrong Email format</div>
                   </div>
                   <div class="form__col form__col--small">
@@ -141,11 +163,12 @@
                 <div class="error-msg error-msg--plank shown">To send the message, please, fill all the fields</div>
                 <div class="form__row"><button class="btn">Send the message</button></div>
 
-
+                <div class="form__row"><button class="btn" disabled>disabled</button></div>
               </form>
             </div>
+
           </div>
-          <div class="section__col ">
+          <div class="section__col">
             <div class="contact__pic">
               <img src="img/pazzle.png" alt="">
             </div>
@@ -154,7 +177,22 @@
         </div>
       </div>
     </section>
-
+    <!-- TODO => Please, include popup INTO <.wrapper>-container! Add class <.shown> for open popup -->
+    <div class="overlay">
+      <div class="popup">
+        <div class="popup__content center">
+          <!-- <button class="popup__close" type="button"></button> -->
+          <div class="popup__title">The Message is sent. Thank you!</div>
+          <div class="popup__body">
+            <p> We will come back with an answer to the email you’ve given in this Form.</p>
+            <p> Have a nice day!</p>
+          </div>
+          <div class="popup__footer">
+            <button class="btn btn-ok" type="button">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="footer">
     <div class="container">
@@ -204,7 +242,6 @@
       <div class="footer__copy">© Innovorg 2022</div>
     </div>
   </footer>
-
   <script src="js/scripts.js"></script>
 
 </body>

@@ -70,4 +70,13 @@
   padding: 0.9em 1em 0.8em 1em;
   background-color: var(--text);
  }
+
+ &:disabled,
+ &.disabled {
+  background-color: var(--disabled);
+ }
+}
+
+.btn-ok {
+ padding: 0.7em 2em 0.6em 2em;
 }

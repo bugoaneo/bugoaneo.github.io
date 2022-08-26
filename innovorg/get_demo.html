@@ -15,7 +15,7 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#ffffff">
 
-  <title></title>
+  <title>Requeast the Demo</title>
   <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/sal.css">
   <link rel="stylesheet" href="css/main.css">
@@ -56,7 +56,7 @@
                 <li class="breadcrambs__item"><a href="">Sertification module</a></li>
               </ul>
             </li>
-            <li class="menu__item breadcrambs current">
+            <li class="menu__item breadcrambs">
               <div class="breadcrambs__header">
                 <a href="/" class="breadcrambs__homelink">Solutions
                   <span class="icon">
@@ -65,7 +65,6 @@
                     </svg>
                   </span>
                 </a>
-                <span class="breadcrambs__current">Managed services</span>
               </div>
               <ul class="breadcrambs__list">
                 <li class="breadcrambs__item">
@@ -120,7 +119,107 @@
       </div>
     </header>
 
+    <section class="section section--gradient get-demo">
+      <div class="section__row">
+        <div class="section__col">
+          <div class="section__content">
+            <h1 class="section__title">Contact our sales team
+              to get the personalized Demo</h1>
+            <form action="" class="form" name="" id="">
+              <div class="form__row">
+                <div class="form__col">
+                  <label for="" class="form__label">First name *</label>
+                  <input type="text" name="" id="" class="form__input" placeholder="" required>
+                </div>
+                <div class="form__col">
+                  <label for="" class="form__label">Last Name*</label>
+                  <input type="text" name="" id="" class="form__input" placeholder="" required>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__col">
+                  <label for="" class="form__label">Company name *</label>
+                  <input type="text" name="" id="" class="form__input" placeholder="" required>
+                </div>
+                <div class="form__col">
+                  <label for="" class="form__label">Job title *</label>
+                  <input type="text" name="" id="" class="form__input" placeholder="" required>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__col">
+                  <label for="" class="form__label">Business phone *</label>
+                  <input type="tel" name="" id="" class="form__input" placeholder="" required>
+                </div>
+                <div class="form__col">
+                  <label for="" class="form__label">Business email *</label>
+                  <input type="email" name="" id="" class="form__input" placeholder="" required>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__col form__col--small">
+                  <label for="" class="form__label">Your Company size*</label>
+                  <div class="form__select-wrap">
+                    <select name="" id="" class="form__select" required>
+                      <option value="" selected="selected">Please, select</option>
+                      <option value="">1 - 500</option>
+                      <option value="">500 - 1,000</option>
+                      <option value="">1,000 - 5,000</option>
+                      <option value="">5,001 +</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__col">
+                  <label for="" class="form__label">Your Country*</label>
+                  <div class="form__select-wrap form__input">
+                    <select name="" id="" class="form__select" required>
+                      <option value="" selected="selected">Please, select</option>
+                      <option value="RU">Россия</option>
+                      <option value="UA">Украина</option>
+                      <option value="KZ">Казахстан</option>
+                      <option value="BY">Беларусь</option>
+                      <option value="MD">Молдова</option>
+                      <option value="AZ">Азербайджан</option>
+                      <option value="AM">Армения</option>
+                      <option value="GE">Грузия</option>
+                      <option value="UZ">Узбекистан</option>
+                      <option value="US">США</option>
+                      <option value="GB">Великобритания</option>
+                      <option value="DE">Германия</option>
+                      <option value="CA">Канада</option>
+                      <option value="AU">Австралия</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row"><button class="btn">Get the Demo</button></div>
+            </form>
+          </div>
+        </div>
+        <div class="section__col">
+          <div class="section__pic">
+            <img src="img/meet.png" alt="">
+          </div>
 
+        </div>
+      </div>
+    </section>
+    <!-- TODO => Please, include popup INTO <.wrapper>-container! Add class <.shown> for open popup -->
+    <div class="overlay">
+      <div class="popup">
+        <div class="popup__content center">
+          <!-- <button class="popup__close" type="button"></button> -->
+          <div class="popup__title">The Request is sent. Thank you!</div>
+          <div class="popup__body">
+            <p> We will come back with an answer to the email you’ve given in this Form.</p>
+            <p> Have a nice day!</p>
+          </div>
+          <div class="popup__footer">
+            <button class="btn btn-ok" type="button">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="footer">
     <div class="container">
@@ -172,7 +271,6 @@
   </footer>
 
   <script src="js/scripts.js"></script>
-
 
 </body>
 

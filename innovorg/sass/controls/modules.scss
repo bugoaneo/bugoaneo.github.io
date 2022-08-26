@@ -26,6 +26,8 @@
 /*error-msg*/
 
 .error-msg {
+ display: none;
+ opacity: 0;
  position: absolute;
  top: calc(100% + 12px);
  padding: 0.8em 1em;
@@ -50,6 +52,11 @@
   border-bottom: 10px solid var(--warning-bg);
  }
 
+ &.shown {
+  display: block;
+  opacity: 1;
+ }
+
  &--plank {
   position: static;
   margin: 1em 0;
@@ -61,5 +68,118 @@
 
  @include bp(1000px) {
   white-space: normal;
+ }
+}
+
+
+/*popup*/
+
+/*popup*/
+.overlay {
+ display: none;
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(215, 223, 232, 0.64);
+ backdrop-filter: blur(30px);
+ z-index: 10;
+ overflow: hidden;
+ opacity: 0;
+
+ // transition: opacity 0.5s linear;
+ &.shown {
+  display: flex;
+  opacity: 1;
+
+  .popup {
+   animation: fadeOut 1s ease 0.2s forwards;
+  }
+ }
+}
+
+.popup {
+ display: flex;
+ flex-direction: column;
+ max-width: 1100px;
+ min-width: 300px;
+ width: auto;
+ height: 100%;
+ margin: 0 auto;
+ opacity: 0;
+
+ @include bp(1200px) {
+  max-width: 85%;
+ }
+}
+
+.popup__content {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ max-height: 80%;
+ font-size: 16px;
+ padding: 3em 2.1em 3em 2.5em;
+ border-radius: 0.4em;
+ background: #fff;
+ margin: 20vh auto 0 auto;
+
+ @include bp(650px) {
+  padding: 1.5em 0.8em 1.5em 1.2em;
+ }
+}
+
+.popup__body {
+ flex: 1 1 auto;
+ overflow: auto;
+ padding: 1em 0.5em 1em 0;
+ margin-bottom: 1em;
+ scrollbar-width: thin;
+ scrollbar-color: var(--bg) #e8ecee;
+
+ p+p {
+  margin-top: 1em;
+ }
+
+ &::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 5px;
+ }
+
+ &::-webkit-scrollbar-track {
+  border-radius: 5px;
+  margin: 5px;
+  background: #e8ecee;
+  box-shadow: inset 0px 5px 5px rgba(0, 78, 114, 0.1);
+ }
+
+ &::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--bg);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+ }
+}
+
+.popup__footer {
+ flex: 0 0 auto;
+
+ .btn {
+  font-size: 16px;
+
+ }
+}
+
+.popup__title {
+ @include fFS(28px, 32px, 320px, 1900px, 18px);
+ font-weight: 700;
+}
+
+@keyframes fadeOut {
+ 100% {
+  opacity: 1;
  }
 }

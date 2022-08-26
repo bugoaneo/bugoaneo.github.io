@@ -68,6 +68,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include bp(1000px) {
+      padding: 10vmax 0 7vmax 0;
+    }
   }
 
   &--gradient {

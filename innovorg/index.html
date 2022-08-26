@@ -469,6 +469,7 @@
           return;
         } else if (breakpoint.matches === false) {
           const scrollAnimations = sal({ once: true, });
+          aboutBox.destroy();
           return;
         }
       };
