@@ -25,6 +25,10 @@
     .breadcrambs__current,
     .breadcrambs__homelink .icon {
      display: inline-block;
+
+     @include bp(1000px) {
+      display: none;
+     }
     }
 
     &:hover {
@@ -344,7 +348,7 @@
   position: relative;
   border-radius: 0;
   margin-top: 0;
-  margin-left: 20px;
+  padding-left: 20px;
   transform: none;
   background-color: transparent;
   box-shadow: none;
