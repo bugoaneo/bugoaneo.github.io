@@ -50,6 +50,11 @@ img {
     width: 100%;
   }
 
+  &--tiny {
+    max-width: 940px;
+    width: 100%;
+  }
+
   @include bp(650px) {
     padding: 0 40px;
   }

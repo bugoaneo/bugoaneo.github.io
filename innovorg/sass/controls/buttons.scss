@@ -71,6 +71,11 @@
   background-color: var(--text);
  }
 
+ &--ligth {
+  background-color: #fff;
+  color: var(--bg);
+ }
+
  &--small {
   font-size: 16px;
  }

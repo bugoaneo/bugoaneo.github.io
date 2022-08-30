@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -19,7 +19,22 @@
   <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/sal.css">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    .who_we_are {
+      background-image: url('img/testimonials_l.png'), url('img/testimonials_r.png');
+      background-position: center left, center right;
+      background-size: auto 80%;
+      background-repeat: no-repeat;
+    }
 
+    @media (max-width:1000px) {
+
+      .who_we_are {
+        background-image: none;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
@@ -58,7 +73,7 @@
             </li>
             <li class="menu__item breadcrambs">
               <div class="breadcrambs__header">
-                <a href="/" class="breadcrambs__homelink">Solutions
+                <a href="" class="breadcrambs__homelink">Solutions
                   <span class="icon">
                     <svg viewBox="0 0 16 7" width="15">
                       <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
@@ -80,7 +95,7 @@
                 <li class="breadcrambs__item"><a href="">Channel</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="">Blog</a></li>
+            <!-- <li class="menu__item"><a href="">Blog</a></li> -->
             <li class="menu__item breadcrambs  current">
               <div class="breadcrambs__header">
                 <a href="/" class="breadcrambs__homelink">Company
@@ -101,7 +116,7 @@
                   </span>
                 </li>
                 <li class="breadcrambs__item"><a href="">Contact us</a></li>
-                <li class="breadcrambs__item"><a href="">About us</a></li>
+                <li class="breadcrambs__item"><a href="/">About us</a></li>
                 <li class="breadcrambs__item"><a href="">Careers</a></li>
               </ul>
             </li>
@@ -132,6 +147,117 @@
         </picture>
       </div>
     </section>
+
+    <section class="section who_we_are ligth">
+      <div class="container container--tiny">
+        <article class="section__content">
+          <h2 class="section__title center">Who we are</h2>
+          <p>We are ambitious. (we need a short and succinct text here)
+            And here goes some text that describes us as the Professionals in the Cloud Industry.</p>
+          <p>We are Remote First.</br>
+            We work from different geographic locations and different zones. We come from different backgrounds and cultures. This diversity is our strength, and we welcome everyone. </p>
+        </article>
+        <article class="section__content">
+          <h2 class="section__title center">Our Mission</h2>
+          <p>Scelerisque in dictum non consectetur. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Cursus metus aliquam eleifend mi in.</p>
+        </article>
+        <article class="section__content">
+          <h2 class="section__title center">Our Vision</h2>
+          <p>Convallis aenean et tortor at risus. Consectetur adipiscing elit pellentesque habitant morbi tristique.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section timeline">
+      <div class="container container--tiny">
+        <h2 class="section__title center">Our Story</h2>
+        <div class="timeline__list">
+          <div class="timeline__item">
+            <div class="timeline__row">
+              <div class="timeline__header">
+                <h3 class="timeline__title">2018 - 2019</h3>
+                <p>Innovorg establishement</p>
+                <p>Vision and market fit</p>
+              </div>
+              <div class="timeline__descr">
+                <p>Innovorg platform as an idea, has been researched
+                  and tested for many years. The founding members and advisors have many years working in the Cloud industry. They firsthand experienced the major pains of the highly technical and resources intensive business, trying to keep and grow their talent.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__row">
+              <div class="timeline__header">
+                <h3 class="timeline__title">2020</h3>
+                <p>Skills Module Beta and Launch</p>
+                <p>First Paying clients signed</p>
+              </div>
+              <div class="timeline__descr">
+                <p>The company was fully bootsrapped by the founder to Skills Module commercialization in 2020.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__row">
+              <div class="timeline__header">
+                <h3 class="timeline__title">2021</h3>
+                <p>First funding round closed</p>
+                <p>First employees hired</p>
+              </div>
+              <div class="timeline__descr">
+                <p>In 2021 to accelerate qrowth, we closed our first funding round, with great support from the Cloud industry’s very well-known Angels.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__row">
+              <div class="timeline__header">
+                <h3 class="timeline__title">2022</h3>
+                <p>Migration to Platform V2</p>
+                <p>Development team expansion</p>
+                <p>Learn Module Launch</p>
+                <p>Certification Module Launch</p>
+              </div>
+              <div class="timeline__descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor... I guess we need some text here</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="timeline__item">
+            <div class="timeline__row">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Future</h3>
+              </div>
+              <div class="timeline__descr">
+                <p>We have ambitious plans for the future: our goal is
+                  to become the to-go platform for technical skills and Certification Management and make our products available worldwide.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section career">
+      <div class="container">
+        <div class="career__row">
+          <div class="career__content">
+            <div class="section__content center ligth">
+              <h2 class="section__title">Join our team!</h2>
+              <p>We are always looking for great talent</p>
+              <a href="contact.html" class="btn btn--small btn--ligth">Contact us</a>
+            </div>
+          </div>
+          <div class="career__picture">
+            <img src="img/career.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   <footer class="footer">
     <div class="container">
@@ -156,15 +282,15 @@
             <li class="submenu__item"><a href="">Channel</a></li>
           </ul>
         </li>
-        <li class="footer__menu-item">
+        <!-- <li class="footer__menu-item">
           <a href="./" class="footer__menu-caption">Blog</a>
-        </li>
+        </li> -->
         <li class="footer__menu-item submenu">
           <span class="submenu__title">Company</span>
           <ul class="submenu__list">
-            <li class="submenu__item"><a href="">About</a></li>
+            <li class="submenu__item"><a href="#/">About</a></li>
             <li class="submenu__item"><a href="">Careers</a></li>
-            <li class="submenu__item"><a href="">Contacts</a></li>
+            <li class="submenu__item"><a href="contact.html">Contacts</a></li>
           </ul>
         </li>
       </ul>
