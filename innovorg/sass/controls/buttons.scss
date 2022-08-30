@@ -71,6 +71,10 @@
   background-color: var(--text);
  }
 
+ &--small {
+  font-size: 16px;
+ }
+
  &:disabled,
  &.disabled {
   background-color: var(--disabled);

@@ -1,13 +1,13 @@
 .solutions {
- min-height: 90vh;
- padding: 10vmax 0 7vmax 0;
+  min-height: 90vh;
+  //  padding: 10vmax 0 7vmax 0;
 
- // @include bp(1000px) {
- // }
- &--module {
-  background:
-   radial-gradient(44.38% 44.38% at 50% 46.53%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
-   linear-gradient(0deg, #C2E5F9, #C2E5F9),
-   linear-gradient(284.64deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
- }
+  // @include bp(1000px) {
+  // }
+  &--module {
+    background:
+      radial-gradient(44.38% 44.38% at 50% 46.53%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(0deg, #C2E5F9, #C2E5F9),
+      linear-gradient(284.64deg, #BDFFD0 -19.68%, #C6E0FF -4.59%);
+  }
 }

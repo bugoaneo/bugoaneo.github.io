@@ -155,8 +155,9 @@
 
 
 .solutions__caption {
-  @include fFS(26px, 32px, 320px, 1900px, 20px);
-  margin-bottom: 0.5em;
+  font-size: 28px;
+  // @include fFS(26px, 32px, 320px, 1900px, 20px);
+  margin-bottom: 0.6em;
 }
 
 
@@ -170,12 +171,19 @@
     padding: 0 10px;
   }
 
-  @include bp(650px) {
-    padding-bottom: 80vmax;
+  .bullets {
+    max-width: 430px;
+    margin-left: auto;
   }
+
+  // @include bp(650px) {
+  //   padding-bottom: 80vmax;
+  // }
 }
 
 .platform__picture {
+  max-width: 580px;
+
   @include bp(650px) {
     display: none;
   }
@@ -190,6 +198,7 @@
   .section__content {
     max-width: 600px;
     margin: 0 10% 0 auto;
+    padding: 0 20px;
 
     @include bp(650px) {
       margin: 0 auto;
