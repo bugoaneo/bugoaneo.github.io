@@ -1037,8 +1037,15 @@ img {
 .hero {
   padding-top: 75px;
   overflow: hidden;
+}
+.hero--index {
   background: -o-radial-gradient(57.53% 51.73%, 52.6% 75.73%, #9393AC 0%, #D7DFEA 100%), -o-linear-gradient(165.36deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
   background: radial-gradient(52.6% 75.73% at 57.53% 51.73%, #9393AC 0%, #D7DFEA 100%), linear-gradient(284.64deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
+}
+.hero--about {
+  padding-bottom: 4vmax;
+  background: -o-linear-gradient(140.49deg, #FFE6C9 7.69%, #DBE7FE 63.51%);
+  background: linear-gradient(-50.49deg, #FFE6C9 7.69%, #DBE7FE 63.51%);
 }
 
 .hero__subtitle {
@@ -1158,6 +1165,11 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hero__pic {
+  max-width: 820px;
+  margin: auto;
 }
 
 /*media*/
