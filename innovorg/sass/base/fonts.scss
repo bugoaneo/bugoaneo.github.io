@@ -1,25 +1,5 @@
 @font-face {
   font-family: 'nunito_sans';
-  src: url('../fonts/nunitosans-black.woff2') format('woff2'),
-    url('../fonts/nunitosans-black.woff') format('woff');
-  font-weight: normal;
-  font-display: 700;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'nunito_sans';
-  src: url('../fonts/nunitosans-bold.woff2') format('woff2'),
-    url('../fonts/nunitosans-bold.woff') format('woff');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'nunito_sans';
   src: url('../fonts/nunitosans-light.woff2') format('woff2'),
     url('../fonts/nunitosans-light.woff') format('woff');
   font-weight: 300;
@@ -35,10 +15,25 @@
   font-weight: 400;
   font-display: swap;
   font-style: normal;
-
 }
 
+@font-face {
+  font-family: 'nunito_sans';
+  src: url('../fonts/nunitosans-bold.woff2') format('woff2'),
+    url('../fonts/nunitosans-bold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'nunito_sans';
+  src: url('../fonts/nunitosans-black.woff2') format('woff2'),
+    url('../fonts/nunitosans-black.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 
 

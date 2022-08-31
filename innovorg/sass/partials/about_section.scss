@@ -1,10 +1,11 @@
-/*about*/
+/*about section in index*/
 .about {
  padding-bottom: 10vmax;
  background: linear-gradient(46.53deg, #DBEBFE 51.48%, #FFE6C9 87.16%);
 
  .section__head {
   margin-bottom: 5em;
+  text-align: center;
 
   @include bp(1200px) {
    margin-bottom: 2em;
@@ -241,6 +242,4 @@
  &.glide__bullet--active {
   background-color: var(--bg);
  }
-
-
 }

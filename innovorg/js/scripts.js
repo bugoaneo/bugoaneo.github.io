@@ -49,7 +49,7 @@ function scrollFunction() {
 //   let href = this.getAttribute('href').substring(1);
 //   const scrollTarget = document.getElementById(href);
 //   // const topOffset = document.querySelector('a[data-title]').offsetHeight;
-//   const topOffset = 60; // если не нужен отступ сверху
+//   const topOffset = 68; // если не нужен отступ сверху
 //   const elementPosition = scrollTarget.getBoundingClientRect().top;
 //   const offsetPosition = elementPosition - topOffset;
 

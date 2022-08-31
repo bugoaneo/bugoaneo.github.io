@@ -7,14 +7,13 @@
 
 @import "layout/header";
 @import "layout/section";
-@import "layout/about";
-@import "layout/testimonials";
-
-@import "pages/solutions";
-@import "pages/modules";
-
 @import "layout/footer";
-@import "controls/components";
+
+@import "partials/about_section";
+@import "partials/testimonials";
+@import "partials/modules";
+
+@import "pages/inner";
 
 @import "controls/forms";
 @import "controls/buttons";

@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <title></title>
-  <link rel="preload" href="fonts/suisseintl-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunitosans-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/sal.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -29,13 +29,6 @@
     }
 
     @media (max-width:650px) {
-      /* .platform {
-        background-image: url('img/platform_mob.png');
-        background-position: 0 85%;
-        background-size: 70% auto;
-        background-repeat: no-repeat;
-      } */
-
       .testimonials {
         background-image: none;
       }
@@ -48,15 +41,15 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
-        <div class="logo"><svg viewBox="0 0 92 21" width="92">
+        <a href="./" class="logo"><svg viewBox="0 0 92 21" width="92">
             <use xlink:href="img/sprite.svg#logo"></use>
-          </svg></div>
+          </svg></a>
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item menu__item--mobil current"><a href="">Home</a></li>
+            <li class="menu__item menu__item--mobil current"><a href="./">Home</a></li>
             <li class="menu__item breadcrambs">
               <div class="breadcrambs__header">
-                <a href="/" class="breadcrambs__homelink">Platform
+                <a class="breadcrambs__homelink">Platform
                   <span class="icon">
                     <svg viewBox="0 0 16 7" width="15">
                       <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
@@ -72,9 +65,9 @@
                     </svg>
                   </span>
                 </li>
-                <li class="breadcrambs__item"><a href="">Skills module</a></li>
-                <li class="breadcrambs__item"><a href="">Training module</a></li>
-                <li class="breadcrambs__item"><a href="">Sertification module</a></li>
+                <li class="submenu__item"><a href="skills.html">Skills module</a></li>
+                <li class="submenu__item"><a href="training.html">Training module</a></li>
+                <li class="submenu__item"><a href="certification.html">Certification module</a></li>
               </ul>
             </li>
             <li class="menu__item breadcrambs">
@@ -95,10 +88,10 @@
                     </svg>
                   </span>
                 </li>
-                <li class="breadcrambs__item"><a href="">Managed services</a></li>
-                <li class="breadcrambs__item"><a href="">Hosting & Data center</a></li>
-                <li class="breadcrambs__item"><a href="">Cloud Saas</a></li>
-                <li class="breadcrambs__item"><a href="">Channel</a></li>
+                <li class="submenu__item"><a href="managed_services.html">Managed Services</a></li>
+                <li class="submenu__item"><a href="cloud_saas.html">Cloud SaaS</a></li>
+                <li class="submenu__item"><a href="hosting.html">Hosting & Data Centers</a></li>
+                <li class="submenu__item"><a href="channel.html">Channel</a></li>
               </ul>
             </li>
             <!-- <li class="menu__item"><a href="">Blog</a></li> -->
@@ -122,7 +115,7 @@
                 </li>
                 <li class="breadcrambs__item"><a href="contact.html">Contact us</a></li>
                 <li class="breadcrambs__item"><a href="about.html">About us</a></li>
-                <li class="breadcrambs__item"><a href="">Careers</a></li>
+                <li class="breadcrambs__item"><a href="contact.html">Careers</a></li>
               </ul>
             </li>
             <li class="menu__item menu__item--desk"><a href="get_demo.html" class="btn btn--dark">Book the Demo</a></li>
@@ -145,7 +138,7 @@
         <div class="hero__content" data-sal="slide-right" style="--sal-duration: 1s;">
           <div class="hero__subtitle">Innovorg skills engine</div>
           <h1 class="hero__title">AI&nbsp;technologies to&nbsp;identify &amp;&nbsp;bridge the skills gaps for&nbsp;your employees and&nbsp;channel partners</h1>
-          <a href="" class="btn btn--action">Book the Demo</a>
+          <a href="get_demo.html" class="btn btn--action">Book the Demo</a>
         </div>
         <div class="hero__media">
           <picture class="hero__minepic" data-sal="slide-left" style="--sal-duration: 1s;">
@@ -449,18 +442,18 @@
         <li class="footer__menu-item submenu">
           <span class="submenu__title">Platform</span>
           <ul class="submenu__list">
-            <li class="submenu__item"><a href="">Skills module</a></li>
-            <li class="submenu__item"><a href="">Training module</a></li>
-            <li class="submenu__item"><a href="">Sertification module</a></li>
+            <li class="submenu__item"><a href="skills.html">Skills module</a></li>
+            <li class="submenu__item"><a href="training.html">Training module</a></li>
+            <li class="submenu__item"><a href="certification.html">Certification module</a></li>
           </ul>
         </li>
         <li class="footer__menu-item submenu">
           <span class="submenu__title">Solutions</span>
           <ul class="submenu__list">
-            <li class="submenu__item"><a href="">Managed Services</a></li>
-            <li class="submenu__item"><a href="">Cloud SaaS</a></li>
-            <li class="submenu__item"><a href="">Data Centers</a></li>
-            <li class="submenu__item"><a href="">Channel</a></li>
+            <li class="submenu__item"><a href="managed_services.html">Managed Services</a></li>
+            <li class="submenu__item"><a href="cloud_saas.html">Cloud SaaS</a></li>
+            <li class="submenu__item"><a href="hosting.html">Data Centers</a></li>
+            <li class="submenu__item"><a href="channel.html">Channel</a></li>
           </ul>
         </li>
         <!-- <li class="footer__menu-item">
@@ -470,7 +463,7 @@
           <span class="submenu__title">Company</span>
           <ul class="submenu__list">
             <li class="submenu__item"><a href="about.html">About</a></li>
-            <li class="submenu__item"><a href="">Careers</a></li>
+            <li class="submenu__item"><a href="contact.html">Careers</a></li>
             <li class="submenu__item"><a href="contact.html">Contacts</a></li>
           </ul>
         </li>
@@ -530,9 +523,6 @@
     });
 
     testimonials.mount();
-
-
-
 
   </script>
 </body>

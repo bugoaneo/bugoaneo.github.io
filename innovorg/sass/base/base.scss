@@ -79,14 +79,29 @@ img {
     }
   }
 
-  &--gradient {
+  &--gradient,
+  &--modules {
     background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
+  }
+
+  &--modules {
+    .section__head {
+      max-width: 545px;
+    }
+  }
+
+  &--solutions {
+    padding: 9vmax 0 6vmax 0;
+
+    .section__head {
+      max-width: 620px;
+    }
   }
 }
 
 .section__head {
   margin-bottom: 3em;
-  text-align: center;
+  // text-align: center;
   @include fFS(16px, 28px, 320px, 1900px, 20px);
   font-weight: 500;
 }
@@ -150,6 +165,8 @@ img {
 .ligth {
   color: #fff;
 }
+
+
 
 .center {
   text-align: center;
