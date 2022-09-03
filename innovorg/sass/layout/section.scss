@@ -140,11 +140,12 @@
   @include bp(650px) {
     flex: 0 1 100%;
     margin-bottom: 2em;
-    // text-align: center;
+    text-align: center;
   }
 
   .btn {
     margin-top: 1em;
+    text-align: center;
   }
 }
 
@@ -157,8 +158,6 @@
 
   @include bp(650px) {
     flex: 0 1 100%;
-    margin-bottom: 1.5em;
-    order: -1;
 
     img {
       width: 95%;
