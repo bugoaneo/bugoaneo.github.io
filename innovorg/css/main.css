@@ -632,7 +632,6 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 0.8em;
   z-index: 100;
   background: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(0px);
@@ -648,6 +647,9 @@ img {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.header.scrolled .header__container {
+  height: 63px;
 }
 .header--innersite .breadcrambs.current .breadcrambs__homelink .icon {
   display: inline-block;
@@ -686,17 +688,13 @@ img {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 95%;
+  height: 93px;
   margin: auto;
   color: var(--text);
+  -webkit-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 @media (max-width: 1400px) {
   .header__container {
@@ -1341,16 +1339,19 @@ img {
   background: -o-linear-gradient(222deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
   background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
 }
-.request .section__content {
-  max-width: 600px;
+.request .section__head {
+  max-width: 665px;
   margin: 0 10% 0 auto;
   padding: 0 20px;
 }
 @media (max-width: 650px) {
-  .request .section__content {
+  .request .section__head {
     margin: 0 auto;
     padding-bottom: 7vmax;
   }
+}
+.request .section__head .btn {
+  margin-top: 0.5em;
 }
 @media (max-width: 650px) {
   .request {

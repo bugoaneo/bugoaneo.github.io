@@ -203,14 +203,19 @@
   padding: 0;
   background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
 
-  .section__content {
-    max-width: 600px;
+  .section__head {
+    max-width: 665px;
     margin: 0 10% 0 auto;
     padding: 0 20px;
+    // margin-bottom: 1em;
 
     @include bp(650px) {
       margin: 0 auto;
       padding-bottom: 7vmax;
+    }
+
+    .btn {
+      margin-top: 0.5em;
     }
   }
 

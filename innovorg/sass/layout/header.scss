@@ -3,7 +3,7 @@
  width: 100%;
  top: 0;
  left: 0;
- padding: 0.8em;
+ // padding: 0.8em;
  z-index: 100;
  background: rgba(255, 255, 255, 0);
  backdrop-filter: blur(0px);
@@ -16,6 +16,9 @@
   // @include bp(1000px){
 
   // }
+  .header__container {
+   height: 63px;
+  }
  }
 
  &--innersite {
@@ -75,10 +78,13 @@
 }
 
 .header__container {
- @include row(jsb, ac);
+ @include row;
+ // @include row(jsb, ac);
  width: 95%;
+ height: 93px;
  margin: auto;
  color: var(--text);
+ transition: height 0.3s ease-in-out;
 
  @include bp(1400px) {
   width: 100%;
