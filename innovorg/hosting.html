@@ -32,7 +32,7 @@
     <!-- PLEASE Leave this class <.header--innersite> in inner page-->
     <header class="header header--innersite">
       <div class="header__container">
-        <a href="./" class="logo"><svg viewBox="0 0 92 21" width="92">
+        <a href="./" class="logo"><svg viewBox="0 0 144 39" width="143">
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg></a>
         <nav class="menu">
@@ -40,37 +40,15 @@
             <li class="menu__item menu__item--mobil"><a href="./">Home</a></li>
             <li class="menu__item breadcrambs">
               <div class="breadcrambs__header">
-                <a href="/" class="breadcrambs__homelink">Platform
+                <a class="breadcrambs__homelink">Platform
                   <span class="icon">
                     <svg viewBox="0 0 16 7" width="15">
-                      <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
+                      <use class="icon-item" xlink:href="img/sprite.svg#triangle"></use>
+                      <use class="icon-breadcramb" xlink:href="img/sprite.svg#horizontal_arrow"></use>
                     </svg>
                   </span>
                 </a>
-              </div>
-              <ul class="breadcrambs__list">
-                <li class="breadcrambs__icon">
-                  <span class="icon">
-                    <svg viewBox="0 0 6 15" width="6">
-                      <use xlink:href="img/sprite.svg#vertical_arrow"></use>
-                    </svg>
-                  </span>
-                </li>
-                <li class="breadcrambs__item"><a href="skills.html">Skills module</a></li>
-                <li class="breadcrambs__item"><a href="training.html">Training module</a></li>
-                <li class="breadcrambs__item"><a href="certification.html">Certification module</a></li>
-              </ul>
-            </li>
-            <li class="menu__item breadcrambs current">
-              <div class="breadcrambs__header">
-                <a href="/" class="breadcrambs__homelink">Solutions
-                  <span class="icon">
-                    <svg viewBox="0 0 16 7" width="15">
-                      <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
-                    </svg>
-                  </span>
-                </a>
-                <span class="breadcrambs__current">Hosting & Data center</span>
+                <span class="breadcrambs__current">Certification module</span>
               </div>
               <ul class="breadcrambs__list">
                 <li class="breadcrambs__item">
@@ -80,19 +58,44 @@
                     </svg>
                   </span>
                 </li>
-                <li class="breadcrambs__item"><a href="managed_services.html">Managed services</a></li>
-                <li class="breadcrambs__item current"><a href="#">Hosting & Data center</a></li>
-                <li class="breadcrambs__item"><a href="cloud_saas.html">Cloud Saas</a></li>
+                <li class="breadcrambs__item"><a href="skills.html">Skills module</a></li>
+                <li class="breadcrambs__item"><a href="training.html">Training module</a></li>
+                <li class="breadcrambs__item current"><a href="certification.html">Certification module</a></li>
+              </ul>
+            </li>
+            <li class="menu__item breadcrambs current">
+              <div class="breadcrambs__header">
+                <a href="/" class="breadcrambs__homelink">Solutions
+                  <span class="icon">
+                    <svg viewBox="0 0 16 7" width="15">
+                      <use class="icon-item" xlink:href="img/sprite.svg#triangle"></use>
+                      <use class="icon-breadcramb" xlink:href="img/sprite.svg#horizontal_arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+                <span class="breadcrambs__current">Hosting & DataCenters</span>
+              </div>
+              <ul class="breadcrambs__list">
+                <li class="breadcrambs__item">
+                  <span class="icon">
+                    <svg viewBox="0 0 6 15" width="6">
+                      <use xlink:href="img/sprite.svg#vertical_arrow"></use>
+                    </svg>
+                  </span>
+                </li>
+                <li class="breadcrambs__item"><a href="managed_services.html">Managed Services</a></li>
+                <li class="breadcrambs__item"><a href="cloud_saas.html">Cloud SaaS</a></li>
+                <li class="breadcrambs__item current"><a href="hosting.html">Hosting &&nbsp;Data&nbsp;Centers</a></li>
                 <li class="breadcrambs__item"><a href="channel.html">Channel</a></li>
               </ul>
             </li>
-            <!-- <li class="menu__item"><a href="">Blog</a></li> -->
             <li class="menu__item breadcrambs">
               <div class="breadcrambs__header">
                 <a href="" class="breadcrambs__homelink">Company
                   <span class="icon">
                     <svg viewBox="0 0 16 7" width="15">
-                      <use xlink:href="img/sprite.svg#horizontal_arrow"></use>
+                      <use class="icon-item" xlink:href="img/sprite.svg#triangle"></use>
+                      <use class="icon-breadcramb" xlink:href="img/sprite.svg#horizontal_arrow"></use>
                     </svg>
                   </span>
                 </a>
@@ -110,17 +113,20 @@
                 <li class="breadcrambs__item"><a href="contact.html">Careers</a></li>
               </ul>
             </li>
-            <li class="menu__item menu__item--desk"><a href="get_demo.html" class="btn btn--dark">Book the Demo</a></li>
+            <li class="menu__item"><a href="">Blog</a></li>
           </ul>
           <!-- hidden on desctop -->
           <ul class="menu__footer">
-            <li><a href="get_demo.html" class="btn btn--action">Book the Demo</a></li>
             <li class="action-block">
-              <a href="">Login</a>
+              <a href="" class="btn btn--border">Login</a>
             </li>
+            <li><a href="get_demo.html" class="btn btn--fill">Book the Demo</a></li>
           </ul>
         </nav>
-        <div class="action-block"><a href="">Login</a></div>
+        <ul class="action-block">
+          <li><a href="" id="login-link" class="btn btn--border">Login</a></li>
+          <li><a href="get_demo.html" class="btn btn--fill">Book the Demo</a></li>
+        </ul>
         <button class="menu-trigger" type="button"></button>
       </div>
     </header>
