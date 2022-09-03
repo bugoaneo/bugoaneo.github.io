@@ -94,7 +94,7 @@
                 </li>
                 <li class="breadcrambs__item"><a href="managed_services.html">Managed Services</a></li>
                 <li class="breadcrambs__item"><a href="cloud_saas.html">Cloud SaaS</a></li>
-                <li class="breadcrambs__item"><a href="hosting.html">Hosting & Data Centers</a></li>
+                <li class="breadcrambs__item"><a href="hosting.html">Hosting &&nbsp;Data Centers</a></li>
                 <li class="breadcrambs__item"><a href="channel.html">Channel</a></li>
               </ul>
             </li>
@@ -127,16 +127,16 @@
           </ul>
           <!-- hidden on desctop -->
           <ul class="menu__footer">
-            <li class="action-block">
-              <a href="" class="btn btn--border">Login</a>
+            <li>
+              <a href="" id="login-link" class="btn btn--border">Login</a>
             </li>
             <li><a href="get_demo.html" class="btn btn--fill">Book the Demo</a></li>
           </ul>
         </nav>
-        <div class="action-block">
-          <a href="" class="btn btn--border">Login</a>
-          <a href="get_demo.html" class="btn btn--fill">Book the Demo</a>
-        </div>
+        <ul class="action-block">
+          <li><a href="" id="login-link" class="btn btn--border">Login</a></li>
+          <li><a href="get_demo.html" class="btn btn--fill">Book the Demo</a></li>
+        </ul>
         <button class="menu-trigger" type="button"></button>
       </div>
     </header>
@@ -208,49 +208,8 @@
     </div>
   </footer>
 
-  <script src="js/sal.js"></script>
-  <script src="js/glide.min.js"></script>
   <script src="js/scripts.js"></script>
 
-  <script>
-    (function () {
-      'use strict';
-      const breakpoint = window.matchMedia('(max-width:650px)');
-      const breakpointChecker = function () {
-        if (breakpoint.matches === true) {
-          aboutBox.mount();
-          return;
-        } else if (breakpoint.matches === false) {
-          const scrollAnimations = sal({ once: true, });
-          aboutBox.destroy();
-          return;
-        }
-      };
-
-      let aboutBox = new Glide('.about__box-slider', {
-        perView: 1,
-        arrow: true,
-        gap: 1,
-        startAt: 0,
-      });
-
-
-
-      breakpoint.addListener(breakpointChecker);
-      breakpointChecker();
-    })();
-
-
-    let testimonials = new Glide('.testimonials__slider', {
-      perView: 1,
-      arrow: true,
-      gap: 5,
-      startAt: 0,
-    });
-
-    testimonials.mount();
-
-  </script>
 </body>
 
 </html>
