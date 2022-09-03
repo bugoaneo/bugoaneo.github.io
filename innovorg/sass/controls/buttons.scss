@@ -63,6 +63,12 @@
   padding: 0.5em 0.8em 0.4em 0.8em;
   @include fFS(21px, 28px, 320px, 1900px, 20px);
   background-color: var(--accent);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+   background: #FF9C40;
+   // box-shadow: 0px 0px 16px #FF3D00;
+  }
  }
 
  &--dark {
@@ -76,8 +82,19 @@
   color: var(--bg);
  }
 
+ &--fill {
+  background-color: var(--btn);
+ }
+
  &--small {
   font-size: 16px;
+ }
+
+ &--border {
+  padding: 0.52em 1.1em 0.42em 1.1em;
+  border: 3px solid currentColor;
+  background-color: transparent;
+  color: var(--btn);
  }
 
  &:disabled,

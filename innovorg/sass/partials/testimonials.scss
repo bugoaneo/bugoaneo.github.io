@@ -31,7 +31,7 @@
 
 .testimonials__item {
  @include row(jsb, ac);
- padding: 2% 1.2em 2% 1.5em;
+ padding: 1% 1.2em 1% 1.5em;
  border-radius: 0.8em;
  background-color: #fff;
 
@@ -99,7 +99,7 @@
 }
 
 .testimonials__details {
- @include fFS(21px, 28px, 320px, 1900px, 20px);
+ @include fFS(21px, 27px, 320px, 1900px, 20px);
 }
 
 .testimonials__name {
