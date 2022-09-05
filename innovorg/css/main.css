@@ -1534,8 +1534,8 @@ img {
 }
 .footer__menu-item.submenu {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 18%;
-          flex: 0 1 18%;
+      -ms-flex: 0 1 19%;
+          flex: 0 1 19%;
 }
 @media (max-width: 650px) {
   .footer__menu-item.submenu {
