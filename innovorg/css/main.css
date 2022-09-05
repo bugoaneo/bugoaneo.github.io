@@ -644,6 +644,9 @@ img {
   max-width: var(--container);
   padding: 0 20px;
 }
+.header--innersite .breadcrambs {
+  min-width: 150px;
+}
 .header--innersite .breadcrambs.current .breadcrambs__header {
   background-color: var(--light-menu);
 }
@@ -848,7 +851,7 @@ img {
 .breadcrambs {
   position: relative;
   max-width: 285px;
-  min-width: 150px;
+  min-width: 180px;
 }
 .breadcrambs.current .breadcrambs__current {
   display: inline-block;
@@ -898,7 +901,8 @@ img {
 }
 @media (max-width: 1200px) {
   .breadcrambs {
-    max-width: 180px;
+    max-width: 190px;
+    min-width: 150px;
   }
 }
 @media (max-width: 650px) {
