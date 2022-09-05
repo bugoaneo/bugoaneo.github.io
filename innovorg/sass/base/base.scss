@@ -90,6 +90,27 @@ img {
       max-width: 620px;
     }
   }
+
+  &--cover {
+    padding: 9vmax 0 6vmax 0;
+
+    .section__content {
+      flex: 0 1 52%;
+      color: var(--hero);
+
+      @include bp(650px) {
+        flex: 0 1 100%;
+      }
+    }
+
+    .section__pic {
+      flex: 0 1 48%;
+
+      @include bp(650px) {
+        flex: 0 1 100%;
+      }
+    }
+  }
 }
 
 .header+.section {
@@ -127,6 +148,17 @@ img {
   @include fFS(28px, 48px, 320px, 1900px, 20px);
   font-weight: 700;
   line-height: 1.1;
+}
+
+.section__herotitle {
+  @include fFS(28px, 64px, 320px, 1900px, 18px);
+  margin-bottom: 0.2em;
+  font-weight: 700;
+  line-height: 1;
+
+  @include bp(1200px) {
+    @include fFS(28px, 38px, 320px, 1900px, 18px);
+  }
 }
 
 .section__row {
