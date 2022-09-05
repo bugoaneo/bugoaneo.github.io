@@ -1,0 +1,156 @@
+/**/
+
+/*contact page*/
+.contact {
+  .section__col {
+    @include bp(1000px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  .section__content {
+    max-width: 510px;
+
+    @include bp(1000px) {
+      margin: 0 auto 2em auto;
+    }
+
+    .form {
+      margin-top: 2em;
+    }
+  }
+}
+
+.contact__pic {
+  max-width: 440px;
+  margin: 0 0 0 auto;
+
+  @include bp(1000px) {
+    display: none;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+/*get_demo page*/
+
+.get-demo {
+  .section__col {
+    @include bp(1000px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  .section__content {
+    max-width: 740px;
+    margin: 0 5% 0 auto;
+    padding-left: 40px;
+
+    @include bp(1000px) {
+      padding: 0 40px;
+      margin: 0 auto;
+    }
+
+    @include bp(350px) {
+      padding: 0 10px;
+    }
+  }
+
+  .section__pic {
+    max-width: 630px;
+    margin: auto;
+
+    @include bp(1000px) {
+      display: none;
+    }
+  }
+}
+
+
+/*solutions & modules page*/
+
+// .definitions {
+//   .section__content {
+//     @include fFS(18px, 28px, 320px, 1900px, 18px);
+//     margin-bottom: 3em;
+
+//     &:last-of-type {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+.definitions__list {
+  padding-bottom: 4.5vmax;
+  border-bottom: 1px solid var(--bg);
+  margin-bottom: 4.5vmax;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.definitions__row {
+  @include row(jsb, ast);
+  margin-bottom: 4.5vmax;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.definitions__header {
+  flex: 0 1 22%;
+  padding-right: 1em;
+  text-align: right;
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
+
+.definitions__title {
+  @include fFS(28px, 32px, 320px, 1900px, 18px);
+  font-weight: 600;
+}
+
+.definitions__content {
+  flex: 0 1 68.5%;
+
+  p {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--tiles {
+    @include row(jsb);
+  }
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+  }
+}
+
+.definitions__tiles {
+  flex: 0 1 45%;
+  margin-bottom: 2vmax;
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+  }
+}
+
+.definitions__caption {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}

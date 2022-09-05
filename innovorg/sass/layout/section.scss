@@ -1,0 +1,276 @@
+.hero {
+  padding-top: 100px;
+  overflow: hidden;
+
+  &--index {
+    background: radial-gradient(52.6% 75.73% at 57.53% 51.73%, #9393AC 0%, #D7DFEA 100%),
+      linear-gradient(284.64deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
+  }
+
+  &--about {
+    padding-bottom: 4.5vmax;
+    background: linear-gradient(-31.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
+  }
+}
+
+.hero__subtitle {
+  @include fFS(18px, 28px, 320px, 1900px, 18px);
+  margin-bottom: 1em;
+  color: var(--text);
+  // font-weight: 700;
+}
+
+.hero__title {
+  margin-bottom: .5em;
+  @include fFS(28px, 65px, 320px, 1900px, 18px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text);
+
+  @include bp(1200px) {
+    @include fFS(28px, 38px, 320px, 1900px, 18px);
+  }
+}
+
+
+.hero__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  justify-content: center;
+  align-items: center;
+
+  @include bp(650px) {
+    grid-template-columns: 100%;
+  }
+}
+
+.hero__content {
+  max-width: 700px;
+  padding: 0 15px;
+  /*!!!!!!!*/
+  margin: -10% -16% 0 auto;
+
+  .btn--action {
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  }
+
+  @include bp(650px) {
+    margin: 0 auto 1.5em auto;
+    text-align: center;
+  }
+}
+
+.hero__media {
+  padding-bottom: 73%;
+
+  @include bp(650px) {
+    padding-bottom: 0;
+  }
+}
+
+.hero__minepic {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 74%;
+
+  @include bp(650px) {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero__pic {
+  max-width: 820px;
+  margin: auto;
+}
+
+/*media*/
+
+.media {
+  .video {
+    @include bp(650px) {
+      margin: 0 -40px;
+    }
+
+    @include bp(350px) {
+      margin: 0 -20px;
+    }
+  }
+}
+
+
+/*solutions*/
+.solutions {
+  .section__head {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.solutions__row {
+  @include row(jsb, ac);
+
+  &--rewerse {
+    flex-direction: row-reverse;
+
+    @include bp(650px) {
+      flex-direction: row;
+    }
+  }
+
+  max-width: 780px;
+  margin: 0 auto 4em auto;
+}
+
+.solutions__content {
+  flex: 0 1 calc(60% - 30px);
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+.solutions__media {
+  flex: 0 1 40%;
+
+  img {
+    display: block;
+  }
+
+  @include bp(650px) {
+    flex: 0 1 100%;
+
+    img {
+      width: 95%;
+      margin: auto;
+    }
+  }
+}
+
+
+.solutions__caption {
+  font-size: 28px;
+  margin-bottom: 0.6em;
+}
+
+
+
+/*platform*/
+.platform {
+  background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
+
+  .section__content {
+    max-width: 530px;
+    padding: 0 10px;
+  }
+
+  .bullets {
+    max-width: 430px;
+    margin-left: auto;
+  }
+
+}
+
+.platform__picture {
+  max-width: 580px;
+
+  @include bp(650px) {
+    display: none;
+  }
+}
+
+/* request*/
+
+.request {
+  padding: 0;
+  background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
+
+  .section__head {
+    max-width: 665px;
+    margin: 0 10% 0 auto;
+    padding: 0 20px;
+    // margin-bottom: 1em;
+
+    @include bp(650px) {
+      margin: 0 auto;
+      padding-bottom: 7vmax;
+    }
+
+    .btn {
+      margin-top: 0.5em;
+    }
+  }
+
+  @include bp(650px) {
+    padding: 7vmax 0 0 0;
+  }
+}
+
+/*who_we_are*/
+
+.who_we_are {
+  background-color: var(--bg);
+
+  .section__content {
+    @include fFS(18px, 28px, 320px, 1900px, 18px);
+    margin-bottom: 3.1em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*timeline*/
+
+.timeline {
+  background: linear-gradient(-31.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
+
+  .section__title {
+    margin-bottom: 1.65em;
+  }
+}
+
+/*career*/
+.career {
+  background: radial-gradient(44.38% 44.38% at 50% 46.53%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), var(--bg);
+
+  .container {
+    max-width: 1380px;
+  }
+}
+
+.career__row {
+  @include row(jsb, ac);
+}
+
+.career__content {
+  flex: 0 1 38%;
+}
+
+.career__picture {
+  flex: 0 1 62%;
+
+  img {
+    display: block;
+  }
+}
