@@ -1158,6 +1158,7 @@ img {
 }
 
 .hero {
+  position: relative;
   padding-top: 100px;
   overflow: hidden;
 }
@@ -1224,17 +1225,23 @@ img {
 }
 
 .hero__row {
-  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 60%;
-  grid-template-columns: 40% 60%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 1500px) {
+  .hero__row {
+    width: 100%;
+  }
 }
 @media (max-width: 650px) {
   .hero__row {
@@ -1244,10 +1251,8 @@ img {
 }
 
 .hero__content {
-  max-width: 700px;
   padding: 0 15px;
   /*!!!!!!!*/
-  margin: -10% -16% 0 auto;
 }
 .hero__content .btn--action {
   -webkit-box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
@@ -1261,7 +1266,7 @@ img {
 }
 
 .hero__media {
-  padding-bottom: 73%;
+  padding-bottom: 105%;
 }
 @media (max-width: 650px) {
   .hero__media {
@@ -1273,7 +1278,7 @@ img {
   position: absolute;
   bottom: -3px;
   right: -3px;
-  width: 74%;
+  width: 68%;
 }
 @media (max-width: 650px) {
   .hero__minepic {
