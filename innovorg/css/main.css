@@ -1171,6 +1171,11 @@ img {
   background: -o-linear-gradient(121.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
   background: linear-gradient(-31.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
 }
+@media (max-width: 650px) {
+  .hero--about .hero__pic {
+    padding: 0 20px;
+  }
+}
 
 .hero__subtitle {
   font-size: 18px;
@@ -1503,11 +1508,25 @@ img {
       -ms-flex: 0 1 38%;
           flex: 0 1 38%;
 }
+@media (max-width: 650px) {
+  .career__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
 
 .career__picture {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 62%;
           flex: 0 1 62%;
+}
+@media (max-width: 650px) {
+  .career__picture {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
 }
 .career__picture img {
   display: block;
