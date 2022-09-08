@@ -3041,8 +3041,8 @@ img {
       -ms-flex: 1;
           flex: 1;
   padding-top: 100px;
-  background: -o-radial-gradient(57.53% 51.73%, 52.6% 75.73%, #9393AC 0%, #D7DFEA 100%), -o-linear-gradient(165.36deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
-  background: radial-gradient(52.6% 75.73% at 57.53% 51.73%, #9393AC 0%, #D7DFEA 100%), linear-gradient(284.64deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
+  background: -o-radial-gradient(51.43% 50%, 51.43% 72.31%, #EBEFFB 0%, #E5EBF5 29.94%, #C5C6D3 100%);
+  background: radial-gradient(51.43% 72.31% at 51.43% 50%, #EBEFFB 0%, #E5EBF5 29.94%, #C5C6D3 100%);
 }
 @media (max-width: 1100px) {
   .login {
