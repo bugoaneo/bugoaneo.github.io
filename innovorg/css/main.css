@@ -435,7 +435,7 @@ img {
   width: 100%;
 }
 .container--tiny {
-  max-width: 940px;
+  max-width: 960px;
   width: 100%;
 }
 @media (max-width: 650px) {
@@ -452,16 +452,36 @@ img {
 .section {
   padding: 6vmax 0;
 }
-.section--gradient, .section--modules {
+.section--gradient {
   background: -o-linear-gradient(222deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
   background: linear-gradient(228deg, #DBF8FE 51.48%, #FFE6C9 87.16%), #FFF3E9;
 }
-.section--modules .section__head {
-  max-width: 545px;
+.section--modules {
+  padding: 11vmax 0;
 }
-@media (max-width: 1000px) {
-  .section--modules {
-    padding: 9vmax 0 6vmax 0;
+.section--modules .section__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 51%;
+          flex: 0 1 51%;
+  color: var(--hero);
+}
+@media (max-width: 650px) {
+  .section--modules .section__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+.section--modules .section__pic {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+}
+@media (max-width: 650px) {
+  .section--modules .section__pic {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 .section--solutions {
@@ -535,18 +555,18 @@ img {
     font-size: 28px;
   }
 }
-.section__head .btn {
-  margin-top: 1em;
-}
 .section__head:only-of-type, .section__head:last-of-type {
   margin-bottom: 0;
+}
+.section__head .btn {
+  margin-top: 1em;
 }
 
 .section__title, .about__box-header {
   margin-bottom: 0.4em;
   font-size: 28px;
-  font-weight: 700;
   line-height: 1.1;
+  font-weight: 700;
 }
 @media (min-width: 320px) {
   .section__title, .about__box-header {
@@ -673,6 +693,9 @@ img {
 }
 
 .cover-box {
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 27vmax;
 }
 
@@ -2561,6 +2584,47 @@ img {
 }
 
 /*solutions & modules page*/
+.modules__box {
+  margin-bottom: 3em;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 320px) {
+  .modules__box {
+    font-size: 20px;
+    font-size: calc(0.0075949367 * 100vw + 13.5696202532px);
+  }
+}
+@media (min-width: 1900px) {
+  .modules__box {
+    font-size: 28px;
+  }
+}
+.modules__box:only-of-type, .modules__box:last-of-type {
+  margin-bottom: 0;
+}
+.modules__box p + p {
+  margin-top: 1.2em;
+}
+
+.modules__title {
+  margin-bottom: 0.4em;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+@media (min-width: 320px) {
+  .modules__title {
+    font-size: 20px;
+    font-size: calc(0.0126582278 * 100vw + 23.9493670886px);
+  }
+}
+@media (min-width: 1900px) {
+  .modules__title {
+    font-size: 48px;
+  }
+}
+
 .definitions__list {
   padding-bottom: 4.5vmax;
   border-bottom: 1px solid var(--bg);
@@ -2636,40 +2700,41 @@ img {
   margin-bottom: 0;
 }
 .definitions__content--tiles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 5vmax;
+     -moz-column-gap: 5vmax;
+          column-gap: 5vmax;
 }
 @media (max-width: 650px) {
   .definitions__content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
   }
 }
 
 .definitions__tiles {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45%;
-          flex: 0 1 45%;
-  margin-bottom: 2vmax;
-}
-@media (max-width: 650px) {
-  .definitions__tiles {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
-  }
+  display: inline-block;
+  -webkit-column-break-after: avoid;
+     -moz-column-break-after: avoid;
+          break-after: avoid;
+  -webkit-column-break-before: avoid;
+     -moz-column-break-before: avoid;
+          break-before: avoid;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
+  margin-bottom: 3.5vmax;
 }
 
 .definitions__caption {
-  font-weight: 700;
   margin-bottom: 0.3em;
+  font-size: 28px;
 }
 
 .form__row {
