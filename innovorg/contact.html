@@ -131,44 +131,42 @@
             <div class="section__content">
               <h1 class="section__title">We are here to help</h1>
               <p>For any questions or if you just want to say “thank you”, just fill this form. And some other text goes here.</p>
-              <form action="" class="form" name="" id="">
+              <form class="form contact-form">
                 <div class="form__row">
                   <div class="form__col">
-                    <label for="" class="form__label">Full name *</label>
-                    <input type="text" name="" id="" class="form__input" placeholder="" required>
+                    <label for="full_name" class="form__label">Full name *</label>
+                    <input type="text" name="full_name" id="full_name" class="form__input" placeholder="" required>
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col">
-                    <label for="" class="form__label">Company name *</label>
-                    <input type="text" name="" id="" class="form__input" placeholder="" required>
+                    <label for="company_name" class="form__label">Company name *</label>
+                    <input type="text" name="company_name" id="company_name" class="form__input" placeholder="" required>
                   </div>
                 </div>
                 <div class="form__row">
                   <!-- TODO => Error class for invalid state of input. -->
-                  <div class="form__col error">
-                    <label for="" class="form__label">Email *</label>
-                    <input type="email" name="" id="" class="form__input" placeholder="">
+                  <div class="form__col">
+                    <label for="email" class="form__label">Email *</label>
+                    <input name="email" id="email" class="form__input" placeholder="" required>
                     <!-- TODO => For display of error message add class <.shown> -->
-                    <div class="error-msg shown">Wrong Email format</div>
+                    <div class="error-msg">Wrong Email format</div>
                   </div>
                   <div class="form__col form__col--small">
-                    <label for="" class="form__label">Phone number</label>
-                    <input type="tel" name="" id="" class="form__input" placeholder="" required>
-
+                    <label for="phone" class="form__label">Phone number</label>
+                    <input type="tel" name="phone" id="phone" class="form__input" placeholder="">
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__col">
-                    <label for="" class="form__label">Your Message *</label>
-                    <textarea name="" id="" name="" class="form__input">
-                    </textarea>
+                    <label for="message" class="form__label">Your Message *</label>
+                    <textarea name="message" id="message" class="form__input" required></textarea>
                   </div>
                 </div>
-                <div class="error-msg error-msg--plank shown">To send the message, please, fill all the fields</div>
-                <div class="form__row"><button class="btn">Send the message</button></div>
+                <div class="error-msg error-msg--plank">To send the message, please, fill all the fields</div>
+                <div class="form__row"><button class="btn submit-button">Send the message</button></div>
 
-                <div class="form__row"><button class="btn" disabled>disabled</button></div>
+<!--                <div class="form__row"><button class="btn" disabled>disabled</button></div>-->
               </form>
             </div>
 
@@ -248,7 +246,9 @@
       <div class="footer__copy">© Innovorg 2022</div>
     </div>
   </footer>
+  <script src="js/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 

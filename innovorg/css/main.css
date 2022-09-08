@@ -1280,6 +1280,14 @@ img {
   background: -o-linear-gradient(121.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
   background: linear-gradient(-31.18deg, #FFE6C9 18.3%, #DBEBFE 72.66%);
 }
+.hero--about .hero__row {
+  width: auto;
+  max-width: 1400px;
+}
+.hero--about .hero__pic {
+  max-width: 660px;
+  margin: 0 0 0 auto;
+}
 @media (max-width: 650px) {
   .hero--about .hero__pic {
     padding: 0 20px;
@@ -1573,9 +1581,13 @@ img {
 .who_we_are {
   background-color: var(--bg);
 }
+.who_we_are .section__title, .who_we_are .about__box-header {
+  font-weight: 600;
+}
 .who_we_are .section__content {
   font-size: 18px;
   margin-bottom: 3.1em;
+  line-height: 1.2;
 }
 @media (min-width: 320px) {
   .who_we_are .section__content {
@@ -1599,6 +1611,7 @@ img {
 }
 .timeline .section__title, .timeline .about__box-header {
   margin-bottom: 1.65em;
+  font-weight: 600;
 }
 
 /*career*/
@@ -1607,7 +1620,7 @@ img {
   background: radial-gradient(44.38% 44.38% at 50% 46.53%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), var(--bg);
 }
 .career .container {
-  max-width: 1380px;
+  max-width: 1400px;
 }
 
 .career__row {
