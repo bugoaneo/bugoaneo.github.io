@@ -383,6 +383,7 @@ html {
   font-family: var(--ff), Arial, Helvetica, sans-serif;
   color: var(--text);
   font-size: var(--fz);
+  line-height: 1.2;
 }
 
 body {
@@ -770,6 +771,10 @@ img {
   text-align: center;
 }
 
+.right {
+  text-align: right;
+}
+
 /**/
 *::-webkit-media-controls-panel {
   display: none !important;
@@ -833,6 +838,22 @@ img {
 }
 .header--innersite .breadcrambs:hover .breadcrambs__header {
   background-color: #fff;
+}
+.header--login {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+@media (max-width: 1100px) {
+  .header--login .header__container {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header--login .header__container .logo {
+    margin-right: 0;
+  }
 }
 .header .btn {
   font-size: 16px;
@@ -1681,6 +1702,31 @@ img {
   padding: 4em 0 2.5em 0;
   color: #fff;
   background-color: var(--dark);
+}
+.footer--line {
+  padding: 1em 0;
+}
+.footer--line .container {
+  max-width: 1160px;
+}
+.footer--line .footer__row {
+  width: 100%;
+  padding: 0;
+}
+@media (max-width: 650px) {
+  .footer--line .footer__row .footer__col {
+    margin-bottom: 1em;
+  }
+  .footer--line .footer__row .footer__col:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.footer--line a {
+  color: #fff;
+  font-weight: 600;
+}
+.footer--line p {
+  font-weight: 600;
 }
 
 .footer__menu {
@@ -2979,6 +3025,123 @@ img {
   font-size: 28px;
 }
 
+/*login*/
+.login {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  background: -o-radial-gradient(57.53% 51.73%, 52.6% 75.73%, #9393AC 0%, #D7DFEA 100%), -o-linear-gradient(165.36deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
+  background: radial-gradient(52.6% 75.73% at 57.53% 51.73%, #9393AC 0%, #D7DFEA 100%), linear-gradient(284.64deg, #C6E0FF -19.68%, #BDFFD0 -4.59%);
+}
+@media (max-width: 1100px) {
+  .login {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+.login .container {
+  max-width: 1160px;
+}
+@media (max-width: 1100px) {
+  .login .container {
+    padding: 0;
+  }
+}
+
+.login__title {
+  margin-bottom: 1em;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.login__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1100px) {
+  .login__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.login__col {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  z-index: 1;
+}
+@media (max-width: 1100px) {
+  .login__col {
+    margin-bottom: 7vmax;
+  }
+}
+@media (max-width: 650px) {
+  .login__col {
+    margin-bottom: 5vmax;
+    padding: 0 20px;
+  }
+}
+
+.login__media {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  padding-bottom: 40%;
+}
+@media (max-width: 1100px) {
+  .login__media {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+.login__media img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1100px) {
+  .login__media img {
+    position: relative;
+  }
+}
+
 .form__row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3006,6 +3169,27 @@ img {
   .form__row .btn {
     font-size: 28px;
   }
+}
+.form__row .form__link {
+  width: 100%;
+}
+
+.form__row-icon {
+  position: relative;
+}
+.form__row-icon .form__input, .form__row-icon .form__select-wrap {
+  padding: 0.8em 4em 0.8em 0.8em;
+}
+.form__row-icon .password-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4em;
+  cursor: pointer;
+}
+.form__row-icon .password-icon.open .password-show {
+  opacity: 0;
 }
 
 .form__col {
@@ -3139,6 +3323,12 @@ textarea.form__input::-webkit-scrollbar-thumb, textarea.form__select-wrap::-webk
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+}
+
+.form__link {
+  font-weight: 800;
+  text-decoration: underline;
+  color: var(--bg);
 }
 
 /*error-msg*/
