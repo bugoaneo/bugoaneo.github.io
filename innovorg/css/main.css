@@ -1619,6 +1619,9 @@ img {
   background: -o-radial-gradient(50% 46.53%, 44.38% 44.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), var(--bg);
   background: radial-gradient(44.38% 44.38% at 50% 46.53%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), var(--bg);
 }
+.career .section__title, .career .about__box-header {
+  font-weight: 600;
+}
 .career .container {
   max-width: 1400px;
 }
@@ -1658,9 +1661,9 @@ img {
 
 .career__picture {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 62%;
-      -ms-flex: 0 1 62%;
-          flex: 0 1 62%;
+  -webkit-flex: 0 1 57%;
+      -ms-flex: 0 1 57%;
+          flex: 0 1 57%;
 }
 @media (max-width: 650px) {
   .career__picture {
