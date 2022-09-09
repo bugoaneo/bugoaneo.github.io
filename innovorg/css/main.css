@@ -11,6 +11,7 @@
   --dark: #5E697A;
   --bg: #3478BB;
   --btn: #53A8DD;
+  --btn-prime-hover: #489DF1;
   --btn-hover: #55BEFF;
   --ligth-bg: #F2EEFA;
   --light-menu: #C9E8FF;
@@ -1600,6 +1601,10 @@ img {
 
 /*who_we_are*/
 .who_we_are {
+  background-image: url("../img/testimonials_l.png"), url("../img/testimonials_r.png");
+  background-position: center left, center right;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
   background-color: var(--bg);
 }
 .who_we_are .section__title, .who_we_are .about__box-header {
@@ -1623,6 +1628,11 @@ img {
 }
 .who_we_are .section__content:last-of-type {
   margin-bottom: 0;
+}
+@media (max-width: 1000px) {
+  .who_we_are {
+    background-image: none;
+  }
 }
 
 /*timeline*/
@@ -2754,7 +2764,7 @@ img {
 }
 .bullet-list li {
   position: relative;
-  padding-left: 0.8em;
+  padding-left: 24px;
   margin-bottom: 0.8em;
 }
 .bullet-list li:before {
@@ -2762,10 +2772,15 @@ img {
   position: absolute;
   left: 0;
   top: 0.25em;
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   background: url("../img/bull.png") center center/cover, var(--ligth-bg);
   border-radius: 100%;
+}
+@media (max-width: 650px) {
+  .bullet-list li:before {
+    top: 0.15em;
+  }
 }
 .bullet-list li:last-child {
   margin-bottom: 0;
@@ -2887,13 +2902,8 @@ img {
 .definitions {
   background-image: url("../img/modul_bg-l.png"), url("../img/modul_bg-r.png");
   background-position: center left, center right;
-  background-size: auto 100%;
+  background-size: auto 70%;
   background-repeat: no-repeat;
-}
-@media (max-width: 1700px) {
-  .definitions {
-    background-size: auto 70%;
-  }
 }
 @media (max-width: 1000px) {
   .definitions {
@@ -3018,6 +3028,9 @@ img {
           break-inside: avoid;
   margin-bottom: 3.5vmax;
   line-height: 1.2;
+}
+.definitions__tiles:last-of-type {
+  margin-bottom: 0;
 }
 
 .definitions__caption {
@@ -3445,6 +3458,9 @@ textarea.form__input::-webkit-scrollbar-thumb, textarea.form__select-wrap::-webk
   line-height: 1;
   color: #fff;
   background-color: var(--bg);
+}
+.btn:hover {
+  background-color: var(--btn-prime-hover);
 }
 .btn--action {
   padding: 0.5em 0.8em 0.4em 0.8em;
