@@ -187,6 +187,13 @@ img {
   }
 }
 
+.section__caption {
+  margin-bottom: 0.3em;
+  @include fFS(18px, 28px, 320px, 1900px, 18px);
+  font-weight: 800;
+}
+
+
 .section__row {
   @include row(jc, ac);
 
