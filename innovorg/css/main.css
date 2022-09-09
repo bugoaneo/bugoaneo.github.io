@@ -3538,6 +3538,7 @@ textarea.form__input::-webkit-scrollbar-thumb, textarea.form__select-wrap::-webk
 }
 .btn--border:hover {
   color: var(--btn-hover);
+  background-color: transparent;
 }
 .btn:disabled, .btn.disabled {
   background-color: var(--disabled);
