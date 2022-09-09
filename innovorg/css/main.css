@@ -3527,6 +3527,7 @@ textarea.form__input::-webkit-scrollbar-thumb, textarea.form__select-wrap::-webk
   font-size: 16px;
 }
 .btn--big {
+  padding: 0.8em 0.8em 0.7em 0.8em;
   font-size: 28px;
 }
 .btn--border {
