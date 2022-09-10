@@ -9,10 +9,28 @@
  max-width: 900px;
  margin: 0 auto;
 
+ @include bp(1000px) {
+  width: 700px;
+ }
+
+ @include bp(800px) {
+  width: 600px;
+ }
+
+ @include bp(650px) {
+  width: 370px;
+ }
+
+ @include bp(450px) {
+  width: 290px;
+ }
+
 }
 
 .testimonials__wrap {
  overflow: hidden;
+ width: 100%;
+ margin: 0 auto;
 }
 
 .testimonials__list {
@@ -21,7 +39,6 @@
  backface-visibility: hidden;
  transform-style: preserve-3d;
  touch-action: pan-Y;
- overflow: hidden;
  padding: 0;
  white-space: nowrap;
  display: flex;
@@ -31,11 +48,13 @@
 
 .testimonials__item {
  @include row(jsb, ac);
+ flex-shrink: 0;
  padding: 1% 1.2em 1% 1.5em;
  border-radius: 0.8em;
  background-color: #fff;
 
  @include bp(650px) {
+
   padding: 2em 0.7em 2em 1.5em;
  }
 }

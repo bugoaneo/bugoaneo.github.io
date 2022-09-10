@@ -1921,6 +1921,16 @@ img {
     padding: 10% 0;
   }
 }
+@media (max-width: 650px) {
+  .about__box-slider {
+    width: 370px;
+  }
+}
+@media (max-width: 450px) {
+  .about__box-slider {
+    width: 290px;
+  }
+}
 
 .about__box-bg {
   position: absolute;
@@ -1941,6 +1951,8 @@ img {
 @media (max-width: 650px) {
   .about__box-trak {
     overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -1996,9 +2008,7 @@ img {
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
-    width: 250px;
-    height: 250px;
-    width: 100%;
+    height: 300px;
     max-width: none;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -2006,8 +2016,8 @@ img {
             transform-style: preserve-3d;
     -ms-touch-action: pan-Y;
         touch-action: pan-Y;
-    overflow: hidden;
     padding: 0;
+    margin: 0;
     white-space: nowrap;
     will-change: transform;
   }
@@ -2031,6 +2041,9 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   width: 100%;
   padding: 10px;
   border-radius: 13px;
@@ -2039,7 +2052,6 @@ img {
 }
 @media (max-width: 650px) {
   .about__box-item {
-    margin: 0 auto;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -2050,6 +2062,8 @@ img {
             user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    width: 100%;
   }
   .about__box-item:last-of-type {
     margin-bottom: 0;
@@ -2174,9 +2188,31 @@ img {
   max-width: 900px;
   margin: 0 auto;
 }
+@media (max-width: 1000px) {
+  .testimonials__slider {
+    width: 700px;
+  }
+}
+@media (max-width: 800px) {
+  .testimonials__slider {
+    width: 600px;
+  }
+}
+@media (max-width: 650px) {
+  .testimonials__slider {
+    width: 370px;
+  }
+}
+@media (max-width: 450px) {
+  .testimonials__slider {
+    width: 290px;
+  }
+}
 
 .testimonials__wrap {
   overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .testimonials__list {
@@ -2188,7 +2224,6 @@ img {
           transform-style: preserve-3d;
   -ms-touch-action: pan-Y;
       touch-action: pan-Y;
-  overflow: hidden;
   padding: 0;
   white-space: nowrap;
   display: -webkit-box;
@@ -2217,6 +2252,9 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   padding: 1% 1.2em 1% 1.5em;
   border-radius: 0.8em;
   background-color: #fff;

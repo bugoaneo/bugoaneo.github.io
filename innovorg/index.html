@@ -541,9 +541,18 @@
 
       let aboutBox = new Glide('.about__box-slider', {
         perView: 1,
+        focusAt: 'center',
         arrow: true,
-        gap: 1,
-        startAt: 0,
+        gap: 15,
+        breakpoints: {
+          650: {
+            gap: 15,
+          },
+          450: {
+            gap: 5,
+          }
+        }
+
       });
 
 
@@ -555,9 +564,17 @@
 
     let testimonials = new Glide('.testimonials__slider', {
       perView: 1,
+      focusAt: 0,
       arrow: true,
-      gap: 5,
-      startAt: 0,
+      gap: 15,
+      breakpoints: {
+        650: {
+          gap: 15,
+        },
+        450: {
+          gap: 5,
+        }
+      }
     });
 
     testimonials.mount();

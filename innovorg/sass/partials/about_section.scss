@@ -49,15 +49,19 @@
 .about__box-slider {
  position: relative;
  margin: auto;
- // aspect-ratio: 1/1;
-
- // @include bp(1400px) {
- //  margin-right: 0;
- // }
 
  @include bp(1200px) {
   padding: 10% 0;
  }
+
+ @include bp(650px) {
+  width: 370px;
+ }
+
+ @include bp(450px) {
+  width: 290px;
+ }
+
 
 }
 
@@ -65,10 +69,6 @@
  @include center();
  display: block;
  margin: auto;
-
- // @include bp(1400px) {
- //  width: 120%;
- // }
 
  @include bp(650px) {
   display: none;
@@ -79,6 +79,8 @@
 
  @include bp(650px) {
   overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
  }
 }
 
@@ -107,15 +109,14 @@
   top: auto;
   display: flex;
   flex-wrap: nowrap;
-  width: 250px;
-  height: 250px;
-  width: 100%;
+  height: 300px;
   max-width: none;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   touch-action: pan-Y;
-  overflow: hidden;
+  // overflow: hidden;
   padding: 0;
+  margin: 0;
   white-space: nowrap;
   will-change: transform;
  }
@@ -126,6 +127,7 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ flex-shrink: 0;
  width: 100%;
  padding: 10px;
  border-radius: 13px;
@@ -138,12 +140,14 @@
  // }
 
  @include bp(650px) {
-  margin: 0 auto;
+  // margin: 0 auto;
   flex-shrink: 0;
   white-space: normal;
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  width: 100%;
 
   &:last-of-type {
    margin-bottom: 0;
