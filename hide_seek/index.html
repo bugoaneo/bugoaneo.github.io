@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+ <meta name="robots" content="all">
+ <meta property="og:title" content="" />
+ <meta property="og:image" content="static/img/logo.png" />
+ <meta property="og:description" content="" />
+ <meta name="description" content="" />
+ <meta name="keywords" content="" />
+
+ <link rel="icon" href="static/img/favicon.png" type="image/png" sizes="34x34">
+ <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+ <meta name="theme-color" content="#ffffff">
+
+ <title></title>
+ <link rel="preload" href="static/fonts/Circe-regular.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="stylesheet" href="static/css/bootstrap.css">
+ <link rel="stylesheet" href="static/css/main.css">
+
+</head>
+
+<body>
+
+ <div class="wrapper">
+  <header class="header">
+   <nav class="navbar navbar-expand-lg">
+    <div class="container">
+     <a class="navbar-brand" href="./">
+      <svg class="navbar-brand__icon" viewBox="0 0 756 242" alt="Hide & Seek VPN" width="150">
+       <use xlink:href="static/img/sprite.svg#logo"></use>
+      </svg>
+     </a>
+     <div class="navbar-action navbar-action--mobil ms-auto">
+      <a href="" class="btn btn-link btn-lg">Учётная запись</a>
+      <a href="" class="btn btn-warning btn-lg">Начать</a>
+     </div>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav justify-content-md-center flex-fill">
+       <li class="nav-item">
+        <a class="nav-link" href="./">О сервисе</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="./">Правила</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="config.html">Цены</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="connection.html">Серверы</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="connection.html">Приложения</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="connection.html">Помощь</a>
+       </li>
+      </ul>
+      <div class="navbar-action navbar-action--desk">
+       <a href="https://hidenseek.net/login" target="_blank" class="btn btn-link btn-lg">Учётная запись</a>
+       <a href="https://hidenseek.net/en/register" target="_blank" class="btn btn-warning btn-lg">Начать</a>
+      </div>
+     </div>
+    </div>
+   </nav>
+  </header>
+
+  <section class="hero">
+   <div class="container">
+    <div class="row justify-content-md-between">
+     <div class="col-md-6 align-self-md-center">
+      <h1 class="hero__title">У вас есть право на&nbsp;конфиденциальность</h1>
+      <p class="hero__text">В&nbsp;обществе, которое все больше и&nbsp;больше пытается лишить всех этого права, быстрый, надежный и&nbsp;простой в&nbsp;использовании VPN&nbsp;— первый шаг к&nbsp;тому, чтобы сохранить это право.</p>
+      <div class="hero__btngroup">
+       <a href="" target="_blank" class="btn btn-warning btn-lxx">Что такое VPN?</a>
+       <a href="" target="_blank" class="btn btn-light btn-lxx">Подробнее о Hide&Seek</a>
+
+      </div>
+     </div>
+     <div class="col-md-5 align-self-md-end">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus, at distinctio ducimus soluta fugit magni ratione consectetur expedita velit maiores odit, rem eius neque! Earum, reprehenderit nisi illum nemo tempora, impedit voluptatum id ullam molestiae incidunt sequi atque quaerat quae aut soluta esse perspiciatis quisquam, velit quo iusto cumque. Minus asperiores totam sed nihil. Perferendis beatae atque, tempora soluta sunt aperiam. Facilis incidunt iste totam consequatur, eveniet, accusantium ipsum corporis eligendi at, deleniti cupiditate hic delectus sed iusto modi aspernatur alias. Eum, eaque ipsum, ad amet molestias suscipit repellat cum facilis repudiandae hic dolorum fugit nulla vel id sit!</p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section my-ip">
+   <div class="container">
+    <div class="row align-items-center">
+     <div class="col-md-6 mb-4 mb-md-0">
+      <div class="my-ip__media">
+       <img src="static/img/googleMap.svg" alt="">
+      </div>
+     </div>
+     <div class="col-md-6">
+      <h2 class="my-ip__title">Какой у вас IP-адрес?</h2>
+      <div class="my-ip__user-adress">193.161.204.11</div>
+      <div class="my-ip__alert warning">
+       <svg class="bi" viewBox="0 0 16 16" width="16">
+        <use xlink:href="static/img/sprite.svg#warning"></use>
+       </svg>
+       <p>Ваша деятельность в&nbsp;Интернете может быть видна вашему интернет&#8209;провайдеру и&nbsp;всем, кто отслеживает ваше подключение.</p>
+      </div>
+      <div class="my-ip__alert success">
+       <svg class="bi" viewBox="0 0 16 16" width="16">
+        <use xlink:href="static/img/sprite.svg#warning"></use>
+       </svg>
+       <p>Ваша деятельность в Интернете успешно защищена.</p>
+      </div>
+      <div class="my-ip__infobox">
+       <div class="my-ip__infobox-title">Местоположение моего IP-адреса:</div>
+       <div class="my-ip__infobox-adress">
+        <div class="flag"><img src="static/img/FI.png" alt="Finland" width="20"></div>
+        <div class="my-ip__infobox-text">Finland, Uusimaa, Helsinki</div>
+       </div>
+      </div>
+      <div class="my-ip__infobox">
+       <div class="my-ip__infobox-title">Интернет-провайдер:</div>
+       <div class="my-ip__infobox-adress">Oy Crea Nova Hosting Solution Ltd</div>
+      </div>
+      <button class="btn btn-warning btn-lxx mt-md-5">Скрыть мой IP-адрес</button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section features">
+   <div class="container">
+    <div class="container-tiny">
+     <div class="row justify-content-md-between align-items-center mb-5">
+      <div class="col-md-7 mb-4 mb-md-0">
+       <h3 class="features__title">Скрытие действий в сети</h3>
+       <div class="features__content">
+        <p>Мы не ведем никаких журналов активности, не запрашиваем персональных данных и настоятельно рекомендуем платить
+         нам анонимно наличными или криптовалютами, которые
+         мы принимаем. Ваш IP-адрес подменяется одним из наших
+         адресов, поэтому все ваши действия в сети не привязываются
+         к местоположению.</p>
+       </div>
+      </div>
+      <div class="col-md-5">
+       <div class="features__media ">
+        <img src="static/img/p1.svg" alt="Скрытие действий в сети" width="360">
+       </div>
+      </div>
+     </div>
+
+     <div class="row justify-content-md-between flex-row-reverse align-items-center mb-5">
+      <div class="col-md-7 mb-4 mb-md-0">
+       <h3 class="features__title">Доступ к любимому контенту</h3>
+       <div class="features__content">
+        <p>Мы не ведем никаких журналов активности, не запрашиваем персональных данных и настоятельно рекомендуем платить
+         нам анонимно наличными или криптовалютами, которые
+         мы принимаем. Ваш IP-адрес подменяется одним из наших
+         адресов, поэтому все ваши действия в сети не привязываются
+         к местоположению.</p>
+       </div>
+      </div>
+      <div class="col-md-5">
+       <div class="features__media">
+        <img src="static/img/p2.svg" alt="Доступ к любимому контенту" width="360">
+       </div>
+      </div>
+     </div>
+
+     <div class="row justify-content-md-between align-items-center mb-5">
+      <div class="col-md-7 mb-4 mb-md-0">
+       <h3 class="features__title">Защита цифровой жизни</h3>
+       <div class="features__content">
+        <p>Мы не ведем никаких журналов активности, не запрашиваем персональных данных и настоятельно рекомендуем платить
+         нам анонимно наличными или криптовалютами, которые
+         мы принимаем. Ваш IP-адрес подменяется одним из наших
+         адресов, поэтому все ваши действия в сети не привязываются
+         к местоположению.</p>
+       </div>
+      </div>
+      <div class="col-md-5">
+       <div class="features__media ">
+        <img src="static/img/p3.svg" alt="Защита цифровой жизни" width="360">
+       </div>
+      </div>
+     </div>
+
+     <div class="row justify-content-md-between flex-row-reverse align-items-center mb-5">
+      <div class="col-md-7 mb-4 mb-md-0">
+       <h3 class="features__title">Отсутствие логов</h3>
+       <div class="features__content">
+        <p>Мы не ведем никаких журналов активности, не запрашиваем персональных данных и настоятельно рекомендуем платить
+         нам анонимно наличными или криптовалютами, которые
+         мы принимаем. Ваш IP-адрес подменяется одним из наших
+         адресов, поэтому все ваши действия в сети не привязываются
+         к местоположению.</p>
+       </div>
+      </div>
+      <div class="col-md-5">
+       <div class="features__media">
+        <img src="static/img/p4.svg" alt="Отсутствие логов" width="360">
+       </div>
+      </div>
+     </div>
+
+     <div class="row justify-content-md-between align-items-center">
+      <div class="col-md-7 mb-4 mb-md-0">
+       <h3 class="features__title">Предоставление точек входа</h3>
+       <div class="features__content">
+        <p>Мы не ведем никаких журналов активности, не запрашиваем персональных данных и настоятельно рекомендуем платить
+         нам анонимно наличными или криптовалютами, которые
+         мы принимаем. Ваш IP-адрес подменяется одним из наших
+         адресов, поэтому все ваши действия в сети не привязываются
+         к местоположению.</p>
+       </div>
+      </div>
+      <div class="col-md-5">
+       <div class="features__media ">
+        <img src="static/img/p5.svg" alt="Предоставление точек входа" width="360">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section anonim">
+   <div class="section__wrap">
+    <div class="container">
+     <div class="row justify-content-md-between align-items-center">
+      <div class="col-md-5 align-self-end">
+       <div class="anonim__media">
+        <img src="static/img/anonim.svg" alt="У каждого есть право на конфиденциальность." width="420">
+       </div>
+      </div>
+      <div class="col-md-6">
+       <div class="anonim__content">
+        <h3 class="section__title white">У каждого есть право на конфиденциальность.</h3>
+        <p>Конфиденциальность — один из базовых принципов гражданского общества,
+         позволяющий свободно обсуждать и оспаривать нормы, этику и законы.
+         Свободное, открытое общество не может ни развиться, ни существовать
+         без права на конфиденциальность.</p>
+        <a href="https://hidenseek.net/en/register" target="_blank" class="btn btn-warning btn-lxx mt-md-4">Создать учетную запись</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section stats">
+   <div class="row container-tiny">
+    <div class="col-md-4 mb-4 mb-md-0">
+     <div class="stats__content">
+      <div class="stats__num mb-4">5</div>
+      <div class="stats__text">Устройств вы сможете
+       подключить одновременно</div>
+     </div>
+    </div>
+    <div class="col-md-4 mb-4 mb-md-0">
+     <div class="stats__content">
+      <div class="stats__num mb-4">45</div>
+      <div class="stats__text">Стран для выхода в интернет
+       на&nbsp;ваш выбор</div>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="stats__content">
+      <div class="stats__num mb-4">16</div>
+      <div class="stats__text">Лет защищаем данные
+       пользователей</div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="section deviсes">
+   <div class="section__wrap">
+    <div class="container">
+     <h2 class="divices__title text-center">Конфиденциальность на всех устройствах!</h2>
+     <h3 class="section__title text-center">Удобное VPN-приложение для любых устройств</h3>
+     <div class="devices__list">
+      <div class="devices__item">
+       <div class="devices__logo">
+        <svg class="devices__icon" viewBox="0 0 42 42" alt="Windows VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#windows"></use>
+        </svg>
+       </div>
+       <div class="devices__text">Windows</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="Chrome VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#chrome"></use>
+        </svg></div>
+       <div class="devices__text">Chrome</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="android VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#android"></use>
+        </svg></div>
+       <div class="devices__text">Android</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="ios VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#ios"></use>
+        </svg></div>
+       <div class="devices__text">iOS</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="MacOS VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#mac"></use>
+        </svg></div>
+       <div class="devices__text">MacOS</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="Linux VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#linux"></use>
+        </svg></div>
+       <div class="devices__text">Linux</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="Firefox VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#firefox"></use>
+        </svg></div>
+       <div class="devices__text">Firefox</div>
+      </div>
+      <div class="devices__item">
+       <div class="devices__logo"><svg class="devices__icon" viewBox="0 0 42 42" alt="iPad VPN-app" width="42">
+         <use xlink:href="static/img/sprite.svg#ipad"></use>
+        </svg></div>
+       <div class="devices__text">iPad</div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="section price">
+   <div class="container">
+    <div class="row container-tiny">
+     <h2 class="section__title text-center">Покупка защищена гарантией</h2>
+     <p class="text-center">Любая покупка у нас защищена 30-дневной <a href="">гарантией возврата средств</a>.
+     </p>
+     <p class="text-center">Мы вернём деньги, если услуга вам не подойдёт.</p>
+     <div class="row price__list">
+      <div class="price__item">
+       <div class="price__period">1 месяц &#9889;</div>
+       <div class="price__value">
+        <div class="price__num">640 &#8381;</div>
+        <p>В месяц</p>
+       </div>
+       <a href="" target="_blank" class="btn btn-primary btn-lxx">Оплатить</a>
+      </div>
+      <div class="price__item popular">
+       <div class="price__period">1 год &#128293;</div>
+       <div class="price__value">
+        <div class="price__num">270 &#8381;</div>
+        <p>В месяц</p>
+       </div>
+       <div class="price__economy">
+        <div class="price__economy-offer">3240 ₽ на 1 год</div>
+        <div class="price__economy-res">Экономия 63%</div>
+       </div>
+       <a href="" target="_blank" class="btn btn-warning btn-lxx">Оплатить</a>
+      </div>
+      <div class="price__item">
+       <div class="price__period">6 месяцев &#128640;</div>
+       <div class="price__value">
+        <div class="price__num">390 &#8381;</div>
+        <p>В месяц</p>
+       </div>
+       <div class="price__economy">
+        <div class="price__economy-offer">2340 ₽ на 1 год</div>
+        <div class="price__economy-res">Экономия 46%</div>
+       </div>
+       <a href="" target="_blank" class="btn btn-primary btn-lxx">Оплатить</a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </div>
+ <footer class="footer">
+  <div class="footer__top">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-3 mb-4 mb-md-0">
+      <h3 class="footer__title">Остались вопросы?
+       Напишите нам</h3>
+     </div>
+     <div class="col-md-3 mb-4 mb-md-0">
+      <div class="footer__caption">VPN-приложения</div>
+      <ul class="footer__list">
+       <li><a href="">MacOS</a></li>
+       <li><a href="">Windows</a></li>
+       <li><a href="">iOS</a></li>
+       <li><a href="">Android</a></li>
+       <li><a href="">Linux</a></li>
+       <li><a href="">Роутер</a></li>
+      </ul>
+     </div>
+     <div class="col-md-3 mb-4 mb-md-0">
+      <div class="footer__caption">Информация</div>
+      <div class="row">
+       <div class="col">
+        <ul class="footer__list">
+         <li><a href="">О компании</a></li>
+         <li><a href="">Блог</a></li>
+         <li><a href="">Новости</a></li>
+         <li><a href="">Статьи</a></li>
+         <li><a href="">FAQ</a></li>
+         <li><a href="">Поддержка</a></li>
+        </ul>
+       </div>
+       <div class="col">
+        <ul class="footer__list">
+         <li><a href="">Партнерам</a></li>
+         <li><a href="">Карта сайта</a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-3">
+      <div class="footer__caption">
+       <div class="soc">
+        <ul class="soc__list">
+         <li class="soc__item">
+          <a href="">
+           <svg class="soc__icon" viewBox="0 0 16 16" width="16">
+            <use xlink:href="static/img/sprite.svg#tg"></use>
+           </svg>
+          </a>
+         </li>
+         <li class="soc__item">
+          <a href="">
+           <svg class="soc__icon" viewBox="0 0 16 16" width="16">
+            <use xlink:href="static/img/sprite.svg#fb"></use>
+           </svg>
+          </a>
+         </li>
+         <li class="soc__item">
+          <a href="">
+           <svg class="soc__icon" viewBox="0 0 16 16" width="16">
+            <use xlink:href="static/img/sprite.svg#tw"></use>
+           </svg>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer__bottom">
+   <div class="container">
+    <div class="row row-cols-auto justify-content-between">
+     <div class="col">© 2022 Hide&Seek VPN</div>
+     <div class="col"><a href="mailto:support@hidenseek.net">support@hidenseek.net</a></div>
+    </div>
+   </div>
+  </div>
+ </footer>
+
+ <script src="static//js/scripts.js"></script>
+ <script src="static//js/bootstrap.min.js"></script>
+</body>
+<!-- https://bootstrap-4.ru/docs/5.2/components/navbar/
+https://codepen.io/emelyanova/pen/GxKKpG
+https://osvaldas.info/auto-hide-sticky-header -->
+
+</html>
