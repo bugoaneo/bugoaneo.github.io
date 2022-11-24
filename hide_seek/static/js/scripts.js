@@ -83,3 +83,21 @@ navTrigger.addEventListener('click', () => {
     }));
 
   }(document, window, 0));
+
+
+//hero slider
+
+const slides = document.querySelectorAll(".hero__slider-pic");
+let currentSlide = 0;
+setTimeout(function run() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('current');
+  }
+  slides[currentSlide].classList.add('current');
+  if (currentSlide + 1 === slides.length) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  setTimeout(run, 3000);
+}, 3000);
