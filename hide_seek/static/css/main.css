@@ -666,6 +666,41 @@ img {
   background: var(--footer-bottom);
 }
 
+.lang__toggle {
+  position: relative;
+  max-width: 224px;
+  width: 100%;
+  padding: 0.8em 1em;
+  border: none;
+  background: var(--footer-bottom);
+  text-align: left;
+}
+.lang__toggle:after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1em;
+}
+
+.lang__list {
+  max-width: 224px;
+  width: 100%;
+}
+
+.lang__item a {
+  display: block;
+  padding: 0.8em 1em;
+}
+
+.lang__icon {
+  width: 22px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: baseline;
+}
+
 .navbar-toggler {
   border: none;
 }
