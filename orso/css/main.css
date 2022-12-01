@@ -748,6 +748,7 @@ img {
   z-index: 100;
 }
 .banner .container {
+  width: 100%;
   padding: 0 10px;
 }
 
