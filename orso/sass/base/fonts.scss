@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("../fonts/inter-v12-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/inter-v12-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("../fonts/inter-v12-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/inter-v12-latin_cyrillic-700.woff") format("woff");
+}

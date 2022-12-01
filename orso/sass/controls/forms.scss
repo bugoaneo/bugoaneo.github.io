@@ -1,0 +1,17 @@
+.form__body {
+ margin-top: 30px;
+}
+.form__row {
+ margin-bottom: 1em;
+ input {
+  padding: 1em;
+  border-radius: 10px;
+  color: #959595;
+  line-height: 2.1;
+  background: #e7e7e7;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+ }
+ + .btn {
+  margin-top: 10px;
+ }
+}

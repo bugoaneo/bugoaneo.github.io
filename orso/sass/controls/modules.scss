@@ -1,0 +1,31 @@
+.banner {
+ position: fixed;
+ top: 0;
+ max-width: var(--container);
+ width: inherit;
+ padding: 5px;
+ background: #f0f365;
+ box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+ z-index: 100;
+ .container {
+  padding: 0 10px;
+ }
+}
+
+.banner__row {
+ justify-content: space-between;
+ align-items: center;
+ @include bp(360px) {
+  justify-content: center;
+ }
+}
+
+.banner__text {
+ text-align: center;
+ text-transform: uppercase;
+ color: #111;
+ span {
+  font-weight: 700;
+  color: #ff0000;
+ }
+}
