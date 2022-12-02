@@ -5,6 +5,7 @@
   --text: #535353;
   --accent: #14ad28;
   --light: #e2f7ff;
+  --offer: #f44336;
 }
 
 *,
@@ -453,6 +454,13 @@ img {
   font-weight: 700;
 }
 
+.section__media {
+  margin: 30px 0;
+}
+.section__media img {
+  width: 100%;
+}
+
 .accent {
   display: inline;
   font-weight: 700;
@@ -461,6 +469,16 @@ img {
 
 .note {
   margin-bottom: 20px;
+}
+
+.plank {
+  padding: 1px 3px;
+  color: #fff;
+  background-color: var(--offer);
+}
+
+.pic {
+  margin-left: 20px;
 }
 
 .hero {
@@ -557,7 +575,7 @@ img {
 
 /*lead*/
 .lead {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .lead__text {
@@ -576,6 +594,10 @@ img {
 }
 
 /*components*/
+.components {
+  padding-top: 0;
+}
+
 .components__item {
   position: relative;
   padding-bottom: 40px;
@@ -699,19 +721,28 @@ img {
   text-align: center;
 }
 
+/*proof*/
+.proof .row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.proof p {
+  font-size: 18px;
+}
+
 /*share*/
 .share {
-  padding: 0 0 100px 0;
+  padding-top: 100px;
   text-align: center;
 }
 .share .row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.share__pic {
-  margin-left: 20px;
 }
 
 .footer {
