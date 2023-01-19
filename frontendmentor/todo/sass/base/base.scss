@@ -1,0 +1,87 @@
+html {
+  font-family: var(--ff);
+  color: var(--text);
+  //  font-size: var(--fz);
+  @include fFS(14px, 18px, 320px, 1900px, 20px);
+  // height: -webkit-fill-available;
+  line-height: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  // min-height: -webkit-fill-available;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  // height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+
+  //
+  background-size: 100% 305px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--theam-bg-color);
+  @include bp(500px) {
+    background-size: 100% 200px;
+  }
+}
+
+.footer {
+  flex-grow: 0;
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  display: inline-block;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 10px;
+  @include bp(380px) {
+    --container: 350px;
+  }
+}
+
+/*grid*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/**/
+
+*::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+}

@@ -1,0 +1,111 @@
+.todo__form {
+ margin-bottom: 26px;
+}
+
+.todo__input {
+ &::placeholder,
+ &::-moz-placeholder {
+  opacity: 0.8;
+  color: var(--theam-descr-color);
+ }
+}
+
+.todo__form-row {
+ position: relative;
+ // display: flex;
+ // justify-content: space-between;
+ // align-items: center;
+ font-size: 1.1em;
+ padding: 1.1em 1em 1.1em 3.8em;
+ border-radius: 0.2em;
+ background: var(--input-bg);
+}
+
+.todo__check {
+ position: absolute;
+ appearance: none;
+ width: 1px;
+ height: 1px;
+ visibility: hidden;
+}
+
+.todo__form-label {
+ --field: 8px;
+ @include center(y);
+ left: 1em;
+ width: 40px;
+ height: 40px;
+ padding: var(--field);
+ border-radius: 100%;
+ opacity: 0.9;
+ will-change: filter;
+ background: var(--gradient);
+ background-clip: content-box;
+ filter: grayscale(1);
+ &:before {
+  content: "";
+  position: absolute;
+  right: calc(var(--field) + 1px);
+  left: calc(var(--field) + 1px);
+  bottom: calc(var(--field) + 1px);
+  top: calc(var(--field) + 1px);
+  border-radius: 100%;
+  background: var(--input-bg);
+  transition: background 0.5s ease-in;
+ }
+}
+
+.todo__label {
+ @include center(y);
+ @extend .todo__form-label;
+ left: 1em;
+ width: 40px;
+ height: 40px;
+ padding: var(--field);
+ border-radius: 100%;
+ opacity: 0.9;
+ will-change: filter;
+ background: var(--gradient);
+ background-clip: content-box;
+ filter: grayscale(1);
+ transition: all 0.5s ease-in;
+
+ &:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 9'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' d='M1 4.304 3.696 7l6-6'/%3E%3C/svg%3E");
+  background-size: 11px 9px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+ }
+ &:hover {
+  opacity: 1;
+  filter: grayscale(0);
+ }
+}
+
+.todo__check:checked ~ .todo__label {
+ opacity: 1;
+ filter: grayscale(0);
+ &:before {
+  background: none;
+ }
+ &:after {
+  opacity: 1;
+ }
+ ~ .todo__descr {
+  text-decoration: line-through;
+ }
+}
+
+.todo__descr {
+ flex: 1 1 auto;
+ line-height: 1;
+ color: var(--theam-descr-color);
+}

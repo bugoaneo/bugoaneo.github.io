@@ -1,0 +1,21 @@
+// $container: 1280px;
+
+// $fz: 20px;
+// $ff: Arial;
+// $acent-ff: PTSans;
+
+// $text: #222;
+// $accent: #f01;
+
+:root {
+ color-scheme: light dark;
+ --container: 565px;
+ --fz: 18px;
+ --ff: "Josefin Sans";
+ --text: hsl(235, 19%, 35%);
+ --accent: hsl(220, 98%, 61%);
+ --dark: hsl(235, 24%, 19%);
+ --medium: hsl(237, 14%, 26%);
+ --light: hsl(233, 11%, 84%);
+ --gradient: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}

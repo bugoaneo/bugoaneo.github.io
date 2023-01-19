@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+ <meta name="robots" content="all">
+ <meta property="og:title" content="To Do app. Vanila JS" />
+ <meta property="og:image" content="img/preview.jpg" />
+ <meta property="og:description" content="To Do app. Vanila JS" />
+ <meta name="description" content="To Do app. Vanila JS" />
+ <meta name="keywords" content="To Do app. Vanila JS" />
+
+ <link rel="icon" href="favicon.png" type="image/png" sizes="34x34">
+
+ <meta name="color-scheme" content="light dark">
+ <meta name="theme-color" media="(prefers-color-scheme: light)" content="#749bf8">
+ <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#25273c">
+
+ <title>To Do app. Vanila JS</title>
+ <link rel="preload" href="fonts/josefin-sans-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="stylesheet" href="css/main.css">
+ <style>
+  @media (prefers-color-scheme: dark) {
+   :root {
+    --bg-image: url("img/bg-desktop-dark.jpg")
+   }
+  }
+
+  @media (prefers-color-scheme: light) {
+   :root {
+    --bg-image: url("img/bg-desktop-light.jpg")
+   }
+  }
+
+  @media (max-width:380px) {
+   @media (prefers-color-scheme: dark) {
+    :root {
+     --bg-image: url("img/bg-mobile-dark.jpg")
+    }
+   }
+
+   @media (prefers-color-scheme: light) {
+    :root {
+     --bg-image: url("img/bg-mobile-light.jpg")
+    }
+   }
+  }
+ </style>
+</head>
+
+<body>
+
+ <div class="wrapper" style="background-image: var(--bg-image);">
+
+  <header class="header">
+   <div class="container">
+    <div class="row">
+     <div class="logo">ToDo</div>
+     <button class="theme-switcher" type="button">
+      <svg class="theme-switcher__icon light" viewBox="0 0 26 26" width="26">
+       <use xlink:href="img/sprite.svg#day" class="day__choose"></use>
+       <use xlink:href="img/sprite.svg#night" class="night__choose"></use>
+      </svg>
+     </button>
+    </div>
+   </div>
+  </header>
+  <section class="todo" id="app">
+
+   <div class="container">
+    <form class="todo__form" action="" method="post">
+     <div class="todo__form-row">
+      <label class="todo__form-label"></label>
+      <input class="todo__input" type="text" aria-label="Task description" placeholder="Create a new todo..." required>
+     </div>
+    </form>
+    <div class="todo__container">
+     <div class="todo__body">
+      <div class="todo__list">
+       <div class="todo__item">
+        <input type="checkbox" id="1" class="todo__check" checked>
+        <label class="todo__label" for="1"></label>
+        <p class="todo__descr">Complite online JavaScript course</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+       <div class="todo__item">
+        <input type="checkbox" id="2" class="todo__check">
+        <label class="todo__label" for="2"></label>
+        <p class="todo__descr">Jog around the park 3x</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+       <div class="todo__item">
+        <input type="checkbox" id="3" class="todo__check">
+        <label class="todo__label" for="3"></label>
+        <p class="todo__descr">10 min meditation</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+       <div class="todo__item">
+        <input type="checkbox" id="4" class="todo__check">
+        <label class="todo__label" for="4"></label>
+        <p class="todo__descr">Read foe one hour</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+       <div class="todo__item">
+        <input type="checkbox" id="5" class="todo__check">
+        <label class="todo__label" for="5"></label>
+        <p class="todo__descr">Pick up groceries</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+       <div class="todo__item">
+        <input type="checkbox" id="6" class="todo__check">
+        <label class="todo__label" for="6"></label>
+        <p class="todo__descr">Complite ToDo app on Frontend Mentor</p>
+        <button class="todo__remove" type="button"></button>
+       </div>
+      </div>
+     </div>
+     <div class="todo__footer">
+      <div class="todo__action">
+       <div class="todo__count"><span class="action-count">5</span> items left</div>
+       <div class="todo__menu">
+        <button class="todo__menu-item current" type="button">All</button>
+        <button class="todo__menu-item" type="button">Active</button>
+        <button class="todo__menu-item" type="button">Complited</button>
+       </div>
+       <button class="todo__clearlist" type="button">Clear Complited</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </div>
+
+
+ <footer class="footer"></footer>
+
+ <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.header {
+ padding-top: 8.5vmin;
+ padding-bottom: 4vmin;
+ .row {
+  justify-content: space-between;
+  align-items: center;
+ }
+ // @include bp(380px) {
+ //  padding-top: 10vmin;
+ // }
+}
+
+.logo {
+ margin-bottom: -0.2em;
+ font-size: 2.5em;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.3em;
+ line-height: 1;
+ color: #fff;
+ @include bp(380px) {
+  font-size: 2em;
+ }
+}

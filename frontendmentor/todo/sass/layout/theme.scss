@@ -1,0 +1,19 @@
+/*Browser theam style*/
+
+@media (prefers-color-scheme: dark) {
+ :root {
+  --theam-bg-color: hsl(235, 21%, 11%);
+  --input-bg: var(--medium);
+  --theam-descr-color: hsl(236, 9%, 61%);
+  --action-menu-hover: hsl(0, 0%, 98%);
+ }
+}
+
+@media (prefers-color-scheme: light) {
+ :root {
+  --theam-bg-color: hsl(235, 32%, 92%);
+  --input-bg: hsl(0, 0%, 98%);
+  --theam-descr-color: var(--text);
+  --action-menu-hover: var(--dark);
+ }
+}

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@media (prefers-color-scheme: dark) {
+  /* Стили для тёмной темы */
+}
+@media (prefers-color-scheme: light) {
+  /* Стили для светлой темы */
+}

@@ -1,0 +1,28 @@
+.todo__footer {
+ font-size: 0.9em;
+ padding: 0.5em 1em;
+ background: var(--input-bg);
+}
+
+.todo__action {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ // font-weight: 700;
+}
+
+.todo__count {
+ padding: 0.8em 0.5em;
+}
+
+.todo__menu-item,
+.todo__clearlist {
+ padding: 0.8em 0.45em;
+ transition: color 0.5s ease-in;
+ &.current {
+  color: var(--accent);
+ }
+ &:not(.current):hover {
+  color: var(--action-menu-hover);
+ }
+}

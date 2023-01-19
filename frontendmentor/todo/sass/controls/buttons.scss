@@ -1,0 +1,45 @@
+.theme-switcher {
+ padding: 10px 0 10px 10px;
+ max-width: 50px;
+}
+
+.theme-switcher__icon {
+ width: 26px;
+ height: 26px;
+ &.light {
+  .day__choose {
+   opacity: 0;
+  }
+ }
+ &.dark {
+  .night__choose {
+   opacity: 0;
+  }
+ }
+}
+
+.todo__remove {
+ @include center(y);
+ right: 1.1em;
+ width: 30px;
+ height: 100%;
+ color: var(--theam-descr-color);
+ opacity: 0;
+ transition: opacity 0.5s ease-out;
+ &:before,
+ &:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25px;
+  height: 1px;
+  background-color: currentColor;
+ }
+ &:before {
+  transform: rotate(45deg);
+ }
+ &:after {
+  transform: rotate(-45deg);
+ }
+}
