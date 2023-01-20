@@ -1,5 +1,4 @@
 :root {
-  color-scheme: light dark;
   --container: 565px;
   --fz: 18px;
   --ff: "Josefin Sans";
@@ -9,6 +8,7 @@
   --medium: hsl(237, 14%, 26%);
   --light: hsl(233, 11%, 84%);
   --gradient: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --error: hsl(0, 77%, 47%);
 }
 
 *,
@@ -381,28 +381,6 @@ img {
       flex-wrap: wrap;
 }
 
-/**/
-*::-webkit-media-controls-panel {
-  display: none !important;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/* Old shadow dom for play button */
-*::-webkit-media-controls-play-button {
-  display: none !important;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/* New shadow dom for play button */
-/* This one works! */
-*::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 .header {
   padding-top: 8.5vmin;
   padding-bottom: 4vmin;
@@ -470,6 +448,7 @@ img {
 }
 
 .todo__body {
+  position: relative;
   max-height: 410px;
   min-height: 200px;
   height: 410px;
@@ -516,7 +495,60 @@ img {
   opacity: 1;
 }
 
+.todo__error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  color: var(--error);
+  background: #fff;
+  z-index: 2;
+  -webkit-box-shadow: 0 0 5px 4px var(--light);
+          box-shadow: 0 0 5px 4px var(--light);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.todo__error.shown {
+  opacity: 1;
+}
+
+.todo__empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  will-change: z-index;
+  z-index: -1;
+}
+.todo__empty.shown {
+  opacity: 0.8;
+  z-index: 1;
+}
+
 .todo__form {
+  position: relative;
   margin-bottom: 26px;
 }
 
@@ -656,11 +688,17 @@ img {
   width: 26px;
   height: 26px;
 }
+.theme-switcher__icon .day__choose {
+  opacity: 1;
+}
+.theme-switcher__icon .night__choose {
+  opacity: 0;
+}
 .theme-switcher__icon.light .day__choose {
   opacity: 0;
 }
-.theme-switcher__icon.dark .night__choose {
-  opacity: 0;
+.theme-switcher__icon.light .night__choose {
+  opacity: 1;
 }
 
 .todo__remove {
@@ -699,20 +737,26 @@ img {
 }
 
 /*Browser theam style*/
-@media (prefers-color-scheme: dark) {
-  :root {
-    --theam-bg-color: hsl(235, 21%, 11%);
-    --input-bg: var(--medium);
-    --theam-descr-color: hsl(236, 9%, 61%);
-    --action-menu-hover: hsl(0, 0%, 98%);
-  }
+:root {
+  color-scheme: light dark;
 }
+
 @media (prefers-color-scheme: light) {
-  :root {
+  :root,
+:root.light {
     --theam-bg-color: hsl(235, 32%, 92%);
     --input-bg: hsl(0, 0%, 98%);
     --theam-descr-color: var(--text);
     --action-menu-hover: var(--dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root,
+:root.dark {
+    --theam-bg-color: hsl(235, 21%, 11%);
+    --input-bg: var(--medium);
+    --theam-descr-color: hsl(236, 9%, 61%);
+    --action-menu-hover: hsl(0, 0%, 98%);
   }
 }
 /*# sourceMappingURL=main.css.map */

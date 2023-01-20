@@ -8,7 +8,6 @@
 // $accent: #f01;
 
 :root {
- color-scheme: light dark;
  --container: 565px;
  --fz: 18px;
  --ff: "Josefin Sans";
@@ -18,4 +17,5 @@
  --medium: hsl(237, 14%, 26%);
  --light: hsl(233, 11%, 84%);
  --gradient: linear-gradient(180deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+ --error: hsl(0, 77%, 47%);
 }

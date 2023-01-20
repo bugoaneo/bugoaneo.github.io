@@ -49,7 +49,7 @@
  </style>
 </head>
 
-<body>
+<body class="">
 
  <div class="wrapper" style="background-image: var(--bg-image);">
 
@@ -57,10 +57,10 @@
    <div class="container">
     <div class="row">
      <div class="logo">ToDo</div>
-     <button class="theme-switcher" type="button">
-      <svg class="theme-switcher__icon light" viewBox="0 0 26 26" width="26">
-       <use xlink:href="img/sprite.svg#day" class="day__choose"></use>
-       <use xlink:href="img/sprite.svg#night" class="night__choose"></use>
+     <button class="theme-switcher" type="button" aria-label="Color theme swicher">
+      <svg class="theme-switcher__icon light" viewBox="0 0 26 26" width="26" aria-label="light scheme">
+       <use xlink:href="img/sprite.svg#day" class="day__choose" aria-label="Day light"></use>
+       <use xlink:href="img/sprite.svg#night" class="night__choose" aria-label="Night dark"></use>
       </svg>
      </button>
     </div>
@@ -74,9 +74,11 @@
       <label class="todo__form-label"></label>
       <input class="todo__input" type="text" aria-label="Task description" placeholder="Create a new todo..." required>
      </div>
+     <span class="todo__error">The task should be formulated briefly! :)</span>
     </form>
     <div class="todo__container">
      <div class="todo__body">
+      <div class="todo__empty">No tasks! You can go for a walk! :)</div>
       <div class="todo__list">
        <div class="todo__item">
         <input type="checkbox" id="1" class="todo__check" checked>
@@ -132,9 +134,14 @@
   </section>
  </div>
 
-
- <footer class="footer"></footer>
-
+ <template id="todoTemplate">
+  <div class="todo__item">
+   <input type="checkbox" id="" class="todo__check">
+   <label class="todo__label" for=""></label>
+   <p class="todo__descr"></p>
+   <button class="todo__remove" type="button"></button>
+  </div>
+ </template>
  <script src="js/scripts.js"></script>
 </body>
 

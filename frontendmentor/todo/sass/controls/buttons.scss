@@ -6,16 +6,25 @@
 .theme-switcher__icon {
  width: 26px;
  height: 26px;
+ .day__choose {
+  opacity: 1;
+ }
+ .night__choose {
+  opacity: 0;
+ }
  &.light {
   .day__choose {
    opacity: 0;
   }
- }
- &.dark {
   .night__choose {
-   opacity: 0;
+   opacity: 1;
   }
  }
+ // &.dark {
+ //  .night__choose {
+ //   opacity: 0;
+ //  }
+ // }
 }
 
 .todo__remove {

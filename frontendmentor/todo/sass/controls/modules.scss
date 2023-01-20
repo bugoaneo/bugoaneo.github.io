@@ -1,4 +1,5 @@
 .todo__body {
+ position: relative;
  max-height: 410px;
  min-height: 200px;
  height: max(200px, 410px);
@@ -40,5 +41,43 @@
   .todo__remove {
    opacity: 1;
   }
+ }
+}
+
+.todo__error {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ padding: 0.5em;
+ border-radius: 0.2em;
+ color: var(--error);
+ background: #fff;
+ z-index: 2;
+ box-shadow: 0 0 5px 4px var(--light);
+ opacity: 0;
+ pointer-events: none;
+ user-select: none;
+ transition: opacity 0.5s ease-in;
+ &.shown {
+  opacity: 1;
+ }
+}
+
+.todo__empty {
+ @include center();
+ width: 100%;
+ font-size: 2.5em;
+ font-weight: 700;
+ text-align: center;
+ text-transform: uppercase;
+ pointer-events: none;
+ user-select: none;
+ opacity: 0;
+ will-change: z-index;
+ z-index: -1;
+ &.shown {
+  opacity: 0.8;
+  z-index: 1;
  }
 }
