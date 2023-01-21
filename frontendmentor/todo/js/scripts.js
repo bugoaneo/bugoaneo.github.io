@@ -102,15 +102,58 @@ const doneTodo = function (item) {
 let doneTodoCounter = function () {
  let list = document.querySelectorAll('.todo__item.done').length;
  todoCount.textContent = list;
- console.log(list)
  return todoCount.textContent;
 }
-
 
 for (let i = 0; i < todoItems.length; i++) {
  removeToDo(todoItems[i]);
  doneTodo(todoItems[i]);
 }
+
+/*menu action*/
+const clearDoneTodo = document.querySelector('.todo__clearlist');
+const menuTodoActions = document.querySelector('.todo__menu');
+
+let menuToDoItem = Array.from(menuTodoActions.children);
+
+clearDoneTodo.addEventListener('click', function () {
+ [...todoItems].forEach(item => {
+  if (item.classList.contains('done')) {
+   item.classList.remove('done');//
+   item.querySelector('.todo__check').checked = false;
+   item.remove();
+  }
+ })
+ doneTodoCounter();
+ toggleEmptyMSG();
+})
+
+
+for (let item of menuToDoItem) {
+ item.addEventListener('click', function () {
+  menuToDoItem.forEach(item => item.classList.remove('current'));
+  this.classList.add('current');
+ })
+}
+
+menuTodoActions.addEventListener('click', function (evt) {
+ let todoList = document.querySelectorAll('.todo__item');
+ let todoDone = document.querySelectorAll('.todo__item.done');
+ todoList.forEach(item => {
+  if (evt.target.dataset.filter === 'active' && item.classList.contains('done')) {
+   item.classList.add('hidden')
+  }
+  else if (evt.target.dataset.filter === 'done' && !item.classList.contains('done') && todoDone.length > 0) {
+   item.classList.add('hidden');
+  }
+  else {
+   item.classList.remove('hidden')
+  }
+ })
+ // toggleEmptyMSG();
+})
+
+
 
 
 todoForm.addEventListener('submit', function (evt) {

@@ -42,6 +42,9 @@
    opacity: 1;
   }
  }
+ &.hidden {
+  display: none;
+ }
 }
 
 .todo__error {

@@ -372,6 +372,10 @@ img {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 /*grid*/
 .row {
   display: -webkit-box;
@@ -493,6 +497,9 @@ img {
 }
 .todo__item:hover .todo__remove {
   opacity: 1;
+}
+.todo__item.hidden {
+  display: none;
 }
 
 .todo__error {
