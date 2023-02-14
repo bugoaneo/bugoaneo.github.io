@@ -1,0 +1,68 @@
+.nav-trigger {
+ position: relative;
+ display: none;
+ width: 40px;
+ height: 27px;
+ padding: 12px 0;
+ background-color: #fff;
+ background-clip: content-box;
+ transition: 0.5s ease-out;
+ &:before,
+ &:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+ }
+ &:before {
+  top: 0;
+  transition: top 0.5s, transform 0.5s;
+ }
+ &:after {
+  bottom: 0;
+  transition: bottom 0.5s, transform 0.5s;
+ }
+ @include bp(770px) {
+  display: block;
+ }
+ &.open {
+  background-color: transparent;
+  &:before {
+   top: 12px;
+   transform: rotate(-45deg);
+  }
+  &:after {
+   bottom: 12px;
+   transform: rotate(45deg);
+  }
+ }
+}
+
+.btn {
+ @include fFS(20px, 34px, 770px, 1920px, 20px);
+ line-height: 1.3;
+ padding: 0.5em 2em;
+ font-weight: 700;
+ text-transform: uppercase;
+ text-align: center;
+ &--light {
+  background: #fff;
+  color: var(--text);
+ }
+ &--dark {
+  color: #ffffff;
+  background: var(--accent);
+ }
+ @include bp(500px) {
+  padding: 0.5em 1.2em;
+ }
+}
+
+.vacansy__close {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%) scale(-1);
+ right: 14px;
+}

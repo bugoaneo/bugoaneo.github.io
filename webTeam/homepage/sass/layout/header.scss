@@ -1,0 +1,82 @@
+.header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ padding: 0.78em 0;
+ background-color: rgba($color: #000000, $alpha: 0.7);
+ z-index: 100;
+ .container {
+  @extend %row;
+  justify-content: space-between;
+  align-items: center;
+ }
+ @include bp(770px) {
+  padding: 0.5em 0;
+ }
+}
+
+.logo {
+ img {
+  @include bp(770px) {
+   height: 50px;
+  }
+ }
+}
+
+.nav {
+ flex: 0.4 1 auto;
+ padding-right: 20px;
+ @include bp(1200px) {
+  padding-right: 0;
+ }
+ @include bp(770px) {
+  position: fixed;
+  top: 66px;
+  left: 0;
+  // bottom: 0;
+  transform: translateX(100%);
+  flex: 1 1 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  transition: all 400ms ease-in;
+  &.open {
+   transform: translateX(0%);
+   .nav__item {
+    transform: translateX(0%);
+   }
+  }
+ }
+}
+
+.nav__list {
+ @extend %row;
+ justify-content: space-between;
+}
+
+.nav__item {
+ position: relative;
+ @include bp(770px) {
+  transform: translateX(100%);
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+ }
+ a {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  line-height: 1.1;
+ }
+}
+
+$menu-items: 4;
+
+@for $i from 1 through $menu-items {
+ .nav__item:nth-child(#{$i}) {
+  transition-delay: ($i / $menu-items) * 1s;
+ }
+}
