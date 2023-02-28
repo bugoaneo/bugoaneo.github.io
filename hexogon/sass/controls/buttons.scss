@@ -1,0 +1,48 @@
+.menu-trigger {
+ display: none;
+ position: relative;
+ bottom: 5px;
+ width: 50px;
+ height: 30px;
+border-left: 1px solid;
+border-right: 1px solid;
+margin-left: auto;
+transition: 0.6s ease;
+&:before, &:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -1px;
+ width: inherit;
+ height: inherit;
+ border-left: 1px solid;
+ border-right: 1px solid;
+ transition: 0.6s ease;
+}
+&:before {
+ transform: rotate(120deg);
+}
+&:after {
+ transform: rotate(-120deg);
+}
+&.opened {
+ font-size: 0;
+ border-color: transparent;
+ &:before, &:after {
+  left: 50%;
+  width: 1px;
+  background-color: #fff;
+  border-color: transparent;
+ }
+}
+ @include bp(580px) {
+  display: block;
+ }
+}
+
+.btn {
+ padding: 0.8em 2em;
+ color: #fff;
+ text-transform: uppercase;
+ background-color: var(--accent);
+}

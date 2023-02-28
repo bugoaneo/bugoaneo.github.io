@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?qhrsll');
+  src:  url('../fonts/icomoon.eot?qhrsll#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?qhrsll') format('truetype'),
+    url('../fonts/icomoon.woff?qhrsll') format('woff'),
+    url('../fonts/icomoon.svg?qhrsll#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-env:before {
+  content: "\f0e0";
+}
+.icon-ptrt:before {
+  content: "\f231";
+}
+.icon-phn:before {
+  content: "\e943";
+}
+.icon-pin:before {
+  content: "\e947";
+}
+.icon-fcbk:before {
+  content: "\ea90";
+}
+.icon-ttr:before {
+  content: "\ea96";
+}
+.icon-dbbl:before {
+  content: "\eaa7";
+}
+.icon-lkn:before {
+  content: "\eaca";
+}
