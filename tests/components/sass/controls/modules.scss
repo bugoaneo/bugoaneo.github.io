@@ -1,0 +1,18 @@
+.tags {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.tag {
+ display: block;
+ padding: 0.3em 0.55em 0.35em 0.55em;
+ border-radius: 4em;
+ font-size: 14px;
+ color: #fff;
+ background-color: var(--dark);
+ line-height: 1;
+ margin-right: 1em;
+ &:last-of-type {
+  margin-right: 0;
+ }
+}
