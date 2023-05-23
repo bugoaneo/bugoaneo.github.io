@@ -1,0 +1,120 @@
+@use "../base/mixin" as *;
+
+.posts {
+ margin-bottom: toRem(48);
+}
+
+.posts__list {
+ @include row();
+ gap: 40px;
+ @include bp(toRem(1100)) {
+  gap: 20px 20px;
+ }
+ @include bp(toRem(600)) {
+  gap: 40px 0;
+ }
+}
+
+/*SINGLE POST*/
+
+.posts__item {
+ flex: 1 1 calc(33% - 40px);
+ @include bp(toRem(1100)) {
+  flex: 1 1 calc(50% - 20px);
+ }
+ @include bp(toRem(600)) {
+  flex: 1 1 100%;
+ }
+}
+.posts__media {
+ position: relative;
+ margin-bottom: toRem(16);
+ aspect-ratio: 1/0.65;
+ background-color: var(--light);
+ overflow: hidden;
+ &:empty {
+  &:before {
+   content: "Sorry, img is NULL";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   color: var(--text);
+   background-color: var(--light);
+   text-align: center;
+  }
+ }
+ img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+}
+
+.posts__tags {
+ @include row();
+ margin-bottom: toRem(16);
+ font-size: toRem(13);
+ span {
+  padding: toRem(5);
+  color: var(--accent);
+  font-weight: 700;
+ }
+}
+
+.posts__title {
+ display: block;
+ margin-bottom: toRem(16);
+ font-size: toRem(24);
+ font-weight: 700;
+ line-height: 1.2;
+}
+
+.posts__meta {
+ @include row();
+ margin-bottom: toRem(16);
+}
+
+.posts__autor,
+.posts__date,
+.posts__views {
+ display: flex;
+ align-items: center;
+ margin-left: toRem(5);
+ font-size: toRem(12);
+ font-weight: 500;
+ line-height: 1;
+ &:before {
+  content: "";
+  display: block;
+  margin-right: toRem(6);
+  width: toRem(3);
+  height: toRem(3);
+  border-radius: 100%;
+  background-color: currentColor;
+ }
+}
+.posts__autor {
+ margin-left: 0;
+ &:before {
+  display: none;
+ }
+}
+.posts__date,
+.posts__views {
+ color: var(--light-text);
+}
+
+.posts__content {
+ display: -webkit-box;
+ -webkit-line-clamp: 4;
+ -webkit-box-orient: vertical;
+ overflow-y: hidden;
+ font-size: toRem(14);
+ line-height: 1.45;
+}

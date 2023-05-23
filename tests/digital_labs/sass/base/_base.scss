@@ -1,0 +1,65 @@
+@use "mixin" as *;
+
+html {
+  font-family: var(--ff);
+  color: var(--text);
+  font-size: var(--fz);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  // height: 100%;
+  flex-grow: 1;
+  // overflow: hidden;
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  position: relative;
+  text-align: center;
+  white-space: pre-wrap;
+  background-color: var(--light);
+  &:before,
+  &:after {
+    display: inherit;
+    position: absolute;
+    width: 100%;
+  }
+  &:after {
+    content: "Sorry, img is undefined :(" "\a"attr(alt) !important;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+    top: 50%;
+    color: var(--text);
+  }
+  &:before {
+    content: "";
+    background: inherit;
+    font-size: 0;
+    height: 100%;
+  }
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 toRem(20);
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
