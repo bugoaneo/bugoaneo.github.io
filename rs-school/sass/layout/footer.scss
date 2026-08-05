@@ -1,0 +1,153 @@
+.footer {
+ padding: 2.5em 0;
+
+ background-color: #111;
+ color: #fff;
+
+ .logo {
+  margin-right: 0;
+
+  img {
+   width: 82px;
+
+   @include bp(450px) {
+    width: 128px;
+    margin: 0 auto;
+   }
+  }
+ }
+
+ @include bp(850px) {
+  padding: 1.2em 0;
+ }
+
+ .row {
+  @include bp(850px) {
+   align-items: flex-start;
+  }
+
+  @include bp(450px) {
+   align-items: center;
+  }
+ }
+}
+
+.footer__logo {
+ flex: 1 1 50%;
+
+ @include bp(850px) {
+  flex: 0 1 80%;
+  orphans: 1;
+ }
+
+ @include bp(450px) {
+  flex: 0 1 100%;
+ }
+}
+
+.footer__action {
+ flex: 0 1 368px;
+
+ @include bp(850px) {
+  display: none;
+ }
+
+}
+
+.footer__caption {
+ font-size: 24px;
+ margin-bottom: 0.5em;
+}
+
+.footer__touch {
+ order: 1;
+
+ @include bp(850px) {
+  margin-top: -53px;
+  margin-bottom: 2.5em;
+  order: 3;
+ }
+
+ @include bp(450px) {
+  margin: 0 auto;
+ }
+}
+
+.footer__menu {
+ align-self: flex-end;
+ order: 2;
+
+ @include bp(850px) {
+  order: 4
+ }
+}
+
+.footer__list {
+ @include row(jst, ac);
+}
+
+.footer__item {
+ a {
+  display: block;
+  padding: 0.5em 1.5vmax;
+  color: #fff;
+
+  @include bp(450px) {
+   padding: 0.5em;
+  }
+ }
+
+ &.current {
+  a {
+   color: var(--orange);
+  }
+ }
+}
+
+.footer__btns {
+ margin: 1.85em 0;
+ flex: 1 1 100%;
+
+
+ @include bp(850px) {
+  flex: 0 1 auto;
+  order: 2;
+ }
+
+ @include bp(450px) {
+  flex: 1 1 auto;
+  margin: 1.7em 0 1em 0;
+  text-align: center;
+ }
+}
+
+.footer__copy {
+ align-self: flex-end;
+ order: 3;
+
+ @include bp(850px) {
+  order: 5;
+ }
+
+ @include bp(450px) {
+  align-self: auto;
+  margin: 1.7em 0 1.7em auto;
+  order: 3;
+ }
+
+ p+p {
+  margin-top: 0.85em;
+ }
+
+ a {
+  display: block;
+  text-align: right;
+  font-weight: 300;
+  border: none;
+
+  &:hover {
+   color: var(--green);
+   text-decoration: underline;
+  }
+ }
+}

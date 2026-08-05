@@ -1,0 +1,39 @@
+.pick-page {
+ .section__subtitle {
+  margin-bottom: 1em;
+ }
+}
+
+.pick__diet {
+ @include row(jsb, ac);
+ max-width: 530px;
+ margin: 11vmin auto 9vmin auto;
+}
+
+.pick__amount {
+ position: relative;
+ flex: 0 1 38%;
+ text-align: center;
+
+ &:before {
+  content: '\00D7';
+  @include center(y);
+  left: 100%;
+  font-size: 2em;
+ }
+}
+
+.pick__animal {
+ flex: 0 1 53%;
+
+ img {
+  display: block;
+  width: 100%;
+ }
+}
+
+.pick__num {
+ @include fFS(48px, 74px, 320px, 1900px, 16px);
+ font-weight: 500;
+ color: #111;
+}

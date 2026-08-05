@@ -1,0 +1,33 @@
+// $container: 1280px;
+
+// $fz: 20px;
+// $ff: Arial;
+// $acent-ff: PTSans;
+
+// $text: #222;
+// $accent: #f01;
+
+:root {
+ --container: 1180px;
+ --fz: 16px;
+ --ff: 'Roboto';
+ --text: #333B41;
+ --accent: #FE9013;
+
+ /*colors*/
+ --green: #4B9200;
+ --orange: #F9804B;
+ --yellow: #FFEE2E;
+ --red: #D31414;
+ --black-blue: #333B41;
+ --grey: #767474;
+ --gray_smoky: #ABABAB;
+ --grey_light: #F1F3F2;
+ --frost: #FDFDFF;
+
+ /*gradients*/
+ --orage-grad: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+  linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+ --pink-grad: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+ --btn-grad: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%), var(--orange);
+}

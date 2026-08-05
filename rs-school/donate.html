@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+ <meta name="robots" content="all">
+ <meta property="og:title" content="" />
+ <meta property="og:image" content="img/hero.jpg" />
+ <meta property="og:description" content="etStory Online" />
+ <meta name="description" content="etStory Online" />
+ <meta name="keywords" content="" />
+
+ <link rel="icon" href="img/favicon.png" type="image/png" sizes="34x34">
+ <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+ <meta name="theme-color" content="#ffffff">
+
+ <title>PetStory Online</title>
+ <link rel="preload" href="fonts/roboto-v30-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="stylesheet" href="css/main.css">
+
+ <!-- speed graf -->
+ <style>
+  .hero {
+   background: url('img/bg/donate_bg.jpg') top center/cover;
+  }
+
+  @media (max-width: 1000px) {
+   .hero {
+    background: url('img/bg/donate_tablet.jpg') top center/cover;
+   }
+  }
+
+
+  @media (max-width: 450px) {}
+ </style>
+</head>
+
+<body>
+
+ <div class="wrapper">
+  <header class="header">
+   <div class="container row">
+    <div class="logo">
+     <a href="./">
+      <img src="img/logo.svg" alt="Petstory Online" width="52">
+     </a>
+    </div>
+    <nav class="menu">
+     <div class="logo logo--menu">
+      <img src="img/logo_menu.svg" alt="Petstory Online" width="64">
+     </div>
+     <ul class="menu__list">
+      <li class="menu__item"><a href="index.html#backstage" data-title="scroll">About</a></li>
+      <li class="menu__item"><a href="./" data-title="scroll">Map</a></li>
+      <li class="menu__item"><a href="index.html#pets" data-title="scroll">Zoos</a></li>
+      <li class="menu__item current"><a href="/">Donate</a></li>
+      <li class="menu__item"><a href="./" data-title="scroll">Contact us</a></li>
+     </ul>
+     <a class="menu__copy" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by ©</a>
+    </nav>
+    <button class="menu-trigger" type="button">Menu</button>
+   </div>
+  </header>
+  <section class="section hero">
+   <div class="container">
+    <h1 class="hidden">PetStory Online</h1>
+   </div>
+  </section>
+  <section class="section pick pick-page">
+   <div class="container">
+    <div class="section__header light">
+     <h2 class="section__subtitle uppercase">The zoo has officially reopened but we still need your help!</h2>
+     <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational programs and public and private events cancelled or postponed for additional months. We need you now more than ever to help ensure that we overcome these challenges. We have been actively raising funds in the community, and we are grateful for the generosity. But much more support is still needed, and we need your help! Please consider a gift today – no matter what size – to help us sustain our mission.</p>
+    </div>
+    <h3 class="section__subtitle accent">Donation Information</h3>
+    <div class="veile">
+     <h2 class="section__title accent center">Pick and feed a friend</h2>
+     <h3 class="section__caption">We know the animals bring you joy, and in these extraordinary times, we’re glad.</h3>
+
+     <div class="pick__diet">
+      <div class="pick__amount">
+       <div class="pick__num">4</div>
+       <p>Panda diet for the day.</p>
+      </div>
+      <div class="pick__animal"><img src="img/panda.svg" alt="panda"></div>
+     </div>
+
+     <form action="/*" method="POST" class="calculator">
+      <div class="calculator__caption">Amount</div>
+      <div class="calculator__wrapper">
+       <div class="calculator__track">
+        <div class="calculator__bar"></div>
+       </div>
+       <div class="calculator__values">
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>5000</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>2000</div>
+        <div class="calculator__value current"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>1000</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>500</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>250</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>100</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>50</div>
+        <div class="calculator__value"><svg class="calculator__icon" viewBox="0 0 10 20">
+          <use xlink:href="img/sprite.svg#baks"></use>
+         </svg>25</div>
+       </div>
+      </div>
+      <div class="calculator__action">
+       <div class="calculator__row calculator__row--amount">
+        <input class="calculator__input" type="number" name="" id="" placeholder="Another amount">
+        <svg class="calculator__icon" viewBox="0 0 10 20">
+         <use xlink:href="img/sprite.svg#baks"></use>
+        </svg>
+       </div>
+       <div class="calculator__row">
+        <div class="calculator__col">
+         <input type="radio" name="period" id="monthly" class="hidden">
+         <label class="calculator__label" for="monthly">Monthly</label>
+        </div>
+        <div class="calculator__col">
+         <input type="radio" name="period" id="once" class="hidden" checked>
+         <label class="calculator__label" for="once">Once</label>
+        </div>
+       </div>
+       <div class="calculator__row">
+        <button class="btn btn--orange btn--round">Feed a friend now</button>
+       </div>
+      </div>
+     </form>
+     <p class="center">Share with your friends on social networks</p>
+    </div>
+   </div>
+  </section>
+ </div>
+ <footer class="footer">
+  <div class="container row">
+   <div class="footer__logo logo">
+    <img class="desc-only" src="img/logo.svg" alt="Petstory Online" width="82">
+    <img class="mobil-only" src="img/logo_mob.svg" alt="Petstory Online" width="125">
+   </div>
+   <div class="footer__action">
+    <h4 class="footer__caption">Subscribe to our news</h4>
+    <form action="#" class="form footer__form" method="POST">
+     <div class="form__row">
+      <div class="form__col">
+       <input class="form__input" type="email" name="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form__col">
+       <button class="btn btn--submit" type="submit">Submit</button>
+      </div>
+     </div>
+    </form>
+   </div>
+   <div class="footer__touch">
+    <ul class="soc">
+     <li class="soc__item">
+      <a href="">
+       <svg class="soc__icon" viewBox="0 0 26 26" width="26">
+        <use xlink:href="img/sprite.svg#fbc"></use>
+       </svg><span class="soc__name">Facebook</span>
+      </a>
+     </li>
+     <li class="soc__item">
+      <a href="">
+       <svg class="soc__icon" viewBox="0 0 26 26" width="26">
+        <use xlink:href="img/sprite.svg#twt"></use>
+       </svg><span class="soc__name">Twitter</span>
+      </a>
+     </li>
+     <li class="soc__item">
+      <a href="">
+       <svg class="soc__icon" viewBox="0 0 26 26" width="26">
+        <use xlink:href="img/sprite.svg#ingm"></use>
+       </svg><span class="soc__name">Instagram</span>
+      </a>
+     </li>
+     <li class="soc__item">
+      <a href="">
+       <svg class="soc__icon" viewBox="0 0 26 26" width="26">
+        <use xlink:href="img/sprite.svg#ytb"></use>
+       </svg><span class="soc__name">YouTube</span>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="footer__btns">
+    <a href="" class="btn btn--orange">Donate for volunteers</a>
+   </div>
+   <div class="footer__menu">
+    <ul class="footer__list">
+     <li class="footer__item current"><a href="#backstage" data-title="scroll">About</a></li>
+     <li class="footer__item"><a href="" data-title="scroll">Map</a></li>
+     <li class="footer__item"><a href="" data-title="scroll">Zoos</a></li>
+     <li class="footer__item"><a href="donate.html">Donate</a></li>
+     <li class="footer__item"><a href="" data-title="scroll">Contact us</a></li>
+    </ul>
+   </div>
+   <div class="footer__copy">
+    <p><a href="./">Designed by Alisa Samborskaya</a></p>
+    <p><a href="./">©RSSchool & ©Yem Digital 2021</a></p>
+   </div>
+  </div>
+ </footer>
+
+ <script src="js/scripts.js"></script>
+</body>
+
+</html>

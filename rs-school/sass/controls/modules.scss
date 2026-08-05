@@ -1,0 +1,171 @@
+.soc {
+ @include bp(1000px) {
+  display: inline-block;
+ }
+
+ @include bp(450px) {
+  @include row()
+ }
+}
+
+.soc__item {
+ &:last-child {
+  margin-right: 0;
+ }
+
+ a {
+  display: block;
+  color: rgba(196, 196, 196, 0.5);
+  padding: 1em;
+
+  @include bpmin(1000px) {
+   padding: 0.5em;
+  }
+ }
+
+ &:hover {
+  a {
+
+   color: var(--green);
+  }
+ }
+}
+
+.soc__name {
+ display: none;
+
+ @include bpmin(1000px) {
+  display: inline-block;
+  margin-left: 12px;
+ }
+}
+
+
+.veile {
+ padding: 3.5% 8%;
+ border-radius: 1.2em;
+ background-color: rgba(253, 253, 255, 0.52);
+ backdrop-filter: blur(2px);
+
+ @include bp(650px) {
+  padding: 3.5%;
+ }
+}
+
+/*slider progressbar*/
+
+.splide__progressbar {
+ position: relative;
+ max-width: 51%;
+ border-radius: 5px;
+ margin: 1.2em auto 2em auto;
+ background: #F5F7F6;
+
+ &:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: inherit;
+  background: var(--pink-grad);
+  z-index: -1;
+ }
+
+ @include bp(650px) {
+  display: none;
+ }
+}
+
+.splide__progressbar-thumb {
+ height: 8px;
+ border-radius: inherit;
+ background: var(--orange);
+}
+
+/*calculator*/
+
+.calculator__wrapper {
+ margin-bottom: 5%;
+}
+
+.calculator__caption {
+ margin-bottom: 1em;
+}
+
+.calculator__track {
+ position: relative;
+ padding: 0.9em 3%;
+ border-radius: 2px;
+ background: #404950;
+
+ @include bp (650px) {
+  margin: 0 -3.5%;
+ }
+}
+
+.calculator__bar {
+ height: 2px;
+ background-color: #72828E;
+}
+
+
+.calculator__values {
+ @include row(jsb);
+
+}
+
+.calculator__value {
+ position: relative;
+ padding-top: 10px;
+ @include fFS(16px, 26px, 320px, 1900px, 16px);
+ font-weight: 500;
+ cursor: pointer;
+
+ &:before {
+  content: '';
+  @include center(x);
+  top: -36px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: radial-gradient(at center,
+    #FFEE2E 0, #FFEE2E 5px, rgba(255, 255, 255, 0) 5px);
+ }
+
+ &.current {
+  color: var(--accent);
+
+  &::before {
+   background: radial-gradient(at center,
+     #FFEE2E 0, #FFEE2E 5px,
+     rgba(255, 255, 255, 0) 5px, rgba(255, 255, 255, 0) 10px,
+     var(--accent) 11px, var(--accent) 12px,
+     rgba(255, 255, 255, 0) 13px, rgba(255, 255, 255, 0) 17px, var(--accent) 18px,
+     var(--accent) 23px);
+  }
+ }
+
+ &:last-child {
+  margin-right: 1.5%;
+ }
+
+ &:first-child {
+  @include bp(1000px) {
+   display: none;
+  }
+ }
+
+ &:nth-child(-n+3) {
+  @include bp (650px) {
+   display: none;
+  }
+ }
+}
+
+.calculator__icon {
+ display: inline-block;
+ width: 0.4em;
+ vertical-align: baseline;
+}

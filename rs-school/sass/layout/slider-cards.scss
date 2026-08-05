@@ -1,0 +1,227 @@
+.pets__card {
+ max-width: 366px;
+ border: 1px solid var(--orange);
+ border-radius: 5px;
+ overflow: hidden;
+ margin: auto;
+
+ +.pets__card {
+  margin-top: 1.2em;
+
+  @include bp(1300px) {
+   margin-top: 9vmax;
+  }
+
+  @include bp(450px) {
+   margin-top: 1.2em;
+  }
+ }
+
+ &:hover {
+  .pets__foto {
+   img {
+    transform: scale(1.1);
+   }
+  }
+ }
+}
+
+.pets__foto {
+ aspect-ratio: 1/1;
+ max-height: 366px;
+ overflow: hidden;
+
+ img {
+  position: relative;
+  transform: scale(1);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+ }
+}
+
+.pets__descr {
+ position: relative;
+ display: grid;
+ grid-template-columns: 1fr 50px;
+ grid-template-rows: auto auto;
+ padding: 0.5em 1em;
+ color: #111;
+ background-color: #fff;
+
+ p,
+ .pets__name {
+  grid-column: 1;
+  margin: 5px 0 0 0;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ }
+}
+
+.pets__name {
+ text-transform: uppercase;
+}
+
+.pets__icon {
+ grid-column: -2/-1;
+ grid-row: 1/-1;
+ margin: auto;
+ // right: 0.85em;
+}
+
+.pets__arrows {
+ @include center(y);
+ @include row(jsb);
+ width: 100%;
+
+ @include bp(1300px) {
+  @include row(jsa);
+  width: 30%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+ }
+}
+
+.pets__arrow {
+ position: relative;
+ width: 62px;
+ height: 62px;
+ border-radius: 100%;
+ text-align: center;
+ overflow: hidden;
+ background-color: var(--orange);
+ background-position: center center;
+ background-size: 20px 12px;
+ background-repeat: no-repeat;
+
+ &:disabled {
+  pointer-events: all;
+ }
+
+
+
+ &--left {
+  left: -5vw;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 10'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.3' d='m5.002 9.107.104.102.105-.102.14-.136.11-.108-.11-.107-3.603-3.51H17.15v-.493H1.749L5.35 1.244l.11-.107-.11-.108-.14-.136L5.106.79l-.104.102-4.107 4L.785 5l.11.108 4.107 4Z'/%3E%3C/svg%3E");
+
+  @include bp(1300px) {
+   left: 0;
+  }
+ }
+
+ &--right {
+  right: -5vw;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 18 10'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.3' d='M12.998.893 12.894.79l-.105.102-.14.136-.11.108.11.107 3.603 3.51H.85v.493h15.401L12.65 8.756l-.11.107.11.108.14.136.104.102.105-.102 4.107-4 .11-.107-.11-.108-4.107-4Z'/%3E%3C/svg%3E");
+
+  @include bp(1300px) {
+   right: 0;
+  }
+ }
+
+ &:hover {
+  background-color: var(--green);
+ }
+}
+
+
+/*testimonials*/
+
+.testimonials__item {
+ position: relative;
+ width: 293px;
+ padding: 0.9em;
+ // border: 2px solid transparent;
+ border-radius: 1.5em;
+ background: #F5F7F6;
+
+ &:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  border-radius: inherit;
+  background: var(--pink-grad);
+  z-index: -1;
+ }
+
+ @include bp(650px) {
+  width: 100%;
+  margin-bottom: 1em;
+
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+}
+
+.testimonials__header {
+ display: grid;
+ grid-template-columns: 50px auto;
+ grid-template-rows: auto auto;
+ margin-bottom: 10px;
+}
+
+.testimonials__avatar {
+ grid-row: span 2;
+ grid-column: 1/2;
+ width: 37px;
+ height: 37px;
+ border-radius: 100%;
+ overflow: hidden;
+
+ img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+}
+
+.testimonials__autor {
+ width: 100%;
+ margin-bottom: 5px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ color: #111;
+}
+
+
+.testimonials__info {
+ display: flex;
+ font-size: 15px;
+ font-weight: 300;
+ color: var(--grey);
+ min-width: 0;
+
+ .location {
+  max-width: 47%;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+}
+
+.testimonials__body {
+ height: 309px;
+ color: var(--grey);
+ font-size: 15px;
+ font-weight: 300;
+ overflow: auto;
+ scrollbar-width: thin;
+
+ &::-webkit-scrollbar {
+  width: 0;
+ }
+
+ @include bp(650px) {
+  height: 35px;
+ }
+}
